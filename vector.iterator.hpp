@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 04:02:51 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/20 18:43:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/20 19:48:26 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,20 @@ namespace ft {
 			~vectorIterator<T, B>(){}
 			//Get pointer
 			element_pointer	getPointer(void) const;
-			//operator
+			// POINTER AND REFERENCE
 			value_type operator*(void) const;
 			element_pointer operator->(void) const;
-			value_type operator++(void);
+			// INCREMENT
+            value_type operator++(void);
+            // DECREMENT
+            value_type operator--(void);
+            // COMPARISON
+            bool operator==(const vectorIterator &other) const;
+            bool operator!=(const vectorIterator &other) const;
+            bool operator<=(const vectorIterator &other) const;
+            bool operator>=(const vectorIterator &other) const;
+            bool operator<(const vectorIterator &other) const;
+            bool operator>(const vectorIterator &other) const;
 			
     };
 	

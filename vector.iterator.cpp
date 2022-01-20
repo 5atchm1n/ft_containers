@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 04:02:51 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/20 18:47:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/20 19:52:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,23 @@ namespace ft {
 			vectorIterator<T, B> temp(*this);
 			++(*this);
 			return (temp);
+		}
+	
+	template<typename T, bool B>
+		bool vectorIterator<T, B>::operator==(const vectorIterator &other) const
+		{
+			return (_val == other._val);
+		}
+	
+	template<typename T, bool B>
+		bool vectorIterator<T, B>::operator!=(const vectorIterator &other) const
+		{
+			return (!(_val == other._val));
+		}
+
+	template<typename T, bool B>
+		bool vectorIterator<T, B>::operator<=(const vectorIterator &other) const
+		{
+			return (_val <= other._val);
 		}
 }
