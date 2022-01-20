@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   vector.iterator.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 04:02:51 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/19 04:15:45 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/20 18:43:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 namespace ft {
     template<typename T, bool B>
-    class vector_iterator
+    class vectorIterator
     {
         public:
             typedef ptrdiff_t difference_type;
@@ -26,8 +26,19 @@ namespace ft {
         private:
             T* _val;
         public:
-            vector_iterator(T* val = 0) : _val(val) {}
-            vector_iterator(const vector_iterator<T, false> &copy) { _val = copy.getElemPtr();}
-            
-    }   
+			//Coplien
+            vectorIterator(T* val = 0) : _val(val) {}
+			vectorIterator(const vectorIterator<T, false> &copy);
+			value_type operator=(const vectorIterator<T, false> &assign);
+			// Destructor
+			~vectorIterator<T, B>(){}
+			//Get pointer
+			element_pointer	getPointer(void) const;
+			//operator
+			value_type operator*(void) const;
+			element_pointer operator->(void) const;
+			value_type operator++(void);
+			
+    };
+	
 }
