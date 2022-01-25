@@ -6,13 +6,17 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/18 17:07:13 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:30:20 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// STD library
+#include <cstddef>
 #include <memory>
-#include <iterator>
+// custom iterator
+#include "vector.iterator.hpp"
 
+// NAMESPACE
 namespace   ft
 {
     template <class T, class A = std::allocator<T>>
@@ -21,12 +25,12 @@ namespace   ft
         public:
             typedef T value_type;
             typedef A allocator_type;
-            typedef typename A::size_t size_type;
-            typedef typename A::ptrdiff_t difference_type;
+            typedef size_t size_type;
+            typedef ptrdiff_t difference_type;
             typedef T* iterator;
             typedef const T* const_iterator;
-            typedef std::reverse_iterator<iterator> reverse_iterator;
-            typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
+            typedef ft::reverse_iterator<iterator> reverse_iterator;
+            typedef ft::reverse_iterator<const_iterator> const_reverse_iterator;
             typedef typename A::pointer pointer;
             typedef typename A::reference reference;
             typedef typename A::const_reference const_reference;
@@ -40,4 +44,4 @@ namespace   ft
             reverse_iterator rend () ; // points to one-past-Iast element ofreverse sequence
             const_reverse_iterator rend () const;
     };
-} 
+} // END NAMESPACE 

@@ -3,52 +3,66 @@
 /*                                                        :::      ::::::::   */
 /*   vector.iterator.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/19 04:02:51 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/20 19:48:26 by sshakya          ###   ########.fr       */
+/*   Created: 2022/01/23 14:02:42 by satchmin          #+#    #+#             */
+/*   Updated: 2022/01/25 23:12:53 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-namespace ft {
-    template<typename T, bool B>
-    class vectorIterator
+#include "iterator_traits.hpp"
+
+#ifndef VECTOR_ITERATOR_H
+#define VECTOR_ITERATOR_H
+
+namespace ft
+{
+
+template<typename _Iterator>
+    class reverse_iterator
     {
+        protected:
+            _Iterator current;
+            typedef iterator_traits<_Iterator>  __traits_type;
+
         public:
-            typedef ptrdiff_t difference_type;
-            typedef T value_type;
-            typedef size_t size_type;
+            typedef _Iterator   iterator_type;
+            typedef typename __traits_type::difference_type difference_type;
+            typedef typename __traits_type::pointer pointer;
+            typedef typename __traits_type::reference reference;
             
-            typedef std::random_access_iterator_tag iterator_category;
-            typedef typename chooseConst<B, T&, const T&>::type reference;
-            typedef typename chooseConst<B, T*, const T*>::type pointer;
-            typedef typename T* element_pointer;
-        private:
-            T* _val;
-        public:
-			//Coplien
-            vectorIterator(T* val = 0) : _val(val) {}
-			vectorIterator(const vectorIterator<T, false> &copy);
-			value_type operator=(const vectorIterator<T, false> &assign);
-			// Destructor
-			~vectorIterator<T, B>(){}
-			//Get pointer
-			element_pointer	getPointer(void) const;
-			// POINTER AND REFERENCE
-			value_type operator*(void) const;
-			element_pointer operator->(void) const;
-			// INCREMENT
-            value_type operator++(void);
-            // DECREMENT
-            value_type operator--(void);
-            // COMPARISON
-            bool operator==(const vectorIterator &other) const;
-            bool operator!=(const vectorIterator &other) const;
-            bool operator<=(const vectorIterator &other) const;
-            bool operator>=(const vectorIterator &other) const;
-            bool operator<(const vectorIterator &other) const;
-            bool operator>(const vectorIterator &other) const;
-			
+            /*
+            ** CONTRUCTORS
+            */
+            reverse_iterator() : current() { }; // default constructor
+            reverse_iterator(iterator_type __x) : current(__x) { } // Iterator constructor
+            reverse_iterator(const reverse_iterator& __x) : current(__x.current) { } // Reverse constructor
+           
+            // Basic operators
+            iterator_type base() const;
+            reference operator*() const;
+            pointer operator->() const;
+
+            reverse_iterator& operator=(const reverse_iterator& __x);
+            
+            reverse_iterator& operator++();
+            reverse_iterator operator++(int);
+            reverse_iterator& operator--();
+            reverse_iterator operator--(int);
+            reverse_iterator operator+(difference_type __n);
+            reverse_iterator &operator+=(difference_type __n);      
+            reverse_iterator operator-(difference_type __n);
+            reverse_iterator &operator-=(difference_type __n);      
+            reference operator[](difference_type __n) const;
+
+            bool operator==(const reverse_iterator& __other) const;
+            bool operator!=(const reverse_iterator& __other) const;
+            bool operator>(const reverse_iterator& __other) const;
+            bool operator<=(const reverse_iterator& __other) const;
+
     };
-	
 }
+
+#include "vector.iterator.cpp"
+
+#endif // VECTOR_ITERATOR_H
