@@ -15,7 +15,6 @@
 namespace ft
 {
 
-
 /*
 ** BASE() method to access current element
 */
@@ -197,34 +196,96 @@ template<typename _Iterator>
 /*
 ** LOGICAL OPERATORS
 ** These will all return a BOOL
+** const vs const || non-const vs non-const
 */
 
 template<typename _Iterator>
     bool
-    reverse_iterator<_Iterator>::operator==(const reverse_iterator<_Iterator>& __other) const
+    operator==(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
     {
-        return __other.base() == base();
+        return __x.base() == __y.base();
     }
 
 template<typename _Iterator>
     bool
-    reverse_iterator<_Iterator>::operator!=(const reverse_iterator<_Iterator>& __other) const
+    operator<(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
     {
-        return !(this == __other);
+        return __y.base() < __x.base();
     }
 
 template<typename _Iterator>
     bool
-    reverse_iterator<_Iterator>::operator>(const reverse_iterator<_Iterator>& __other) const
+    operator!=(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
     {
-        return base() < __other.base();
+        return !(__x == __y);
     }
 
 template<typename _Iterator>
     bool
-    reverse_iterator<_Iterator>::operator<=(const reverse_iterator<_Iterator>& __other) const
+    operator<=(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
     {
-        return !(this < __other);
+        return !(__y < __x);
     }
 
+template<typename _Iterator>
+    bool
+    operator>(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
+    {
+        return __y < __x;
+    }
+
+template<typename _Iterator>
+    bool
+    operator>=(const reverse_iterator<_Iterator>& __x, const reverse_iterator<_Iterator>& __y)
+    {
+        return !(__x < __y);
+    }
+
+/*
+** LOGICAL OPERTORS
+** These all return a BOOL
+** const vs non-const
+*/
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator==(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return __x.base() == __y.base();
+    }
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator<(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return __y.base() < __x.base();
+    }
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator!=(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return !(__x == __y);
+    }
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator<=(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return !(__y < __x);
+    }
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator>(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return __y < __x;
+    }
+
+template<typename _IteratorL, typename _IteratorR>
+    bool
+    operator>=(const reverse_iterator<_IteratorL>& __x, const reverse_iterator<_IteratorR>& __y)
+    {
+        return !(__x < __y);
+    }
 }

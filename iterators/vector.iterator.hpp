@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:02:42 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/25 23:12:53 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:39:32 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,6 @@ template<typename _Iterator>
             reverse_iterator operator-(difference_type __n);
             reverse_iterator &operator-=(difference_type __n);      
             reference operator[](difference_type __n) const;
-
-            bool operator==(const reverse_iterator& __other) const;
-            bool operator!=(const reverse_iterator& __other) const;
-            bool operator>(const reverse_iterator& __other) const;
-            bool operator<=(const reverse_iterator& __other) const;
 
     };
 }

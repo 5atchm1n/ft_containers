@@ -6,34 +6,36 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/25 13:30:20 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/28 01:45:05 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_VECTOR_HPP
+#define FT_VECTOR_HPP
 // STD library
 #include <cstddef>
-#include <memory>
 // custom iterator
 #include "vector.iterator.hpp"
+#include "ft_vector_base.hpp"
 
 // NAMESPACE
 namespace   ft
 {
-    template <class T, class A = std::allocator<T>>
-    class vector
+    template <typename _Tp, typename _Alloc = std::allocator<_Tp> >
+    class vector : protected _Vector_base<_Tp, _Alloc>
     {
         public:
-            typedef T value_type;
-            typedef A allocator_type;
+            typedef _Tp value_type;
+            typedef _Alloc allocator_type;
             typedef size_t size_type;
             typedef ptrdiff_t difference_type;
-            typedef T* iterator;
-            typedef const T* const_iterator;
+            typedef _Tp* iterator;
+            typedef const _Tp* const_iterator;
             typedef ft::reverse_iterator<iterator> reverse_iterator;
             typedef ft::reverse_iterator<const_iterator> const_reverse_iterator;
-            typedef typename A::pointer pointer;
-            typedef typename A::reference reference;
-            typedef typename A::const_reference const_reference;
+            typedef typename _Alloc::pointer pointer;
+            typedef typename _Alloc::reference reference;
+            typedef typename _Alloc::const_reference const_reference;
 
             iterator begin (); //points to first element
             const_iterator begin () const;
