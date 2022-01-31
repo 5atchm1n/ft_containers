@@ -6,13 +6,11 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 05:18:17 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 09:11:30 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_vector.hpp"
-#include <limits>
-#include <stdexcept>
 
 namespace ft {
 
@@ -57,7 +55,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     if (this->_capacity > size)
         return ;
     if (size > max_size())
-        throw std::lenght_error("vector");
+        throw std::out_of_range("vector");
     else
         this->_realloc(size);
 }
@@ -68,16 +66,46 @@ vector<_Tp, _Alloc>::reserve(size_type size)
  */
     template <typename _Tp, typename _Alloc>
     void
-    vector<_Tp, _Alloc>::resize(size_type size, value_type val = value_type())
+    vector<_Tp, _Alloc>::resize(size_type size, value_type val)
     {
-        if (size < size())
+        this->_range_check(size);
+        if (size < this->_size)
             for (reverse_iterator it = end(); it < size; it++)
                 this->_mem.destroy(it);
-        if (size > this->_capacity)
-            this->_realloc(size);
-        if (size > size())
-            this->_realloc(size);
+        if (size > this->_size)
+            this->_realloc(size, val);
     }
+
+/**
+ * @brief return the capacity
+ */
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::size_type
+    vector<_Tp, _Alloc>::capacity() const
+    {
+        return this->_capacity;
+    }
+
+/**
+ * @brief true if vector is empty
+ */
+    template <typename _Tp, typename _Alloc>
+    bool
+    vector<_Tp, _Alloc>::empty() const
+    {
+        return size ? true : false;
+    }
+
+/**
+ * @brief return the amount of objects
+ */
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::size_type
+    vector<_Tp, _Alloc>::size() const
+    {
+        return this->_size;
+    }
+
 /**
  * @brief   Returns a pointer to _start 
  * non-const version
@@ -166,7 +194,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         return const_reverse_iterator (begin());
     }
 
-/*******
+/**
  * @brief return the max allocation size
  */
     template <typename _Tp, typename _Alloc>
@@ -176,4 +204,136 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         return (std::numeric_limits<size_type>::max() / sizeof(value_type));
     }
 
+/**
+ * @brief
+ */
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::reference
+    vector<_Tp, _Alloc>::at(size_type n)
+    {
+        this->_range_check(n);
+        return (*this)[n];
+    }
+
+/**
+ * @brief 
+ */
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::const_reference
+    vector<_Tp, _Alloc>::at(size_type n) const
+    {
+        this->_range_check(n);
+        return (*this)[n];
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::reference
+    vector<_Tp, _Alloc>::front(void)
+    {
+        return *begin();
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::const_reference
+    vector<_Tp, _Alloc>::front(void) const
+    {
+        return *begin();
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::reference
+    vector<_Tp, _Alloc>::back(void)
+    {
+        return *(end() - 1);
+    }
+    
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::const_reference
+    vector<_Tp, _Alloc>::back(void) const
+    {
+        return *(end() - 1);
+    }
+    
+    
+    
+
+    template <typename _Tp, typename _Alloc>
+    template<typename _Iterator>
+    void
+    vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last)
+    {
+
+    }
+
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::push_back(const value_type &val)
+    {
+        
+    }
+    
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::pop_back()
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::iterator
+    vector<_Tp, _Alloc>::insert(iterator position, const value_type &val)
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    template <typename _Iterator>
+    void
+    vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last)
+    {
+
+    }
+    
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::iterator
+    vector<_Tp, _Alloc>::erase(iterator position)
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::iterator
+    vector<_Tp, _Alloc>::erase(iterator first, iterator last)
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::swap(vector &val)
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::clear()
+    {
+        
+    }
+
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::allocator_type
+    vector<_Tp, _Alloc>::get_allocator() const
+    {
+        
+    }
+    
 } // end namespace

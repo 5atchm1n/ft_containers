@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:16:30 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/30 16:59:25 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 08:44:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,7 @@ int main (void)
         std::cout << *_int << " == " << *_int2 << std::endl;
 
     ft::vector<int> _vec_test;
-
-    try
-    {
-    _vec_test.reserve(10000000000000);
-    }
-    catch (const std::bad_alloc& e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-
-    
+/*
     std::vector<int> _vec_real;
     try {
     _vec_real.reserve(10000000000000);
@@ -63,5 +53,16 @@ int main (void)
     {
         std::cout << e.what() << std::endl;
     }
+    */
+    try
+    {
+    _vec_test.reserve(100);
+    }
+    catch (const std::bad_alloc& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    
     return (0);
 }

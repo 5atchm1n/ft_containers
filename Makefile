@@ -9,7 +9,7 @@ CPPSTD = -std=c++98
 
 MEM = -fsanitize=address
 
-INC = -I./containers -I./iterators
+INC = -I./containers -I./iterators -I./
 
 OBJDIR = objs
 
