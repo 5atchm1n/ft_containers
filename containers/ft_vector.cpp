@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 09:11:30 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:38:51 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,47 @@ namespace ft {
  * First we allocate a default amount of memory and we then copy then
  * use push back to add elements to the end.
  */
+
+template<typename _Tp, typename _Alloc>
+vector<_Tp, _Alloc>&
+vector<_Tp, _Alloc>::operator=(const vector &val)
+{
+    vector  tmp(val);
+    swap(tmp);
+    return *this;
+    
+}
+
+template<typename _Tp, typename _Alloc>
+typename vector<_Tp, _Alloc>::reference
+vector<_Tp, _Alloc>::operator[](size_type n)
+{
+    return *(this->_start + n);
+}
+
+template<typename _Tp, typename _Alloc>
+typename vector<_Tp, _Alloc>::const_reference
+vector<_Tp, _Alloc>::operator[](size_type n) const
+{
+    return *(this->_start + n);
+}
+
+template <typename _Tp, typename _Alloc>
+vector<_Tp, _Alloc>::vector(size_type size, const value_type &val, const allocator_type &alloc) : _vector_base<_Tp, _Alloc>(size, val, alloc)
+{
+    
+}
+
 template <typename _Tp, typename _Alloc>
 template <typename _Iterator>
-vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last)
+vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
 {
-    this->_size = 0;
-    this->_capacity = DFLT_CAPACITY;
-    this->_start = this->_mem.allocate(DFLT_CAPACITY);
-    while (first != last)
-        this->push_back(*first++);
+    difference_type diff = last - first;
+    
+    this->_size = diff;
+    this->_capacity = diff * DFLT_SCALE;
+    this->_realloc_empty(diff);
+    std::uninitialized_copy(first, last, this->_start);
 }
 
 /**
@@ -70,8 +102,8 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         this->_range_check(size);
         if (size < this->_size)
-            for (reverse_iterator it = end(); it < size; it++)
-                this->_mem.destroy(it);
+            for (size_type i = this->_size; i > size; i--)
+                this->_mem.destroy(this->_start + i);
         if (size > this->_size)
             this->_realloc(size, val);
     }
@@ -93,7 +125,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     bool
     vector<_Tp, _Alloc>::empty() const
     {
-        return size ? true : false;
+        return this->_size ? true : false;
     }
 
 /**
@@ -201,7 +233,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     typename vector<_Tp, _Alloc>::size_type
     vector<_Tp, _Alloc>::max_size(void) const
     {
-        return (std::numeric_limits<size_type>::max() / sizeof(value_type));
+        return this->_mem.max_size();
     }
 
 /**
@@ -253,32 +285,35 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         return *(end() - 1);
     }
-    
-    
-    
 
     template <typename _Tp, typename _Alloc>
     template<typename _Iterator>
     void
     vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last)
     {
-
+        while (first != last)
+            push_back(*first++);
     }
 
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
     {
-        
+        for (size_type i = 0; i < n; i++)
+            push_back(val.begin() + i);    
     }
 
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::push_back(const value_type &val)
     {
-        
+        if (size() < capacity())
+            this->_mem.construct(this->_start + this->_size, val);
+        else if (this->_size == capacity())
+            this->_insert_back(val);
+        this->_size++;
     }
-    
+/*    
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::pop_back()
@@ -314,26 +349,34 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         
     }
-
+*/
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::swap(vector &val)
     {
-        
+        pointer tmp = this->_mem.allocate(val.size());
+        std::uninitialized_copy(val.begin(), val.end(), tmp);
+        this->_mem.deallocate(begin(), capacity());
+        this->_size = val.size();
+        this->_capacity = val.capacity();
+        this->_start = tmp;        
     }
-
+    
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::clear()
     {
-        
+        for (size_type i = 0; i < size(); ++i)
+            this->_mem.destroy(begin() + i);
+        this->_size = 0;
     }
 
+/*
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::allocator_type
     vector<_Tp, _Alloc>::get_allocator() const
     {
         
     }
-    
+*/ 
 } // end namespace

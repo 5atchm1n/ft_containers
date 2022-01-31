@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:16:30 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 08:44:02 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 10:30:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int main (void)
     try
     {
     _vec_test.reserve(100);
+    ft::vector<int>_vec_test_2(5);
     }
     catch (const std::bad_alloc& e)
     {

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 08:13:06 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:29:04 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,34 +35,36 @@
  * @param _capacity number of objects that the vector can hold
 
 
-**************************************************************/ 
+**************************************************************/
 namespace ft
 {
     template <typename _Tp, typename _Alloc = std::allocator<_Tp> >
     class _vector_base
     {
-        public:
-        typedef _Tp* _iterator;
+    public:
+        typedef _Tp *_iterator;
         typedef _Alloc _alloc_type;
         typedef size_t _size_type;
 
         _iterator _start;
-        _alloc_type _mem;
         _size_type _size;
+        _alloc_type _mem;
         _size_type _capacity;
 
-        void    _realloc_empty(_size_type size);
-        void    _realloc(_size_type size);
-        void    _realloc(_size_type size, const _Tp& value);
-        void    _range_check(_size_type n);
-        
         _vector_base();
-        _vector_base(_size_type size, const _Tp &value);
-        _vector_base(const _vector_base<_Tp, _Alloc>& copy);
+        _vector_base(_size_type size, const _Tp& value = _Tp(), const _Alloc &val = _Alloc());
+        _vector_base(const _vector_base<_Tp, _Alloc> &copy);
         ~_vector_base();
+
+    protected:
+        void _realloc_empty(_size_type size);
+        void _realloc(_size_type size);
+        void _realloc(_size_type size, const _Tp &value);
+        void _insert_back(const _Tp &value);
+        void _range_check(_size_type n) const;
     };
 
-/**
+    /**
  * @brief default contructor
  * start with a default capacity
  */
@@ -72,31 +74,31 @@ namespace ft
         _start = _mem.allocate(_capacity);
     }
 
-/**
+    /**
  * @brief Construct a new vector base object
  * @param size  the size of the of vector
  * @param value the value to fill
  */
     template <typename _Tp, typename _Alloc>
-    _vector_base<_Tp, _Alloc>::_vector_base(_size_type size, const _Tp &value) : _size(size), _capacity(size * DFLT_SCALE)
+    _vector_base<_Tp, _Alloc>::_vector_base(_size_type size, const _Tp &value, const _Alloc &alloc) : _size(size), _mem(alloc) ,_capacity(size * DFLT_SCALE)
     {
         _start = _mem.allocate(_capacity);
         for (_size_type i = 0; i < size; i++)
-            _mem.construct(_start + i, value);
+            _mem.construct(&_start[i], value);
     }
 
-/**
+    /**
  * @brief Construct a new vector base
  * @param copy  a vector to duplicate
  */
     template <typename _Tp, typename _Alloc>
-    _vector_base<_Tp, _Alloc>::_vector_base(const _vector_base &copy) : _size(copy.size()), _capacity(copy.capacity())
+    _vector_base<_Tp, _Alloc>::_vector_base(const _vector_base &copy) : _size(copy._size), _capacity(copy._size)
     {
-        _start = _mem.allocate(_capacity);
-        std::uninitialized_copy(copy.begin(), copy.end(), _start);
+        _start = _mem.allocate(copy._size);
+        std::uninitialized_copy(copy._start, copy._start + copy._size, _start);
     }
 
-/**
+    /**
  * @brief   Empty allocation helper
  */
     template <typename _Tp, typename _Alloc>
@@ -107,7 +109,7 @@ namespace ft
         _start = _mem.allocate(size);
     }
 
-/**
+    /**
  * @brief allocation helper
  * @param 
  */
@@ -122,18 +124,18 @@ namespace ft
         }
         else
         {
-            _Tp* temp = _mem.allocate(size);
+            _Tp *temp = _mem.allocate(size);
             std::uninitialized_copy(_start, _start + _size, temp);
             for (_size_type i = 0; i < _size; i++)
                 _mem.destroy(_start + i);
             _mem.deallocate(_start, _capacity);
             _start = temp;
-           _size = size;
-           _capacity = size;
+            _size = size;
+            _capacity = size;
         }
     }
 
-/**
+    /**
  * @brief 
  */
     template <typename _Tp, typename _Alloc>
@@ -144,8 +146,8 @@ namespace ft
             _realloc_empty(new_size);
         else
         {
-            _Tp* temp = this->_mem.allocate(new_size);
-            _size_type  old_size(_size);
+            _Tp *temp = this->_mem.allocate(new_size);
+            _size_type old_size(_size);
             std::uninitialized_copy(_start, _start + _size, temp);
             for (_size_type i = 0; i < _size; i++)
                 _mem.destroy(_start + i);
@@ -156,18 +158,41 @@ namespace ft
             _capacity = new_size;
         }
     }
-/**
+
+    /**
  * @brief 
  */
-    template<typename _Tp, typename _Alloc>
+    template <typename _Tp, typename _Alloc>
     void
-    _vector_base<_Tp, _Alloc>::_range_check(_size_type n)
+    _vector_base<_Tp, _Alloc>::_insert_back(const _Tp &value)
+    {
+        _size_type nsize;
+        if (_size * DFLT_SCALE < _mem.max_size())
+            nsize = _size * DFLT_SCALE;
+        else
+            nsize = _mem.max_size();
+        _Tp* tmp = _mem.allocate(nsize);
+        std::uninitialized_copy(_start, _start + _size, tmp);
+        for (_size_type i = 0; i < _size; i++)
+            _mem.destroy(_start + i);
+        _mem.deallocate(_start, _capacity);
+        _capacity = nsize;
+        _start = tmp;
+        _mem.construct(_start + _size, value);
+    }
+
+    /**
+ * @brief 
+ */
+    template <typename _Tp, typename _Alloc>
+    void
+    _vector_base<_Tp, _Alloc>::_range_check(_size_type n) const
     {
         if (n > _size)
             throw std::out_of_range("vector");
     }
 
-/**
+    /**
  * @brief Destroy the vector base object
  */
     template <typename _Tp, typename _Alloc>

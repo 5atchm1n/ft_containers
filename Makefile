@@ -1,13 +1,13 @@
 
 NAME = ft_containers
 
-SRC = main.cpp \
+SRC = main2.cpp \
 
 CC = clang++
 
 CPPSTD = -std=c++98
 
-MEM = -fsanitize=address
+MEM = -fsanitize=address -g
 
 INC = -I./containers -I./iterators -I./
 

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 08:59:34 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:36:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <iostream>
 // custom iterator
 #include "vector.iterator.hpp"
+#include "ft_type_traits.hpp"
 #include "ft_vector_base.hpp"
 
 // NAMESPACE
@@ -29,32 +30,35 @@ namespace ft
     class vector : protected _vector_base<_Tp, _Alloc>
     {
     public:
-        typedef _Tp value_type;
-        typedef _Alloc allocator_type;
-        typedef size_t size_type;
-        typedef ptrdiff_t difference_type;
-        typedef _Tp *iterator;
-        typedef const _Tp *const_iterator;
-        typedef ft::reverse_iterator<iterator> reverse_iterator;
-        typedef ft::reverse_iterator<const_iterator> const_reverse_iterator;
-        typedef typename _Alloc::pointer pointer;
-        typedef typename _Alloc::reference reference;
-        typedef typename _Alloc::const_reference const_reference;
+        typedef _Tp                                     value_type;
+        typedef _Alloc                                  allocator_type;
+        typedef size_t                                  size_type;
+        typedef ptrdiff_t                               difference_type;
+        typedef _Tp*                                    iterator;
+        typedef const _Tp                               *const_iterator;
+        typedef ft::reverse_iterator<iterator>          reverse_iterator;
+        typedef ft::reverse_iterator<const_iterator>    const_reverse_iterator;
+        typedef typename _Alloc::pointer                pointer;
+        typedef typename _Alloc::reference              reference;
+        typedef typename _Alloc::const_reference        const_reference;
 
     public:
 /**
  *  CONSTRUCTORS
  */
-        vector() : _vector_base<_Tp, _Alloc>() {}                                            // default
-        vector(size_type size, const _Tp &value) : _vector_base<_Tp, _Alloc>(size, value) {} // size and value
-        vector(const vector<_Tp, _Alloc> &copy) : _vector_base<_Tp, _Alloc>(copy) {}         // copy
-        template <class InputIterator>
-        vector(InputIterator first, InputIterator last); // range
+        explicit vector() : _vector_base<_Tp, _Alloc>() {}                                            // default
+        explicit vector(size_type size,
+                        const value_type &val = value_type(),
+                        const allocator_type& alloc = allocator_type());
+        template <typename _Iterator>
+        vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
         ~vector();
 /**
  *  ASSIGNEMENT OPERATOR
  */
-        vector &operator=(const vector &x);
+        vector          &operator=(const vector &x);
+        reference       operator[](size_type n);
+        const_reference operator[](size_type n) const;
 
 /**
  *   METHODS 
