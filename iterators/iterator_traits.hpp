@@ -6,11 +6,12 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:55:48 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/23 14:20:47 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 02:42:18 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iterator>
+#include <cstddef>
 
 /**
 *  Traits class for iterators.

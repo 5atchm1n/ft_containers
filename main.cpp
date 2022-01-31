@@ -6,12 +6,13 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:16:30 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/25 23:05:53 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/30 16:59:25 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.iterator.hpp"
 #include "ft_vector.hpp"
+#include <vector>
 #include <iostream>
 
 int main (void)
@@ -42,7 +43,25 @@ int main (void)
     if (_int == _int2)
         std::cout << *_int << " == " << *_int2 << std::endl;
 
-    
+    ft::vector<int> _vec_test;
 
+    try
+    {
+    _vec_test.reserve(10000000000000);
+    }
+    catch (const std::bad_alloc& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    
+    std::vector<int> _vec_real;
+    try {
+    _vec_real.reserve(10000000000000);
+    }
+    catch (const std::bad_alloc& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     return (0);
 }
