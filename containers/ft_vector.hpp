@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 14:36:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 16:44:01 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <limits>
 #include <stdexcept>
 #include <iostream>
+#include <algorithm>
 // custom iterator
 #include "vector.iterator.hpp"
 #include "ft_type_traits.hpp"
@@ -52,6 +53,7 @@ namespace ft
                         const allocator_type& alloc = allocator_type());
         template <typename _Iterator>
         vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
+        vector( const vector &copy ) : _vector_base<_Tp, _Alloc>(copy) {}
         ~vector();
 /**
  *  ASSIGNEMENT OPERATOR
@@ -79,7 +81,7 @@ namespace ft
         const_iterator          end() const;
         reverse_iterator        rbegin();
         const_reverse_iterator  rbegin() const;
-        reverse_iterator        rend(); // points to one-past-Iast element ofreverse sequence
+        reverse_iterator        rend();
         const_reverse_iterator  rend() const;
 
 /*

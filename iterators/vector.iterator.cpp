@@ -71,7 +71,7 @@ template<typename _Iterator>
 
 template<typename _Iterator>
     typename reverse_iterator<_Iterator>::reference
-    reverse_iterator<_Iterator>::operator[](difference_type __n) const
+    reverse_iterator<_Iterator>::operator[](difference_type __n)
     {
         return *(*this + __n);
     }

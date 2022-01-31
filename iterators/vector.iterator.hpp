@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:02:42 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/27 18:39:32 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 17:32:31 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ template<typename _Iterator>
             ** CONTRUCTORS
             */
             reverse_iterator() : current() { }; // default constructor
-            reverse_iterator(iterator_type __x) : current(__x) { } // Iterator constructor
+            explicit reverse_iterator(iterator_type __x) : current(__x) { } // Iterator constructor
             reverse_iterator(const reverse_iterator& __x) : current(__x.current) { } // Reverse constructor
+            template <typename _IteratorOther>
+            reverse_iterator(const reverse_iterator<_IteratorOther>& __x) : current(__x.base()) { } // Reverse constructor
+            
            
             // Basic operators
             iterator_type base() const;
@@ -53,7 +56,7 @@ template<typename _Iterator>
             reverse_iterator &operator+=(difference_type __n);      
             reverse_iterator operator-(difference_type __n);
             reverse_iterator &operator-=(difference_type __n);      
-            reference operator[](difference_type __n) const;
+            reference operator[](difference_type __n);
 
     };
 }

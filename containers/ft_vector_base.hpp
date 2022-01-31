@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector_base.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 14:29:04 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 17:15:55 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,13 @@ namespace ft
         ~_vector_base();
 
     protected:
+        void _dealloc();
         void _realloc_empty(_size_type size);
         void _realloc(_size_type size);
         void _realloc(_size_type size, const _Tp &value);
         void _insert_back(const _Tp &value);
         void _range_check(_size_type n) const;
+        void _bounds_check(_size_type n) const;
     };
 
     /**
@@ -98,6 +100,17 @@ namespace ft
         std::uninitialized_copy(copy._start, copy._start + copy._size, _start);
     }
 
+/**
+ * @brief   de-allocate helper 
+ */
+    template <typename _Tp, typename _Alloc>
+    void
+    _vector_base<_Tp, _Alloc>::_dealloc()
+    {
+        for (_size_type i = 0; i < _size; i++)
+            _mem.destroy(_start + i);
+        _mem.deallocate(_start, _capacity);
+    }
     /**
  * @brief   Empty allocation helper
  */
@@ -126,17 +139,14 @@ namespace ft
         {
             _Tp *temp = _mem.allocate(size);
             std::uninitialized_copy(_start, _start + _size, temp);
-            for (_size_type i = 0; i < _size; i++)
-                _mem.destroy(_start + i);
-            _mem.deallocate(_start, _capacity);
+            _dealloc();
             _start = temp;
-            _size = size;
             _capacity = size;
         }
     }
 
     /**
- * @brief 
+ * @brief reallocated and copy in value
  */
     template <typename _Tp, typename _Alloc>
     void
@@ -149,9 +159,7 @@ namespace ft
             _Tp *temp = this->_mem.allocate(new_size);
             _size_type old_size(_size);
             std::uninitialized_copy(_start, _start + _size, temp);
-            for (_size_type i = 0; i < _size; i++)
-                _mem.destroy(_start + i);
-            _mem.deallocate(_start, _capacity);
+            _dealloc();
             _start = temp;
             std::uninitialized_fill(_start + old_size, _start + new_size, value);
             _size = new_size;
@@ -173,9 +181,7 @@ namespace ft
             nsize = _mem.max_size();
         _Tp* tmp = _mem.allocate(nsize);
         std::uninitialized_copy(_start, _start + _size, tmp);
-        for (_size_type i = 0; i < _size; i++)
-            _mem.destroy(_start + i);
-        _mem.deallocate(_start, _capacity);
+        _dealloc();
         _capacity = nsize;
         _start = tmp;
         _mem.construct(_start + _size, value);
@@ -188,10 +194,19 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_range_check(_size_type n) const
     {
+        if (n > _mem.max_size())
+            throw std::out_of_range("vector");
+    }
+    /**
+ * @brief 
+ */
+    template <typename _Tp, typename _Alloc>
+    void
+    _vector_base<_Tp, _Alloc>::_bounds_check(_size_type n) const
+    {
         if (n > _size)
             throw std::out_of_range("vector");
     }
-
     /**
  * @brief Destroy the vector base object
  */

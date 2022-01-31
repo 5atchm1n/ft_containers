@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 14:38:51 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/01/31 17:16:16 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,12 @@ template<typename _Tp, typename _Alloc>
 vector<_Tp, _Alloc>&
 vector<_Tp, _Alloc>::operator=(const vector &val)
 {
-    vector  tmp(val);
-    swap(tmp);
+    if (this->_size)
+        this->_dealloc();
+    this->_start = this->_mem.allocate(val.capacity());
+    std::uninitialized_copy(val.begin(), val.end(), this->_start);
+    this->_size = val.size();
+    this->_capacity = val.capacity();
     return *this;
     
 }
@@ -102,8 +106,11 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         this->_range_check(size);
         if (size < this->_size)
+        {
             for (size_type i = this->_size; i > size; i--)
                 this->_mem.destroy(this->_start + i);
+            this->_size = size;
+        }
         if (size > this->_size)
             this->_realloc(size, val);
     }
@@ -125,7 +132,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     bool
     vector<_Tp, _Alloc>::empty() const
     {
-        return this->_size ? true : false;
+        return this->_size ? false : true;
     }
 
 /**
@@ -243,7 +250,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     typename vector<_Tp, _Alloc>::reference
     vector<_Tp, _Alloc>::at(size_type n)
     {
-        this->_range_check(n);
+        this->_bounds_check(n);
         return (*this)[n];
     }
 
@@ -254,7 +261,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     typename vector<_Tp, _Alloc>::const_reference
     vector<_Tp, _Alloc>::at(size_type n) const
     {
-        this->_range_check(n);
+        this->_bounds_check(n);
         return (*this)[n];
     }
 
@@ -354,12 +361,10 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     void
     vector<_Tp, _Alloc>::swap(vector &val)
     {
-        pointer tmp = this->_mem.allocate(val.size());
-        std::uninitialized_copy(val.begin(), val.end(), tmp);
-        this->_mem.deallocate(begin(), capacity());
-        this->_size = val.size();
-        this->_capacity = val.capacity();
-        this->_start = tmp;        
+        std::swap(this->_mem, val._mem);
+        std::swap(this->_start, val._start);
+        std::swap(this->_size, val._size);
+        std::swap(this->_capacity, val._capacity);
     }
     
     template <typename _Tp, typename _Alloc>
@@ -371,12 +376,10 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         this->_size = 0;
     }
 
-/*
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::allocator_type
     vector<_Tp, _Alloc>::get_allocator() const
     {
-        
+        return this->_mem;
     }
-*/ 
 } // end namespace
