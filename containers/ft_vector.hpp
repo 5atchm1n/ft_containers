@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 02:44:06 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 05:19:11 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,12 @@ namespace   ft
             /**
             *   METHODS 
             */
+            size_type size () const;
+            size_type max_size() const;
+            void    resize(size_type size, value_type val = value_type());
+            bool    empty() const;
             void    reserve (size_type n);
             size_type capacity () const;
-            size_type size () const;
-            bool    empty() const;
-            size_type max_size() const;
            
             /*
             *   ITERATORS
@@ -73,7 +74,7 @@ namespace   ft
             reverse_iterator rbegin ();
             const_reverse_iterator rbegin () const; 
             reverse_iterator rend () ; // points to one-past-Iast element ofreverse sequence
-            const_reverse_iterator rend () const;
+            const_reverse_iterator rend () const;   
     };
 
 } // END NAMESPACE

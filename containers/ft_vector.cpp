@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 02:48:45 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 05:18:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_vector.hpp"
 #include <limits>
+#include <stdexcept>
 
 namespace ft {
 
@@ -55,24 +56,28 @@ vector<_Tp, _Alloc>::reserve(size_type size)
 {
     if (this->_capacity > size)
         return ;
-    if (size > std::numeric_limits<size_type>::max())
-        throw std::bad_alloc();
-    if (this->_size == 0)
-    {
-        this->_mem.deallocate(this->_start, this->_capacity);
-        this->_start = this->_mem.allocate(size);
-    }
+    if (size > max_size())
+        throw std::lenght_error("vector");
     else
-    {
-        _Tp* temp = this->_mem.allocate(size);
-        std::uninitialized_copy(this->_start, this->_start + this->_size, temp);
-        for (size_type i = 0; i < this->_size; i++)
-            this->_mem.destroy(this->_start + i);
-        this->_mem.deallocate(this->_start, this->_capacity);
-        this->_start = temp;
-    }
+        this->_realloc(size);
 }
 
+/**
+ * @brief resize vector so it contains n elements
+ * 
+ */
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::resize(size_type size, value_type val = value_type())
+    {
+        if (size < size())
+            for (reverse_iterator it = end(); it < size; it++)
+                this->_mem.destroy(it);
+        if (size > this->_capacity)
+            this->_realloc(size);
+        if (size > size())
+            this->_realloc(size);
+    }
 /**
  * @brief   Returns a pointer to _start 
  * non-const version
@@ -84,7 +89,6 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         return this->_start;
     }
 
-
 /**
  * @brief   Returns a pointer to _start
  * const version 
@@ -95,7 +99,6 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         return this->_start;
     }
-
 
 /**
  * @brief returns a pointer to end 
@@ -163,5 +166,14 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         return const_reverse_iterator (begin());
     }
 
+/*******
+ * @brief return the max allocation size
+ */
+    template <typename _Tp, typename _Alloc>
+    typename vector<_Tp, _Alloc>::size_type
+    vector<_Tp, _Alloc>::max_size(void) const
+    {
+        return (std::numeric_limits<size_type>::max() / sizeof(value_type));
+    }
 
 } // end namespace
