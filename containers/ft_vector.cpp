@@ -6,11 +6,11 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 17:16:16 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/01/31 22:37:37 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_vector.hpp"
+#include "vector.hpp"
 
 namespace ft {
 
@@ -26,7 +26,7 @@ template<typename _Tp, typename _Alloc>
 vector<_Tp, _Alloc>&
 vector<_Tp, _Alloc>::operator=(const vector &val)
 {
-    if (this->_size)
+    if (this->_size || this->_capacity)
         this->_dealloc();
     this->_start = this->_mem.allocate(val.capacity());
     std::uninitialized_copy(val.begin(), val.end(), this->_start);
@@ -320,19 +320,42 @@ vector<_Tp, _Alloc>::reserve(size_type size)
             this->_insert_back(val);
         this->_size++;
     }
-/*    
+        
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::pop_back()
     {
-        
+        if (!this->_size)
+            return ;
+        this->_mem.destroy(end() - 1);
+        this->_size--;
+    }
+
+    template <typename _Tp, typename _Alloc>
+    void
+    vector<_Tp, _Alloc>::insert(iterator position, size_type n, const value_type &val)
+    {
+        const difference_type old_pos = position - begin();
+        if (this->_size + n > capacity())
+            this->_realloc(this->_size + n);
+        iterator    index = this->_start + old_pos;
+        for (reverse_iterator it = begin(); it != index; it++)
+        {
+            std::cout << "test" << std::endl;
+            this->_mem.construct(it - n, val);
+            this->_mem.destroy(it);
+        }
+        for (size_type i = 0; i < n; i++)
+            this->_mem.construct(index + i, val);
+        this->_size += n;
     }
 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::insert(iterator position, const value_type &val)
     {
-        
+        insert(position, 1, val);
+        return position;
     }
 
     template <typename _Tp, typename _Alloc>
@@ -340,9 +363,11 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     void
     vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last)
     {
-
+        (void)first;
+        (void)last;
+        (void)position;
     }
-    
+/* 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::erase(iterator position)
