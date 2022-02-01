@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:16:30 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 10:30:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/01 23:47:39 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.iterator.hpp"
-#include "ft_vector.hpp"
+#include "vector.hpp"
 #include <vector>
 #include <iostream>
 

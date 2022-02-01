@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector.hpp                                      :+:      :+:    :+:   */
+/*   vector.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 16:44:01 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/01 23:59:23 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 // custom iterator
 #include "vector.iterator.hpp"
 #include "ft_type_traits.hpp"
-#include "ft_vector_base.hpp"
+#include "vector/base/_vector_base.hpp"
 
 // NAMESPACE
 namespace ft
@@ -54,13 +54,11 @@ namespace ft
         template <typename _Iterator>
         vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
         vector( const vector &copy ) : _vector_base<_Tp, _Alloc>(copy) {}
-        ~vector();
-/**
- *  ASSIGNEMENT OPERATOR
- */
         vector          &operator=(const vector &x);
-        reference       operator[](size_type n);
-        const_reference operator[](size_type n) const;
+/**
+ *  DESTRUCTOR
+ */
+        ~vector();
 
 /**
  *   METHODS 
@@ -87,6 +85,8 @@ namespace ft
 /*
  *  ACCESSORS
  */
+        reference       operator[](size_type n);
+        const_reference operator[](size_type n) const;
         reference       at(size_type size);
         const_reference at(size_type size) const;
         reference       front();
@@ -114,6 +114,10 @@ namespace ft
 
 } // END NAMESPACE
 
-#include "ft_vector.cpp"
+#include "vector/bits/vector_basic.cpp"
+#include "vector/bits/vector_iterators.cpp"
+#include "vector/bits/vector_accessors.cpp"
+#include "vector/bits/vector_capacity.cpp"
+#include "vector/bits/vector_modifiers.cpp"
 
 #endif // FT_VECTOR_HPP

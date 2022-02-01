@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main2.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 10:00:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/01/31 12:33:31 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/01 23:53:37 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_vector.hpp"
+#include "vector.hpp"
 #include <vector>
 #include <iostream>
 
