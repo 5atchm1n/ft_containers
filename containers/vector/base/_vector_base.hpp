@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_base.hpp                                 :+:      :+:    :+:   */
+/*   _vector_base.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 17:15:55 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/02 17:37:13 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FT_VECTOR_BASE_H
 
 #include <memory>
+#include <cstddef>
 #include <stdexcept>
 
 #define DFLT_CAPACITY 32
@@ -60,7 +61,8 @@ namespace ft
         void _dealloc();
         void _realloc_empty(_size_type size);
         void _realloc(_size_type size);
-        void _realloc(_size_type size, const _Tp &value);
+        void _realloc_fill(_size_type size, const _Tp &value);
+        void _move(_size_type n, _iterator start, _iterator end);
         void _insert_back(const _Tp &value);
         void _range_check(_size_type n) const;
         void _bounds_check(_size_type n) const;
@@ -150,7 +152,7 @@ namespace ft
  */
     template <typename _Tp, typename _Alloc>
     void
-    _vector_base<_Tp, _Alloc>::_realloc(_size_type new_size, const _Tp &value)
+    _vector_base<_Tp, _Alloc>::_realloc_fill(_size_type new_size, const _Tp &value)
     {
         if (this->_size == 0)
             _realloc_empty(new_size);
@@ -166,6 +168,22 @@ namespace ft
             _capacity = new_size;
         }
     }
+
+/**
+ * @brief 
+ * 
+ */
+    template <typename _Tp, typename _Alloc>
+    void
+    _vector_base<_Tp, _Alloc>::_move(_size_type n, _iterator start, _iterator end)
+    {
+        for (_iterator i = end; i >= start; --i)
+        {
+            _mem.construct(i + n, *i);
+            _mem.destroy(i);
+        }
+    }
+
 
     /**
  * @brief 

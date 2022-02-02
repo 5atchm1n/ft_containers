@@ -44,10 +44,9 @@ namespace ft
  * @param first         start of elements to copy 
  * @param last          end of elements to copy 
  */
-
     template <typename _Tp, typename _Alloc>
     template <typename _Iterator>
-    vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type *)
+    vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type*)
     {
         difference_type diff = last - first;
 
@@ -56,6 +55,7 @@ namespace ft
         this->_realloc_empty(diff);
         std::uninitialized_copy(first, last, this->_start);
     }
+
 
 /**
  * @brief Destructor

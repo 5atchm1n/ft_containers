@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 16:31:59 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/01 23:36:10 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/02 01:25:31y satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
             this->_size = size;
         }
         if (size > this->_size)
-            this->_realloc(size, val);
+            this->_realloc_fill(size, val);
     }
 
     template <typename _Tp, typename _Alloc>
@@ -91,38 +91,50 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     void
     vector<_Tp, _Alloc>::insert(iterator position, size_type n, const value_type &val)
     {
-        const difference_type old_pos = position - begin();
+        const difference_type index = position - begin();
+        const difference_type pos_end = end() - begin();
+        size_type old_size = size();
+
+        if (old_size == 0)
+            return push_back(val);
         if (this->_size + n > capacity())
             this->_realloc(this->_size + n);
-        iterator    index = this->_start + old_pos;
-        for (reverse_iterator it = begin(); it != index; it++)
-        {
-            std::cout << "test" << std::endl;
-            this->_mem.construct(it - n, val);
-            this->_mem.destroy(it);
-        }
-        for (size_type i = 0; i < n; i++)
-            this->_mem.construct(index + i, val);
-        this->_size += n;
+        
+        iterator    new_pos = this->_start + index;
+        iterator    old_end = this->_start + pos_end;
+        this->_move(n, new_pos, old_end);
+        for (iterator i = new_pos; i < new_pos + n; i++)
+            this->_mem.construct(i, val);
+        this->_size += n; 
     }
 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::insert(iterator position, const value_type &val)
     {
+        const difference_type index = position - begin();
         insert(position, 1, val);
-        return position;
+        return begin() + index;
     }
 
     template <typename _Tp, typename _Alloc>
     template <typename _Iterator>
     void
-    vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last)
+    vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last,typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
     {
-        (void)first;
-        (void)last;
-        (void)position;
+        const   difference_type index = position - begin();
+        const   difference_type pos_end = end() - begin();
+        const   difference_type csize = last - first;
+        if (size() + csize > capacity())
+            this->_realloc(size() + csize);
+        iterator    cpos = begin() + index;
+        iterator    cend = begin() + pos_end;
+        this->_move(csize, cpos, cend);
+        while (first != last)
+            this->_mem.construct(cpos++, *first++);
+        this->_size += csize;        
     }
+
 /* 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator

@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/01 23:59:23 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/02 01:12:33 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ namespace ft
         typedef typename _Alloc::pointer                pointer;
         typedef typename _Alloc::reference              reference;
         typedef typename _Alloc::const_reference        const_reference;
-
+        
     public:
 /**
  *  CONSTRUCTORS
@@ -52,7 +52,8 @@ namespace ft
                         const value_type &val = value_type(),
                         const allocator_type& alloc = allocator_type());
         template <typename _Iterator>
-        vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
+        vector(_Iterator first, _Iterator last,
+                typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
         vector( const vector &copy ) : _vector_base<_Tp, _Alloc>(copy) {}
         vector          &operator=(const vector &x);
 /**
@@ -104,7 +105,7 @@ namespace ft
         iterator    insert(iterator position, const value_type &val);
         void        insert(iterator position, size_type n, const value_type &val);
         template <typename _Iterator>
-            void    insert(iterator position, _Iterator first, _Iterator last);
+            void    insert(iterator position, _Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0 );
         iterator    erase(iterator position);
         iterator    erase(iterator first, iterator last);
         void        swap(vector &val);
