@@ -52,7 +52,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     template <typename _Tp, typename _Alloc>
     template<typename _Iterator>
     void
-    vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last)
+    vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
     {
         while (first != last)
             push_back(*first++);
@@ -63,7 +63,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
     {
         for (size_type i = 0; i < n; i++)
-            push_back(val.begin() + i);    
+            push_back(val);    
     }
 
     template <typename _Tp, typename _Alloc>
@@ -135,21 +135,37 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         this->_size += csize;        
     }
 
-/* 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::erase(iterator position)
     {
-        
+        iterator last = end() - 1;
+        for (iterator i = position; i < last; i++)
+        {
+            this->_mem.destroy(i);
+            if (i != last)
+                this->_mem.construct(i, *(i + 1));
+        }
+        this->_size--;
+        return position;
     }
 
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::erase(iterator first, iterator last)
     {
-        
+        difference_type size = last - first;
+        iterator old_last = end() - 1;
+        for (iterator i = first; i < old_last; i++)
+        {
+            this->_mem.destroy(i);
+            if (i + size <= old_last)
+                this->_mem.construct(i, *(i + size));
+        }
+        this->_size -= size;
+        return first;
     }
-*/
+
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::swap(vector &val)

@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/02 01:12:33 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/03 06:50:03 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ namespace ft
  *  MODIFIERS
  */
         template <typename _Iterator>
-            void    assign(_Iterator first, _Iterator last);
+            void    assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0);
         void        assign(size_type n, const value_type &val);
         void        push_back(const value_type &val);
         void        pop_back();
