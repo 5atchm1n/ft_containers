@@ -58,7 +58,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         this->_realloc_empty(static_cast<size_type>(size));
         for (iterator i = begin(); i < begin() + size; i++)
             this->_mem.construct(i, *first++);
-        this->_size = static_cast<size_type>(size);
+        this->_size = size;
     }
 
     template <typename _Tp, typename _Alloc>
