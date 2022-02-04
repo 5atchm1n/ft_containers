@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/03 06:50:03 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/04 13:03:26 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ namespace ft
 /**
  *  CONSTRUCTORS
  */
-        explicit vector() : _vector_base<_Tp, _Alloc>() {}                                            // default
+        explicit vector() : _vector_base<_Tp, _Alloc>() {}
         explicit vector(size_type size,
                         const value_type &val = value_type(),
                         const allocator_type& alloc = allocator_type());
         template <typename _Iterator>
         vector(_Iterator first, _Iterator last,
-                typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0); // range
+                typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0);
         vector( const vector &copy ) : _vector_base<_Tp, _Alloc>(copy) {}
         vector          &operator=(const vector &x);
 /**

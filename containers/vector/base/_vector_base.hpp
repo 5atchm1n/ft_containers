@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _vector_base.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/02 17:37:13 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/04 14:33:59 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@
  * @param _size     number of objects in the vector
  * @param _capacity number of objects that the vector can hold
 
-
-**************************************************************/
+*****************************************************************/
 namespace ft
 {
     template <typename _Tp, typename _Alloc = std::allocator<_Tp> >
@@ -68,7 +67,7 @@ namespace ft
         void _bounds_check(_size_type n) const;
     };
 
-    /**
+/**
  * @brief default contructor
  * start with a default capacity
  */
@@ -78,7 +77,7 @@ namespace ft
         _start = _mem.allocate(_capacity);
     }
 
-    /**
+/**
  * @brief Construct a new vector base object
  * @param size  the size of the of vector
  * @param value the value to fill
@@ -113,7 +112,8 @@ namespace ft
             _mem.destroy(_start + i);
         _mem.deallocate(_start, _capacity);
     }
-    /**
+    
+/**
  * @brief   Empty allocation helper
  */
     template <typename _Tp, typename _Alloc>
@@ -122,9 +122,10 @@ namespace ft
     {
         _mem.deallocate(_start, _capacity);
         _start = _mem.allocate(size);
+        _capacity = size;
     }
 
-    /**
+/**
  * @brief allocation helper
  * @param 
  */
@@ -147,7 +148,7 @@ namespace ft
         }
     }
 
-    /**
+/**
  * @brief reallocated and copy in value
  */
     template <typename _Tp, typename _Alloc>
@@ -185,7 +186,7 @@ namespace ft
     }
 
 
-    /**
+/**
  * @brief 
  */
     template <typename _Tp, typename _Alloc>
@@ -205,7 +206,7 @@ namespace ft
         _mem.construct(_start + _size, value);
     }
 
-    /**
+/**
  * @brief 
  */
     template <typename _Tp, typename _Alloc>
@@ -215,7 +216,8 @@ namespace ft
         if (n > _mem.max_size())
             throw std::out_of_range("vector");
     }
-    /**
+
+/**
  * @brief 
  */
     template <typename _Tp, typename _Alloc>
@@ -225,7 +227,8 @@ namespace ft
         if (n > _size)
             throw std::out_of_range("vector");
     }
-    /**
+
+/**
  * @brief Destroy the vector base object
  */
     template <typename _Tp, typename _Alloc>

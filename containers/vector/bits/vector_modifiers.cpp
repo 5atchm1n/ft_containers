@@ -54,17 +54,22 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     void
     vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
     {
-        size_type size = last - first;
-        this->_realloc_empty(size);
-        for (iterator i = begin(); i < size; i++)
+        difference_type size = last - first;
+        this->_realloc_empty(static_cast<size_type>(size));
+        for (iterator i = begin(); i < begin() + size; i++)
             this->_mem.construct(i, *first++);
+        this->_size = static_cast<size_type>(size);
     }
 
     template <typename _Tp, typename _Alloc>
     void
     vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
     {
-        this->_realloc_fill(n, val);
+        if (n > capacity())
+            this->_realloc_empty(n);
+        for (iterator i = begin(); i < begin() + n; i++)
+            this->_mem.construct(i, val);
+        this->_size = n;
     }
 
     template <typename _Tp, typename _Alloc>
