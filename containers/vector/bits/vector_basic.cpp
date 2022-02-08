@@ -48,7 +48,7 @@ namespace ft
     template <typename _Iterator>
     vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type*)
     {
-        difference_type diff = last - first; 
+        difference_type diff = std::distance(first, last);
         this->_size = diff;
         this->_capacity = diff * DFLT_SCALE;
         this->_realloc_empty(diff);

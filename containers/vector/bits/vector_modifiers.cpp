@@ -54,7 +54,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     void
     vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
     {
-        difference_type size = last - first;
+        difference_type size = std::distance(first, last);
         this->_realloc_empty(static_cast<size_type>(size));
         for (iterator i = begin(); i < begin() + size; i++)
             this->_mem.construct(i, *first++);
@@ -130,11 +130,17 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         const   difference_type index = position - begin();
         const   difference_type pos_end = end() - begin();
-        const   difference_type csize = last - first;
+        const   difference_type csize = std::distance(first, last);
         if (size() + csize > capacity())
             this->_realloc(size() + csize);
         iterator    cpos = begin() + index;
         iterator    cend = begin() + pos_end;
+        if (cpos == cend)
+        {
+            while (first != last)
+                push_back(*first++);        
+            return ;
+        }
         this->_move(csize, cpos, cend);
         while (first != last)
             this->_mem.construct(cpos++, *first++);
@@ -160,7 +166,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     typename vector<_Tp, _Alloc>::iterator
     vector<_Tp, _Alloc>::erase(iterator first, iterator last)
     {
-        difference_type size = last - first;
+        difference_type size = std::distance(first, last);
         iterator old_last = end() - 1;
         for (iterator i = first; i < old_last; i++)
         {
