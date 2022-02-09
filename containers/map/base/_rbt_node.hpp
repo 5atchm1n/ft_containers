@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/08 03:02:42 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/09 02:31:12 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 #include <cstddef>
 #include <memory>
+#include <iostream>
 
 #define SINGLE_NODE 1
 
 namespace ft {
 
-template <typename _Tp, typename _Alloc = std::allocator<_Tp> >
-class _rb_node
+template <typename _Tp>
+struct _rb_node
 {
     private:
-        _Alloc _data_alloc;
+        void    _copy_node(const _rb_node &copy);
     
     public:
         bool        isred;
@@ -32,46 +33,49 @@ class _rb_node
         _rb_node    *left;
          _rb_node    *right;
         _Tp         *data;
-        
-        _rb_node();
-        _rb_node(const _rb_node &copy);
+    //  HELPER FUNCTORS
         _rb_node    operator=(const _rb_node &val);
-        ~_rb_node();
+        void        _init_node(_rb_node *_nil);
 };
 
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>::_rb_node()
+
+template <typename _Tp>
+void
+_rb_node<_Tp>::_init_node(_rb_node *_nil)
 {
-    isred = false;
-    parent = NULL;
-    left = NULL;
-    right = NULL;
-    data =  _data_alloc.allocate(SINGLE_NODE); 
+    parent = _nil;
+    left = _nil;
+    right = _nil;
+    data = NULL;
 }
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>::_rb_node(const _rb_node &copy)
+
+template <typename _Tp>
+void
+_rb_node<_Tp>::_copy_node(const _rb_node &copy)
 {
     isred = copy.isred;
     parent = copy.parent;
     left = copy.left;
     right = copy.right;
-    data = _data_alloc.allocate(SINGLE_NODE);
-    _data_alloc.construct(data, *copy.data);
+    data = copy.data; 
 }
 
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>
-_rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
+template <typename _Tp>
+_rb_node<_Tp>
+_rb_node<_Tp>::operator=(const _rb_node &val)
 {
-    _rb_node _new(val);
-    return _new;        
+    _copy_node(val);
+    return *this;        
 }
 
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>::~_rb_node()
+template <typename _Tp>
+std::ostream& operator<<(std::ostream& stream, const _rb_node<_Tp> &val)
 {
-    _data_alloc.destroy(data);
-    _data_alloc.deallocate(data, SINGLE_NODE);
+    stream << val.isred << "\n";
+    stream << val.parent << "\n";
+    stream << val.left << "\t" << val.right << "\n";
+    stream << val.data;
+    return stream;
 }
 
 }

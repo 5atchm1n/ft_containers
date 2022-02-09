@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _red_black_tree.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/08 17:39:15 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:04:55by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,27 @@ template <typename _Tp, typename _Alloc>
 _rbtree<_Tp, _Alloc>::_rbtree()
 {
     _root = _node_alloc.allocate(SINGLE_TREE);
+    _nil = _node_alloc.allocate(SINGLE_TREE);
+    _root->_init_node(_nil);
+    _root->data = _data_alloc.allocate(SINGLE_TREE);
+}
+
+template <typename _Tp, typename _Alloc>
+_rbtree<_Tp, _Alloc>::_rbtree(const _Tp &value)
+{
+    _root = _node_alloc.allocate(SINGLE_TREE);
+    _nil = _node_alloc.allocate(SINGLE_TREE);
+    _root->_init_node(_nil);
+    _root->data = _data_alloc.allocate(SINGLE_TREE);
+    _data_alloc.construct(_root->data, value);
 }
 
 template <typename _Tp, typename _Alloc>
 _rbtree<_Tp, _Alloc>::~_rbtree()
 {
+    _data_alloc.deallocate(_root->data, SINGLE_TREE);
     _node_alloc.deallocate(_root, SINGLE_TREE);
+    _node_alloc.deallocate(_nil, SINGLE_TREE);
 }
 
 template <typename _Tp, typename _Alloc>
@@ -63,6 +78,15 @@ _rbtree<_Tp, _Alloc>::_rbtree_rotate_right(const node_type *current)
         current->parent->left = tmp;
     tmp->right = current;
     current->parent = tmp;
+}
+
+template <typename _Tp, typename _Alloc>
+std::ostream& operator<<(std::ostream& stream, const _rbtree<_Tp, _Alloc> &val)
+{
+    stream << val._root << "\n";
+    stream << val._nil << "\n";
+    stream << *val._root;
+    return stream;
 }
 
 }   // END NAMESPACE FT
