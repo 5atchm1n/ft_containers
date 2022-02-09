@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _red_black_tree.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/09 02:25:16 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/09 18:32:44 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,22 @@ class _rbtree
         typedef size_t                          size_type;
         typedef _Tp                             value_type;
         typedef _Alloc                          data_allocator;
-        typedef _rb_node<_Tp>           node_type;
+        typedef _rb_node<_Tp>                   node_type;
+        typedef _rb_node<_Tp>*                  node_pointer;
     
         node_allocator          _node_alloc;
         data_allocator          _data_alloc;
+
+        node_pointer    _create_node(const value_type &val);
+    
     public:
         node_type               *_root;
         node_type               *_nil;
 
         void _rbtree_rotate_left(const node_type *current_node);
         void _rbtree_rotate_right(const node_type *current_node);
+        void _insert_node(const value_type &val);
+        
 
 
     public: 

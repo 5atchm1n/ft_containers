@@ -17,10 +17,9 @@ namespace ft {
 template <typename _Tp, typename _Alloc>
 _rbtree<_Tp, _Alloc>::_rbtree()
 {
-    _root = _node_alloc.allocate(SINGLE_TREE);
     _nil = _node_alloc.allocate(SINGLE_TREE);
-    _root->_init_node(_nil);
-    _root->data = _data_alloc.allocate(SINGLE_TREE);
+    _nil->_init_node(_nil);
+    _root = _nil;
 }
 
 template <typename _Tp, typename _Alloc>
@@ -36,9 +35,12 @@ _rbtree<_Tp, _Alloc>::_rbtree(const _Tp &value)
 template <typename _Tp, typename _Alloc>
 _rbtree<_Tp, _Alloc>::~_rbtree()
 {
-    _data_alloc.deallocate(_root->data, SINGLE_TREE);
-    _node_alloc.deallocate(_root, SINGLE_TREE);
     _node_alloc.deallocate(_nil, SINGLE_TREE);
+    if (_root != _nil)
+    {
+        _data_alloc.deallocate(_root->data, SINGLE_TREE);
+        _node_alloc.deallocate(_root, SINGLE_TREE);
+    }
 }
 
 template <typename _Tp, typename _Alloc>
@@ -48,7 +50,7 @@ _rbtree<_Tp, _Alloc>::_rbtree_rotate_left(const node_type *current)
     node_type   *tmp = current->right;
     
     current->right = tmp->left;
-    if (tmp->left != NULL)
+    if (tmp->left != _nil)
         tmp->left->parent = current;
     tmp->parent = current->parent;
     if (current == _root)
@@ -67,7 +69,7 @@ _rbtree<_Tp, _Alloc>::_rbtree_rotate_right(const node_type *current)
 {
     node_type   *tmp= current->left;
     current->left = tmp->right;
-    if (tmp->right != NULL)
+    if (tmp->right != _nil)
         tmp->right->parent = current;
     tmp->parent = current->parent;
     if (current == _root)
@@ -81,11 +83,53 @@ _rbtree<_Tp, _Alloc>::_rbtree_rotate_right(const node_type *current)
 }
 
 template <typename _Tp, typename _Alloc>
+typename _rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_create_node(const value_type &val)
+{
+    node_pointer    new_node;
+    new_node = _node_alloc.allocate(SINGLE_NODE);
+    new_node->_init_node(_nil);
+    new_node->data = _data_alloc.allocate(SINGLE_NODE);
+    _data_alloc.construct(new_node->data, val);
+    return new_node;
+}
+
+
+
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
+{
+    node_pointer new_node = _create_node(val);
+    if (_root == _nil)
+        _root = new_node;
+    else
+    {
+        node_pointer tmp = _root;
+        node_pointer pos;
+        while (tmp != _nil)
+        {
+            pos = tmp;
+            if (val < *tmp->data)
+                tmp = tmp->left;
+            else
+                tmp = tmp->right;
+        }
+        new_node->parent = pos;
+        if (*new_node->data > *pos->data)
+            pos->right = new_node;
+        else
+            pos->left = new_node;
+        new_node->isred = true;
+    }
+}
+
+template <typename _Tp, typename _Alloc>
 std::ostream& operator<<(std::ostream& stream, const _rbtree<_Tp, _Alloc> &val)
 {
-    stream << val._root << "\n";
-    stream << val._nil << "\n";
-    stream << *val._root;
+    stream << "root = " << val._root << "\n";
+    stream << "nil = " << val._nil << "\n";
+    stream << "node : " << *val._root;
     return stream;
 }
 

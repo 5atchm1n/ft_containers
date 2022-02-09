@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _test-rbt.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:54:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/09 02:28:46 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/09 19:29:34 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 int main(void)
 {
-    ft::_rbtree<ft::vector<int> > tree;
+    ft::_rbtree<int> tree;
+    std::cout << tree << std::endl;
 
-    //ft::_rb_node<int> node;
-    
-    //std::cout << node << std::endl;
+    tree._insert_node(5);
+    std::cout << tree << std::endl;
+    tree._insert_node(10);
     std::cout << tree << std::endl;
 
     return 0;

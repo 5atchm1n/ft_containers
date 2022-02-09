@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_node.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/09 02:31:12 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/09 18:58:31 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ _rb_node<_Tp>::operator=(const _rb_node &val)
 template <typename _Tp>
 std::ostream& operator<<(std::ostream& stream, const _rb_node<_Tp> &val)
 {
-    stream << val.isred << "\n";
-    stream << val.parent << "\n";
-    stream << val.left << "\t" << val.right << "\n";
-    stream << val.data;
+    stream << "isred = " << val.isred << "\n";
+    stream << "parent: " << val.parent << "\n";
+    stream << "left: " << val.left << "\tright: " << val.right << "\n";
+    stream << "data: " << val.data;
     return stream;
 }
 
