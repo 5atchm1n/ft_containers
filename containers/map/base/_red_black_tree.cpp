@@ -94,7 +94,87 @@ _rbtree<_Tp, _Alloc>::_create_node(const value_type &val)
     return new_node;
 }
 
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_insert_node(node_pointer parent, node_pointer new_node)
+{
+    if (*new_node->data > *parent->data)
+    {
+        if (parent->right == _nil)
+        {
+            parent->right = new_node;
+            new_node->parent = parent;
+        }
+        return _insert_node(parent->right, new_node);
+    }
+    if (parent->left == _nil)
+    {
+        parent->left = new_node;
+        new_node->parent = parent;
+        return ;
+    }
+    return _insert_node(parent->left, new_node);
+}
 
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_check_color(node_pointer node)
+{
+    if (node == _root)
+        return ;
+    if (node->isred = true && node->parent->isred = true)
+        _correct_tree(node);
+    _check_color(node->parent);
+}
+
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_correct_tree(node_pointer node)
+{
+    if (node->parent->parent->left == node->parent)
+    {
+        if (node->parent->parent->right == _nil && node->parent->parent->right->isred = false)
+            return _rotate(node);
+        if (node->parent->parent->right != _nil)
+            node->parent->parent->right->isred = false;
+        node->parent->parent->isred = true;
+        node->parent->isred = false;
+    
+    }
+    if (node->parent->parent->right == node->parent)
+    {
+        if (node->parent->parent->left == _nil && node->parent->parent->left->isred = false)
+            return _rotate(node);
+        if (node->parent->parent->left != _nil)
+            node->parent->parent->left->isred = false;
+        node->parent->parent->isred = true;
+        node->parent->isred = false; 
+    }
+
+}
+
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_rotate(node_pointer node)
+{
+    if (node->parent->left = node)
+    {
+        if (node->parent->parent->left == node->parent)
+        {
+            _rbtree_rotate_right(node->parent->parent);
+            node->isred = true;
+            node->parent->isred = true;
+            if (node->parent->right != _nil)
+                node->parent->right->isred = true;
+            return ;
+        }
+        _right_left_rotate(node->parent->parent);
+        node->isred = false;
+        node->right->isred = true;
+        node->left->isred = true;
+        return ;
+    }
+}
 
 template <typename _Tp, typename _Alloc>
 void
@@ -102,26 +182,13 @@ _rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
 {
     node_pointer new_node = _create_node(val);
     if (_root == _nil)
-        _root = new_node;
-    else
     {
-        node_pointer tmp = _root;
-        node_pointer pos;
-        while (tmp != _nil)
-        {
-            pos = tmp;
-            if (val < *tmp->data)
-                tmp = tmp->left;
-            else
-                tmp = tmp->right;
-        }
-        new_node->parent = pos;
-        if (*new_node->data > *pos->data)
-            pos->right = new_node;
-        else
-            pos->left = new_node;
-        new_node->isred = true;
+        _root = new_node;
+        _root->isred = false;
+        _size++;
+        return ;
     }
+    _insert_node(_root, new_node);
 }
 
 template <typename _Tp, typename _Alloc>

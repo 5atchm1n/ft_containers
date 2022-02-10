@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/09 18:32:44 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/10 18:46:49 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,15 @@ class _rbtree
     public:
         node_type               *_root;
         node_type               *_nil;
+        size_type               _size;
 
         void _rbtree_rotate_left(const node_type *current_node);
         void _rbtree_rotate_right(const node_type *current_node);
         void _insert_node(const value_type &val);
+        void _insert_node(node_pointer parent, node_pointer new_node);
+        void _check_color(node_pointer node);
+        void _correct_tree(node_pointer node);
+        void _rotate(node_pointer node);
         
 
 
