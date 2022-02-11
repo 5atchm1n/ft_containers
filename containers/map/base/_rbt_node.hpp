@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/09 18:58:31 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/11 15:18:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ _rb_node<_Tp>::_init_node(_rb_node *_nil)
     parent = _nil;
     left = _nil;
     right = _nil;
+    isred = true;
     data = NULL;
 }
 
