@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _test-rbt.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:54:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/11 15:16:07 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/13 12:53:13 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,18 @@
 int main(void)
 {
     ft::_rbtree<int> tree;
-    std::cout << tree << std::endl;
 
     tree._insert_node(5);
     std::cout << tree << std::endl;
+    std::cout << "ADD 10" << std::endl;
     tree._insert_node(10);
+    std::cout << "ADD 12" << std::endl;
     tree._insert_node(12);
+    std::cout << tree << std::endl;
+    std::cout << "ADD 8" << std::endl;
     tree._insert_node(8);
+    tree._insert_node(3);
+    tree._insert_node(14);
     std::cout << tree << std::endl;
 
     return 0;

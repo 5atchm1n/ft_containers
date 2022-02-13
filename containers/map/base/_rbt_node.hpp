@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_node.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/11 15:18:43 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/13 12:01:44 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ _rb_node<_Tp>::_init_node(_rb_node *_nil)
     parent = _nil;
     left = _nil;
     right = _nil;
-    isred = true;
+    isred = false;
     data = NULL;
 }
 
@@ -73,9 +73,12 @@ template <typename _Tp>
 std::ostream& operator<<(std::ostream& stream, const _rb_node<_Tp> &val)
 {
     stream << "isred = " << val.isred << "\n";
+    stream << "node = " << &val << "\n";
     stream << "parent: " << val.parent << "\n";
     stream << "left: " << val.left << "\tright: " << val.right << "\n";
     stream << "data: " << val.data;
+    if (val.data != NULL)
+        stream << " " << *val.data;
     return stream;
 }
 
