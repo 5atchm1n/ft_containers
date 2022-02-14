@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/14 16:25:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/14 17:05:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ class _rbtree
         // Member Functions
         void _insert_node(const value_type &val);
         void _delete_node(node_pointer node);
-        node_pointer    _rbtree_minimum() const;
-        node_pointer    _rbtree_maximum() const;
+        node_pointer    _rbtree_successor(node_pointer node) const;
+        node_pointer    _rbtree_minimum(node_pointer node) const;
+        node_pointer    _rbtree_maximum(node_pointer node) const;
         node_pointer    _search_tree(const value_type &val) const;
         // Destructor
         ~_rbtree();

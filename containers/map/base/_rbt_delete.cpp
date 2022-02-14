@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/14 14:54:13 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/14 17:40:54 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ _rbtree<_Tp, _Alloc>::_delete_node(node_pointer node)
 {
     node_pointer tmp_x;
     node_pointer tmp_y;
-    tmp = node;
+    tmp_y = node;
     bool node_isred = tmp_y->isred;
     if (node->left == _nil)
     {
@@ -62,10 +62,82 @@ _rbtree<_Tp, _Alloc>::_delete_node(node_pointer node)
         _rbtree_transplant(node, tmp_y);
         tmp_y->left = node->left;
         tmp_y->left->parent = tmp_y;
-        tmp_Y->isred = node->isred;
+        tmp_y->isred = node->isred;
     }
     if (node_isred == false)
         _delete_node_fix(tmp_x);
+}
+
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_delete_node_fix(node_pointer node)
+{
+    while (node != _root && node->isred == false)
+    {
+        if (node == node->parent->left)
+        {
+            node_pointer tmp_w = node->parent->right;
+            if (tmp_w->isred == true)
+            {
+                tmp_w->isred = false;
+                node->parent->isred = true;
+                _rbtree_rotate_left(node->parent);
+                tmp_w = node->parent->right;
+            }
+            if (tmp_w->left->isred == false && tmp_w->right->isred == false)
+            {
+                tmp_w->isred = true;
+                node = node->parent;
+            }
+            else if (tmp_w->right->isred == false)
+            {
+                tmp_w->left->isred = false;
+                tmp_w->isred = true;
+                _rbtree_rotate_right(tmp_w);
+                tmp_w = node->parent->right;
+            }
+            else
+            {
+                tmp_w->isred = node->parent->isred;
+                node->parent->isred = false;
+                tmp_w->right->isred = false;
+                _rbtree_rotate_left(node->parent);
+                node = _root;
+            }
+        }
+        else
+        {
+            node_pointer tmp_w = node->parent->left;
+            if (tmp_w->isred == true)
+            {
+                tmp_w->isred = false;
+                node->parent->isred = true;
+                _rbtree_rotate_right(node->parent);
+                tmp_w = node->parent->left;
+            }
+            if (tmp_w->right->isred == false && tmp_w->left->isred == false)
+            {
+                tmp_w->isred = true;
+                node = node->parent;
+            }
+            else if (tmp_w->left->isred == false)
+            {
+                tmp_w->right->isred = false;
+                tmp_w->isred = true;
+                _rbtree_rotate_left(tmp_w);
+                tmp_w = node->parent->left;
+            }
+            else
+            {
+                tmp_w->isred = node->parent->isred;
+                node->parent->isred = false;
+                tmp_w->right->isred = false;
+                _rbtree_rotate_right(node->parent);
+                node = _root;
+            }
+        }
+    }
+    node->isred = false;
 }
 
 }   // END NAMESPACE FT

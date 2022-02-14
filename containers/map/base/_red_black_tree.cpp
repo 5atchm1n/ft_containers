@@ -60,7 +60,7 @@ _rbtree<_Tp, _Alloc>::~_rbtree()
  */
 
 template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::node_pointer
+typename _rbtree<_Tp, _Alloc>::node_pointer
 _rbtree<_Tp, _Alloc>::_search_tree(const value_type &val) const
 {
     node_pointer tmp = _root;
@@ -74,23 +74,52 @@ _rbtree<_Tp, _Alloc>::_search_tree(const value_type &val) const
     return (tmp);
 }
 
+/**
+ * @brief find smallest value in tree
+ * 
+ * @return poitner to node containing smallest value 
+ */
 template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_rbtree_minimum() const
+typename _rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_rbtree_minimum(node_pointer node) const
 {
-    node_pointer tmp = _root;
+    node_pointer tmp = node;
     while (tmp->left != _nil)
         tmp = tmp->left;
     return tmp;
 }
-
+/**
+ * @brief find largest value in tree 
+ * 
+ * @return poitner to node containing largest value
+ */
 template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_rbtree_maximum() const
+typename _rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_rbtree_maximum(node_pointer node) const
 {
-    node_pointer tmp = _root;
+    node_pointer tmp = node;
     while (tmp->right != _nil)
         tmp = tmp->right;
+    return tmp;
+}
+
+/**
+ * @brief find the in order successor
+ *  
+ * 
+ */
+template <typename _Tp, typename _Alloc>
+typename _rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_rbtree_successor(node_pointer node) const
+{
+    if (node->right != _nil)
+        return _rbtree_minimum(node->right);
+    node_pointer tmp = node->parent;
+    while (tmp != _nil && node == tmp->right)
+    {
+        node = tmp;
+        tmp = tmp->parent;
+    }
     return tmp;
 }
 
@@ -135,4 +164,5 @@ std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Alloc> &val)
         stream << *tmpL << "\n";
     return stream;
 }
-/ END NAMESPACE FT
+
+}   // END NAMESPACE FT
