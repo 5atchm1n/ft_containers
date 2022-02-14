@@ -52,6 +52,58 @@ _rbtree<_Tp, _Alloc>::~_rbtree()
     }
 }
 
+/**
+ * @brief iterative search
+ * 
+ * @param val value to find
+ * @return pointer to node
+ */
+
+template <typename _Tp, typename _Alloc>
+_rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_search_tree(const value_type &val) const
+{
+    node_pointer tmp = _root;
+    while (tmp != _nil && *tmp->data != val)
+    {
+        if (val < *tmp->data)
+            tmp = tmp->left;
+        else
+            tmp = tmp->right;
+    }
+    return (tmp);
+}
+
+template <typename _Tp, typename _Alloc>
+_rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_rbtree_minimum() const
+{
+    node_pointer tmp = _root;
+    while (tmp->left != _nil)
+        tmp = tmp->left;
+    return tmp;
+}
+
+template <typename _Tp, typename _Alloc>
+_rbtree<_Tp, _Alloc>::node_pointer
+_rbtree<_Tp, _Alloc>::_rbtree_maximum() const
+{
+    node_pointer tmp = _root;
+    while (tmp->right != _nil)
+        tmp = tmp->right;
+    return tmp;
+}
+
+/**
+ * @brief 
+ * 
+ * @tparam _Tp 
+ * @tparam _Alloc 
+ * @param stream 
+ * @param val 
+ * @return std::ostream& 
+ */
+
 template <typename _Tp, typename _Alloc>
 std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Alloc> &val)
 {

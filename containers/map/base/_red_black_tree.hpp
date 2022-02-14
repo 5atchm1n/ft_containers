@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _red_black_tree.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/13 21:10:27 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/14 16:25:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ class _rbtree
         void _rbtree_rotate_left(node_type *current_node);
         void _rbtree_rotate_right(node_type *current_node);
         void _insert_node_fix(node_pointer node);
+        void _rbtree_transplant(node_pointer node_a, node_pointer node_b);
+        void _delete_node_fix(node_pointer node);
 
     public: 
         // Constructors
@@ -53,6 +55,10 @@ class _rbtree
         _rbtree(const _Tp &value);
         // Member Functions
         void _insert_node(const value_type &val);
+        void _delete_node(node_pointer node);
+        node_pointer    _rbtree_minimum() const;
+        node_pointer    _rbtree_maximum() const;
+        node_pointer    _search_tree(const value_type &val) const;
         // Destructor
         ~_rbtree();
 };
@@ -61,5 +67,7 @@ class _rbtree
 
 #include <_red_black_tree.cpp>
 #include <_rbt_rotations.cpp>
+#include <_rbt_insert.cpp>
+#include <_rbt_delete.cpp>
 
 #endif // END _RED_BLACK_TREE_H

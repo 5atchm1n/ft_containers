@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_insert.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/13 21:21:18 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/14 12:02:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ _rbtree<_Tp, _Alloc>::_insert_node_fix(node_pointer node)
 {
     while (node->parent->isred == true)
     {
-        if (node->parent == node->parent->parent->left)
+        if (node->parent == node->parent->parent->left)     // if aunt is red
         {
-            node_pointer y = node->parent->parent->right;
+            node_pointer y = node->parent->parent->right;   // check uncle
             if (y->isred == true)
             {
                 node->parent->isred = false;
