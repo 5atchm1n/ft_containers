@@ -44,12 +44,9 @@ _rbtree<_Tp, _Alloc>::_rbtree(const _Tp &value)
 template <typename _Tp, typename _Alloc>
 _rbtree<_Tp, _Alloc>::~_rbtree()
 {
-    _node_alloc.deallocate(_nil, SINGLE_TREE);
     if (_root != _nil)
-    {
-        _data_alloc.deallocate(_root->data, SINGLE_TREE);
-    _node_alloc.deallocate(_root, SINGLE_TREE);
-    }
+        _clean_tree(_root);
+    _node_alloc.deallocate(_nil, SINGLE_TREE);
 }
 
 /**
@@ -122,6 +119,20 @@ _rbtree<_Tp, _Alloc>::_rbtree_successor(node_pointer node) const
     }
     return tmp;
 }
+
+template <typename _Tp, typename _Alloc>
+void
+_rbtree<_Tp, _Alloc>::_clean_tree(node_pointer node)
+{
+    if (node != _nil)
+    {
+        _clean_tree(node->left);
+        _data_alloc.deallocate(node->data, SINGLE_NODE);
+        _node_alloc.deallocate(node, SINGLE_NODE);
+        _clean_tree(node->right);
+    }
+}
+
 
 /**
  * @brief 

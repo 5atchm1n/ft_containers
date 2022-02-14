@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/14 17:05:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/14 17:49:08 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ class _rbtree
         void _insert_node_fix(node_pointer node);
         void _rbtree_transplant(node_pointer node_a, node_pointer node_b);
         void _delete_node_fix(node_pointer node);
+        void _clean_tree(node_pointer node);
 
     public: 
         // Constructors
