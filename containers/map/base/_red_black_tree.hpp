@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/14 17:49:08 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/15 01:53:56 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ class _rbtree
         size_type               _size;
     private:
         // Helper Functions
-        void _rbtree_rotate_left(node_type *current_node);
-        void _rbtree_rotate_right(node_type *current_node);
-        void _insert_node_fix(node_pointer node);
-        void _rbtree_transplant(node_pointer node_a, node_pointer node_b);
-        void _delete_node_fix(node_pointer node);
-        void _clean_tree(node_pointer node);
+        void            _rbtree_rotate_left(node_type *current_node);
+        void            _rbtree_rotate_right(node_type *current_node);
+        void            _insert_node_fix(node_pointer node);
+        void            _rbtree_transplant(node_pointer node_a, node_pointer node_b);
+        void            _delete_node_fix(node_pointer node);
+        void            _clean_tree(node_pointer node);
+        node_pointer    _increment(node_pointer node);
+        node_pointer    _decrement(node_pointer node);
 
     public: 
         // Constructors
@@ -71,5 +73,6 @@ class _rbtree
 #include <_rbt_rotations.cpp>
 #include <_rbt_insert.cpp>
 #include <_rbt_delete.cpp>
+#include <_rbt_traversal.cpp>
 
 #endif // END _RED_BLACK_TREE_H

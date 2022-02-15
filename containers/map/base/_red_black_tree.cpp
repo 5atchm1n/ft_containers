@@ -102,8 +102,7 @@ _rbtree<_Tp, _Alloc>::_rbtree_maximum(node_pointer node) const
 
 /**
  * @brief find the in order successor
- *  
- * 
+ * @return pointer to in order successor 
  */
 template <typename _Tp, typename _Alloc>
 typename _rbtree<_Tp, _Alloc>::node_pointer
@@ -119,7 +118,9 @@ _rbtree<_Tp, _Alloc>::_rbtree_successor(node_pointer node) const
     }
     return tmp;
 }
-
+/**
+ * @brief helper function to clean tree - recursive
+ */ 
 template <typename _Tp, typename _Alloc>
 void
 _rbtree<_Tp, _Alloc>::_clean_tree(node_pointer node)
@@ -127,20 +128,14 @@ _rbtree<_Tp, _Alloc>::_clean_tree(node_pointer node)
     if (node != _nil)
     {
         _clean_tree(node->left);
+        _clean_tree(node->right);
         _data_alloc.deallocate(node->data, SINGLE_NODE);
         _node_alloc.deallocate(node, SINGLE_NODE);
-        _clean_tree(node->right);
     }
 }
 
-
 /**
- * @brief 
- * 
- * @tparam _Tp 
- * @tparam _Alloc 
- * @param stream 
- * @param val 
+ * @brief print tree helper
  * @return std::ostream& 
  */
 
