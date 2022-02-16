@@ -6,11 +6,14 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:06:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/15 12:48:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/16 11:49:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <memory>
+
+namespace ft
+{
 
 template <typename _T1, typename _T2>
 struct pair
@@ -70,3 +73,5 @@ struct pair
         return pair<_T1, _T2>(x, y)
     }
 };
+
+}   // END NAMESPACE FT
