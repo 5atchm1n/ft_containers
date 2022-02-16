@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 01:34:31 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/15 01:47:34 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/16 17:14:14 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 namespace ft
 {
 
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_increment(node_pointer node)
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_increment(node_pointer node)
 {
     if (node->right != _nil)
     {
@@ -39,9 +39,9 @@ _rbtree<_Tp, _Alloc>::_increment(node_pointer node)
     return node;
 }
 
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_decrement(node_pointer node)
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_decrement(node_pointer node)
 {
     if (node->isred == true && node->parent->parent == node)
         node = node->right;

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/14 12:02:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/16 18:17:19 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ namespace ft
 /**
  * @brief create and initialize new node
  */
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_create_node(const value_type &val)
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
 {
     node_pointer new_node;
     new_node = _node_alloc.allocate(SINGLE_NODE);
@@ -30,9 +30,9 @@ _rbtree<_Tp, _Alloc>::_create_node(const value_type &val)
 /**
  * @brief insert node into tree
  */
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
+_rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val)
 {
     node_pointer new_node = _create_node(val);
     node_pointer y = _nil;
@@ -40,7 +40,7 @@ _rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
     while (x != _nil)
     {
         y = x;
-        if (*new_node->data < *x->data)
+        if (_key_compare(val, *x->data))
             x = x->left;
         else
             x = x->right;
@@ -48,7 +48,7 @@ _rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
     new_node->parent = y;
     if (y == _nil)
         _root = new_node;
-    else if (*new_node->data < *y->data)
+    else if (_key_compare(val, *y->data))
         y->left = new_node;
     else
         y->right = new_node;
@@ -63,9 +63,9 @@ _rbtree<_Tp, _Alloc>::_insert_node(const value_type &val)
  * @brief fix insert function
  * @param node node that was just added 
  */
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_insert_node_fix(node_pointer node)
+_rbtree<_Tp, _Cmp, _Alloc>::_insert_node_fix(node_pointer node)
 {
     while (node->parent->isred == true)
     {

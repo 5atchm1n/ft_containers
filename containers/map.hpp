@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:02:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/16 12:00:32 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/16 17:39:45 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ template <typename _Key, typename _Tp, typename _Cmp = std::less<_Key>, typename
 class map
 {
     public:
-        typedef _Key     key_type;
-        typedef _Tp       mapped_type;
-        typedef pair<const Key, _Tp> value_type;
-        typedef _Cmp key_compare;
-        typedef _Alloc  allocator_type;
+        typedef _Key                                key_type;
+        typedef _Tp                                 mapped_type;
+        typedef pair<const Key, _Tp>                value_type;
+        typedef _Cmp                                key_compare;
+        typedef _Alloc                              allocator_type;
 
         typedef typename _Alloc::reference          reference;
         typedef typename _Alloc::const_reference    const_reference;
+    private:
+        typedef _Alloc::value_type                  _alloc_value_type;
     
     public:
         class value_compare : public std::binary_functions<value_type, value_type, bool>
@@ -42,6 +44,8 @@ class map
                     return comp(x.first, y.first);
                 }
         };
+
+        _rbtree<_Tp, _Cmp, _Alloc>  tree;
 
 };
 

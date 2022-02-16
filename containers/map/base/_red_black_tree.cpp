@@ -17,8 +17,8 @@ namespace ft
 /**
  * @brief default contructor
  */
-template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::_rbtree()
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree()
 {
     _nil = _node_alloc.allocate(SINGLE_TREE);
     _nil->isred = false;
@@ -29,8 +29,8 @@ _rbtree<_Tp, _Alloc>::_rbtree()
 /**
  * @brief contructor with default
  */
-template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::_rbtree(const _Tp &value)
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value)
 {
     _root = _node_alloc.allocate(SINGLE_TREE);
     _nil = _node_alloc.allocate(SINGLE_TREE);
@@ -38,11 +38,28 @@ _rbtree<_Tp, _Alloc>::_rbtree(const _Tp &value)
     _root->data = _data_alloc.allocate(SINGLE_TREE);
     _data_alloc.construct(_root->data, value);
 }
+
+/**
+ * @brief contructor with default
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value, _Alloc allocator, _Cmp compare)
+{
+    _data_alloc = allocator;
+    //_node_alloc = allocator::template rebind<_rb_node<_Tp> >::other;
+    _key_compare = compare;
+    _root = _node_alloc.allocate(SINGLE_TREE);
+    _nil = _node_alloc.allocate(SINGLE_TREE);
+    _root->_init_node(_nil);
+    _root->data = _data_alloc.allocate(SINGLE_TREE);
+    _data_alloc.construct(_root->data, value);
+}
+
 /**
  * @brief destructor
  */
-template <typename _Tp, typename _Alloc>
-_rbtree<_Tp, _Alloc>::~_rbtree()
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::~_rbtree()
 {
     if (_root != _nil)
         _clean_tree(_root);
@@ -55,10 +72,9 @@ _rbtree<_Tp, _Alloc>::~_rbtree()
  * @param val value to find
  * @return pointer to node
  */
-
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_search_tree(const value_type &val) const
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_search_tree(const value_type &val) const
 {
     node_pointer tmp = _root;
     while (tmp != _nil && *tmp->data != val)
@@ -76,9 +92,9 @@ _rbtree<_Tp, _Alloc>::_search_tree(const value_type &val) const
  * 
  * @return poitner to node containing smallest value 
  */
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_rbtree_minimum(node_pointer node) const
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_minimum(node_pointer node) const
 {
     node_pointer tmp = node;
     while (tmp->left != _nil)
@@ -90,9 +106,9 @@ _rbtree<_Tp, _Alloc>::_rbtree_minimum(node_pointer node) const
  * 
  * @return poitner to node containing largest value
  */
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_rbtree_maximum(node_pointer node) const
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_maximum(node_pointer node) const
 {
     node_pointer tmp = node;
     while (tmp->right != _nil)
@@ -104,9 +120,9 @@ _rbtree<_Tp, _Alloc>::_rbtree_maximum(node_pointer node) const
  * @brief find the in order successor
  * @return pointer to in order successor 
  */
-template <typename _Tp, typename _Alloc>
-typename _rbtree<_Tp, _Alloc>::node_pointer
-_rbtree<_Tp, _Alloc>::_rbtree_successor(node_pointer node) const
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_successor(node_pointer node) const
 {
     if (node->right != _nil)
         return _rbtree_minimum(node->right);
@@ -121,9 +137,9 @@ _rbtree<_Tp, _Alloc>::_rbtree_successor(node_pointer node) const
 /**
  * @brief helper function to clean tree - recursive
  */ 
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_clean_tree(node_pointer node)
+_rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
 {
     if (node != _nil)
     {

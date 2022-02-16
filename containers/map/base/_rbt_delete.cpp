@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/14 17:40:54 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/16 17:15:30 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 namespace ft
 {
 
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_rbtree_transplant(node_pointer node_a, node_pointer node_b)
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_transplant(node_pointer node_a, node_pointer node_b)
 {
     if (node_a->parent == _nil)
         _root = node_b;
@@ -28,9 +28,9 @@ _rbtree<_Tp, _Alloc>::_rbtree_transplant(node_pointer node_a, node_pointer node_
     node_b->parent = node_a->parent;
 }
 
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_delete_node(node_pointer node)
+_rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
 {
     node_pointer tmp_x;
     node_pointer tmp_y;
@@ -68,9 +68,9 @@ _rbtree<_Tp, _Alloc>::_delete_node(node_pointer node)
         _delete_node_fix(tmp_x);
 }
 
-template <typename _Tp, typename _Alloc>
+template <typename _Tp, typename _Cmp, typename _Alloc>
 void
-_rbtree<_Tp, _Alloc>::_delete_node_fix(node_pointer node)
+_rbtree<_Tp, _Cmp, _Alloc>::_delete_node_fix(node_pointer node)
 {
     while (node != _root && node->isred == false)
     {
