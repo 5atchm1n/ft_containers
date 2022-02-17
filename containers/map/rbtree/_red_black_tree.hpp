@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/16 18:00:04 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/17 17:16:56 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 #include <cstddef>
 #include <memory>
-#include "_rbt_node.hpp"
+#include "bits/_rbt_node.hpp"
+#include "iterator/_rbt_iterator.hpp"
+#include "iterator/_rbt_const_iterator.hpp"
+#include "vector.iterator.hpp"
 
 #define SINGLE_TREE 1
 
@@ -35,7 +38,12 @@ class _rbtree
         node_allocator          _node_alloc;
         data_allocator          _data_alloc;
         _Cmp                    _key_compare;
-        
+    
+    public:
+        typename _rbt_iterator<value_type>              iterator;
+        typename _rbt_const_iterator<value_type>        const_iterator;
+        typename ft::reverse_iterator<iterator>         reverse_iterator;
+        typename ft::reverse_iterator<const_iterator>   const_reverse_iterator;
     
     public:
         node_type               *_root;

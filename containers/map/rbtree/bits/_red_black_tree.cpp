@@ -77,9 +77,9 @@ typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_search_tree(const value_type &val) const
 {
     node_pointer tmp = _root;
-    while (tmp != _nil && *tmp->data != val)
+    while (tmp != _nil && !_key_compare(val, *tmp->data) && !_key_compare(*tmp->data, val))
     {
-        if (val < *tmp->data)
+        if (_key_compare(val, *tmp->data))
             tmp = tmp->left;
         else
             tmp = tmp->right;

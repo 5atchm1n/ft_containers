@@ -17,7 +17,7 @@ MEM = -fsanitize=address -g
 
 INC = -I./containers -I./iterators -I./
 
-_INC_RBT_TEST = -I./containers/map/base
+_INC_RBT_TEST = -I./containers/map/rbtree
 
 OBJDIR = objs
 
