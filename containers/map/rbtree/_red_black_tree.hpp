@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _red_black_tree.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/17 17:16:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/18 14:39:54 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <cstddef>
 #include <memory>
-#include "bits/_rbt_node.hpp"
+#include "map/rbtree/bits/_rbt_node.hpp"
 #include "iterator/_rbt_iterator.hpp"
 #include "iterator/_rbt_const_iterator.hpp"
 #include "vector.iterator.hpp"
@@ -24,7 +24,7 @@
 
 namespace ft {
 
-template <typename _Tp, typename _Cmp = std::less<_Tp> , typename _Alloc = std::allocator<_Tp> >
+template <typename _Tp, typename _Cmp, typename _Alloc >
 class _rbtree
 {
     private:
@@ -40,10 +40,10 @@ class _rbtree
         _Cmp                    _key_compare;
     
     public:
-        typename _rbt_iterator<value_type>              iterator;
-        typename _rbt_const_iterator<value_type>        const_iterator;
-        typename ft::reverse_iterator<iterator>         reverse_iterator;
-        typename ft::reverse_iterator<const_iterator>   const_reverse_iterator;
+        typedef typename ft::_rbtree_iterator<value_type>              iterator;
+        typedef typename ft::_rbtree_const_iterator<value_type>        const_iterator;
+        typedef typename ft::reverse_iterator<iterator>         reverse_iterator;
+        typedef typename ft::reverse_iterator<const_iterator>   const_reverse_iterator;
     
     public:
         node_type               *_root;
@@ -58,15 +58,16 @@ class _rbtree
         void            _rbtree_transplant(node_pointer node_a, node_pointer node_b);
         void            _delete_node_fix(node_pointer node);
         void            _clean_tree(node_pointer node);
-        node_pointer    _increment(node_pointer node);
-        node_pointer    _decrement(node_pointer node);
         node_pointer    _create_node(const value_type &val);
 
     public: 
+        node_pointer    _increment(node_pointer node);
+        node_pointer    _decrement(node_pointer node);
         // Constructors
         _rbtree();
         _rbtree(const _Tp &value);
-        _rbtree(const _Tp &value, _Alloc allocator, _Cmp compare);
+        _rbtree(const _Cmp compare,const _Alloc allocator);
+        _rbtree(const _Tp &value, const _Alloc allocator, const _Cmp compare);
         // Member Functions
         void _insert_node(const value_type &val);
         void _delete_node(node_pointer node);
@@ -74,6 +75,14 @@ class _rbtree
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
         node_pointer    _search_tree(const value_type &val) const;
+        size_type       _get_size() const;
+        size_type       _get_max_size() const;
+
+        iterator        _begin() { return iterator(_rbtree_minimum(_root)); };
+        const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };
+        iterator        _end() { return iterator(_rbtree_maximum(_root)); };
+        const_iterator  _end() const { return const_iterator(_rbtree_maximum(_root)); };
+
         // Destructor
         ~_rbtree();
 };
@@ -82,10 +91,10 @@ class _rbtree
 
 }   // END NAMESPACE FT
 
-#include <_red_black_tree.cpp>
-#include <_rbt_rotations.cpp>
-#include <_rbt_insert.cpp>
-#include <_rbt_delete.cpp>
-#include <_rbt_traversal.cpp>
+#include "bits/_red_black_tree.cpp"
+#include "bits/_rbt_rotations.cpp"
+#include "bits/_rbt_insert.cpp"
+#include "bits/_rbt_delete.cpp"
+#include "bits/_rbt_traversal.cpp"
 
 #endif // END _RED_BLACK_TREE_H

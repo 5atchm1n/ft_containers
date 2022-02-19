@@ -3,23 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_iterator.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/17 14:29:16 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/18 13:58:12 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _RBT_ITERATOR_H
+#define _RBT_ITERATOR_H
+
 #include <iterator>
-#include "_rbt_node.hpp"
-#include "_red_black_tree.hpp"
+#include "../bits/_rbt_node.hpp"
+#include "../_red_black_tree.hpp"
 
 namespace ft
 {
 
 template<typename _Tp>
-class _rbtree_iterator
-{
+struct _rbtree_iterator
+{   
     typedef _Tp value_type;
     typedef _Tp& reference;
     typedef _Tp* pointer;
@@ -79,7 +82,7 @@ class _rbtree_iterator
     bool
     operator==(const _self &val) const
     {
-        return _node == x._node;
+        return _node == val._node;
     }
 
     bool
@@ -91,3 +94,5 @@ class _rbtree_iterator
 };
 
 }   // END NAMESPACE FT
+
+#endif      //_RBT_ITERATOR_H

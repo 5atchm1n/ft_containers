@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pair.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:06:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/16 11:49:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/18 11:56:03 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,42 +36,48 @@ struct pair
         return *this;
     }
 
-    inline bool operator==(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return x.first == y.first && x.second == y.second;
-    }
-
-    inline bool operator!=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return !(x == y);
-    }
-
-    inline bool operator<(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return x.first < y.first || (!(y.first<x.first) && x.second<y.second);
-    }
-    
-    inline bool operator<=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return !(y < x);
-    }
-    
-    inline bool operator>(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return y < x;
-    }
-    
-    inline bool operator>=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
-    {
-        return !(x < y);
-    }
-
-    template <typename _T1, typename _T2>
-    inline pair<_T1, _T2>
-    make_pair(_T1 x, _T2 y)
-    {
-        return pair<_T1, _T2>(x, y)
-    }
 };
 
-}   // END NAMESPACE FT
+template <typename _T1, typename _T2>
+inline bool operator==(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return x.first == y.first && x.second == y.second;
+}
+
+template <typename _T1, typename _T2>
+inline bool operator!=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return !(x == y);
+}
+
+template <typename _T1, typename _T2>
+inline bool operator<(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return x.first < y.first || (!(y.first<x.first) && x.second<y.second);
+}
+
+template <typename _T1, typename _T2>
+inline bool operator<=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return !(y < x);
+}
+
+template <typename _T1, typename _T2>
+inline bool operator>(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return y < x;
+}
+
+template <typename _T1, typename _T2>
+inline bool operator>=(const pair<_T1, _T2> &x, const pair<_T1, _T2> &y)
+{
+    return !(x < y);
+}
+
+template <typename _T1, typename _T2>
+inline pair<_T1, _T2>
+make_pair(_T1 x, _T2 y)
+{
+    return pair<_T1, _T2>(x, y);
+}
+}  // END NAMESPACE FT

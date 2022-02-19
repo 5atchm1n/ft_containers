@@ -3,23 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_const_iterator.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:40:27 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/17 16:50:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/18 14:10:31 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _RBT_CONST_ITERATOR_H
+#define _RBT_CONST_ITERATOR_H
+
 #include <iterator>
-#include "_rbt_node.hpp"
+#include "../bits/_rbt_node.hpp"
 #include "_rbt_iterator.hpp"
-#include "_red_black_tree.hpp"
+#include "../_red_black_tree.hpp"
 
 namespace ft
 {
 
 template<typename _Tp>
-class _rbtree_const_iterator
+struct _rbtree_const_iterator
 {
     typedef _Tp value_type;
     typedef _Tp& reference;
@@ -47,13 +50,13 @@ class _rbtree_const_iterator
     reference
     operator*() const
     {
-        return *static_cast<_node_pointer>(_node->data);
+        return *_node->data;
     }
 
     pointer
     operator->() const
     {
-        return static_cast<_node_pointer>(_node->data);
+        return &(operator*());
     }
 
     _self&
@@ -67,7 +70,7 @@ class _rbtree_const_iterator
     operator++(int)
     {
         _self tmp = *this;
-        _node = increment(_node);
+        _node = _increment(_node);
         return tmp;
     }
 
@@ -89,7 +92,7 @@ class _rbtree_const_iterator
     bool
     operator==(const _self &val) const
     {
-        return _node == x._node;
+        return _node == val._node;
     }
 
     bool
@@ -101,3 +104,5 @@ class _rbtree_const_iterator
 };
 
 }   // END NAMESPACE FT
+
+#endif      //_RBT_CONST_ITERATOR_H

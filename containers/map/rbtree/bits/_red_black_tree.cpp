@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <_red_black_tree.hpp>
+#include "../_red_black_tree.hpp"
 
 namespace ft
 {
@@ -43,10 +43,22 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value)
  * @brief contructor with default
  */
 template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value, _Alloc allocator, _Cmp compare)
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator) : _data_alloc(allocator), _key_compare(compare)
+{
+    //_data_alloc = allocator;
+    //_key_compare = compare;
+    _root = _node_alloc.allocate(SINGLE_TREE);
+    _nil = _node_alloc.allocate(SINGLE_TREE);
+    _root->_init_node(_nil);
+}
+
+/**
+ * @brief contructor with default
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value, const _Alloc allocator, const _Cmp compare)
 {
     _data_alloc = allocator;
-    //_node_alloc = allocator::template rebind<_rb_node<_Tp> >::other;
     _key_compare = compare;
     _root = _node_alloc.allocate(SINGLE_TREE);
     _nil = _node_alloc.allocate(SINGLE_TREE);
@@ -134,6 +146,21 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_successor(node_pointer node) const
     }
     return tmp;
 }
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
+_rbtree<_Tp, _Cmp, _Alloc>::_get_size() const
+{
+    return _size;
+}
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
+_rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
+{
+    return _node_alloc.max_size();
+}
+
 /**
  * @brief helper function to clean tree - recursive
  */ 
@@ -148,43 +175,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
         _data_alloc.deallocate(node->data, SINGLE_NODE);
         _node_alloc.deallocate(node, SINGLE_NODE);
     }
-}
-
-/**
- * @brief print tree helper
- * @return std::ostream& 
- */
-
-template <typename _Tp, typename _Alloc>
-std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Alloc> &val)
-{
-    stream << "root = " << val._root << "\n";
-    stream << "nil = " << val._nil << "\n";
-    stream << "node : " << *val._root << "\n";
-    const _rb_node<_Tp> *tmp = val._root;
-    const _rb_node<_Tp> *tmpR;
-    const _rb_node<_Tp> *tmpL;
-    tmpR = tmp->right;
-    tmpL = tmp->left;
-    if (tmpR != val._nil)
-        stream << *tmpR << "\n";
-    if (tmpL != val._nil)
-        stream << *tmpL << "\n";
-    tmpR = tmpR->right;
-    tmp = tmpL;
-    tmpL = tmpR->left;
-    if (tmpR != val._nil)
-        stream << *tmpR << "\n";
-    if (tmpL != val._nil)
-        stream << *tmpL << "\n";
-    tmpL = tmp;
-    tmpR = tmpL->right;
-    tmpL = tmpL->left;
-    if (tmpR != val._nil)
-        stream << *tmpR << "\n";
-    if (tmpL != val._nil)
-        stream << *tmpL << "\n";
-    return stream;
 }
 
 }   // END NAMESPACE FT

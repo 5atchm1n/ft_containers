@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_traversal.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 01:34:31 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/16 17:14:14 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/18 12:42:04y satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_red_black_tree.hpp"
+#include "../_red_black_tree.hpp"
 
 namespace ft
 {
