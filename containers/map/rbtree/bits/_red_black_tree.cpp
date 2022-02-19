@@ -14,57 +14,20 @@
 
 namespace ft
 {
+
 /**
- * @brief default contructor
+ * @brief contructor with default
  */
 template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree()
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator)
+: _data_alloc(allocator), _key_compare(compare)
 {
-    _nil = _node_alloc.allocate(SINGLE_TREE);
+    _size = 0;
+    _nil = _node_alloc.allocate(SINGLE_NODE);
     _nil->isred = false;
-    _nil->left = _nil;
-    _nil->right = _nil;
+    _nil->isnull = true;
+    _nil->data = NULL;
     _root = _nil;
-}
-/**
- * @brief contructor with default
- */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value)
-{
-    _root = _node_alloc.allocate(SINGLE_TREE);
-    _nil = _node_alloc.allocate(SINGLE_TREE);
-    _root->_init_node(_nil);
-    _root->data = _data_alloc.allocate(SINGLE_TREE);
-    _data_alloc.construct(_root->data, value);
-}
-
-/**
- * @brief contructor with default
- */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator) : _data_alloc(allocator), _key_compare(compare)
-{
-    //_data_alloc = allocator;
-    //_key_compare = compare;
-    _root = _node_alloc.allocate(SINGLE_TREE);
-    _nil = _node_alloc.allocate(SINGLE_TREE);
-    _root->_init_node(_nil);
-}
-
-/**
- * @brief contructor with default
- */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Tp &value, const _Alloc allocator, const _Cmp compare)
-{
-    _data_alloc = allocator;
-    _key_compare = compare;
-    _root = _node_alloc.allocate(SINGLE_TREE);
-    _nil = _node_alloc.allocate(SINGLE_TREE);
-    _root->_init_node(_nil);
-    _root->data = _data_alloc.allocate(SINGLE_TREE);
-    _data_alloc.construct(_root->data, value);
 }
 
 /**
@@ -75,7 +38,17 @@ _rbtree<_Tp, _Cmp, _Alloc>::~_rbtree()
 {
     if (_root != _nil)
         _clean_tree(_root);
-    _node_alloc.deallocate(_nil, SINGLE_TREE);
+    _node_alloc.deallocate(_nil, SINGLE_NODE);
+}
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+bool
+_rbtree<_Tp, _Cmp, _Alloc>::_is_duplicate(const value_type &val) const
+{
+    node_pointer check = _search_tree(val);
+    if (check == _nil)
+        return false;
+    return true;
 }
 
 /**
@@ -89,7 +62,7 @@ typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_search_tree(const value_type &val) const
 {
     node_pointer tmp = _root;
-    while (tmp != _nil && !_key_compare(val, *tmp->data) && !_key_compare(*tmp->data, val))
+    while (tmp != _nil && !(!_key_compare(val, *tmp->data) && !_key_compare(*tmp->data, val)))
     {
         if (_key_compare(val, *tmp->data))
             tmp = tmp->left;
@@ -128,6 +101,15 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_maximum(node_pointer node) const
     return tmp;
 }
 
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_end(node_pointer node) const
+{
+    node_pointer tmp = node;
+    while (tmp->right != _nil)
+        tmp = tmp->right;
+    return tmp->right;
+}
 /**
  * @brief find the in order successor
  * @return pointer to in order successor 

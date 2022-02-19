@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/13 12:01:44 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 13:18:43by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,51 +24,128 @@ namespace ft {
 template <typename _Tp>
 struct _rb_node
 {
-    private:
-        void    _copy_node(const _rb_node &copy);
+    typedef _rb_node    node;
+    typedef _rb_node*   node_pointer;
+    typedef _Tp*        data_pointer;
     
-    public:
-        bool        isred;
-        _rb_node    *parent;
-        _rb_node    *left;
-         _rb_node    *right;
-        _Tp         *data;
-    //  HELPER FUNCTORS
-        _rb_node    operator=(const _rb_node &val);
-        void        _init_node(_rb_node *_nil);
+    bool            isred;
+    bool            isnull;
+    node_pointer    parent;
+    node_pointer    left;
+    node_pointer    right;
+    data_pointer    data;
+    // Coplien
+    _rb_node();
+    _rb_node(const _rb_node &copy);            
+    _rb_node    &operator=(const _rb_node &val);
+    // Helper function for iterator
+    node_pointer _increment() const;
+    node_pointer _decrement() const;
 };
 
-
+/**
+ * @brief Helper function for iterator
+ * 
+ * @param nil_node  value of _nil node
+ * @return value of "next" node 
+ */
 template <typename _Tp>
-void
-_rb_node<_Tp>::_init_node(_rb_node *_nil)
+typename _rb_node<_Tp>::node_pointer
+_rb_node<_Tp>::_increment() const
 {
-    parent = _nil;
-    left = _nil;
-    right = _nil;
-    isred = false;
-    data = NULL;
+    node_pointer    current = const_cast<node_pointer>(this);
+    if (!current->right->isnull)
+    {
+        current = current->right;
+        while (!current->left->isnull)
+            current = current->left;
+    }
+    else
+    {
+        node_pointer tmp = current->parent;
+        while (current == tmp->right)
+        {
+            current = tmp;
+            tmp = tmp->parent;
+        }
+        if (current->right != tmp)
+            current = tmp;
+    }
+    return current;
 }
 
 template <typename _Tp>
-void
-_rb_node<_Tp>::_copy_node(const _rb_node &copy)
+typename _rb_node<_Tp>::node_pointer
+_rb_node<_Tp>::_decrement() const
 {
-    isred = copy.isred;
-    parent = copy.parent;
-    left = copy.left;
-    right = copy.right;
-    data = copy.data; 
+    node_pointer    current = const_cast<node_pointer>(this);
+    if (current->isred == true && current->parent->parent == current)
+        current = current->right;
+    else if (!current->left->isnull)
+    {
+        node_pointer tmp = current->left;
+        while (!tmp->right->isnull)
+            tmp = tmp->right;
+        current = tmp;
+    }
+    else
+    {
+        node_pointer tmp = current->parent;
+        while (current == tmp->left)
+        {
+            current = tmp;
+            tmp = tmp->parent;
+        }
+        current = tmp;
+    }
+    return current;
 }
 
+
+/**
+ * @brief Construct a new NODE
+ * 
+ * @tparam _Tp 
+ */
 template <typename _Tp>
-_rb_node<_Tp>
+_rb_node<_Tp>::_rb_node() : isred(false), parent(), left(), right(), data()
+{
+    
+}
+/**
+ * @brief Construct a new NODE from copy
+ * 
+ * @tparam _Tp 
+ * @param copy 
+ */
+template <typename _Tp>
+_rb_node<_Tp>::_rb_node(const _rb_node &copy)
+{
+    *this = copy;
+}
+/**
+ * @brief Operator= for COPLIEN class
+ * 
+ * @tparam _Tp 
+ * @param val   node that we want to assign
+ * @return current node with pointers swapped 
+ */
+template <typename _Tp>
+_rb_node<_Tp> &
 _rb_node<_Tp>::operator=(const _rb_node &val)
 {
-    _copy_node(val);
+    isred = val.isred;
+    parent = val.parent;
+    left = val.left;
+    right = val.right;
+    data = val.data; 
     return *this;        
 }
-
+/**
+ * @brief Overload ostream operator to print node easily
+ * 
+ * @param val   node to be printed 
+ */
 template <typename _Tp>
 std::ostream& operator<<(std::ostream& stream, const _rb_node<_Tp> &val)
 {

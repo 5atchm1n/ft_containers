@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:02:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/18 14:05:05 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 17:47:07 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ template <typename _Key, typename _Tp, typename _Cmp = std::less<_Key>, typename
 class map
 {
     public:
-        typedef _Key                                key_type;
-        typedef _Tp                                 mapped_type;
-        typedef ft::pair<const _Key, _Tp>           value_type;
-        typedef _Cmp                                key_compare;
-        typedef _Alloc                              allocator_type;
+        typedef _Key                                            key_type;
+        typedef _Tp                                             mapped_type;
+        typedef ft::pair<const key_type, mapped_type>           value_type;
+        typedef _Cmp                                            key_compare;
+        typedef _Alloc                                          allocator_type;
 
-        typedef ptrdiff_t                           difference_type;
-        typedef size_t                              size_type;
+        typedef ptrdiff_t                                       difference_type;
+        typedef size_t                                          size_type;
     
     public:
         class value_compare : public std::binary_function<value_type, value_type, bool>
@@ -45,8 +45,8 @@ class map
         };
 
     private:
-        typedef typename _Alloc::value_type                                     _alloc_value_type;
-        typedef _rbtree<value_type, value_compare, allocator_type>   _tree_type;
+        typedef typename _Alloc::value_type                         _alloc_value_type;
+        typedef _rbtree<value_type, value_compare, allocator_type>  _tree_type;
 
         _tree_type  tree;
 
@@ -80,7 +80,10 @@ template <typename InputIterator>
 map<_Key, _Tp, _Cmp, _Alloc>::map(InputIterator first, InputIterator last, const key_compare &comp, const allocator_type &alloc) : tree(comp, alloc)
 {
     for (InputIterator tmp = first; tmp != last; tmp++)
-        tree._insert_node(*tmp);
+    {
+        if (!tree._is_duplicate(*tmp))
+            tree._insert_node(*tmp);
+    }
 }
 
 

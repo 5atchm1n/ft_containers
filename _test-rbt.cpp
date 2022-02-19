@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:54:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/18 13:21:02 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:02:51 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
     tree._insert_node(8);
     tree._insert_node(3);
     tree._insert_node(14);
+    std::cout << tree << std::endl;
 
     return 0;
 }

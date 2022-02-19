@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/18 12:42:27 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 17:23:10 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
 {
     node_pointer new_node;
     new_node = _node_alloc.allocate(SINGLE_NODE);
+    new_node->isnull = false;
     new_node->data = _data_alloc.allocate(SINGLE_NODE);
     _data_alloc.construct(new_node->data, val);
     return new_node;

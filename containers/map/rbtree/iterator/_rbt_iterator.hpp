@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/18 13:58:12 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 13:04:19 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,19 @@ struct _rbtree_iterator
     reference
     operator*() const
     {
-        return *static_cast<_node_pointer>(_node->data);
+        return *_node->data;
     }
 
     pointer
     operator->() const
     {
-        return static_cast<_node_pointer>(_node->data);
+        return &(operator*());
     }
 
     _self&
     operator++()
     {
-        _node = _increment(_node);
+        _node = _node->_increment();
         return *this;
     }
 
@@ -60,14 +60,14 @@ struct _rbtree_iterator
     operator++(int)
     {
         _self tmp = *this;
-        _node = increment(_node);
+        _node = _node->_increment();
         return tmp;
     }
 
     _self&
     operator--()
     {
-        _node = _decrement(_node);
+        _node = _node->_decrement();
         return *this;
     }
 
@@ -75,7 +75,7 @@ struct _rbtree_iterator
     operator--(int)
     {
         _self tmp = *this;
-        _node = _decrement(_node);
+        _node = _node->_decrement();
         return tmp;
     }
 

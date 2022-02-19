@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:40:27 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/18 14:10:31 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 13:06:39 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ struct _rbtree_const_iterator
     _self&
     operator++()
     {
-        _node = _increment(_node);
+        _node = _node->_increment();
         return *this;
     }
 
@@ -70,14 +70,14 @@ struct _rbtree_const_iterator
     operator++(int)
     {
         _self tmp = *this;
-        _node = _increment(_node);
+        _node = _node->_increment();
         return tmp;
     }
 
     _self&
     operator--()
     {
-        _node = _decrement(_node);
+        _node = _node->_decrement();
         return *this;
     }
 
@@ -85,7 +85,7 @@ struct _rbtree_const_iterator
     operator--(int)
     {
         _self tmp = *this;
-        _node = _decrement(_node);
+        _node = _node->_decrement();
         return tmp;
     }
 

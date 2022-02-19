@@ -14,8 +14,8 @@ incl_path="../containers -I../iterators"
 srcs="srcs"
 
 CC="clang++"
-CFLAGS="-Wall -Wextra -Werror -std=c++98"
-CFLAGS+=" -fsanitize=address -g3"
+CFLAGS="-Wall -Wextra -Werror -std=c++98 -g"
+CFLAGS+=" -fsanitize=address"
 
 function pheader () {
 printf "${EOC}${BOLD}${DBLUE}\
