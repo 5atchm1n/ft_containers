@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:02:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/19 17:47:07 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:56:13 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,18 +60,32 @@ class map
         typedef typename _tree_type::reverse_iterator       reverse_iterator;
         typedef typename _tree_type::const_reverse_iterator const_reverse_iterator;
 
+        // CONSTRUCTORS
+        //explicit map() : tree() {}
         explicit map (const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type()) : tree(comp, alloc) {}
         template <typename InputIterator>
         map(InputIterator first, InputIterator last, const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type());
         map(const map &copy);
 
+        // INSERT
+        ft::pair<iterator, bool>    insert(const value_type &value);
+        iterator                    insert(iterator position, const value_type &value);
+        template <class InputIterator>
+        void    insert(InputIterator first, InputIterator last);
+
+        // CAPACITY
+        bool        empty() const {return (size() ? false : true) ;}
         size_type   size() const { return tree._get_size(); }
         size_type   max_size() const { return tree._get_max_size();}
-
+        // ITERATORS
         iterator begin() { return tree._begin(); }
         const_iterator begin() const { return tree._begin(); }
         iterator end() { return tree._end(); }
         const_iterator end() const { return tree._end(); }
+        reverse_iterator rbegin() { return tree._rbegin(); }
+        reverse_iterator rend() { return tree.rend(); }
+        const_reverse_iterator rbegin() const { return tree._rbegin(); }
+        const_reverse_iterator rend() const { return tree._rend(); }
     
 };
 
@@ -86,5 +100,15 @@ map<_Key, _Tp, _Cmp, _Alloc>::map(InputIterator first, InputIterator last, const
     }
 }
 
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+template <typename InputIterator>
+void
+map<_Key, _Tp, _Cmp, _Alloc>::insert(InputIterator first, InputIterator last)
+{
+    for (InputIterator tmp = first; tmp != last; tmp++)
+    {
+        tree._insert_node(*tmp);
+    }
+}
 
 }   // END NAMESPACE FT

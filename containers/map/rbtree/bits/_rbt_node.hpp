@@ -138,8 +138,8 @@ _rb_node<_Tp>::operator=(const _rb_node &val)
     parent = val.parent;
     left = val.left;
     right = val.right;
-    data = val.data; 
-    return *this;        
+    data = val.data;
+    return *this;
 }
 /**
  * @brief Overload ostream operator to print node easily
@@ -150,9 +150,9 @@ template <typename _Tp>
 std::ostream& operator<<(std::ostream& stream, const _rb_node<_Tp> &val)
 {
     stream << "isred = " << val.isred << "\n";
-    stream << "node = " << &val << "\n";
-    stream << "parent: " << val.parent << "\n";
-    stream << "left: " << val.left << "\tright: " << val.right << "\n";
+    //stream << "node = " << &val << "\n";
+    //stream << "parent: " << val.parent << "\n";
+    //stream << "left: " << val.left << "\tright: " << val.right << "\n";
     stream << "data: " << val.data;
     if (val.data != NULL)
         stream << " " << *val.data;

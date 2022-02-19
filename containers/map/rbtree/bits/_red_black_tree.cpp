@@ -15,6 +15,18 @@
 namespace ft
 {
 
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree()
+{
+    _size = 0;
+    _nil = _node_alloc.allocate(SINGLE_NODE);
+    _nil->isred = false;
+    _nil->isnull = true;
+    _nil->data = NULL;
+    _root = _nil;
+
+}
 /**
  * @brief contructor with default
  */
@@ -81,6 +93,8 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_minimum(node_pointer node) const
 {
+    if (node == _nil)
+        return node;
     node_pointer tmp = node;
     while (tmp->left != _nil)
         tmp = tmp->left;
@@ -95,6 +109,8 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_maximum(node_pointer node) const
 {
+    if (node == _nil)
+        return node;
     node_pointer tmp = node;
     while (tmp->right != _nil)
         tmp = tmp->right;
@@ -158,5 +174,17 @@ _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
         _node_alloc.deallocate(node, SINGLE_NODE);
     }
 }
+/**
+ * @brief print tree helper
+ * @return std::ostream& 
+ */
 
+template <typename _Tp, typename _Cmp, typename _Alloc>
+std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Cmp, _Alloc> &val)
+{
+    stream << "root = " << val._root << "\n";
+    stream << "nil = " << val._nil << "\n";
+    stream << "node : " << *val._root << "\n";
+    return stream;
+}
 }   // END NAMESPACE FT

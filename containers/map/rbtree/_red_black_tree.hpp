@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/19 18:06:42 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:40:35 by satchmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ namespace ft {
 template <typename _Tp, typename _Cmp, typename _Alloc>
 class _rbtree
 {
+
     private:
         typedef typename _Alloc::template rebind<_rb_node<_Tp> >::other  node_allocator;
         
@@ -41,11 +42,6 @@ class _rbtree
         data_allocator          _data_alloc;
         _Cmp                    _key_compare;
     
-    public:
-        typedef typename ft::_rbtree_iterator<value_type>           iterator;
-        typedef typename ft::_rbtree_const_iterator<value_type>     const_iterator;
-        typedef typename ft::reverse_iterator<iterator>             reverse_iterator;
-        typedef typename ft::reverse_iterator<const_iterator>       const_reverse_iterator;
     
     public:
         node_type               *_root;
@@ -53,7 +49,6 @@ class _rbtree
         size_type               _size;
 
     private:
-        // Helper Functions
         void            _rbtree_rotate_left(node_type *current_node);
         void            _rbtree_rotate_right(node_type *current_node);
         void            _insert_node_fix(node_pointer node);
@@ -61,23 +56,32 @@ class _rbtree
         void            _delete_node_fix(node_pointer node);
         void            _clean_tree(node_pointer node);
         node_pointer    _create_node(const value_type &val);
-
-    public: 
         node_pointer    _increment(node_pointer node);
         node_pointer    _decrement(node_pointer node);
-        // Constructors
+
+    public:
+        typedef typename ft::_rbtree_iterator<value_type>           iterator;
+        typedef typename ft::_rbtree_const_iterator<value_type>     const_iterator;
+        typedef typename ft::reverse_iterator<iterator>             reverse_iterator;
+        typedef typename ft::reverse_iterator<const_iterator>       const_reverse_iterator;
+        
+        
         _rbtree();
-        _rbtree(const _Cmp compare,const _Alloc allocator);
+        explicit _rbtree(const _Cmp compare,const _Alloc allocator);
         _rbtree(const _rbtree &copy);
-        // Member Functions
-        void            _insert_node(const value_type &val);
-        void            _delete_node(node_pointer node);
+        ~_rbtree();
+
         node_pointer    _rbtree_successor(node_pointer node) const;
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
         node_pointer    _rbtree_end(node_pointer node) const;
+        
         node_pointer    _search_tree(const value_type &val) const;
+
         bool            _is_duplicate(const value_type &val) const;
+        void            _insert_node(const value_type &val);
+        void            _delete_node(node_pointer node);
+
         size_type       _get_size() const;
         size_type       _get_max_size() const;
 
@@ -86,12 +90,6 @@ class _rbtree
         iterator        _end() { return iterator(_rbtree_end(_root)); };
         const_iterator  _end() const { return const_iterator(_rbtree_end(_root)); };
 
-        // Destructor
-        ~_rbtree();
-
-
-        // Print Tree
-        void    print
 };
 
 }   // END NAMESPACE FT
