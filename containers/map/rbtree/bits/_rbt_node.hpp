@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/19 13:18:43by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/20 11:14:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,20 @@ struct _rb_node
     _rb_node(const _rb_node &copy);            
     _rb_node    &operator=(const _rb_node &val);
     // Helper function for iterator
-    node_pointer _increment() const;
-    node_pointer _decrement() const;
+    node_pointer	_increment() const;
+    node_pointer	_decrement() const;
+	data_pointer	_get_data() const;
 };
+
+/**
+ *	@brief return data
+ */
+template <typename _Tp>
+typename _rb_node<_Tp>::data_pointer
+_rb_node<_Tp>::_get_data() const
+{
+	return (data);
+}
 
 /**
  * @brief Helper function for iterator

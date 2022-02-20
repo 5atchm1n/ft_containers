@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _red_black_tree.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/19 19:40:35 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/20 12:15:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ class _rbtree
         _Cmp                    _key_compare;
     
     
-    public:
         node_type               *_root;
         node_type               *_nil;
         size_type               _size;
@@ -84,6 +83,8 @@ class _rbtree
 
         size_type       _get_size() const;
         size_type       _get_max_size() const;
+        _Cmp            _get_key_compare() const { return _key_compare ;}
+        data_allocator  _get_data_allocator() const { return _data_alloc ;}
 
         iterator        _begin() { return iterator(_rbtree_minimum(_root)); };
         const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };

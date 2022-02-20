@@ -15,9 +15,9 @@
 namespace ft
 {
 
-
+/**
 template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree()
+_rbtree<_Tp, _Cmp, _Alloc>::_rbtree() : _key_compare()
 {
     _size = 0;
     _nil = _node_alloc.allocate(SINGLE_NODE);
@@ -27,6 +27,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree()
     _root = _nil;
 
 }
+*/
 /**
  * @brief contructor with default
  */

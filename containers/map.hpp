@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:02:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/19 19:56:13 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/20 12:35:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ class map
         typedef typename _Alloc::value_type                         _alloc_value_type;
         typedef _rbtree<value_type, value_compare, allocator_type>  _tree_type;
 
+        key_compare _key_cmp;
         _tree_type  tree;
 
     public:
@@ -65,28 +66,97 @@ class map
         explicit map (const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type()) : tree(comp, alloc) {}
         template <typename InputIterator>
         map(InputIterator first, InputIterator last, const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type());
-        map(const map &copy);
+        map(const map &copy) : tree(copy.key_comp(), copy.get_allocator())
+        {
+            insert(copy.begin(), copy.end());
+        }
 
-        // INSERT
-        ft::pair<iterator, bool>    insert(const value_type &value);
-        iterator                    insert(iterator position, const value_type &value);
-        template <class InputIterator>
-        void    insert(InputIterator first, InputIterator last);
+        /**
+         * @brief 
+         * 
+         */
+        map &operator=(const map &val)
+        {
+            if (this != &val)
+                *this = val;
+            return *this;
+        }
+		/**
+		 *	ELEMENT ACCESS
+		 */
+		mapped_type			&operator[](const key_type &key)
+		{
+            value_type val = ft::make_pair(key, mapped_type());
+            if (!tree._is_duplicate(val))
+                tree._insert_node(val);
+            return (tree._search_tree(val)->_get_data())->second;
+		}
 
-        // CAPACITY
+		mapped_type			&at(const key_type &key);
+		const mapped_type	&at(const key_type &key) const;
+
+        /**
+		 *	CAPACITY
+		 */
         bool        empty() const {return (size() ? false : true) ;}
         size_type   size() const { return tree._get_size(); }
         size_type   max_size() const { return tree._get_max_size();}
-        // ITERATORS
+        
+		/**
+		 *	ITERATORS
+		 */
         iterator begin() { return tree._begin(); }
         const_iterator begin() const { return tree._begin(); }
         iterator end() { return tree._end(); }
         const_iterator end() const { return tree._end(); }
+		//reverse
         reverse_iterator rbegin() { return tree._rbegin(); }
         reverse_iterator rend() { return tree.rend(); }
         const_reverse_iterator rbegin() const { return tree._rbegin(); }
         const_reverse_iterator rend() const { return tree._rend(); }
-    
+
+		/**
+		 *	MODIFIERS
+		 */
+        // insert
+        ft::pair<iterator, bool>    insert(const value_type &value);
+        iterator                    insert(iterator position, const value_type &value);
+        template <class InputIterator>
+        void    insert(InputIterator first, InputIterator last);
+		// erase
+		void		erase(iterator position);
+		size_type	erase(const key_type &k);
+		void		erase(iterator first, iterator last);
+		// swap
+		void		swap(map &val);
+		// clear
+		void		clear();
+		/**
+		 *	OBSERVERS
+		 */
+		key_compare		key_comp() const { return _key_cmp ; }
+		value_compare	value_comp() const { return value_compare(tree._get_key_compare()); }
+		/**
+		 *	OPERATIONS
+		 */
+		// find
+		iterator		find(const key_type &key);
+		const_iterator	find(const key_type &key) const;
+		// cound
+		size_type		count(const key_type &key) const;
+		// lower_bound
+		iterator		lower_bound(const key_type &key);
+		const_iterator	lower_bound(const key_type &key) const;
+		// upper bound
+		iterator		upper_bound(const key_type &key);
+		const_iterator	upper_bound(const key_type &key) const;
+		// equal range
+		pair<const_iterator, const_iterator>	equal_range(const key_type &key) const;
+		pair<iterator, iterator>				equal_range(const key_type &key);
+		/**
+		 *	ALLOCATOR
+		 */
+		allocator_type	get_allocator() const { return tree._get_data_allocator(); }
 };
 
 template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
