@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/21 01:50:40 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:21:346 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,13 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node_fix(node_pointer node)
                 node->parent->parent->isred = true;
                 node = node->parent->parent;
             }
-            else if (node == node->parent->right)
-            {
-                node = node->parent->parent;
-                _rbtree_rotate_left(node);
-            }
             else
             {
+                if (node == node->parent->right)
+                {    
+                    node = node->parent;
+                    _rbtree_rotate_left(node);
+                }
                 node->parent->isred = false;
                 node->parent->parent->isred = true;
                 _rbtree_rotate_right(node->parent->parent);
@@ -106,13 +106,13 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node_fix(node_pointer node)
                 node->parent->parent->isred = true;
                 node = node->parent->parent;
             }
-            else if (node == node->parent->left)
-            {
-                node = node->parent->parent;
-                _rbtree_rotate_right(node);
-            }
             else
-            {
+            { 
+                if (node == node->parent->left)
+                {
+                    node = node->parent;
+                    _rbtree_rotate_right(node);
+                }
                 node->parent->isred = false;
                 node->parent->parent->isred = true;
                 _rbtree_rotate_left(node->parent->parent);
