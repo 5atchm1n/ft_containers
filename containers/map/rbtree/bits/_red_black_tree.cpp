@@ -16,19 +16,6 @@ namespace ft
 {
 
 /**
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree() : _key_compare()
-{
-    _size = 0;
-    _nil = _node_alloc.allocate(SINGLE_NODE);
-    _nil->isred = false;
-    _nil->isnull = true;
-    _nil->data = NULL;
-    _root = _nil;
-
-}
-*/
-/**
  * @brief contructor with default
  */
 template <typename _Tp, typename _Cmp, typename _Alloc>
@@ -62,6 +49,16 @@ _rbtree<_Tp, _Cmp, _Alloc>::_is_duplicate(const value_type &val) const
     if (check == _nil)
         return false;
     return true;
+}
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+_rbtree<_Tp, _Cmp, _Alloc>::_insert_search(const value_type &val)
+{
+    node_pointer check = _search_tree(val);
+    if (check == _nil)
+        check = _insert_node(val);
+    return check;
 }
 
 /**

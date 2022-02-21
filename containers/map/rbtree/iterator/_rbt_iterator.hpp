@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   _rbt_iterator.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/19 13:04:19 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/20 23:14:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ struct _rbtree_iterator
 
     _node_pointer   _node;
 
-    _rbtree_iterator(_node_pointer val) : _node(val) {}
     _rbtree_iterator() : _node() {}
+    _rbtree_iterator(_node_pointer val) : _node(val) {}
     
     reference
     operator*() const

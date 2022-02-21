@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/20 12:15:43 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/21 00:05:05 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <memory>
 #include "map/rbtree/bits/_rbt_node.hpp"
 #include "iterator/_rbt_iterator.hpp"
-#include "iterator/_rbt_const_iterator.hpp"
 #include "vector.iterator.hpp"
 
 #define SINGLE_TREE 1
@@ -37,17 +36,18 @@ class _rbtree
         typedef _Alloc              data_allocator;
         typedef _rb_node<_Tp>       node_type;
         typedef _rb_node<_Tp>*      node_pointer;
-     
-        node_allocator          _node_alloc;
-        data_allocator          _data_alloc;
-        _Cmp                    _key_compare;
     
+    // Allocators 
+        node_allocator  _node_alloc;
+        data_allocator  _data_alloc;
+    // Compare function
+        _Cmp            _key_compare;
     
-        node_type               *_root;
-        node_type               *_nil;
-        size_type               _size;
-
-    private:
+    // Key nodes
+        node_type       *_root;
+        node_type       *_nil;
+        size_type       _size;
+    // Helper functions
         void            _rbtree_rotate_left(node_type *current_node);
         void            _rbtree_rotate_right(node_type *current_node);
         void            _insert_node_fix(node_pointer node);
@@ -59,33 +59,39 @@ class _rbtree
         node_pointer    _decrement(node_pointer node);
 
     public:
-        typedef typename ft::_rbtree_iterator<value_type>           iterator;
-        typedef typename ft::_rbtree_const_iterator<value_type>     const_iterator;
-        typedef typename ft::reverse_iterator<iterator>             reverse_iterator;
-        typedef typename ft::reverse_iterator<const_iterator>       const_reverse_iterator;
-        
-        
+    
+    // Iterators
+        typedef ft::_rbtree_iterator<value_type>            iterator;
+        typedef const ft::_rbtree_iterator<value_type>      const_iterator;
+        typedef ft::reverse_iterator<iterator>              reverse_iterator;
+        typedef const ft::reverse_iterator<iterator>        const_reverse_iterator;
+    
+    //  Constructors    
         _rbtree();
         explicit _rbtree(const _Cmp compare,const _Alloc allocator);
         _rbtree(const _rbtree &copy);
         ~_rbtree();
 
+    //  Methods
         node_pointer    _rbtree_successor(node_pointer node) const;
+    
+    //      
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
         node_pointer    _rbtree_end(node_pointer node) const;
-        
+    //    
         node_pointer    _search_tree(const value_type &val) const;
-
-        bool            _is_duplicate(const value_type &val) const;
-        void            _insert_node(const value_type &val);
+        node_pointer    _insert_search(const value_type &val);
+        node_pointer    _insert_node(const value_type &val);
         void            _delete_node(node_pointer node);
-
+    
+        bool            _is_duplicate(const value_type &val) const;
+    //
         size_type       _get_size() const;
         size_type       _get_max_size() const;
         _Cmp            _get_key_compare() const { return _key_compare ;}
         data_allocator  _get_data_allocator() const { return _data_alloc ;}
-
+    //
         iterator        _begin() { return iterator(_rbtree_minimum(_root)); };
         const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };
         iterator        _end() { return iterator(_rbtree_end(_root)); };

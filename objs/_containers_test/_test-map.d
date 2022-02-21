@@ -4,7 +4,6 @@ objs/_containers_test/_test-map.o: _containers_test/_test-map.cpp \
   containers/map/rbtree/iterator/_rbt_iterator.hpp \
   containers/map/rbtree/iterator/../bits/_rbt_node.hpp \
   containers/map/rbtree/iterator/../_red_black_tree.hpp \
-  containers/map/rbtree/iterator/_rbt_const_iterator.hpp \
   iterators/vector.iterator.hpp iterators/iterator_traits.hpp \
   iterators/vector.iterator.cpp \
   containers/map/rbtree/bits/_red_black_tree.cpp \
@@ -25,8 +24,6 @@ containers/map/rbtree/iterator/_rbt_iterator.hpp:
 containers/map/rbtree/iterator/../bits/_rbt_node.hpp:
 
 containers/map/rbtree/iterator/../_red_black_tree.hpp:
-
-containers/map/rbtree/iterator/_rbt_const_iterator.hpp:
 
 iterators/vector.iterator.hpp:
 

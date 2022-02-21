@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:02:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/20 12:35:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/21 00:27:24 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,6 +179,42 @@ map<_Key, _Tp, _Cmp, _Alloc>::insert(InputIterator first, InputIterator last)
     {
         tree._insert_node(*tmp);
     }
+}
+
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+ft::pair<typename ft::map<_Key, _Tp, _Cmp, _Alloc>::iterator, bool>
+map<_Key, _Tp, _Cmp, _Alloc>::insert(const value_type &value)
+{
+    bool    is_in = !tree._is_duplicate(value);
+    iterator position = (tree._insert_search(value));
+    ft::pair<iterator, bool> _value = ft::make_pair(position, is_in);
+    return _value;
+}
+
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
+map<_Key, _Tp, _Cmp, _Alloc>::insert(iterator position, const value_type &value)
+{
+    (void)position;
+    return iterator (tree._insert_search(value));
+}
+
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
+map<_Key, _Tp, _Cmp, _Alloc>::find(const key_type &key)
+{
+    value_type val = ft::make_pair(key, mapped_type());
+    iterator pos(tree._search_tree(val));
+    return pos == end() ? end() : pos;
+}
+
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+typename map<_Key, _Tp, _Cmp, _Alloc>::const_iterator
+map<_Key, _Tp, _Cmp, _Alloc>::find(const key_type &key) const
+{
+    value_type val = ft::make_pair(key, mapped_type());
+    const_iterator pos(tree._search_tree(val));
+    return pos == end() ? end() : pos;
 }
 
 }   // END NAMESPACE FT
