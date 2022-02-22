@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 04:45:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/21 02:15:25 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/22 18:29:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,10 @@ int main()
 	std::cout << "anothermap contains:\n";
 	for (it = anothermap.begin(); it != anothermap.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
-
+	
+	ft::map<char, int>::const_iterator itt = mymap.begin();
+	for (itt = mymap.begin(); itt != mymap.end(); ++itt)
+		std::cout << it->first << " => " << it->second << '\n';
+	
 	return 0;
 }

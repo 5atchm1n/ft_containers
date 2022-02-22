@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/20 23:14:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/22 18:13:31 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define _RBT_ITERATOR_H
 
 #include <iterator>
-#include "../bits/_rbt_node.hpp"
+    #include "../bits/_rbt_node.hpp"
 #include "../_red_black_tree.hpp"
 
 namespace ft
@@ -36,6 +36,7 @@ struct _rbtree_iterator
 
     _rbtree_iterator() : _node() {}
     _rbtree_iterator(_node_pointer val) : _node(val) {}
+    _rbtree_iterator(const _rbtree_iterator & other) : _node(other._node) {}
     
     reference
     operator*() const

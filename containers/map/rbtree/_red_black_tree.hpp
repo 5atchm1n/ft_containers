@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 12:25:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/21 00:05:05 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/22 18:20:45by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,25 @@ class _rbtree
     
     // Iterators
         typedef ft::_rbtree_iterator<value_type>            iterator;
-        typedef const ft::_rbtree_iterator<value_type>      const_iterator;
+
+        class const_iterator : public ft::_rbtree_iterator<value_type>
+        {
+            public:
+            const_iterator(_rbtree_iterator<value_type> other) : _rbtree_iterator<value_type>(other) {}
+            const_iterator() : _rbtree_iterator<value_type>() {}
+            const_iterator(node_pointer val) : _rbtree_iterator<value_type>(val) {}
+
+           const value_type & operator*() const
+            {
+                return _rbtree_iterator<value_type>::operator*();
+            }
+        
+            const value_type *  operator->() const
+            {
+                return _rbtree_iterator<value_type>::operator->();
+            }
+        };
+
         typedef ft::reverse_iterator<iterator>              reverse_iterator;
         typedef const ft::reverse_iterator<iterator>        const_reverse_iterator;
     
