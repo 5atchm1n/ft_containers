@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 02:20:30 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 05:40:08 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,10 @@ map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
 {
     iterator i = first;
     value_type val;
-
-    while (i != last)
+    for (iterator i = first; i != last; i++)
     {
-        value_type val = make_pair(first->first, mapped_type());
+        value_type val = make_pair(i->first, mapped_type());
         tree._delete_node(tree._search_tree(val));
-        i++;
     }
 }
 

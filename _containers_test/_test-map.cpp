@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 04:45:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 03:53:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 05:29:46 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_print(ft::map<T1, T2> map, std::string const name, int i)
 int main()
 {
 
-	int i = 0;
+	int i = 1;
 	
 	ft::pair<ft::map<char, int>::iterator, bool> ret;
 	bool (*fn_pt)(char, char) = fncomp;

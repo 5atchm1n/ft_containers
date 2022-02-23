@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 05:08:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 05:42:45 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,8 @@ namespace ft
     void
     _rbtree_iterator<_Tp>::_increment()
     {
+        if (_node == _node->nil_node)
+            return ;
         if (_node->right != _node->nil_node)
         {
             _node = _node->right;
@@ -151,6 +153,8 @@ namespace ft
     void
     _rbtree_iterator<_Tp>::_decrement()
     {
+        if (_node == _node->nil_node)
+            return ;
         if (_node->left != _node->nil_node)
         {
             while (_node->right != _node->nil_node)
