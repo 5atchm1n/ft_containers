@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/04 13:03:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 02:31:00 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <iostream>
 #include <algorithm>
 // custom iterator
-#include "vector.iterator.hpp"
+#include "vector/iterators/vector.iterator.hpp"
 #include "ft_type_traits.hpp"
 #include "vector/base/_vector_base.hpp"
 

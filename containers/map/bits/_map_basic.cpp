@@ -6,11 +6,14 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 00:42:12 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 02:19:22 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../map.hpp"
+#ifndef _MAP_BASIC_HPP
+#define _MAP_BASIC_HPP
+
+#include "../_map_header.hpp"
 
 namespace ft 
 {
@@ -98,3 +101,5 @@ map<_Key, _Tp, _Cmp, _Alloc>::count(const _Key &key) const
 
 
 }   // END NAMESPACE FT
+
+#endif // _MAP_BASIC_HPP

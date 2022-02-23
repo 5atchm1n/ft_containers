@@ -17,7 +17,7 @@
 #include <memory>
 #include "map/rbtree/bits/_rbt_node.hpp"
 #include "bits/_rbt_iterator.hpp"
-#include "vector.iterator.hpp"
+#include "vector/iterators/vector.iterator.hpp"
 
 #define SINGLE_TREE 1
 #define SINGLE_NODE 1

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../_red_black_tree.hpp"
+#include <cstddef>
 
 namespace ft
 {
@@ -154,7 +155,7 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
 _rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
 {
-    return _node_alloc.max_size();
+    return _node_alloc.max_size() / (sizeof(_Tp));
 }
 
 /**

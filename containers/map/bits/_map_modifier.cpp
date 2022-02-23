@@ -6,11 +6,14 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 01:07:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 02:20:30 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../map.hpp"
+#ifndef _MAP_MODIFIER_HPP
+#define _MAP_MODIFIER_HPP
+
+#include "../_map_header.hpp"
 
 namespace ft 
 {
@@ -101,4 +104,6 @@ map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
     }
 }
 
-}
+}   // END NAMESPACE FT
+
+#endif //_MAP_MODIFIER_HPP

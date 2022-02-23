@@ -11,7 +11,8 @@ objs/_containers_test/_test-map.o: _containers_test/_test-map.cpp \
   containers/map/rbtree/bits/_rbt_insert.cpp \
   containers/map/rbtree/bits/_rbt_delete.cpp \
   containers/map/rbtree/bits/_rbt_traversal.cpp containers/pair.hpp \
-  containers/map/bits/_map_basic.cpp containers/map/bits/../../map.hpp \
+  containers/map/bits/_map_basic.cpp \
+  containers/map/bits/../_map_header.hpp \
   containers/map/bits/_map_modifier.cpp
 
 containers/map.hpp:
@@ -46,6 +47,6 @@ containers/pair.hpp:
 
 containers/map/bits/_map_basic.cpp:
 
-containers/map/bits/../../map.hpp:
+containers/map/bits/../_map_header.hpp:
 
 containers/map/bits/_map_modifier.cpp:
