@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 04:45:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/22 18:29:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 02:13:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ struct classcomp
 		return lhs < rhs;
 	}
 };
+
+void	ft_print(ft::map<char, int> map)
+{
+	std::cout << "map contains:\n";
+	ft::map<char, int>::const_iterator itt = map.begin();
+		for (itt = map.begin(); itt != map.end(); ++itt)
+		std::cout << itt->first << " => " << itt->second << '\n';
+	std::cout << "size :" << map.size() << std::endl;
+}
 
 int main()
 {
@@ -46,9 +55,7 @@ int main()
 
 	// TESTING INSERT
 
-	ft::map<char, int> mymap;
-
-	
+	ft::map<char, int> mymap;	
 
 	// first insert function version (single parameter):
 	mymap.insert(ft::pair<char, int>('a', 100));
@@ -62,11 +69,14 @@ int main()
 		std::cout << " with a value of " << ret.first->second << '\n';
 	}
 
+	mymap['b'] = 20;
+	mymap['c'] = 67;
+	mymap['e'] = 67;
+	mymap['x'] = 67;
+	mymap['f'] = 90;
+
 	// second insert function version (with hint position):
 	ft::map<char, int>::iterator it = mymap.begin();
-	mymap.insert(it, ft::pair<char, int>('b', 300)); // max efficiency inserting
-	mymap.insert(it, ft::pair<char, int>('c', 400)); // no max efficiency inserting
-
 	// third insert function version (range insertion):
 	ft::map<char, int> anothermap;
 	anothermap.insert(mymap.begin(), mymap.find('c'));
@@ -79,10 +89,18 @@ int main()
 	std::cout << "anothermap contains:\n";
 	for (it = anothermap.begin(); it != anothermap.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
+
+	ft_print(mymap);
+
+	it=mymap.find('b');
+	mymap.erase (it);                   // erasing by iterator
+	std::cout << mymap.erase ('c') << std::endl;                  // erasing by key
+
+	ft_print(mymap);
+
+	it=mymap.find ('e');
+	mymap.erase ( it, mymap.end() );
 	
-	ft::map<char, int>::const_iterator itt = mymap.begin();
-	for (itt = mymap.begin(); itt != mymap.end(); ++itt)
-		std::cout << it->first << " => " << it->second << '\n';
-	
+	ft_print(mymap);
 	return 0;
 }

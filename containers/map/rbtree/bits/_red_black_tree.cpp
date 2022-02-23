@@ -168,8 +168,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
     {
         _clean_tree(node->left);
         _clean_tree(node->right);
-        _data_alloc.deallocate(node->data, SINGLE_NODE);
-        _node_alloc.deallocate(node, SINGLE_NODE);
+        _clean_node(node);
     }
 }
 /**

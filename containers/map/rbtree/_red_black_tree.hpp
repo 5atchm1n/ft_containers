@@ -16,7 +16,7 @@
 #include <cstddef>
 #include <memory>
 #include "map/rbtree/bits/_rbt_node.hpp"
-#include "iterator/_rbt_iterator.hpp"
+#include "bits/_rbt_iterator.hpp"
 #include "vector.iterator.hpp"
 
 #define SINGLE_TREE 1
@@ -53,6 +53,7 @@ class _rbtree
         void            _insert_node_fix(node_pointer node);
         void            _rbtree_transplant(node_pointer node_a, node_pointer node_b);
         void            _delete_node_fix(node_pointer node);
+        void            _clean_node(node_pointer node);
         void            _clean_tree(node_pointer node);
         node_pointer    _create_node(const value_type &val);
         node_pointer    _increment(node_pointer node);
@@ -62,24 +63,7 @@ class _rbtree
     
     // Iterators
         typedef ft::_rbtree_iterator<value_type>            iterator;
-
-        class const_iterator : public ft::_rbtree_iterator<value_type>
-        {
-            public:
-            const_iterator(_rbtree_iterator<value_type> other) : _rbtree_iterator<value_type>(other) {}
-            const_iterator() : _rbtree_iterator<value_type>() {}
-            const_iterator(node_pointer val) : _rbtree_iterator<value_type>(val) {}
-
-           const value_type & operator*() const
-            {
-                return _rbtree_iterator<value_type>::operator*();
-            }
-        
-            const value_type *  operator->() const
-            {
-                return _rbtree_iterator<value_type>::operator->();
-            }
-        };
+        typedef ft::_rbtree_const_iterator<value_type>      const_iterator;
 
         typedef ft::reverse_iterator<iterator>              reverse_iterator;
         typedef const ft::reverse_iterator<iterator>        const_reverse_iterator;
@@ -92,7 +76,6 @@ class _rbtree
 
     //  Methods
         node_pointer    _rbtree_successor(node_pointer node) const;
-    
     //      
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
