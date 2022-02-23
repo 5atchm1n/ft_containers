@@ -36,11 +36,15 @@ _rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
  */
 template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
-_rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val)
+_rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos)
 {
     node_pointer new_node = _create_node(val);
     node_pointer y = _nil;
-    node_pointer x = _root;
+    node_pointer x;
+    if (pos == _nil)
+        x = _root;
+    else
+        x = pos;
     while (x != _nil)
     {
         y = x;

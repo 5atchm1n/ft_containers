@@ -42,11 +42,6 @@ class _rbtree
         data_allocator  _data_alloc;
     // Compare function
         _Cmp            _key_compare;
-    
-    // Key nodes
-        node_type       *_root;
-        node_type       *_nil;
-        size_type       _size;
     // Helper functions
         void            _rbtree_rotate_left(node_type *current_node);
         void            _rbtree_rotate_right(node_type *current_node);
@@ -56,6 +51,11 @@ class _rbtree
         void            _clean_node(node_pointer node);
         void            _clean_tree(node_pointer node);
         node_pointer    _create_node(const value_type &val);
+
+    // Key nodes
+        node_type       *_root;
+        node_type       *_nil;
+        size_type       _size;
 
     public:
     
@@ -80,8 +80,10 @@ class _rbtree
         node_pointer    _rbtree_end(node_pointer node) const;
     //    
         node_pointer    _search_tree(const value_type &val) const;
-        node_pointer    _insert_search(const value_type &val);
-        node_pointer    _insert_node(const value_type &val);
+        iterator        _insert_search(const value_type &val);
+        iterator        _insert_pos(iterator start, const value_type &val);
+        
+        node_pointer    _insert_node(const value_type &val, node_pointer start_pos);
         void            _delete_node(node_pointer node);
     
         bool            _is_duplicate(const value_type &val) const;
@@ -104,5 +106,6 @@ class _rbtree
 #include "bits/_rbt_rotations.cpp"
 #include "bits/_rbt_insert.cpp"
 #include "bits/_rbt_delete.cpp"
+#include "bits/_rbt_basic.cpp"
 
 #endif // END _RED_BLACK_TREE_H

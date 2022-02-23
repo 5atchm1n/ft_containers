@@ -16,32 +16,17 @@
 namespace ft
 {
 
-/**
- * @brief contructor with default
+/** 
+ * @tparam _Tp      value type 
+ * @tparam _Cmp     compare object
+ * @tparam _Alloc   allocator object 
  */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator)
-: _data_alloc(allocator), _key_compare(compare)
-{
-    _size = 0;
-    _nil = _node_alloc.allocate(SINGLE_NODE);
-    _nil->isred = false;
-    _nil->data = NULL;
-    _nil->nil_node = _nil;
-    _root = _nil;
-}
+
 
 /**
- * @brief destructor
+ * @brief   check if element is in the tree
+ * @return true or false boolean 
  */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc>::~_rbtree()
-{
-    if (_root != _nil)
-        _clean_tree(_root);
-    _node_alloc.deallocate(_nil, SINGLE_NODE);
-}
-
 template <typename _Tp, typename _Cmp, typename _Alloc>
 bool
 _rbtree<_Tp, _Cmp, _Alloc>::_is_duplicate(const value_type &val) const
@@ -53,13 +38,28 @@ _rbtree<_Tp, _Cmp, _Alloc>::_is_duplicate(const value_type &val) const
 }
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
+_rbtree<_Tp, _Cmp, _Alloc>::_insert_pos(iterator it, const value_type &val)
+{
+    node_pointer node = _search_tree(val);
+    if (node != _nil)
+        return iterator(node);
+    iterator ret;
+    if (!_key_compare(val, *it))
+        ret = (_insert_node(val, node));
+    else
+        ret = _insert_node(val, _root);
+    return ret;
+}
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
 _rbtree<_Tp, _Cmp, _Alloc>::_insert_search(const value_type &val)
 {
-    node_pointer check = _search_tree(val);
-    if (check == _nil)
-        check = _insert_node(val);
-    return check;
+    node_pointer node = _search_tree(val);
+    if (node == _nil)
+        node = _insert_node(val, _root);
+    return iterator(node);
 }
 
 /**
@@ -144,45 +144,4 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_successor(node_pointer node) const
     return tmp;
 }
 
-template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
-_rbtree<_Tp, _Cmp, _Alloc>::_get_size() const
-{
-    return _size;
-}
-
-template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
-_rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
-{
-    return _node_alloc.max_size() / (sizeof(_Tp));
-}
-
-/**
- * @brief helper function to clean tree - recursive
- */ 
-template <typename _Tp, typename _Cmp, typename _Alloc>
-void
-_rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
-{
-    if (node != _nil)
-    {
-        _clean_tree(node->left);
-        _clean_tree(node->right);
-        _clean_node(node);
-    }
-}
-/**
- * @brief print tree helper
- * @return std::ostream& 
- */
-
-template <typename _Tp, typename _Cmp, typename _Alloc>
-std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Cmp, _Alloc> &val)
-{
-    stream << "root = " << val._root << "\n";
-    stream << "nil = " << val._nil << "\n";
-    stream << "node : " << *val._root << "\n";
-    return stream;
-}
 }   // END NAMESPACE FT

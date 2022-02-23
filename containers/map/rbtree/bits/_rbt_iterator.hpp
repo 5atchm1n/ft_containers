@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 05:42:45 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:51:35 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ namespace ft
         typedef std::bidirectional_iterator_tag iterator_category;
         typedef ptrdiff_t difference_type;
         typedef _rbtree_iterator<_Tp> _self;
-        typedef _rb_node<_Tp> *_node_pointer;
+        typedef _rb_node<_Tp> * _node_pointer;
 
     protected:
         void _increment();
