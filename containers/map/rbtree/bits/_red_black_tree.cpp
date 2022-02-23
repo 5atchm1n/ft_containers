@@ -26,8 +26,8 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator)
     _size = 0;
     _nil = _node_alloc.allocate(SINGLE_NODE);
     _nil->isred = false;
-    _nil->isnull = true;
     _nil->data = NULL;
+    _nil->nil_node = _nil;
     _root = _nil;
 }
 

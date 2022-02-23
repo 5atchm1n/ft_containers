@@ -23,10 +23,10 @@ _rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
 {
     node_pointer new_node;
     new_node = _node_alloc.allocate(SINGLE_NODE);
-    new_node->isnull = false;
     new_node->left = _nil;
     new_node->parent = _nil;
     new_node->right = _nil;
+    new_node->nil_node = _nil;
     new_node->data = _data_alloc.allocate(SINGLE_NODE);
     _data_alloc.construct(new_node->data, val);
     return new_node;

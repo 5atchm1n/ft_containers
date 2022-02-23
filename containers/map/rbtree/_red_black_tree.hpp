@@ -56,8 +56,6 @@ class _rbtree
         void            _clean_node(node_pointer node);
         void            _clean_tree(node_pointer node);
         node_pointer    _create_node(const value_type &val);
-        node_pointer    _increment(node_pointer node);
-        node_pointer    _decrement(node_pointer node);
 
     public:
     
@@ -106,6 +104,5 @@ class _rbtree
 #include "bits/_rbt_rotations.cpp"
 #include "bits/_rbt_insert.cpp"
 #include "bits/_rbt_delete.cpp"
-#include "bits/_rbt_traversal.cpp"
 
 #endif // END _RED_BLACK_TREE_H

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/23 01:42:00 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 04:49:49 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ struct _rb_node
     typedef _Tp*        data_pointer;
     
     bool            isred;
-    bool            isnull;
+    node_pointer    nil_node;
     node_pointer    parent;
     node_pointer    left;
     node_pointer    right;
@@ -55,74 +55,19 @@ _rb_node<_Tp>::_get_data() const
 }
 
 /**
- * @brief Helper function for iterator
- * 
- * @param nil_node  value of _nil node
- * @return value of "next" node 
- */
-template <typename _Tp>
-typename _rb_node<_Tp>::node_pointer
-_rb_node<_Tp>::_increment() const
-{
-    node_pointer    current = const_cast<node_pointer>(this);
-    if (!current->right->isnull)
-    {
-        current = current->right;
-        while (!current->left->isnull)
-            current = current->left;
-    }
-    else
-    {
-        node_pointer tmp = current->parent;
-        while (current == tmp->right)
-        {
-            current = tmp;
-            tmp = tmp->parent;
-        }
-        if (current->right != tmp)
-            current = tmp;
-    }
-    return current;
-}
-
-template <typename _Tp>
-typename _rb_node<_Tp>::node_pointer
-_rb_node<_Tp>::_decrement() const
-{
-    node_pointer    current = const_cast<node_pointer>(this);
-    if (current->isred == true && current->parent->parent == current)
-        current = current->right;
-    else if (!current->left->isnull)
-    {
-        node_pointer tmp = current->left;
-        while (!tmp->right->isnull)
-            tmp = tmp->right;
-        current = tmp;
-    }
-    else
-    {
-        node_pointer tmp = current->parent;
-        while (current == tmp->left)
-        {
-            current = tmp;
-            tmp = tmp->parent;
-        }
-        current = tmp;
-    }
-    return current;
-}
-
-
-/**
  * @brief Construct a new NODE
  * 
  * @tparam _Tp 
  */
 template <typename _Tp>
-_rb_node<_Tp>::_rb_node() : isred(false), parent(), left(), right(), data()
-{
-    
-}
+_rb_node<_Tp>::_rb_node() : 
+isred(false),
+nil_node(),
+parent(),
+left(),
+right(), 
+data()
+{}
 /**
  * @brief Construct a new NODE from copy
  * 
@@ -146,6 +91,7 @@ _rb_node<_Tp> &
 _rb_node<_Tp>::operator=(const _rb_node &val)
 {
     isred = val.isred;
+    nil_node = val.nil_node;
     parent = val.parent;
     left = val.left;
     right = val.right;

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 00:57:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 05:08:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ namespace ft
     template <typename _Tp>
     class _rbtree_iterator
     {
-        public:
+    public:
         typedef _Tp value_type;
         typedef _Tp &reference;
         typedef _Tp *pointer;
@@ -33,10 +33,13 @@ namespace ft
         typedef _rbtree_iterator<_Tp> _self;
         typedef _rb_node<_Tp> *_node_pointer;
 
-        protected:
-            _node_pointer _node;
+    protected:
+        void _increment();
+        void _decrement();
 
-        public:
+        _node_pointer _node;
+
+    public:
         _rbtree_iterator() : _node() {}
         _rbtree_iterator(_node_pointer val) : _node(val) {}
         _rbtree_iterator(const _rbtree_iterator &other) : _node(other._node) {}
@@ -50,13 +53,13 @@ namespace ft
         pointer
         operator->() const
         {
-            return &(operator*());
+            return _node->data;
         }
 
         _self &
         operator++()
         {
-            _node = _node->_increment();
+            _increment();
             return *this;
         }
 
@@ -64,14 +67,14 @@ namespace ft
         operator++(int)
         {
             _self tmp = *this;
-            _node = _node->_increment();
+            _increment();
             return tmp;
         }
 
         _self &
         operator--()
         {
-            _node = _node->_decrement();
+            _decrement();
             return *this;
         }
 
@@ -79,7 +82,7 @@ namespace ft
         operator--(int)
         {
             _self tmp = *this;
-            _node = _node->_decrement();
+            _decrement();
             return tmp;
         }
 
@@ -95,13 +98,12 @@ namespace ft
             return _node != val._node;
         }
     };
-
     template <typename value_type>
     class _rbtree_const_iterator : public ft::_rbtree_iterator<value_type>
     {
         typedef typename _rbtree_iterator<value_type>::_node_pointer _node_pointer;
-    public:
 
+    public:
         _rbtree_const_iterator() : _rbtree_iterator<value_type>() {}
         _rbtree_const_iterator(_node_pointer val) : _rbtree_iterator<value_type>(val) {}
         _rbtree_const_iterator(_rbtree_iterator<value_type> other) : _rbtree_iterator<value_type>(other) {}
@@ -116,6 +118,55 @@ namespace ft
             return _rbtree_iterator<value_type>::operator->();
         }
     };
+
+    /**
+     * @brief Helper function for iterator
+     *
+     * @param nil_node  value of _nil node
+     * @return value of "next" node
+     */
+    template <typename _Tp>
+    void
+    _rbtree_iterator<_Tp>::_increment()
+    {
+        if (_node->right != _node->nil_node)
+        {
+            _node = _node->right;
+            while (_node->left != _node->nil_node)
+                _node = _node->left;
+        }
+        else
+        {
+            _node_pointer tmp = _node->parent;
+            while(tmp != _node->nil_node && _node == tmp->right)
+            {
+                _node = tmp;
+                tmp = tmp->parent;
+            }
+            _node = tmp;
+        }
+    }
+
+    template <typename _Tp>
+    void
+    _rbtree_iterator<_Tp>::_decrement()
+    {
+        if (_node->left != _node->nil_node)
+        {
+            while (_node->right != _node->nil_node)
+                _node = _node->right;
+        }
+        else
+        {
+            _node_pointer tmp = _node->parent;
+            while (tmp != _node->nil_node && _node == tmp->left)
+            {
+                _node = tmp;
+                tmp = tmp->parent;
+            }
+            _node = tmp;
+        }
+    }
 
 } // END NAMESPACE FT
 
