@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 04:45:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 05:29:46 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/23 22:50:37 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,29 +104,30 @@ int main()
 	ft_print<char, int>(mymap, "basic test MAP", i++);
 
 	it=mymap.find ('e');
-	mymap.erase ( it, mymap.end() );
+	mymap.erase ( it, mymap.end());
 	// TEST 7
 	ft_print<char, int>(mymap, "basic test MAP", i++);
 	typedef ft::map<int, std::string>::value_type	map_pair;
 
+	// TEST 8 start
 	std::list<map_pair> lst;
 	std::list<map_pair>::iterator itlst;
 
 	lst.push_back(map_pair(42, "lol"));
-
 	lst.push_back(map_pair(50, "mdr"));
 	lst.push_back(map_pair(35, "funny"));
-
 	lst.push_back(map_pair(45, "bunny"));
 	lst.push_back(map_pair(21, "fizz"));
 	lst.push_back(map_pair(38, "buzz"));
 	lst.push_back(map_pair(55, "fuzzy"));
 
-	std::cout << "List contains:" << std::endl;
+	std::cout << "\nList contains:\n" << std::endl;
 	for (itlst = lst.begin(); itlst != lst.end(); ++itlst)
 		std::cout << itlst->first << "=>" << itlst->second << std::endl;
+	std::cout << "\nList end\n" << std::endl;
 
 	ft::map<int, std::string> mp;
+	
 	mp.insert(lst.begin(), lst.end());
 	
 	i = 0;
@@ -145,10 +146,11 @@ int main()
 	std::cout << "List contains:" << std::endl;
 	for (itlst = lst.begin(); itlst != lst.end(); ++itlst)
 		std::cout << itlst->first << "=>" << itlst->second << std::endl;
+	std::cout << "\nList end\n" << std::endl;
+	
 	ft::map<int, std::string>::iterator itmp;
-	std::cout << "Map contains:" << std::endl;
-	for (itmp = mp.begin(); itmp != mp.end(); ++itmp)
-		std::cout << itmp->first << " => " << itmp->second << std::endl;
+	
+	ft_print<int, std::string>(mp, "Advanced Test", i++);
 
 	mp.insert(lst.begin(), lst.end());
 

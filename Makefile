@@ -16,7 +16,8 @@ CPPSTD = -std=c++98
 
 CFLAGS = -Wall -Wextra -Werror -MMD -MP
 
-MEM = -fsanitize=address -g
+MEM = -fsanitize=address -g3 
+DEBUG = -fstandalone-debug
 
 INC = -I./containers -I./iterators -I./
 

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 21:51:35 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 00:46:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 namespace ft
 {
 
-    template <typename _Tp>
+    template <typename _Tp, typename _Alloc>
     class _rbtree_iterator
     {
     public:
@@ -30,8 +30,8 @@ namespace ft
 
         typedef std::bidirectional_iterator_tag iterator_category;
         typedef ptrdiff_t difference_type;
-        typedef _rbtree_iterator<_Tp> _self;
-        typedef _rb_node<_Tp> * _node_pointer;
+        typedef _rbtree_iterator<_Tp, _Alloc> _self;
+        typedef _rb_node<_Tp, _Alloc> * _node_pointer;
 
     protected:
         void _increment();
@@ -98,24 +98,24 @@ namespace ft
             return _node != val._node;
         }
     };
-    template <typename value_type>
-    class _rbtree_const_iterator : public ft::_rbtree_iterator<value_type>
+    template <typename value_type, typename _Alloc>
+    class _rbtree_const_iterator : public ft::_rbtree_iterator<value_type, _Alloc>
     {
-        typedef typename _rbtree_iterator<value_type>::_node_pointer _node_pointer;
+        typedef typename _rbtree_iterator<value_type, _Alloc>::_node_pointer _node_pointer;
 
     public:
-        _rbtree_const_iterator() : _rbtree_iterator<value_type>() {}
-        _rbtree_const_iterator(_node_pointer val) : _rbtree_iterator<value_type>(val) {}
-        _rbtree_const_iterator(_rbtree_iterator<value_type> other) : _rbtree_iterator<value_type>(other) {}
+        _rbtree_const_iterator() : _rbtree_iterator<value_type, _Alloc>() {}
+        _rbtree_const_iterator(_node_pointer val) : _rbtree_iterator<value_type, _Alloc>(val) {}
+        _rbtree_const_iterator(_rbtree_iterator<value_type, _Alloc> other) : _rbtree_iterator<value_type, _Alloc>(other) {}
 
         const value_type &operator*() const
         {
-            return _rbtree_iterator<value_type>::operator*();
+            return _rbtree_iterator<value_type, _Alloc>::operator*();
         }
 
         const value_type *operator->() const
         {
-            return _rbtree_iterator<value_type>::operator->();
+            return _rbtree_iterator<value_type, _Alloc>::operator->();
         }
     };
 
@@ -125,9 +125,9 @@ namespace ft
      * @param nil_node  value of _nil node
      * @return value of "next" node
      */
-    template <typename _Tp>
+    template <typename _Tp, typename _Alloc>
     void
-    _rbtree_iterator<_Tp>::_increment()
+    _rbtree_iterator<_Tp, _Alloc>::_increment()
     {
         if (_node == _node->nil_node)
             return ;
@@ -149,9 +149,9 @@ namespace ft
         }
     }
 
-    template <typename _Tp>
+    template <typename _Tp, typename _Alloc>
     void
-    _rbtree_iterator<_Tp>::_decrement()
+    _rbtree_iterator<_Tp, _Alloc>::_decrement()
     {
         if (_node == _node->nil_node)
             return ;

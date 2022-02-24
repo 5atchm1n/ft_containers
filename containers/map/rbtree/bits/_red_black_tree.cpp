@@ -123,7 +123,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_end(node_pointer node) const
     node_pointer tmp = node;
     while (tmp->right != _nil)
         tmp = tmp->right;
-    return tmp->right;
+    return tmp;
 }
 /**
  * @brief find the in order successor

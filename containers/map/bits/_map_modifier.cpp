@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 22:27:24 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 00:29:35 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ namespace ft
  * @tparam _Cmp             key_compare
  * @tparam _Alloc           allocator_type
  * @tparam InputIterator    Input iterator type
- *
- * * * *    INSERT METHODS * * * *
  */
 
 /**
@@ -90,12 +88,10 @@ template<typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
 {
-    iterator i = first;
-    value_type val;
-    for (iterator i = first; i != last; i++)
+    while (first != last)
     {
-        value_type val = make_pair(i->first, mapped_type());
-        tree._delete_node(tree._search_tree(val));
+        tree._delete_node(tree._search_tree(*first));
+        first++;
     }
 }
 

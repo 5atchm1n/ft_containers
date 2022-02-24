@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/23 20:39:55 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 01:17:21 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,21 @@ namespace ft
  * @brief 
  * 
  */
-
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc> &
+_rbtree<_Tp, _Cmp, _Alloc>::operator=(const _rbtree &copy)
+{
+    _clean_tree(_root);
+    _nil = _node_alloc.allocate(SINGLE_NODE);
+    _nil->isred = false;
+    _nil->parent = _nil;
+    _nil->right = _nil;
+    _nil->left = _nil;
+    _root = _nil;
+    for (const_iterator i = copy._begin(); i != copy._end(); ++i)
+        _insert_node(*i, _root);
+    return *this;
+}
 
 /**
  * @brief contructor with default
