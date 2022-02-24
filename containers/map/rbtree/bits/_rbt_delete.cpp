@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 01:40:07 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 02:39:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
     node_pointer tmp_y;
     tmp_y = node;
     bool node_isred = tmp_y->isred;
-    if (node == _nil)
-        return ;
     if (node->left == _nil)
     {
         tmp_x = node->right;
@@ -76,7 +74,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
         tmp_y->isred = node->isred;
     }
     if (node_isred == false)
-        _delete_node_fix(tmp_y);
+        _delete_node_fix(tmp_x);
     _clean_node(node);
     _size--;
 }

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 00:29:35 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 11:53:40 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,12 @@ template<typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
 {
+    iterator tmp = first;
     while (first != last)
     {
+        tmp++;
         tree._delete_node(tree._search_tree(*first));
-        first++;
+        first = tmp;
     }
 }
 
