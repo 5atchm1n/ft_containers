@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/23 02:31:00 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:50:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ namespace ft
 /**
  *  CONSTRUCTORS
  */
-        explicit vector() : _vector_base<_Tp, _Alloc>() {}
+        explicit vector(const allocator_type &alloc = allocator_type()) : _vector_base<_Tp, _Alloc>(alloc) {}
         explicit vector(size_type size,
                         const value_type &val = value_type(),
                         const allocator_type& alloc = allocator_type());

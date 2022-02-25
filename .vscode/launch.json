@@ -4,13 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
-            "name": "clang++ - Build and debug active file",
+            "name": "C/C++: clang++ Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/rbt_test",
-            "args": [],
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [ ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
@@ -29,7 +28,11 @@
                 }
             ],
             "preLaunchTask": "C/C++: clang++ build active file",
-            "miDebuggerPath": "/usr/bin/lldb-mi"
+            "miDebuggerPath": "/usr/bin/lldb-mi",
+            "sourceFileMap": {
+                "map.hpp": "/home/sshakya/Documents/Projects/ft_containers/containers/map.hpp"
+
+            }
         }
     ]
 }

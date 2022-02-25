@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 12:45:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 19:00:12 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,15 +148,19 @@ namespace ft
             _node = tmp;
         }
     }
-
+    
     template <typename _Tp, typename _Alloc>
     void
     _rbtree_iterator<_Tp, _Alloc>::_decrement()
     {
         if (_node == _node->nil_node)
+        {
+            _node = _node->nil_node->_max;
             return ;
+        }
         if (_node->left != _node->nil_node)
         {
+            _node = _node->left;
             while (_node->right != _node->nil_node)
                 _node = _node->right;
         }

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 01:19:43 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 01:19:47 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,8 @@ typename map<_Key, _Tp, _Cmp, _Alloc>::mapped_type &
 map<_Key, _Tp, _Cmp, _Alloc>::operator[](const key_type &key)
 {
     value_type val = ft::make_pair(key, mapped_type());
-    if (!tree._is_duplicate(val))
-        insert(val);
-    return (tree._search_tree(val)->data)->second;
+    iterator tmp = tree._insert_search(val);
+    return tmp->second;
 }
 /**
  * @brief find a value that matches key pairing 

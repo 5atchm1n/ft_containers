@@ -6,7 +6,7 @@
 /*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/09 02:04:55by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/25 01:17:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,6 @@ namespace ft
  * @tparam _Alloc   allocator object 
  */
 
-
-/**
- * @brief   check if element is in the tree
- * @return true or false boolean 
- */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-bool
-_rbtree<_Tp, _Cmp, _Alloc>::_is_duplicate(const value_type &val) const
-{
-    node_pointer check = _search_tree(val);
-    if (check == _nil)
-        return false;
-    return true;
-}
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
@@ -123,7 +109,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_end(node_pointer node) const
     node_pointer tmp = node;
     while (tmp->right != _nil)
         tmp = tmp->right;
-    return tmp;
+    return tmp->right;
 }
 /**
  * @brief find the in order successor

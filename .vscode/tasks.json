@@ -5,6 +5,7 @@
             "label": "C/C++: clang++ build active file",
             "command": "/usr/bin/clang++",
             "args": [
+                "-I${workspaceFolder}/containers",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",

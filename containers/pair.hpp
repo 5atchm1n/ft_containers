@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pair.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:06:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/19 15:26:01 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/24 18:31:31 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ make_pair(_T1 x, _T2 y)
 template <typename _T1, typename _T2>
 std::ostream &operator<<(std::ostream &os, const pair<_T1, _T2> &val)
 {
-    os << "key = " << val.first << std::endl;
+    os << "key = " << val.first;
     os << " value = " << val.second;
     return os;
 }

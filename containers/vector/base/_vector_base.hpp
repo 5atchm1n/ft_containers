@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/04 14:33:59 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:53:56 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ namespace ft
         _alloc_type _mem;
         _size_type _capacity;
 
-        _vector_base();
+        explicit _vector_base(const _alloc_type & alloc = _alloc_type());
         _vector_base(_size_type size, const _Tp& value = _Tp(), const _Alloc &val = _Alloc());
         _vector_base(const _vector_base<_Tp, _Alloc> &copy);
         ~_vector_base();
@@ -72,7 +72,7 @@ namespace ft
  * start with a default capacity
  */
     template <typename _Tp, typename _Alloc>
-    _vector_base<_Tp, _Alloc>::_vector_base(void) : _size(), _capacity(DFLT_CAPACITY)
+    _vector_base<_Tp, _Alloc>::_vector_base(const _alloc_type & alloc) : _size(), _mem(alloc) ,_capacity(DFLT_CAPACITY)
     {
         _start = _mem.allocate(_capacity);
     }

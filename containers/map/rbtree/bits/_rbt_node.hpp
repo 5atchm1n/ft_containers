@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/24 00:52:28 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 22:15:01 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,13 @@ public:
     node_pointer left;
     node_pointer right;
     data_pointer data;
+
+    node_pointer    _min;
+    node_pointer    _max;
     // Coplien
     _rb_node();
     _rb_node(const _rb_node &copy);
+
     _rb_node &operator=(const _rb_node &val);
     // Helper function for iterator
 private:
@@ -73,6 +77,8 @@ nil_node(),
 parent(),
 left(),
 right(),
+_min(),
+_max(),
 data() {}
 /**
  * @brief Construct a new NODE from copy
@@ -102,6 +108,8 @@ _rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
     left = val.left;
     right = val.right;
     data = val.data;
+    _max = val._max;
+    _min = val._min;
     return *this;
 }
 /**
@@ -112,11 +120,19 @@ _rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
 template <typename _Tp, typename _Alloc>
 std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp, _Alloc> &val)
 {
+    if (val.data == NULL)
+    {
+    stream << "NIL node" <<std::endl;
+    stream << "max : " << val._max << "\n";
+    stream << "min : " << val._min << "\n";
+    return stream;
+    }
     stream << "isred = " << val.isred << "\n";
-    // stream << "node = " << &val << "\n";
-    // stream << "parent: " << val.parent << "\n";
-    // stream << "left: " << val.left << "\tright: " << val.right << "\n";
-    stream << "data: " << val.data;
+    stream << "node = " << &val << "\n";
+    stream << "parent: " << val.parent << "\n";
+    stream << "nil : " << val.nil_node << "\n";
+    stream << "left: " << val.left << "\tright: " << val.right << "\n";
+    stream << "data: ";
     if (val.data != NULL)
         stream << " " << *val.data;
     return stream;

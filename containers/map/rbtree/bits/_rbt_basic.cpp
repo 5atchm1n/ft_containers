@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 12:18:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/24 22:03:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator)
     _nil->data = NULL;
     _nil->right = _nil;
     _nil->left = _nil;
+    _nil->parent = _nil;
     _nil->nil_node = _nil;
+    _nil->_max = _nil;
+    _nil->_min = _nil;
     _root = _nil;
 }
 
@@ -56,12 +59,14 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 void
 _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
 {
+    std::cout << "#" << std::endl;
     if (node != _nil)
     {
         _clean_tree(node->left);
         _clean_tree(node->right);
         _clean_node(node);
     }
+    _size = 0;
     _root = _nil;
     _root->right = _nil;
     _root->left = _nil;
@@ -89,7 +94,7 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::size_type
 _rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
 {
-    return _node_alloc.max_size() / (sizeof(_Tp));
+    return _node_alloc.max_size() / sizeof(_Tp);
 }
 
 /**
