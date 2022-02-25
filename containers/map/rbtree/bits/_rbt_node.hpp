@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/25 13:21:07 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 16:37:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,9 +113,7 @@ _rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
     return *this;
 }
 
-#define RESET "\033[0m"
-#define BLUE  "\033[34m"      /* Black */
-#define RED   "\033[31m"      /* Red */
+
 /**
  * @brief Overload ostream operator to print node easily
  *
@@ -131,18 +129,13 @@ std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp, _Alloc> &val)
         stream << "min : " << val._min << "\n";
         return stream;
     }
-    if (val.isred)
-        stream << RED;
-    else
-        stream << BLUE;
     //stream << "node = " << &val << "\n";
     //stream << "parent: " << val.parent << "\n";
     //stream << "nil : " << val.nil_node << "\n";
     //stream << "left: " << val.left << "\tright: " << val.right << "\n";
     //stream << "data: ";
     if (val.data != NULL)
-        stream << " " << *val.data;
-    stream << RESET;
+        stream << "isred : "<< val.isred << " " << *val.data;
     return stream;
 }
 

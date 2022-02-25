@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 15:03:01 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 15:13:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ _rbtree<_Tp, _Cmp, _Alloc> &
 _rbtree<_Tp, _Cmp, _Alloc>::operator=(const _rbtree &copy)
 {
     _clean_tree(_root);
-    for (const_iterator i = copy._begin(); i != copy._end(); ++i)
+    for (const_iterator i = copy._begin(); i != copy._end(); i++)
         _insert_node(*i, _root);
     return *this;
 }

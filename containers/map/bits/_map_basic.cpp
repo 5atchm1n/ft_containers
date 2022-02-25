@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 14:12:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 16:33:13 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 map<_Key, _Tp, _Cmp, _Alloc>::map(const map &copy) : tree(copy.key_comp(), copy.get_allocator())
 {
     iterator pos = copy.begin();
-    iterator tmp = tree._insert_search(*pos);
+    iterator tmp = tree._insert_search(*pos++);
     while (pos != copy.end())
         tmp = tree._insert_pos(tmp, *pos++);
 }    
