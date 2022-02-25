@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 14:57:55 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 21:51:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ template<typename _Tp, typename _Cmp, typename _Alloc>
 void
 _rbtree<_Tp, _Cmp, _Alloc>::_clean_node(node_pointer node)
 {
-    _data_alloc.destroy(node->data);
-    _data_alloc.deallocate(node->data, SINGLE_NODE);    
-    _node_alloc.deallocate(node, SINGLE_NODE);
+    if (node != _nil)
+    {
+        _data_alloc.destroy(node->data);
+        _data_alloc.deallocate(node->data, SINGLE_NODE);    
+        _node_alloc.deallocate(node, SINGLE_NODE);
+    }
 }
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
@@ -44,7 +47,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
     node_pointer tmp_x;
     node_pointer tmp_y;
     tmp_y = node;
-    bool node_isred = tmp_y->isred;
+    bool node_isred = node->isred;
     if (node->left == _nil)
     {
         tmp_x = node->right;
@@ -74,10 +77,11 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
         tmp_y->isred = node->isred;
     }
     if (node_isred == false)
-        _delete_node_fix(tmp_x == _nil ? node : tmp_x);
+        _delete_node_fix(node);
     _clean_node(node);
     _nil->_max = _rbtree_maximum(_root);
     _nil->_min = _rbtree_minimum(_root);
+    _nil->parent = _nil;
     _size--;
 }
 

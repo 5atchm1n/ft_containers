@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/25 18:40:39 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 21:34:49 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
     new_node = _node_alloc.allocate(SINGLE_NODE);
     new_node->parent = _nil;
     new_node->nil_node = _nil;
-	new_node->isred = true;
     new_node->data = _data_alloc.allocate(SINGLE_NODE);
     _data_alloc.construct(new_node->data, val);
     return new_node;
@@ -61,6 +60,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos
         y->right = new_node;
     new_node->left = _nil;
     new_node->right = _nil;
+	new_node->isred = true;
     _insert_node_fix(new_node);
     _size++;
     return new_node;

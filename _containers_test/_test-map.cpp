@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 04:45:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 17:59:28 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 22:02:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int main()
 	ft::map<char, int, classcomp> fourth; // class as Compare
 	ft::map<char, int, bool (*)(char, char)> fifth(fn_pt); // function pointer as Compare
 
-	/*
 	// TESTING INSERT
 	std::cout << "Testing INSERT basic" << std::endl;
 
@@ -158,6 +157,5 @@ int main()
 	mp.insert(lst.begin(), lst.end());
 
 	ft_print<int, std::string>(mp, "Advanced Test", i++);
-*/
 	return 0;
 }

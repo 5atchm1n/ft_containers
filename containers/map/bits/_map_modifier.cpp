@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 01:15:13 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 21:59:34 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
 map<_Key, _Tp, _Cmp, _Alloc>::insert(iterator position, const value_type &value)
 {
-    return tree._insert_search(position, value);
+    return tree._insert_pos(position, value);
 }
 
 template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
@@ -90,13 +90,8 @@ template<typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
 {
-    iterator tmp = first;
     while (first != last)
-    {
-        tmp++;
-        tree._delete_node(tree._search_tree(*first));
-        first = tmp;
-    }
+        tree._delete_node(tree._search_tree(*first++));
 }
 
 }   // END NAMESPACE FT
