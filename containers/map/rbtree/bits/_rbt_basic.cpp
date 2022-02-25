@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 14:11:46 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 15:03:01 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 void
 _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
 {
-    std::cout << "#" << std::endl;
     if (node != _nil)
     {
         _clean_tree(node->left);
