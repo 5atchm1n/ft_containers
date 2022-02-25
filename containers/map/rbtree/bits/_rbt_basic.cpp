@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 15:13:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 17:20:14 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,6 @@
 namespace ft
 {
 
-/**
- * @brief 
- * 
- */
-template <typename _Tp, typename _Cmp, typename _Alloc>
-_rbtree<_Tp, _Cmp, _Alloc> &
-_rbtree<_Tp, _Cmp, _Alloc>::operator=(const _rbtree &copy)
-{
-    _clean_tree(_root);
-    for (const_iterator i = copy._begin(); i != copy._end(); i++)
-        _insert_node(*i, _root);
-    return *this;
-}
 
 /**
  * @brief contructor with default
@@ -53,6 +40,33 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree(const _Cmp compare, const _Alloc allocator)
 }
 
 /**
+ * @brief 
+ * 
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+_rbtree<_Tp, _Cmp, _Alloc> &
+_rbtree<_Tp, _Cmp, _Alloc>::operator=(const _rbtree &copy)
+{
+    _clean_tree(_root);
+    for (const_iterator i = copy._begin(); i != copy._end(); i++)
+        _insert_node(*i, _root);
+    return *this;
+}
+
+/*******
+ * @brief clean tree
+ */
+template<typename _Tp, typename _Cmp, typename _Alloc>
+void
+_rbtree<_Tp, _Cmp, _Alloc>::_clean() 
+{
+    _clean_tree(_root);
+    _root = _nil;
+    _root->right = _nil;
+    _root->left = _nil;
+}
+
+/**
  * @brief helper function to clean tree - recursive
  */ 
 template <typename _Tp, typename _Cmp, typename _Alloc>
@@ -66,9 +80,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_clean_tree(node_pointer node)
         _clean_node(node);
     }
     _size = 0;
-    _root = _nil;
-    _root->right = _nil;
-    _root->left = _nil;
 }
 
 /**

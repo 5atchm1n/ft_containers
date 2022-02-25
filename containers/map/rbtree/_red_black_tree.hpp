@@ -85,7 +85,7 @@ class _rbtree
         node_pointer    _search_tree(const value_type &val) const;
         node_pointer    _insert_node(const value_type &val, node_pointer start_pos);
         void            _delete_node(node_pointer node);
-        void            _clean() { _clean_tree(_root); };
+        void            _clean();
     //
         bool            _is_duplicate(const value_type &val) const;
         size_type       _get_size() const;

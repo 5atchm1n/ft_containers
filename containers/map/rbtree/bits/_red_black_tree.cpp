@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 14:11:12 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 17:32:36 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_pos(iterator it, const value_type &val)
     if (node != _nil)
         return iterator(node);
     iterator ret;
-    if (!_key_compare(val, *it))
-        ret = (_insert_node(val, node));
+    if (_key_compare(*it, val))
+        ret = _insert_node(val, node);
     else
         ret = _insert_node(val, _root);
     return ret;
