@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/25 01:42:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 11:58:51 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,9 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos)
 {
-	std::cout << "create node" << std::endl;
 	node_pointer new_node = _create_node(val);
     node_pointer y = _nil;
-    node_pointer x;
-    if (pos == _nil)
-        x = _root;
-    else
-        x = pos;
+    node_pointer x = pos;
     while (x != _nil)
     {
         y = x;
@@ -54,8 +49,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos
             x = x->left;
         else
             x = x->right;
-		std::cout << *x << std::endl;
-		std::cout << *y << std::endl;
 	}
     new_node->parent = y;
     if (y == _nil)
@@ -63,12 +56,9 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos
     else if (_key_compare(val, *y->data))
         y->left = new_node;
     else
-    y->right = new_node;
-	std::cout << *y << std::endl;
-	std::cout << *_root << std::endl;
-    
-	new_node->left = _nil;
-    new_node->right = _nil;
+    {
+        y->right = new_node;
+    }
     new_node->isred = true;
     _insert_node_fix(new_node);
     _size++;
@@ -107,7 +97,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node_fix(node_pointer node)
                 _rbtree_rotate_right(node->parent->parent);
             }
         }
-        else
+        else    // if uncle 
         {
             node_pointer y = node->parent->parent->left;
             if (y->isred == true)

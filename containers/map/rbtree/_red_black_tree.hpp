@@ -51,6 +51,7 @@ class _rbtree
         void            _clean_node(node_pointer node);
         node_pointer    _create_node(const value_type &val);
         void            _clean_tree(node_pointer node);
+        int             _count_nodes(node_pointer node) const;
 
     // Key nodes
         node_type       *_root;
@@ -58,7 +59,6 @@ class _rbtree
         size_type       _size;
 
     public:
-    
     // Iterators
         typedef ft::_rbtree_iterator<value_type, data_allocator>        iterator;
         typedef ft::_rbtree_const_iterator<value_type, data_allocator>  const_iterator;

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 02:50:49 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/24 22:15:01 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 13:21:07 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,10 @@ _rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
     _min = val._min;
     return *this;
 }
+
+#define RESET "\033[0m"
+#define BLUE  "\033[34m"      /* Black */
+#define RED   "\033[31m"      /* Red */
 /**
  * @brief Overload ostream operator to print node easily
  *
@@ -122,19 +126,23 @@ std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp, _Alloc> &val)
 {
     if (val.data == NULL)
     {
-    stream << "NIL node" <<std::endl;
-    stream << "max : " << val._max << "\n";
-    stream << "min : " << val._min << "\n";
-    return stream;
+        stream << "NIL node" <<std::endl;
+        stream << "max : " << val._max << "\n";
+        stream << "min : " << val._min << "\n";
+        return stream;
     }
-    stream << "isred = " << val.isred << "\n";
-    stream << "node = " << &val << "\n";
-    stream << "parent: " << val.parent << "\n";
-    stream << "nil : " << val.nil_node << "\n";
-    stream << "left: " << val.left << "\tright: " << val.right << "\n";
-    stream << "data: ";
+    if (val.isred)
+        stream << RED;
+    else
+        stream << BLUE;
+    //stream << "node = " << &val << "\n";
+    //stream << "parent: " << val.parent << "\n";
+    //stream << "nil : " << val.nil_node << "\n";
+    //stream << "left: " << val.left << "\tright: " << val.right << "\n";
+    //stream << "data: ";
     if (val.data != NULL)
         stream << " " << *val.data;
+    stream << RESET;
     return stream;
 }
 

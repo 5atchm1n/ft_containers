@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 22:03:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 14:11:46 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
  * @brief print tree helper
  * @return std::ostream& 
  */
-
-template <typename _Tp, typename _Cmp, typename _Alloc>
-std::ostream &operator<<(std::ostream &stream, const _rbtree<_Tp, _Cmp, _Alloc> &val)
-{
-    stream << "root = " << val._root << "\n";
-    stream << "nil = " << val._nil << "\n";
-    stream << "node : " << *val._root << "\n";
-    return stream;
-}
 
     
 }   // END NAMESPACE FT
