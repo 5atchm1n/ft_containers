@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 16:33:13 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/25 18:30:18 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ map<_Key, _Tp, _Cmp, _Alloc>::map(InputIterator first, InputIterator last, const
 {
     InputIterator tmp = first;
     iterator pos = tree._insert_search(*tmp++);
+    tmp++;
     while (tmp != last)
         pos = tree._insert_pos(pos, *tmp++);
 }
