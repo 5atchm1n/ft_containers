@@ -68,4 +68,46 @@ namespace ft
             this->_mem.destroy(this->_start + i);
     }
 
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator==(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return lhs.size() == rhs.size() && std::equal(lhs.begin(), lhs.end(), rhs.begin());
+    }
+
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator!=(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return !(lhs == rhs);
+    }
+
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator<(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+    }
+
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator>(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return !(rhs < lhs);
+    }
+
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator<=(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return !(rhs < lhs);
+    }
+
+    template <typename _Tp, typename _Alloc>
+    inline bool
+    operator>=(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
+    {
+        return !(lhs < rhs);
+    }
+
 }   // END NAMESPACE FT
