@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/24 16:53:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/26 14:22:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ namespace ft
  * @param copy  a vector to duplicate
  */
     template <typename _Tp, typename _Alloc>
-    _vector_base<_Tp, _Alloc>::_vector_base(const _vector_base &copy) : _size(copy._size), _capacity(copy._size)
+    _vector_base<_Tp, _Alloc>::_vector_base(const _vector_base &copy) : _size(copy._size), _capacity(copy._capacity * DFLT_SCALE)
     {
-        _start = _mem.allocate(copy._size);
+        _start = _mem.allocate(_capacity);
         std::uninitialized_copy(copy._start, copy._start + copy._size, _start);
     }
 

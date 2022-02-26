@@ -1,0 +1,614 @@
+--- std.out	2022-02-26 15:00:49.818651626 +0100
++++ ft.out	2022-02-26 15:00:50.330658493 +0100
+@@ -1,7 +1,7 @@
+ test constructors
+ empty : 0
+ size : 1
+-capacity : 1
++capacity : 2
+ max size : 288230376151711743
+ front : Sed vehicula tellus eu erat
+ back : Sed vehicula tellus eu erat
+@@ -11,7 +11,7 @@
+ Sed vehicula tellus eu erat
+ empty : 0
+ size : 1
+-capacity : 1
++capacity : 2
+ max size : 288230376151711743
+ front : Sed vehicula tellus eu erat
+ back : Sed vehicula tellus eu erat
+@@ -21,7 +21,7 @@
+ Sed vehicula tellus eu erat
+ empty : 0
+ size : 1
+-capacity : 1
++capacity : 2
+ max size : 288230376151711743
+ front : Sed vehicula tellus eu erat
+ back : Sed vehicula tellus eu erat
+@@ -41,7 +41,7 @@
+ Sed vehicula tellus eu erat
+ empty : 0
+ size : 1
+-capacity : 1
++capacity : 2
+ max size : 288230376151711743
+ front : Sed vehicula tellus eu erat
+ back : Sed vehicula tellus eu erat
+@@ -307,7 +307,7 @@
+ test constructors
+ empty : 0
+ size : 17
+-capacity : 17
++capacity : 34
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -349,7 +349,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 17
++capacity : 34
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -391,7 +391,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 17
++capacity : 34
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -433,7 +433,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 17
++capacity : 34
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -475,7 +475,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 35
++capacity : 17
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -517,7 +517,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 17
++capacity : 34
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -559,7 +559,7 @@
+ This is a test
+ empty : 0
+ size : 17
+-capacity : 35
++capacity : 17
+ max size : 288230376151711743
+ front : This is a test
+ back : This is a test
+@@ -602,7 +602,7 @@
+ test constructors
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -624,7 +624,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -646,7 +646,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -668,7 +668,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -690,73 +690,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 7
+-capacity : 17
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 7
+-capacity : 17
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 8
+-capacity : 35
++capacity : 7
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -768,7 +702,6 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+ reverse content : 
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+@@ -777,10 +710,10 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
++basic_string::_M_create
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -801,79 +734,8 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ empty : 0
+-size : 8
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-test copy constructor
+-empty : 0
+-size : 8
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+ size : 7
+-capacity : 17
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 8
+-capacity : 35
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -885,7 +747,6 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+ reverse content : 
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+@@ -894,60 +755,9 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-test assignment operator
+-empty : 0
+-size : 8
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 8
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-test mixed
+ empty : 0
+ size : 7
+-capacity : 35
++capacity : 8
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -969,7 +779,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -991,7 +801,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 35
++capacity : 8
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -1011,9 +821,10 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
++test copy constructor
+ empty : 0
+ size : 7
+-capacity : 35
++capacity : 8
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -1035,7 +846,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 17
++capacity : 14
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -1057,111 +868,7 @@
+ Pellentesque eget risus efficitur
+ empty : 0
+ size : 7
+-capacity : 35
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-test constructors
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-empty : 0
+-size : 4
+-capacity : 17
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-test assign
+-empty : 0
+-size : 5
+-capacity : 5
++capacity : 8
+ max size : 288230376151711743
+ front : Pellentesque eget risus efficitur
+ back : Pellentesque eget risus efficitur
+@@ -1171,22 +878,6 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 5
+-capacity : 17
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ reverse content : 
+@@ -1195,53 +886,6 @@
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-empty : 0
+-size : 5
+-capacity : 17
+-max size : 288230376151711743
+-front : Pellentesque eget risus efficitur
+-back : Pellentesque eget risus efficitur
+-content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-reverse content : 
+-Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+ Pellentesque eget risus efficitur
+-Pellentesque eget risus efficitur
+-empty : 0
+-size : 4
+-capacity : 35
+-max size : 288230376151711743
+-front : Lorem ipsum dolor sit amet
+-back : Lorem ipsum dolor sit amet
+-content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-reverse content : 
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
+-Lorem ipsum dolor sit amet
++test assignment operator
