@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 03:34:44 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/27 07:11:46 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/27 16:14:32 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <climits>
 
 #define _MAX_TEST_SIZE 20
-#define _NTESTS 50
+#define _NTESTS 5
 
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
@@ -29,7 +29,29 @@ static int main_test_no = 0;
 
 namespace _test
 {
-
+    /**
+     * @brief PRINT VECTOR
+     */
+    template <typename _vector>
+    void test_print(const _vector &v)
+    {
+        std::cout << "empty : " << v.empty() << std::endl;
+        std::cout << "size : " << v.size() << std::endl;
+        // std::cout << "capacity : " << v.capacity() << std::endl;
+        // std::cout << "max size : " << v.max_size() << std::endl;
+        if (!v.empty())
+        {
+            std::cout << "front : " << v.front() << std::endl;
+            std::cout << "back : " << v.back() << std::endl;
+            std::cout << "content : " << std::endl;
+            for (typename _vector::const_iterator it = v.begin(); it != v.end(); it++)
+                std::cout << *it << std::endl;
+            std::cout << "reverse content : " << std::endl;
+            for (typename _vector::const_reverse_iterator it = v.rbegin(); it != v.rend(); it++)
+                std::cout << *it << std::endl;
+        }
+    }
+    
     /**
      * @brief Template overload RDM_VAL
      */
@@ -66,6 +88,7 @@ namespace _test
                 "eget pretium velit vehicula et."};
         return (std::string(default_val[std::rand() % 17]));
     }
+
     /**
      * @brief Generate a random UINT
      *
@@ -76,28 +99,11 @@ namespace _test
         return (int(std::rand() % UINT_MAX));
     }
 
-    /**
-     * @brief PRINT VECTOR
+    /********
+     * @brief   TEST SUITE FOR VECTOR
+     * @tparam _vector  vector class
      */
-    template <typename _vector>
-    void test_print(const _vector &v)
-    {
-        std::cout << "empty : " << v.empty() << std::endl;
-        std::cout << "size : " << v.size() << std::endl;
-        // std::cout << "capacity : " << v.capacity() << std::endl;
-        // std::cout << "max size : " << v.max_size() << std::endl;
-        if (!v.empty())
-        {
-            std::cout << "front : " << v.front() << std::endl;
-            std::cout << "back : " << v.back() << std::endl;
-            std::cout << "content : " << std::endl;
-            for (typename _vector::const_iterator it = v.begin(); it != v.end(); it++)
-                std::cout << *it << std::endl;
-            std::cout << "reverse content : " << std::endl;
-            for (typename _vector::const_reverse_iterator it = v.rbegin(); it != v.rend(); it++)
-                std::cout << *it << std::endl;
-        }
-    }
+
     /**
      * @brief CONSTRUCTORS
      */

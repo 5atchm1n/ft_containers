@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/27 07:00:57 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/27 23:42:11 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,10 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_reserve(_size_type size)
     {
-        if (_capacity)
-            _mem.deallocate(_start, _capacity);
+        _dealloc();
+        _range_check(size);
+        if (_size * DFLT_SCALE < _mem.max_size())
+            size *= DFLT_SCALE;
         _start = _mem.allocate(size);
         _capacity = size;
     }
@@ -180,10 +182,11 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_move(_size_type n, _iterator start, _iterator end)
     {
-        for (_iterator i = end; i != start; --i)
+        _iterator i = end;
+        while (i != start)
         {
             _mem.construct(i + n, *i);
-            _mem.destroy(i);
+            _mem.destroy(i--);
         }
     }
 

@@ -1,0 +1,168 @@
+MAIN TEST : 0
+TEST : 0
+empty : 1
+size : 0
+empty : 1
+size : 0
+MAIN TEST : 1
+TEST : 1
+test copy constructor
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 1
+size : 0
+MAIN TEST : 2
+TEST : 2
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 1
+size : 0
+MAIN TEST : 3
+TEST : 3
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 0
+size : 4
+front : Pellentesque eget risus efficitur
+back : Pellentesque eget risus efficitur
+content : 
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+reverse content : 
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+Pellentesque eget risus efficitur
+MAIN TEST : 4
+TEST : 4
+test assign
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test

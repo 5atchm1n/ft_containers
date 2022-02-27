@@ -78,7 +78,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         if (size() < capacity())
             this->_mem.construct(this->_start + this->_size, val);
-        else if (this->_size == capacity())
+        else if (size() == capacity())
             this->_insert_back(val);
         this->_size++;
     }
@@ -101,14 +101,13 @@ vector<_Tp, _Alloc>::reserve(size_type size)
         const difference_type pos_end = end() - begin();
 
         if (this->_size + n > capacity())
-            this->_realloc(this->_size + n + 1);
+            this->_realloc(this->_size + n);
         iterator    new_pos = this->_start + index;
         iterator    old_end = this->_start + pos_end;
-        if (size() != 0)
-            this->_move(n, new_pos, old_end);
-        for (iterator i = new_pos; i != new_pos + n; i++)
-            this->_mem.construct(i, val);
+        this->_move(n, new_pos, old_end);
         this->_size += n;
+        while (n--)
+            this->_mem.construct(new_pos++, val);
     }
 
     template <typename _Tp, typename _Alloc>
