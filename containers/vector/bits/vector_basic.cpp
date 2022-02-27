@@ -24,18 +24,22 @@ namespace ft
     vector<_Tp, _Alloc> &
     vector<_Tp, _Alloc>::operator=(const vector &val)
     {
-        if (this->_size || this->_capacity)
+        if (size())
             this->_dealloc();
-        this->_start = this->_mem.allocate(val.capacity());
-        std::uninitialized_copy(val.begin(), val.end(), this->_start);
+        if (val.capacity())
+            this->_reserve(val.capacity());
+        if (val.size() != 0)
+            std::uninitialized_copy(val.begin(), val.end(), this->_start);
         this->_size = val.size();
         this->_capacity = val.capacity();
         return *this;
     }
 
     template <typename _Tp, typename _Alloc>
-    vector<_Tp, _Alloc>::vector(size_type size, const value_type &val, const allocator_type &alloc) : _vector_base<_Tp, _Alloc>(size, val, alloc)
+    vector<_Tp, _Alloc>::vector(size_type size, const value_type &val, const allocator_type &alloc) :
+    _vector_base<_Tp, _Alloc>(size, val, alloc)
     {
+        
     }
 
 /**
@@ -46,12 +50,13 @@ namespace ft
  */
     template <typename _Tp, typename _Alloc>
     template <typename _Iterator>
-    vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type*)
+    vector<_Tp, _Alloc>::vector(_Iterator first, _Iterator last,
+        typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type*)
     {
         difference_type diff = std::distance(first, last);
         this->_size = diff;
-        this->_capacity = diff * DFLT_SCALE;
-        this->_realloc_empty(diff);
+        this->_capacity = diff + 1;
+        this->_reserve(this->_capacity);
         std::uninitialized_copy(first, last, this->_start);
     }
 
@@ -67,6 +72,10 @@ namespace ft
         for (size_type i = 0; i < this->_size; i++)
             this->_mem.destroy(this->_start + i);
     }
+
+/**
+ * @brief Comparison operators between vectors 
+ */
 
     template <typename _Tp, typename _Alloc>
     inline bool

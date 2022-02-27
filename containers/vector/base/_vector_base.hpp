@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/26 14:22:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/27 07:00:57 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,14 @@ namespace ft
         explicit _vector_base(const _alloc_type & alloc = _alloc_type());
         _vector_base(_size_type size, const _Tp& value = _Tp(), const _Alloc &val = _Alloc());
         _vector_base(const _vector_base<_Tp, _Alloc> &copy);
+        
+        _vector_base& operator=(const _vector_base &val);
+
         ~_vector_base();
 
     protected:
         void _dealloc();
-        void _realloc_empty(_size_type size);
+        void _reserve(_size_type size);
         void _realloc(_size_type size);
         void _realloc_fill(_size_type size, const _Tp &value);
         void _move(_size_type n, _iterator start, _iterator end);
@@ -85,6 +88,10 @@ namespace ft
     template <typename _Tp, typename _Alloc>
     _vector_base<_Tp, _Alloc>::_vector_base(_size_type size, const _Tp &value, const _Alloc &alloc) : _size(size), _mem(alloc) ,_capacity(size * DFLT_SCALE)
     {
+        _range_check(size);
+        _capacity = size * DFLT_SCALE;
+        if (_capacity >= _mem.max_size())
+            _capacity = size;
         _start = _mem.allocate(_capacity);
         for (_size_type i = 0; i < size; i++)
             _mem.construct(&_start[i], value);
@@ -111,6 +118,8 @@ namespace ft
         for (_size_type i = 0; i < _size; i++)
             _mem.destroy(_start + i);
         _mem.deallocate(_start, _capacity);
+        _capacity = 0;
+        _size = 0;
     }
     
 /**
@@ -118,9 +127,10 @@ namespace ft
  */
     template <typename _Tp, typename _Alloc>
     void
-    _vector_base<_Tp, _Alloc>::_realloc_empty(_size_type size)
+    _vector_base<_Tp, _Alloc>::_reserve(_size_type size)
     {
-        _mem.deallocate(_start, _capacity);
+        if (_capacity)
+            _mem.deallocate(_start, _capacity);
         _start = _mem.allocate(size);
         _capacity = size;
     }
@@ -133,19 +143,11 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_realloc(_size_type size)
     {
-        if (_size == 0)
-        {
-            _realloc_empty(size);
-            _size = size;
-        }
-        else
-        {
-            _Tp *temp = _mem.allocate(size);
-            std::uninitialized_copy(_start, _start + _size, temp);
-            _dealloc();
-            _start = temp;
-            _capacity = size;
-        }
+        _Tp *temp = _mem.allocate(size);
+        std::uninitialized_copy(_start, _start + _size, temp);
+        _dealloc();
+        _start = temp;
+        _capacity = size;
     }
 
 /**
@@ -156,7 +158,7 @@ namespace ft
     _vector_base<_Tp, _Alloc>::_realloc_fill(_size_type new_size, const _Tp &value)
     {
         if (this->_size == 0)
-            _realloc_empty(new_size);
+            _reserve(new_size);
         else
         {
             _Tp *temp = this->_mem.allocate(new_size);
@@ -178,7 +180,7 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_move(_size_type n, _iterator start, _iterator end)
     {
-        for (_iterator i = end; i >= start; --i)
+        for (_iterator i = end; i != start; --i)
         {
             _mem.construct(i + n, *i);
             _mem.destroy(i);

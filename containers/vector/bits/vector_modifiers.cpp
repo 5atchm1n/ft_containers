@@ -55,7 +55,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
     {
         difference_type size = std::distance(first, last);
-        this->_realloc_empty(static_cast<size_type>(size));
+        this->_reserve(static_cast<size_type>(size));
         for (iterator i = begin(); i < begin() + size; i++)
             this->_mem.construct(i, *first++);
         this->_size = size;
@@ -66,7 +66,7 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
     {
         if (n > capacity())
-            this->_realloc_empty(n);
+            this->_reserve(n);
         for (iterator i = begin(); i < begin() + n; i++)
             this->_mem.construct(i, val);
         this->_size = n;
@@ -99,19 +99,16 @@ vector<_Tp, _Alloc>::reserve(size_type size)
     {
         const difference_type index = position - begin();
         const difference_type pos_end = end() - begin();
-        size_type old_size = size();
 
-        if (old_size == 0)
-            return push_back(val);
         if (this->_size + n > capacity())
-            this->_realloc(this->_size + n);
-        
+            this->_realloc(this->_size + n + 1);
         iterator    new_pos = this->_start + index;
         iterator    old_end = this->_start + pos_end;
-        this->_move(n, new_pos, old_end);
-        for (iterator i = new_pos; i < new_pos + n; i++)
+        if (size() != 0)
+            this->_move(n, new_pos, old_end);
+        for (iterator i = new_pos; i != new_pos + n; i++)
             this->_mem.construct(i, val);
-        this->_size += n; 
+        this->_size += n;
     }
 
     template <typename _Tp, typename _Alloc>
