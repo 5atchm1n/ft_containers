@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/28 01:02:17 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/28 16:24:48 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,7 @@ namespace ft
     _vector_base<_Tp, _Alloc>::_vector_base(_size_type size, const _Tp &value, const _Alloc &alloc) : _size(size), _mem(alloc) ,_capacity(size * DFLT_SCALE)
     {
         _range_check(size);
-        _capacity = size * DFLT_SCALE;
-        if (_capacity >= _mem.max_size())
-            _capacity = size;
-        _start = _mem.allocate(_capacity);
+        _reserve(size);
         for (_size_type i = 0; i < size; i++)
             _mem.construct(&_start[i], value);
     }
@@ -130,7 +127,6 @@ namespace ft
     void
     _vector_base<_Tp, _Alloc>::_reserve(_size_type size)
     {
-        _dealloc();
         _range_check(size);
         if (_size * DFLT_SCALE < _mem.max_size())
             size *= DFLT_SCALE;

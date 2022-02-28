@@ -59,6 +59,7 @@ void
 vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
 {
     difference_type size = std::distance(first, last);
+    this->_dealloc();
     this->_reserve(static_cast<size_type>(size));
     for (iterator i = begin(); i < begin() + size; i++)
         this->_mem.construct(i, *first++);
@@ -71,8 +72,8 @@ template <typename _Tp, typename _Alloc>
 void
 vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
 {
-    if (n > capacity())
-        this->_reserve(n);
+    this->_dealloc();
+    this->reserve(n);
     for (iterator i = begin(); i < begin() + n; i++)
         this->_mem.construct(i, val);
     this->_size = n;
@@ -111,7 +112,7 @@ vector<_Tp, _Alloc>::insert(iterator position, size_type n, const value_type &va
 {
     const difference_type index = position - begin();
     const difference_type pos_end = end() - begin();
-    if (this->_size + n > capacity())
+    if (this->_size + n >= capacity())
         this->_realloc(this->_size + n);
     iterator    new_pos = this->_start + index;
     iterator    old_end = this->_start + pos_end;

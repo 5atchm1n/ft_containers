@@ -26,12 +26,9 @@ namespace ft
     vector<_Tp, _Alloc> &
     vector<_Tp, _Alloc>::operator=(const vector &val)
     {
-        if (size())
-            this->_dealloc();
-        if (val.capacity())
-            this->_reserve(val.capacity());
-        if (val.size() != 0)
-            std::uninitialized_copy(val.begin(), val.end(), this->_start);
+        this->_dealloc();
+        this->_reserve(val.capacity());
+        std::uninitialized_copy(val.begin(), val.end(), this->_start);
         this->_size = val.size();
         this->_capacity = val.capacity();
         return *this;
@@ -57,7 +54,7 @@ namespace ft
     {
         difference_type diff = std::distance(first, last);
         this->_size = diff;
-        this->_capacity = diff + 1;
+        this->_capacity = diff;
         this->_reserve(this->_capacity);
         std::uninitialized_copy(first, last, this->_start);
     }
