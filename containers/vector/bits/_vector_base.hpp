@@ -6,12 +6,12 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/27 23:42:11 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/28 01:02:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_VECTOR_BASE_H
-#define FT_VECTOR_BASE_H
+#ifndef FT_VECTOR_BASE_HPP
+#define FT_VECTOR_BASE_HPP
 
 #include <memory>
 #include <cstddef>
@@ -117,7 +117,8 @@ namespace ft
     {
         for (_size_type i = 0; i < _size; i++)
             _mem.destroy(_start + i);
-        _mem.deallocate(_start, _capacity);
+        if (_capacity)
+            _mem.deallocate(_start, _capacity);
         _capacity = 0;
         _size = 0;
     }
@@ -244,4 +245,4 @@ namespace ft
 
 } // end namespace
 
-#endif // FT_VECTOR_BASE_H
+#endif // FT_VECTOR_BASE_HPP

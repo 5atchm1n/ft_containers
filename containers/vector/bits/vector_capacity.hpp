@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_capacity.cpp                                :+:      :+:    :+:   */
+/*   vector_capacity.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 23:21:36 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/01 23:25:23 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/27 23:51:13 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.hpp"
+
+#ifndef FT_VECTOR_CAPACITY_HPP
+#define FT_VECTOR_CAPACITY_HPP
 
 namespace ft {
     
@@ -54,3 +57,5 @@ namespace ft {
     }
 
 }
+
+#endif  // FT_VECTOR_CAPACITY_HPP

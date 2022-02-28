@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/24 16:50:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/27 23:51:51 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 // custom iterator
 #include "vector/iterators/vector.iterator.hpp"
 #include "ft_type_traits.hpp"
-#include "vector/base/_vector_base.hpp"
+#include "vector/bits/_vector_base.hpp"
 
 // NAMESPACE
 namespace ft
@@ -115,10 +115,10 @@ namespace ft
 
 } // END NAMESPACE
 
-#include "vector/bits/vector_basic.cpp"
-#include "vector/bits/vector_iterators.cpp"
-#include "vector/bits/vector_accessors.cpp"
-#include "vector/bits/vector_capacity.cpp"
-#include "vector/bits/vector_modifiers.cpp"
+#include "vector/bits/vector_basic.hpp"
+#include "vector/bits/vector_iterators.hpp"
+#include "vector/bits/vector_accessors.hpp"
+#include "vector/bits/vector_capacity.hpp"
+#include "vector/bits/vector_modifiers.hpp"
 
 #endif // FT_VECTOR_HPP

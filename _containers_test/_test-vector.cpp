@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 03:34:44 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/27 16:14:32 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/02/28 00:23:54 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <climits>
 
 #define _MAX_TEST_SIZE 20
-#define _NTESTS 5
+#define _NTESTS 50
 
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
@@ -51,7 +51,7 @@ namespace _test
                 std::cout << *it << std::endl;
         }
     }
-    
+
     /**
      * @brief Template overload RDM_VAL
      */
@@ -251,6 +251,14 @@ namespace _test
     }
 
 }
+#define _DEFAULT_CONSTRUCTOR 0
+#define _COPY_CONSTRUCTOR 1
+#define _ASSIGNMENT_OP 2
+#define _MIXED_0_3 3
+#define _INSERT 4
+#define _ASSIGN 5
+#define _PUSH 6
+#define _POP 7
 
 #define _TEST 8
 
@@ -274,14 +282,63 @@ void test_vector(int rdm_seed)
     _vector Z;
     for (int i = 0; i < _NTESTS; i++)
     {
+    /*
         std::cout << "MAIN TEST : " << main_test_no++ << std::endl;
-        int rand = std::rand() % _TEST;
-        if (std::rand() % 2)
-            _testArray[rand](X, Y);
-        else
-            _testArray[rand](Y, X);
-        _test::test_print(X);
-        _test::test_print(Y);
+        switch (std::rand() % _TEST)
+        {
+        case (_DEFAULT_CONSTRUCTOR):
+            if (std::rand() % 2)
+                _testArray[_DEFAULT_CONSTRUCTOR](X, Y);
+            else
+                _testArray[_DEFAULT_CONSTRUCTOR](Y, X);
+        case (_COPY_CONSTRUCTOR):
+            if (std::rand() % 2)
+                _testArray[_COPY_CONSTRUCTOR](X, Y);
+            else
+                _testArray[_COPY_CONSTRUCTOR](Y, X);
+        case (_ASSIGNMENT_OP):
+            if (std::rand() % 2)
+                _testArray[_ASSIGNMENT_OP](X, Y);
+            else
+                _testArray[_ASSIGNMENT_OP](Y, X);
+        case (_MIXED_0_3) :
+            if (std::rand() % 2)
+                _testArray[_MIXED_0_3](X, Y);
+            else
+            _testArray[_MIXED_0_3](Y, X);
+        case (_INSERT):
+            if (std::rand() % 2)
+                _testArray[_INSERT](X, Y);
+            else
+                _testArray[_INSERT](Y, X);
+        case (_ASSIGN):
+            if (std::rand() % 2)
+                _testArray[_ASSIGN](X, Y);
+            else
+                _testArray[_ASSIGN](Y, X);
+        case (_PUSH):
+            if (std::rand() % 2)
+                _testArray[_PUSH](X, Y);
+            else
+                _testArray[_PUSH](Y, X);
+        case (_POP):
+            if (std::rand() % 2)
+                _testArray[_POP](X, Y);
+            else
+                _testArray[_POP](Y, X);
+        default:
+            _test::test_print(X);
+            _test::test_print(Y);
+        }
+    */
+    std::cout << "MAIN TEST : " << main_test_no++ << std::endl;
+    int rand = std::rand() % _TEST;
+    if (std::rand() % 2)
+        _testArray[rand](X, Y);
+    else
+        _testArray[rand](Y, X);
+    _test::test_print(X);
+    _test::test_print(Y);
     }
 }
 

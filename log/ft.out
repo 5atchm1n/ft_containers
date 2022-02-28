@@ -166,3 +166,205 @@ This is a test
 This is a test
 This is a test
 This is a test
+MAIN TEST : 5
+TEST : 5
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+empty : 1
+size : 0
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+MAIN TEST : 6
+TEST : 6
+test mixed
+empty : 1
+size : 0
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+empty : 1
+size : 0
+empty : 1
+size : 0
+empty : 0
+size : 16
+front : This is a test
+back : This is a test
+content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+reverse content : 
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+This is a test
+empty : 1
+size : 0
+MAIN TEST : 7
+TEST : 7
+test constructors
+empty : 0
+size : 13
+front : congue dictum. Fusce a ultrices
+back : congue dictum. Fusce a ultrices
+content : 
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+reverse content : 
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices
+congue dictum. Fusce a ultrices

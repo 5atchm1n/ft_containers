@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   vector_accessors.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 23:11:47 by satchmin          #+#    #+#             */
-/*   Updated: 2022/02/01 23:20:55 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/02/27 23:48:46 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.hpp"
 
+#ifndef FT_VECTOR_ACCESSORS_HPP
+#define FT_VECTOR_ACCESSORS_HPP
 namespace ft {
 
 /**
@@ -23,7 +25,6 @@ namespace ft {
     {
         return *(this->_start + n);
     }
-
 /**
  * @brief return a const value at position ' n '
  */
@@ -33,7 +34,6 @@ namespace ft {
     {
         return *(this->_start + n);
     }
-
 /**
  * @brief returns const value at ' n ' 
  * with range check
@@ -45,7 +45,6 @@ namespace ft {
         this->_bounds_check(n);
         return (*this)[n];
     }
-
 /**
  * @brief return value at ' n ' with range check
  */
@@ -56,11 +55,9 @@ namespace ft {
         this->_bounds_check(n);
         return (*this)[n];
     }
-
 /**
  * @brief returns value first value.
  */
-
     template <typename _Tp, typename _Alloc>
     typename vector<_Tp, _Alloc>::reference
     vector<_Tp, _Alloc>::front(void)
@@ -96,3 +93,5 @@ namespace ft {
     }
 
 }   // END NAMESPACE FT
+
+#endif // FT_VECTOR_ACCESSOR_HPP

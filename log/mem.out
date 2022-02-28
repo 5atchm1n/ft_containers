@@ -1,0 +1,20 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==21083==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x00000041d784 bp 0x000000000000 sp 0x7ffdf59f8760 T0)
+==21083==The signal is caused by a READ memory access.
+==21083==Hint: this fault was caused by a dereference of a high value address (see register values below).  Dissassemble the provided pc to learn which register was used.
+    #0 0x41d784 in __asan::Allocator::Deallocate(void*, unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType) (/home/sshakya/Documents/Projects/ft_containers/ft_vector+0x41d784)
+    #1 0x4c4c65 in operator delete(void*) (/home/sshakya/Documents/Projects/ft_containers/ft_vector+0x4c4c65)
+    #2 0x4cbe28 in __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::destroy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/ext/new_allocator.h:162:36
+    #3 0x4cba5f in ft::_vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_dealloc() /home/sshakya/Documents/Projects/ft_containers/./containers/vector/bits/_vector_base.hpp:119:18
+    #4 0x4cbc0f in ft::_vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_reserve(unsigned long) /home/sshakya/Documents/Projects/ft_containers/./containers/vector/bits/_vector_base.hpp:133:9
+    #5 0x4cb0ee in ft::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, ft::enable_if<!(ft::is_integral<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::value), void>::type*) /home/sshakya/Documents/Projects/ft_containers/./containers/vector/bits/vector_basic.hpp:61:15
+    #6 0x4c86f8 in void _test::test_constructors<ft::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >(ft::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, ft::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) /home/sshakya/Documents/Projects/ft_containers/_containers_test/_test-vector.cpp:117:13
+    #7 0x4c80bb in void test_vector<ft::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >(int) /home/sshakya/Documents/Projects/ft_containers/_containers_test/_test-vector.cpp:337:9
+    #8 0x4c7c6d in main /home/sshakya/Documents/Projects/ft_containers/_containers_test/_test-vector.cpp:348:5
+    #9 0x7f9e0f2a70b2 in __libc_start_main /build/glibc-eX1tMB/glibc-2.31/csu/../csu/libc-start.c:308:16
+    #10 0x41c4ed in _start (/home/sshakya/Documents/Projects/ft_containers/ft_vector+0x41c4ed)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/sshakya/Documents/Projects/ft_containers/ft_vector+0x41d784) in __asan::Allocator::Deallocate(void*, unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType)
+==21083==ABORTING

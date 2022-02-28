@@ -12,6 +12,8 @@
 
 #include "vector.hpp"
 
+#ifndef FT_VECTOR_BASIC_HPP
+#define FT_VECTOR_BASIC_HPP
 namespace ft
 {
 /**
@@ -120,3 +122,5 @@ namespace ft
     }
 
 }   // END NAMESPACE FT
+
+#endif  // FT_VECTOR_BASIC_HPP
