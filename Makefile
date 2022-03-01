@@ -39,7 +39,7 @@ CFLAGS = -Wall -Wextra -Werror -MMD -MP
 
 # Debug and Memory
 
-#MEM = -fsanitize=address 
+MEM = -fsanitize=address 
 DEBUG = -fstandalone-debug -g3
 
 ## SOURCE FILES

@@ -1,4139 +1,1839 @@
 MAIN TEST : 0
 TEST : 0
+Test push_back
+empty : 1
+size : 0
+empty : 1
+size : 0
+TEST : 1
 empty : 1
 size : 0
 empty : 1
 size : 0
 MAIN TEST : 1
-TEST : 1
-test copy constructor
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 1
-size : 0
-MAIN TEST : 2
 TEST : 2
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 1
-size : 0
-MAIN TEST : 3
+Test push_back
+empty : 0
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
+content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
+reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
+empty : 0
+size : 20
+front : Curabitur elementum enim
+back : there are many tests
+content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+reverse content : 
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 3
-empty : 1
-size : 0
-empty : 1
-size : 0
 empty : 0
-size : 4
-front : Pellentesque eget risus efficitur
-back : Pellentesque eget risus efficitur
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
-Pellentesque eget risus efficitur
-Pellentesque eget risus efficitur
-Pellentesque eget risus efficitur
-Pellentesque eget risus efficitur
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
+empty : 0
+size : 20
+front : Curabitur elementum enim
+back : there are many tests
+content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
 Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+reverse content : 
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
 Pellentesque eget risus efficitur
-Pellentesque eget risus efficitur
-Pellentesque eget risus efficitur
-MAIN TEST : 4
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
+MAIN TEST : 2
 TEST : 4
-test assign
+Test push_back
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
 This is a test
+Sed vehicula tellus eu erat
+
+	
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
 This is a test
+	
+
+Sed vehicula tellus eu erat
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 0
-size : 16
-front : This is a test
-back : This is a test
-content : 
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-reverse content : 
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-MAIN TEST : 5
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 5
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
 This is a test
+Sed vehicula tellus eu erat
+
+	
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
 This is a test
+	
+
+Sed vehicula tellus eu erat
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-empty : 1
-size : 0
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-MAIN TEST : 6
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
+MAIN TEST : 3
 TEST : 6
-test mixed
-empty : 1
-size : 0
+test assign
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 17
+front : Curabitur elementum enim
+back : Praesent ullamcorper venenatis augue,
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
 This is a test
+Sed vehicula tellus eu erat
+
+	
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
 reverse content : 
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
 This is a test
+	
+
+Sed vehicula tellus eu erat
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-empty : 1
-size : 0
-empty : 1
-size : 0
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : This is a test
-back : This is a test
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
 This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
+empty : 0
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
+content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
 This is a test
+Sed vehicula tellus eu erat
+
+	
 This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
+reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
 This is a test
+	
+
+Sed vehicula tellus eu erat
 This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-This is a test
-empty : 1
-size : 0
-MAIN TEST : 7
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 TEST : 7
-test constructors
+Test push_back
 empty : 0
-size : 13
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 13
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
 congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
 congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
 congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 13
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 13
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 13
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-MAIN TEST : 8
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 8
-test constructors
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
 	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-MAIN TEST : 9
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
+MAIN TEST : 4
 TEST : 9
-test assignment operator
+test mixed
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
 	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
 	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
 	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
 	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 empty : 0
-size : 16
-front : 	
-back : 	
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
 	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
 reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-empty : 0
-size : 16
-front : 	
-back : 	
-content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-reverse content : 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-MAIN TEST : 10
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 10
-test constructors
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
-a mi vestibulum eleifend.
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 11
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 TEST : 11
+test assign
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 4
+front : Curabitur elementum enim
+back : eget pretium velit vehicula et.
 content : 
-a mi vestibulum eleifend.
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
 reverse content : 
-a mi vestibulum eleifend.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 20
+front : Curabitur elementum enim
+back : nisi id scelerisque.
 content : 
-a mi vestibulum eleifend.
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
 reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 12
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
+empty : 0
+size : 40
+front : Curabitur elementum enim
+back : Sed vehicula tellus eu erat
+content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+reverse content : 
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 12
+Test push_back
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 40
+front : Curabitur elementum enim
+back : magna. Morbi fringilla ullamcorper
 content : 
-a mi vestibulum eleifend.
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
+euismod mi ut, tristique lorem.
+consectetur adipiscing elit.
+Curabitur elementum enim
+This is a test
+nisi id scelerisque.
+	
+consectetur adipiscing elit.
+all tests should pass
+Phasellus ut rutrum ante.
+there are many tests
+Curabitur elementum enim
+Pellentesque eget risus efficitur
+Curabitur elementum enim
+
+magna. Morbi fringilla ullamcorper
+
+Pellentesque eget risus efficitur
+
+there are many tests
+magna. Morbi fringilla ullamcorper
 reverse content : 
-a mi vestibulum eleifend.
+magna. Morbi fringilla ullamcorper
+there are many tests
+
+Pellentesque eget risus efficitur
+
+magna. Morbi fringilla ullamcorper
+
+Curabitur elementum enim
+Pellentesque eget risus efficitur
+Curabitur elementum enim
+there are many tests
+Phasellus ut rutrum ante.
+all tests should pass
+consectetur adipiscing elit.
+	
+nisi id scelerisque.
+This is a test
+Curabitur elementum enim
+consectetur adipiscing elit.
+euismod mi ut, tristique lorem.
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
+magna. Morbi fringilla ullamcorper
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+Curabitur elementum enim
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 60
+front : Curabitur elementum enim
+back : euismod mi ut, tristique lorem.
 content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
+all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+all tests should pass
+magna. Morbi fringilla ullamcorper
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+Praesent ullamcorper venenatis augue,
+consectetur adipiscing elit.
+
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+there are many tests
+Praesent ullamcorper venenatis augue,
+there are many tests
 a mi vestibulum eleifend.
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+a mi vestibulum eleifend.
+euismod mi ut, tristique lorem.
 reverse content : 
+euismod mi ut, tristique lorem.
 a mi vestibulum eleifend.
-MAIN TEST : 13
+Phasellus ut rutrum ante.
+Curabitur elementum enim
+a mi vestibulum eleifend.
+there are many tests
+Praesent ullamcorper venenatis augue,
+there are many tests
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+
+consectetur adipiscing elit.
+Praesent ullamcorper venenatis augue,
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+magna. Morbi fringilla ullamcorper
+all tests should pass
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
+all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 TEST : 13
 empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
+size : 60
+front : Curabitur elementum enim
+back : euismod mi ut, tristique lorem.
 content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 14
-TEST : 14
-test mixed
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 15
-TEST : 15
-test mixed
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 16
-TEST : 16
-test mixed
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 17
-TEST : 17
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 18
-TEST : 18
-test mixed
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 19
-TEST : 19
-test assign
-empty : 0
-size : 8
-front : Sed vehicula tellus eu erat
-back : Sed vehicula tellus eu erat
-content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-reverse content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-empty : 0
-size : 8
-front : Sed vehicula tellus eu erat
-back : Sed vehicula tellus eu erat
-content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-reverse content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 8
-front : Sed vehicula tellus eu erat
-back : Sed vehicula tellus eu erat
-content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-reverse content : 
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-Sed vehicula tellus eu erat
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 20
-TEST : 20
-test assign
-empty : 0
-size : 10
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 10
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-empty : 0
-size : 10
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 21
-TEST : 21
-empty : 0
-size : 10
-front : congue dictum. Fusce a ultrices
-back : congue dictum. Fusce a ultrices
-content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-reverse content : 
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-congue dictum. Fusce a ultrices
-empty : 0
-size : 1
-front : a mi vestibulum eleifend.
-back : a mi vestibulum eleifend.
-content : 
-a mi vestibulum eleifend.
-reverse content : 
-a mi vestibulum eleifend.
-MAIN TEST : 22
-TEST : 22
-test constructors
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
+Curabitur elementum enim
+euismod mi ut, tristique lorem.
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
 all tests should pass
+	
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+eget pretium velit vehicula et.
+This is a test
+Pellentesque eget risus efficitur
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
 all tests should pass
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Curabitur elementum enim
+there are many tests
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Curabitur elementum enim
+there are many tests
+magna. Morbi fringilla ullamcorper
 all tests should pass
+Praesent ullamcorper venenatis augue,
+congue dictum. Fusce a ultrices
+there are many tests
+	
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+
+nisi id scelerisque.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+all tests should pass
+magna. Morbi fringilla ullamcorper
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+Praesent ullamcorper venenatis augue,
+consectetur adipiscing elit.
+
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+there are many tests
+Praesent ullamcorper venenatis augue,
+there are many tests
+a mi vestibulum eleifend.
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+a mi vestibulum eleifend.
+euismod mi ut, tristique lorem.
 reverse content : 
+euismod mi ut, tristique lorem.
+a mi vestibulum eleifend.
+Phasellus ut rutrum ante.
+Curabitur elementum enim
+a mi vestibulum eleifend.
+there are many tests
+Praesent ullamcorper venenatis augue,
+there are many tests
+Lorem ipsum dolor sit amet
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+
+consectetur adipiscing elit.
+Praesent ullamcorper venenatis augue,
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+magna. Morbi fringilla ullamcorper
 all tests should pass
+magna. Morbi fringilla ullamcorper
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+Phasellus ut rutrum ante.
+nisi id scelerisque.
+nisi id scelerisque.
+
+Phasellus ut rutrum ante.
+Lorem ipsum dolor sit amet
+	
+there are many tests
+congue dictum. Fusce a ultrices
+Praesent ullamcorper venenatis augue,
 all tests should pass
+magna. Morbi fringilla ullamcorper
+there are many tests
+Curabitur elementum enim
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+congue dictum. Fusce a ultrices
+there are many tests
+Curabitur elementum enim
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
 all tests should pass
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+Pellentesque eget risus efficitur
+This is a test
+eget pretium velit vehicula et.
+congue dictum. Fusce a ultrices
+Sed vehicula tellus eu erat
+nisi id scelerisque.
+Sed vehicula tellus eu erat
+	
+all tests should pass
+eget pretium velit vehicula et.
+eget pretium velit vehicula et.
+euismod mi ut, tristique lorem.
+Curabitur elementum enim
 empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-MAIN TEST : 23
-TEST : 23
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-MAIN TEST : 24
-TEST : 24
-test assign
-empty : 0
-size : 1
-front : magna. Morbi fringilla ullamcorper
+size : 40
+front : Curabitur elementum enim
 back : magna. Morbi fringilla ullamcorper
 content : 
+Curabitur elementum enim
+Phasellus ut rutrum ante.
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+magna. Morbi fringilla ullamcorper
+This is a test
+Sed vehicula tellus eu erat
+
+	
+This is a test
+Sed vehicula tellus eu erat
+magna. Morbi fringilla ullamcorper
+Lorem ipsum dolor sit amet
+Sed vehicula tellus eu erat
+eget pretium velit vehicula et.
+Lorem ipsum dolor sit amet
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+nisi id scelerisque.
+euismod mi ut, tristique lorem.
+consectetur adipiscing elit.
+Curabitur elementum enim
+This is a test
+nisi id scelerisque.
+	
+consectetur adipiscing elit.
+all tests should pass
+Phasellus ut rutrum ante.
+there are many tests
+Curabitur elementum enim
+Pellentesque eget risus efficitur
+Curabitur elementum enim
+
+magna. Morbi fringilla ullamcorper
+
+Pellentesque eget risus efficitur
+
+there are many tests
 magna. Morbi fringilla ullamcorper
 reverse content : 
 magna. Morbi fringilla ullamcorper
-empty : 0
-size : 1
-front : magna. Morbi fringilla ullamcorper
-back : magna. Morbi fringilla ullamcorper
-content : 
+there are many tests
+
+Pellentesque eget risus efficitur
+
 magna. Morbi fringilla ullamcorper
-reverse content : 
+
+Curabitur elementum enim
+Pellentesque eget risus efficitur
+Curabitur elementum enim
+there are many tests
+Phasellus ut rutrum ante.
+all tests should pass
+consectetur adipiscing elit.
+	
+nisi id scelerisque.
+This is a test
+Curabitur elementum enim
+consectetur adipiscing elit.
+euismod mi ut, tristique lorem.
+nisi id scelerisque.
+Praesent ullamcorper venenatis augue,
+Phasellus ut rutrum ante.
+Praesent ullamcorper venenatis augue,
+Lorem ipsum dolor sit amet
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Lorem ipsum dolor sit amet
 magna. Morbi fringilla ullamcorper
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 1
-front : magna. Morbi fringilla ullamcorper
-back : magna. Morbi fringilla ullamcorper
-content : 
+Sed vehicula tellus eu erat
+This is a test
+	
+
+Sed vehicula tellus eu erat
+This is a test
 magna. Morbi fringilla ullamcorper
-reverse content : 
-magna. Morbi fringilla ullamcorper
-MAIN TEST : 25
-TEST : 25
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 1
-front : magna. Morbi fringilla ullamcorper
-back : magna. Morbi fringilla ullamcorper
-content : 
-magna. Morbi fringilla ullamcorper
-reverse content : 
-magna. Morbi fringilla ullamcorper
-MAIN TEST : 26
-TEST : 26
-empty : 0
-size : 3
-front : all tests should pass
-back : all tests should pass
-content : 
-all tests should pass
-all tests should pass
-all tests should pass
-reverse content : 
-all tests should pass
-all tests should pass
-all tests should pass
-empty : 0
-size : 1
-front : magna. Morbi fringilla ullamcorper
-back : magna. Morbi fringilla ullamcorper
-content : 
-magna. Morbi fringilla ullamcorper
-reverse content : 
-magna. Morbi fringilla ullamcorper
-MAIN TEST : 27
-TEST : 27
-test constructors
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-MAIN TEST : 28
-TEST : 28
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-empty : 0
-size : 5
-front : consectetur adipiscing elit.
-back : consectetur adipiscing elit.
-content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-reverse content : 
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-consectetur adipiscing elit.
-MAIN TEST : 29
-TEST : 29
-test constructors
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
+eget pretium velit vehicula et.
+Sed vehicula tellus eu erat
+Phasellus ut rutrum ante.
 Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 30
-TEST : 30
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 31
-TEST : 31
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 32
-TEST : 32
-test assignment operator
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 33
-TEST : 33
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 34
-TEST : 34
-test copy constructor
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 35
-TEST : 35
-test copy constructor
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 36
-TEST : 36
-test mixed
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 37
-TEST : 37
-test copy constructor
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 38
-TEST : 38
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 39
-TEST : 39
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 40
-TEST : 40
-test copy constructor
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 41
-TEST : 41
-test mixed
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 42
-TEST : 42
-test assignment operator
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 43
-TEST : 43
-test mixed
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 44
-TEST : 44
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 45
-TEST : 45
-test copy constructor
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 46
-TEST : 46
-test assign
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 0
-size : 9
-front : Curabitur elementum enim
-back : Curabitur elementum enim
-content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-reverse content : 
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-Curabitur elementum enim
-MAIN TEST : 47
-TEST : 47
-test assign
-empty : 1
-size : 0
-empty : 1
-size : 0
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 1
-size : 0
-MAIN TEST : 48
-TEST : 48
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 1
-size : 0
-MAIN TEST : 49
-TEST : 49
-empty : 0
-size : 18
-front : 
-back : 
-content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reverse content : 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-empty : 1
-size : 0

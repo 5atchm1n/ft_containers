@@ -60,7 +60,8 @@ vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable
 {
     difference_type size = std::distance(first, last);
     this->_dealloc();
-    this->_reserve(static_cast<size_type>(size));
+    if (size)
+        this->_reserve(static_cast<size_type>(size));
     for (iterator i = begin(); i < begin() + size; i++)
         this->_mem.construct(i, *first++);
     this->_size = size;
@@ -73,7 +74,8 @@ void
 vector<_Tp, _Alloc>::assign(size_type n, const value_type& val)
 {
     this->_dealloc();
-    this->reserve(n);
+    if (n)
+        this->reserve(n);
     for (iterator i = begin(); i < begin() + n; i++)
         this->_mem.construct(i, val);
     this->_size = n;
@@ -85,10 +87,7 @@ template <typename _Tp, typename _Alloc>
 void
 vector<_Tp, _Alloc>::push_back(const value_type &val)
 {
-    if (size() < capacity())
-        this->_mem.construct(this->_start + this->_size, val);
-    else if (size() == capacity())
-        this->_insert_back(val);
+    this->_insert_back(val);
     this->_size++;
 }
 /**

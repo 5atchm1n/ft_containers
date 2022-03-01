@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 03:34:44 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/28 00:23:54 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/01 16:20:40 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <climits>
 
 #define _MAX_TEST_SIZE 20
-#define _NTESTS 50
+#define _NTESTS 5
 
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
@@ -66,7 +66,7 @@ namespace _test
     template <>
     std::string rdm_val<std::string>()
     {
-        std::string default_val[] =
+        std::string default_val[18] =
             {
                 "This is a test",
                 "there are many tests",
@@ -86,7 +86,7 @@ namespace _test
                 "Praesent ullamcorper venenatis augue,",
                 "\t",
                 "eget pretium velit vehicula et."};
-        return (std::string(default_val[std::rand() % 17]));
+        return (std::string(default_val[std::rand() % 18]));
     }
 
     /**
@@ -119,21 +119,7 @@ namespace _test
         _vector z(std::rand() % _MAX_TEST_SIZE, rdm_val<typename _vector::value_type>());
         test_print(x);
     }
-    /**
-     * @brief TEST VECTOR ASSIGN
-     */
-    template <typename _vector>
-    void test_assign(_vector &X, _vector &Y)
-    {
-        _vector Z;
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test assign" << std::endl;
-        Z.assign(std::rand() % _MAX_TEST_SIZE, rdm_val<typename _vector::value_type>());
-        test_print(Z);
-        X.assign(Z.begin(), Z.end());
-        test_print(X);
-        test_print(Y);
-    }
+
     /**
      * @brief TEST COPY CONSTRUCTOR
      */
@@ -233,13 +219,54 @@ namespace _test
         }
         test_print(x);
     }
-
+    /**
+     * @brief TEST VECTOR ASSIGN
+     */
     template <typename _vector>
-    void test_push(_vector &x, _vector &y)
+    void test_assign(_vector &X, _vector &Y)
+    {
+        _vector Z;
+        std::cout << "TEST : " << test_no++ << std::endl;
+        std::cout << "test assign" << std::endl;
+        switch (std::rand() % 4)
+        {
+            case (0) :
+                Z.assign(0, rdm_val<typename _vector::value_type>());
+            case (1) :
+                Z.assign(std::rand() % _MAX_TEST_SIZE, rdm_val<typename _vector::value_type>());
+            case (2) :
+                Z.assign(Y.begin(), Y.end());
+            case (3) :
+                if (!Y.empty())
+                    Z.assign(Y.begin() + (std::rand() % Y.size()), Y.end());
+            case (4) :
+                if (!Y.empty())
+                    Z.assign(Y.begin(), Y.end() - (std::rand() % Y.size()));
+        }
+        test_print(Z);
+        test_print(X);
+        test_print(Y);
+    }
+    
+    template <typename _vector>
+    void test_push(_vector &X, _vector &Y)
     {
         std::cout << "TEST : " << test_no++ << std::endl;
-        (void)x;
-        (void)y;
+        std::cout << "Test push_back" << std::endl;
+        switch (std::rand() % 3)
+        {
+            case (0) :
+                for (int i = 0; i < _MAX_TEST_SIZE; i++)
+                    X.push_back(rdm_val<typename _vector::value_type>());
+            case (1) :
+                for (int i = 0; i < _MAX_TEST_SIZE; i++)
+                    Y.push_back(rdm_val<typename _vector::value_type>());
+            case (2) :
+                _vector Z;
+                Z.push_back(rdm_val<typename _vector::value_type>());
+        }
+        test_print(X);
+        test_print(Y);
     }
 
     template <typename _vector>
@@ -282,7 +309,6 @@ void test_vector(int rdm_seed)
     _vector Z;
     for (int i = 0; i < _NTESTS; i++)
     {
-    /*
         std::cout << "MAIN TEST : " << main_test_no++ << std::endl;
         switch (std::rand() % _TEST)
         {
@@ -330,15 +356,6 @@ void test_vector(int rdm_seed)
             _test::test_print(X);
             _test::test_print(Y);
         }
-    */
-    std::cout << "MAIN TEST : " << main_test_no++ << std::endl;
-    int rand = std::rand() % _TEST;
-    if (std::rand() % 2)
-        _testArray[rand](X, Y);
-    else
-        _testArray[rand](Y, X);
-    _test::test_print(X);
-    _test::test_print(Y);
     }
 }
 
