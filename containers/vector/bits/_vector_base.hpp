@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/01 16:19:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/01 23:24:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ namespace ft
         _size_type _capacity;
 
         explicit _vector_base(const _alloc_type & alloc = _alloc_type());
-        _vector_base(_size_type size, const _Tp& value = _Tp(), const _Alloc &val = _Alloc());
+        explicit _vector_base(_size_type size, const _Tp& value, const _Alloc &val);
         _vector_base(const _vector_base<_Tp, _Alloc> &copy);
         
         _vector_base& operator=(const _vector_base &val);
@@ -92,12 +92,14 @@ template <typename _Tp, typename _Alloc>
 _vector_base<_Tp, _Alloc>::_vector_base(_size_type size, const _Tp &value, const _Alloc &alloc) :
 _mem(alloc)
 {
+    _start = NULL;
     _range_check(size);
     if (size)
         _reserve(size);
-    _start = NULL;
+    _size = size;
+    _iterator pos = _start;
     for (_size_type i = 0; i < size; i++)
-        _mem.construct(&_start[i], value);
+        _mem.construct(pos++, value);
 }
 /**
  * @brief Construct a new vector base
@@ -207,11 +209,10 @@ _vector_base<_Tp, _Alloc>::_insert_back(const _Tp &value)
      _size_type nsize;
      _size_type osize = _size;
     _range_check(_size + 1);
-    nsize = _size + 1;
-    if (_size * DFLT_SCALE / DFLT_REFACTOR < _mem.max_size())
-        nsize = _size * DFLT_SCALE / DFLT_REFACTOR;
     if (_size * DFLT_SCALE < _mem.max_size())
         nsize = _size * DFLT_SCALE;
+    else
+        nsize = _size + 1;
     _iterator tmp;
     tmp = _mem.allocate(nsize);
     std::uninitialized_copy(_start, _start + _size, tmp);

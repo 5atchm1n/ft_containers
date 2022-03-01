@@ -164,11 +164,13 @@ template <typename _Tp, typename _Alloc>
 typename vector<_Tp, _Alloc>::iterator
 vector<_Tp, _Alloc>::erase(iterator position)
 {
-    iterator last = end() - 1;
+    iterator last = end();
+    if (position == end())
+        return position;
     for (iterator i = position; i != last; i++)
     {
         this->_mem.destroy(i);
-        if (i != last)
+        if (i + 1 != last)
             this->_mem.construct(i, *(i + 1));
     }
     this->_size--;
@@ -181,15 +183,18 @@ template <typename _Tp, typename _Alloc>
 typename vector<_Tp, _Alloc>::iterator
 vector<_Tp, _Alloc>::erase(iterator first, iterator last)
 {
-    difference_type size = std::distance(first, last);
-    iterator old_last = end() - 1;
-    for (iterator i = first; i < old_last; i++)
+    if (first == last)
+        return erase(first);
+    iterator it = first;
+    size_type n = 0;
+    while (it != last)
     {
-        this->_mem.destroy(i);
-        if (i + size <= old_last)
-            this->_mem.construct(i, *(i + size));
+        this->_mem.destroy(it++);
+        n++;
     }
-    this->_size -= size;
+    while (it != end())
+        this->_mem.destroy(it++);
+    this->_size -= n;
     return first;
 }
 /**

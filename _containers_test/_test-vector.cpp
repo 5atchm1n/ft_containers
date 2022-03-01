@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 03:34:44 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/01 16:20:40 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/01 17:1 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include <cstdlib>
 #include <climits>
 
-#define _MAX_TEST_SIZE 20
-#define _NTESTS 5
+#define _MAX_TEST_SIZE 10
+#define _NTESTS 8000
 
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
@@ -110,14 +110,14 @@ namespace _test
     template <typename _vector>
     void test_constructors(_vector &x, _vector &y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test constructors" << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - CONSTRUCTORS" << std::endl;
         x = _vector(std::rand() % _MAX_TEST_SIZE, rdm_val<typename _vector::value_type>());
         test_print(x);
         y = _vector(x.begin(), x.end());
         test_print(x);
         _vector z(std::rand() % _MAX_TEST_SIZE, rdm_val<typename _vector::value_type>());
-        test_print(x);
+        test_print(z);
     }
 
     /**
@@ -126,8 +126,8 @@ namespace _test
     template <typename _vector>
     void test_copy(_vector &x, _vector &y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test copy constructor" << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - COPY CONSTRUCTOR" << std::endl;
         _vector z(x);
         _vector w(y);
         test_print(x);
@@ -141,10 +141,9 @@ namespace _test
     template <typename _vector>
     void test_assign_op(_vector &x, _vector &y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test assignment operator" << std::endl;
-        _vector Z(x);
-        Z = x;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - OPERATOR=" << std::endl;
+        _vector Z = x;
         y = Z;
         test_print(x);
         test_print(y);
@@ -163,8 +162,8 @@ namespace _test
     template <typename _vector>
     void test_mixed_assign_copy(_vector &x, _vector &y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test mixed" << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - MIXED BASIC" << std::endl;
         _vector Z(x);
         Z = x;
         test_print(Z);
@@ -183,7 +182,8 @@ namespace _test
     template <typename _vector>
     void test_insert(_vector &x, _vector &y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - INSERT" << std::endl;
         typename _vector::iterator it;
         if (!x.empty())
             it = x.begin() + std::rand() % x.size();
@@ -226,8 +226,8 @@ namespace _test
     void test_assign(_vector &X, _vector &Y)
     {
         _vector Z;
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "test assign" << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - ASSIGN" << std::endl;
         switch (std::rand() % 4)
         {
             case (0) :
@@ -251,33 +251,79 @@ namespace _test
     template <typename _vector>
     void test_push(_vector &X, _vector &Y)
     {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        std::cout << "Test push_back" << std::endl;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - PUSH_BACK" << std::endl;
         switch (std::rand() % 3)
         {
             case (0) :
-                for (int i = 0; i < _MAX_TEST_SIZE; i++)
+                for (int i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
                     X.push_back(rdm_val<typename _vector::value_type>());
             case (1) :
-                for (int i = 0; i < _MAX_TEST_SIZE; i++)
+                for (int i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
                     Y.push_back(rdm_val<typename _vector::value_type>());
             case (2) :
                 _vector Z;
                 Z.push_back(rdm_val<typename _vector::value_type>());
+                test_print(Z);
         }
         test_print(X);
         test_print(Y);
     }
 
-    template <typename _vector>
-    void test_pop(_vector &x, _vector &y)
-    {
-        std::cout << "TEST : " << test_no++ << std::endl;
-        (void)x;
-        (void)y;
-    }
+#define _LESS_SIZE(X) (X.size() - (std::rand() % X.size()))
 
+    template <typename _vector>
+    void test_pop(_vector &X, _vector &Y)
+    {
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - POP" << std::endl;
+        switch (std::rand() % 2)
+        {
+            case (0) :
+                if (!X.empty())
+                    for (size_t i = 0; i < X.size(); i++)
+                        X.pop_back();
+            case (1) :
+                if (!Y.empty())
+                    for (size_t i = 0; i < Y.size(); i++)
+                        Y.pop_back();
+        }
+        test_print(X);
+        test_print(Y);
+    }
+    
+    template <typename _vector>
+    void test_erase(_vector &X, _vector &Y)
+    {
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - ERASE" << std::endl;
+        typename _vector::iterator pos;
+        switch (std::rand() % 4)
+        {
+            case (0) :
+                if (!X.empty())
+                    X.erase(X.begin());
+            case (1) :
+                if (!X.empty())
+                    X.erase(X.end() - 1);
+            case (2) :
+                if (!X.empty() && X.size() > 1)
+                {   
+                    pos = X.begin() + (std::rand() % X.size());
+                    X.erase(X.begin(), pos);
+                }
+            case (3) :
+                if (!Y.empty() && Y.size() > 1)
+                {
+                    pos = Y.begin() + (std::rand() % Y.size());
+                    Y.erase(Y.begin(), pos);
+                }
+        }
+        test_print(X);
+        test_print(Y);
+    }
 }
+
 #define _DEFAULT_CONSTRUCTOR 0
 #define _COPY_CONSTRUCTOR 1
 #define _ASSIGNMENT_OP 2
@@ -286,6 +332,7 @@ namespace _test
 #define _ASSIGN 5
 #define _PUSH 6
 #define _POP 7
+#define _ERASE 8
 
 #define _TEST 8
 
@@ -302,11 +349,12 @@ void test_vector(int rdm_seed)
             &_test::test_insert,
             &_test::test_assign,
             &_test::test_push,
-            &_test::test_pop};
+            &_test::test_pop,
+            //&_test::test_erase
+        };
 
     _vector X;
     _vector Y;
-    _vector Z;
     for (int i = 0; i < _NTESTS; i++)
     {
         std::cout << "MAIN TEST : " << main_test_no++ << std::endl;
@@ -317,51 +365,64 @@ void test_vector(int rdm_seed)
                 _testArray[_DEFAULT_CONSTRUCTOR](X, Y);
             else
                 _testArray[_DEFAULT_CONSTRUCTOR](Y, X);
+            break;
         case (_COPY_CONSTRUCTOR):
             if (std::rand() % 2)
                 _testArray[_COPY_CONSTRUCTOR](X, Y);
             else
                 _testArray[_COPY_CONSTRUCTOR](Y, X);
+            break;
         case (_ASSIGNMENT_OP):
             if (std::rand() % 2)
                 _testArray[_ASSIGNMENT_OP](X, Y);
             else
                 _testArray[_ASSIGNMENT_OP](Y, X);
+            break;
         case (_MIXED_0_3) :
             if (std::rand() % 2)
                 _testArray[_MIXED_0_3](X, Y);
             else
             _testArray[_MIXED_0_3](Y, X);
+            break;
         case (_INSERT):
             if (std::rand() % 2)
                 _testArray[_INSERT](X, Y);
             else
                 _testArray[_INSERT](Y, X);
+            break;
         case (_ASSIGN):
             if (std::rand() % 2)
                 _testArray[_ASSIGN](X, Y);
             else
                 _testArray[_ASSIGN](Y, X);
+            break;
         case (_PUSH):
             if (std::rand() % 2)
                 _testArray[_PUSH](X, Y);
             else
                 _testArray[_PUSH](Y, X);
+            break;
         case (_POP):
             if (std::rand() % 2)
                 _testArray[_POP](X, Y);
             else
                 _testArray[_POP](Y, X);
-        default:
-            _test::test_print(X);
-            _test::test_print(Y);
+            break;
+         case (_ERASE):
+            if (std::rand() % 2)
+                _testArray[_ERASE](X, Y);
+            else
+                _testArray[_ERASE](Y, X);
+            break;
         }
+        _test::test_print(X);
+        _test::test_print(Y);
     }
 }
 
 int main(void)
 {
-    int seed = 42;
+    int seed = 18;
     test_vector<_NAMESPACE::vector<std::string> >(seed);
 
     return 0;
