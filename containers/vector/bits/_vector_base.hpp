@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/01 23:24:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/03 18:32:06 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ _mem(alloc)
     _range_check(size);
     if (size)
         _reserve(size);
+    else
+        _capacity = 0;
     _size = size;
     _iterator pos = _start;
     for (_size_type i = 0; i < size; i++)
@@ -253,6 +255,7 @@ _vector_base<_Tp, _Alloc>::_insert_back(const _Tp &value)
     {
         if (_capacity)
             _mem.deallocate(_start, _capacity);
+        _capacity = 0;
     }
 
 } // end namespace

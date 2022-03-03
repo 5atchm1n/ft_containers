@@ -111,11 +111,14 @@ vector<_Tp, _Alloc>::insert(iterator position, size_type n, const value_type &va
 {
     const difference_type index = position - begin();
     const difference_type pos_end = end() - begin();
+    if (n == 0)
+        return ;
     if (this->_size + n >= capacity())
         this->_realloc(this->_size + n);
     iterator    new_pos = this->_start + index;
     iterator    old_end = this->_start + pos_end;
-    this->_move(n, new_pos, old_end);
+    if (this->_size > 0)
+        this->_move(n, new_pos, old_end);
     this->_size += n;
     while (n--)
         this->_mem.construct(new_pos++, val);
@@ -139,6 +142,8 @@ template <typename _Iterator>
 void
 vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last,typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
 {
+    if (first == last)
+        return ;
     const   difference_type index = position - begin();
     const   difference_type pos_end = end() - begin();
     const   difference_type csize = std::distance(first, last);

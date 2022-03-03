@@ -55,8 +55,8 @@ namespace ft
         typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type*)
     {
         difference_type diff = std::distance(first, last);
-        this->_size = diff;
-        this->_capacity = diff;
+        this->_size = static_cast<size_type>(diff);
+        this->_capacity = static_cast<size_type>(diff);
         if (diff)
         {    
             this->_reserve(this->_capacity);
@@ -75,6 +75,7 @@ namespace ft
     {
         for (size_type i = 0; i < this->_size; i++)
             this->_mem.destroy(this->_start + i);
+        this->_size = 0;
     }
 
 /**
