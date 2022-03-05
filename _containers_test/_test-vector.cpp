@@ -18,7 +18,7 @@
 #include <climits>
 
 #define _MAX_TEST_SIZE 10
-#define _NTESTS 100
+#define _NTESTS 1000
 
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
@@ -334,7 +334,7 @@ namespace _test
 #define _POP 7
 #define _ERASE 8
 
-#define _TEST 5
+#define _TEST 9
 
 template <class _vector>
 void test_vector(int rdm_seed)
@@ -347,10 +347,10 @@ void test_vector(int rdm_seed)
             &_test::test_assign_op,
             &_test::test_mixed_assign_copy,
             &_test::test_insert,
-            //&_test::test_assign,
-            //&_test::test_push,
-            //&_test::test_pop,
-            //&_test::test_erase
+            &_test::test_assign,
+            &_test::test_push,
+            &_test::test_pop,
+            &_test::test_erase
         };
 
     _vector X;
@@ -422,15 +422,8 @@ void test_vector(int rdm_seed)
 
 int main(void)
 {
-    int seed = 18;
-    test_vector<_NAMESPACE::vector<std::string> >(seed);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-    test_vector<_NAMESPACE::vector<std::string> >(seed++);
-
+    int seed = 55;
+    for (int i = 0; i < 100; i++)
+        test_vector<_NAMESPACE::vector<std::string> >(seed++);
     return 0;
 }

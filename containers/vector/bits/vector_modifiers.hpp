@@ -189,17 +189,32 @@ typename vector<_Tp, _Alloc>::iterator
 vector<_Tp, _Alloc>::erase(iterator first, iterator last)
 {
     if (first == last)
-        return erase(first);
+        return first;
+    if (last == end())
+    {
+        for (iterator i = first; i != last; i++)
+        {
+            this->_mem.destroy(i);
+            this->_size--;
+        }
+        return first;
+        
+    }
     iterator it = first;
-    size_type n = 0;
+    difference_type size = std::distance(first, last);
     while (it != last)
     {
-        this->_mem.destroy(it++);
-        n++;
+        this->_mem.destroy(it);
+        it++;
     }
-    while (it != end())
-        this->_mem.destroy(it++);
-    this->_size -= n;
+    it = first;
+    while (it + size != end())
+    {
+        this->_mem.construct(it, *(it + size));
+        this->_mem.destroy(it + size);
+        it++;
+    }
+    this->_size -= static_cast<size_type>(size);
     return first;
 }
 /**

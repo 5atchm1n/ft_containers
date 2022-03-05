@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 15:36:28 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/03 18:32:06 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/05 14:45:29 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,9 +151,11 @@ template <typename _Tp, typename _Alloc>
 void
 _vector_base<_Tp, _Alloc>::_realloc(_size_type size)
 {
+    _size_type  old_size = _size;
     _Tp *temp = _mem.allocate(size);
     std::uninitialized_copy(_start, _start + _size, temp);
     _dealloc();
+    _size = old_size;
     _start = temp;
     _capacity = size;
 }
@@ -182,12 +184,15 @@ template <typename _Tp, typename _Alloc>
 void
 _vector_base<_Tp, _Alloc>::_move(_size_type n, _iterator start, _iterator end)
 {
-    _iterator i = end;
+    _iterator i = end - 1;
     while (i != start)
     {
         _mem.construct(i + n, *i);
-        _mem.destroy(i--);
+        _mem.destroy(i);
+        i--;
     }
+    _mem.construct(i + n, *i);
+    _mem.destroy(i);
 }
 /**
  * @brief 

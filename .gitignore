@@ -1,3 +1,8 @@
---
+.gitignore
 *.o
 *.d
+test/
+objs/
+ft_vector
+std_vector
+.vscode
