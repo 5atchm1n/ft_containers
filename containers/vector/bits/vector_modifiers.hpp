@@ -41,11 +41,20 @@ void
 vector<_Tp, _Alloc>::resize(size_type size, value_type val)
 {
     this->_range_check(size);
+    if (size == this->_size)
+        return ;
+    if (size == 0)
+        return (clear());
     if (size < this->_size)
     {
-        for (size_type i = this->_size; i > size; i--)
-            this->_mem.destroy(this->_start + i);
-        this->_size = size;
+        iterator it = end();
+        size_type diff = this->_size - size;
+        while (diff--)
+        {
+            this->_mem.destroy(--it);
+            this->_size--;
+        }
+        return ;
     }
     if (size > this->_size)
         this->_realloc_fill(size, val);
@@ -236,7 +245,7 @@ template <typename _Tp, typename _Alloc>
 void
 vector<_Tp, _Alloc>::clear()
 {
-    for (size_type i = 0; i < size(); ++i)
+    for (size_type i = 0; i < this->_size; i++)
         this->_mem.destroy(begin() + i);
     this->_size = 0;
 }

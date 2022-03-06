@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/05 15:23:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/06 14:07:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ namespace _test
                 std::cout << error.what() << std::endl;
             }
         }
-        test_print(x);
     }
     /**
      * @brief TEST VECTOR ASSIGN
@@ -85,10 +84,11 @@ namespace _test
             case (4) :
                 if (!Y.empty())
                     Z.assign(Y.begin(), Y.end() - (std::rand() % Y.size()));
+            case (5) :
+                if (!Z.empty())
+                    X.assign(Z.begin(), Z.end() - (std::rand() % Z .size()));
         }
         test_print(Z);
-        test_print(X);
-        test_print(Y);
     }
     
     template <typename _vector>
@@ -109,8 +109,6 @@ namespace _test
                 Z.push_back(rdm_val<typename _vector::value_type>());
                 test_print(Z);
         }
-        test_print(X);
-        test_print(Y);
     }
 
 
@@ -130,8 +128,6 @@ namespace _test
                     for (size_t i = 0; i < Y.size(); i++)
                         Y.pop_back();
         }
-        test_print(X);
-        test_print(Y);
     }
     
     template <typename _vector>
@@ -161,8 +157,20 @@ namespace _test
                     Y.erase(Y.begin(), pos);
                 }
         }
-        test_print(X);
-        test_print(Y);
+    }
+
+    template <typename _vector>
+    void
+    test_clear(_vector &X, _vector &Y)
+    {
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - CLEAR" << std::endl;
+        if (std::rand() % 2)
+            X.clear();
+        else
+            Y.clear();
+        std::cout << "X size : " << X.size() << std::endl;
+        std::cout << "Y size : " << Y.size() << std::endl;
     }
     
 }

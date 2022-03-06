@@ -107,7 +107,7 @@ namespace ft
     inline bool
     operator>(const vector<_Tp, _Alloc>& lhs, const vector<_Tp, _Alloc>& rhs)
     {
-        return !(rhs < lhs);
+        return rhs < lhs;
     }
 
     template <typename _Tp, typename _Alloc>
