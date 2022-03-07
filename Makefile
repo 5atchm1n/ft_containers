@@ -15,6 +15,9 @@ VEC_FT = ft_vector
 
 VEC_STD = std_vector
 
+MAP_FT = ft_map
+
+MAP_STD = std_map
 # Makefile recipe specific Rules
 
 OBJDIR = objs
@@ -39,8 +42,13 @@ CFLAGS = -Wall -Wextra -Werror -MMD -MP
 
 # Debug and Memory
 
-#MEM = -fsanitize=address 
 DEBUG = -fstandalone-debug -g3
+
+MEM = 
+
+ifeq ($(VAR),1)
+MEM = -fsanitize=address 
+endif
 
 ## SOURCE FILES
 # Default
@@ -79,7 +87,7 @@ ${NAME} : ${OBJS}
 # object file recipe
 ${OBJDIR}/%.o:%.cpp
 	@${MKDIR_P} ${@D}
-	${CC} ${CFLAGS} ${_TEST} ${INC} $(DEBUG) $(_INC_RBT_TEST) ${MEM} ${CPPSTD} -c $< -o $@
+	${CC} ${CFLAGS} ${_TEST} ${MEM} ${INC} $(DEBUG) $(_INC_RBT_TEST)  ${CPPSTD} -c $< -o $@
 
 # END GLOBAL ALL
 
@@ -88,11 +96,19 @@ ${OBJDIR}/%.o:%.cpp
 ${RBT_TEST} : fclean ${_RBT_TEST_OBJS}
 	${CC} ${CFLAGS} ${_INC_RBT_TEST} ${MEM} ${CPPSTD} ${_RBT_TEST_OBJS} -o $@
 
+# MAP
+
+${MAP_FT} : ${MAP_TEST}
+
+${MAP_STD}: _TEST=-D_NAMESPACE=std
+
+${MAP_STD}: ${MAP_TEST}
+
 # TEST MAP
 # generate map exectutable
 
 ${MAP_TEST} : fclean ${_MAP_TEST_OBJS}
-	${CC} ${CFLAGS} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_MAP_TEST_OBJS} -o $@
+	${CC} ${CFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_MAP_TEST_OBJS} -o $@
 
 
 # VECTOR
