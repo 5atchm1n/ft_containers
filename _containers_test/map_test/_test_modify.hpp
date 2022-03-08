@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 12:42:22 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 20:13:37 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ namespace _test
                     if (X.size() > _MAX_TEST_SIZE)
                     {
                         it = X.begin();
-                        for (size_t i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
+                        for (int i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
                             it++;
                         X.erase(it, X.end());
                     }

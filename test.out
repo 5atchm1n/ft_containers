@@ -1362,14 +1362,14 @@ TEST : 34 - ERASE
 └── key = 1450949922 value = 	[0m
     │   ┌── key = 519275039 value = there are many tests[0m
     └── key = 204635683 value = there are many tests[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
 │       ┌── key = 1941755899 value = 	[0m
 │   ┌── key = 1754290516 value = This is a test[0m
 │   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
 └── key = 1450949922 value = 	[0m
     │   ┌── key = 519275039 value = there are many tests[0m
     └── key = 204635683 value = there are many tests[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 14
 content : 
@@ -1510,16 +1510,16 @@ content :
 MAIN TEST : 28
 TEST : 38 - ERASE
 │       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
+│   ┌── key = 1754290516 value = This is a test[0m
 │   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
 └── key = 1450949922 value = 	[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
     └── key = 204635683 value = there are many tests[0m
 │       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
+│   ┌── key = 1754290516 value = This is a test[0m
 │   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
 └── key = 1450949922 value = 	[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
     └── key = 204635683 value = there are many tests[0m
 empty : 0
 size : 13
@@ -1698,13 +1698,13 @@ TEST : 42 - ERASE
 │       ┌── [31mkey = 1941755899 value = 	[0m
 │   ┌── key = 1754290516 value = This is a test[0m
 └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 204635683 value = there are many tests[0m
 │       ┌── [31mkey = 1941755899 value = 	[0m
 │   ┌── key = 1754290516 value = This is a test[0m
 └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 204635683 value = there are many tests[0m
 empty : 0
 size : 1
 content : 
@@ -1990,10 +1990,10 @@ TEST : 51 - ERASE
 │   │   └── key = 1055369838 value = consectetur adipiscing elit.[0m
 │   │       └── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
 └── key = 585169881 value = eget pretium velit vehicula et.[0m
-    │   ┌── key = 555320787 value = [0m
-    └── key = 519275039 value = there are many tests[0m
-        │   ┌── [31mkey = 435230875 value = This is a test[0m
-        └── key = 204635683 value = there are many tests[0m
+    │       ┌── key = 555320787 value = [0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    │   │   └── key = 435230875 value = This is a test[0m
+    └── key = 204635683 value = there are many tests[0m
 │           ┌── [31mkey = 1941755899 value = 	[0m
 │       ┌── key = 1791144929 value = [0m
 │       │   └── [31mkey = 1754290516 value = This is a test[0m
@@ -2040,4 +2040,4 @@ TEST : 51 - ERASE
     └── [31mkey = 1055369838 value = consectetur adipiscing elit.[0m
         └── key = 766762787 value = a mi vestibulum eleifend.[0m
 │       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1791144929 value = [0m
+│   ┌── key = 1791144929 valu

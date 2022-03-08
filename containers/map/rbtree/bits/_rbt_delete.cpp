@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 13:28:11 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 20:46:21 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,13 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
         tmp_y->left->parent = tmp_y;
         tmp_y->isred = node->isred;
     }
-    if (node_isred == false)
-        _delete_node_fix(node);
     _clean_node(node);
+    if (node_isred == false)
+        _delete_node_fix(tmp_x);
     _nil->_max = _rbtree_maximum(_root);
     _nil->_min = _rbtree_minimum(_root);
     _nil->parent = _nil;
+    print();
     _size--;
 }
 
@@ -149,7 +150,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node_fix(node_pointer node)
                 }
                 tmp_w->isred = node->parent->isred;
                 node->parent->isred = false;
-                tmp_w->right->isred = false;
+                tmp_w->left->isred = false;
                 _rbtree_rotate_right(node->parent);
                 node = _root;
             }
