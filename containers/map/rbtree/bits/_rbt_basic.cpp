@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 18:43:40 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 13:07:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,11 +107,34 @@ _rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
     return _node_alloc.max_size() / sizeof(_Tp);
 }
 
+
 /**
  * @brief print tree helper
  * @return std::ostream& 
  */
-
+template <typename _Tp, typename _Cmp, typename _Alloc>
+void
+_rbtree<_Tp, _Cmp, _Alloc>::print(void)
+{
+    std::stringstream buffer;
+    this->_print(this->_root, buffer, true, "");
+    std::cout << buffer.str();
+}
+template <typename _Tp, typename _Cmp, typename _Alloc>
+void
+_rbtree<_Tp, _Cmp, _Alloc>::_print(node_pointer node, std::stringstream &buffer, bool is_tail, std::string prefix)
+{
+    if (node->right != this->_nil)
+        this->_print(node->right, buffer, false,
+            std::string(prefix).append(is_tail != 0 ? "│   " : "    "));
+    buffer << prefix << (is_tail != 0 ? "└── " : "┌── ");
+    if (node->isred == true)
+        buffer << "\033[31m";
+    buffer << *node->data << "\033[0m" << std::endl;
+    if (node->left != this->_nil)
+        this->_print(node->left, buffer, true,
+                std::string(prefix).append(is_tail != 0 ? "    " : "│   "));
+}
     
 }   // END NAMESPACE FT
 

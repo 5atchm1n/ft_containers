@@ -463,33 +463,7 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 1
-TEST : 11 - INSERT
-empty : 0
-size : 10
-content : 
-204635682 => Lorem ipsum dolor sit amet
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 10
-content : 
-204635682 => Lorem ipsum dolor sit amet
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
+TEST : 11 - ERASE
 empty : 0
 size : 10
 content : 
@@ -517,7 +491,7 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 2
-TEST : 12 - ERASE
+TEST : 12 - CLEAR
 empty : 0
 size : 10
 content : 
@@ -574,6 +548,25 @@ content :
 1941755899 => 	
 MAIN TEST : 4
 TEST : 14 - ERASE
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+│   │   └── key = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 10
 content : 
@@ -588,12 +581,11 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -602,13 +594,31 @@ content :
 1941755899 => 	
 MAIN TEST : 5
 TEST : 15 - ERASE
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+│   │   └── key = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -616,12 +626,11 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -631,12 +640,11 @@ content :
 MAIN TEST : 6
 TEST : 16 - CLEAR
 empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -644,12 +652,11 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -657,57 +664,41 @@ content :
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 7
-TEST : 17 - INSERT
+TEST : 17 - ERASE
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
-size : 10
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
-1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 12
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 12
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 10
+size : 9
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
@@ -716,159 +707,131 @@ content :
 1941755899 => 	
 MAIN TEST : 8
 TEST : 18 - ERASE
+│               ┌── [31mkey = 1941755899 value = 	[0m
+│           ┌── key = 1754290516 value = This is a test[0m
+│       ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│       │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   ┌── key = 1450949922 value = 	[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
-size : 12
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
-1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 10
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 9
-TEST : 19 - INSERT
-key :1615400249
- value : Lorem ipsum dolor sit amet
-already in :1
+TEST : 19 - CLEAR
 empty : 0
-size : 11
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 12
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 12
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 11
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 10
 TEST : 20 - INSERT
+key :1693140455
+ value : there are many tests
+already in :1
+key :1010639471
+ value : congue dictum. Fusce a ultrices
+already in :1
+key :1532156720
+ value : euismod mi ut, tristique lorem.
+already in :1
+key :1357140244
+ value : there are many tests
+already in :1
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 13
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
@@ -876,233 +839,154 @@ content :
 MAIN TEST : 11
 TEST : 21 - CLEAR
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 13
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 12
-TEST : 22 - CLEAR
+TEST : 22 - ERASE
+Elements erased : 0
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 13
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 13
-TEST : 23 - INSERT
-key :473000824
- value : eget pretium velit vehicula et.
-already in :1
-key :1857873889
- value : Phasellus ut rutrum ante.
-already in :1
+TEST : 23 - CLEAR
 empty : 0
-size : 15
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 13
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 14
-TEST : 24 - ERASE
+TEST : 24 - CLEAR
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 15
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 15
-TEST : 25 - CLEAR
+TEST : 25 - ERASE
+Elements erased : 0
 empty : 0
-size : 13
+size : 12
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 15
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 16
-TEST : 26 - CLEAR
+TEST : 26 - INSERT
 empty : 0
-size : 13
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
@@ -1111,70 +995,113 @@ empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 15
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1010639471 => congue dictum. Fusce a ultrices
+1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 17
-TEST : 27 - ERASE
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
+TEST : 27 - CLEAR
 empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 18
-TEST : 28 - ERASE
+TEST : 28 - INSERT
+key :204635682
+ value : Lorem ipsum dolor sit amet
+already in :0
+key :1941755899
+ value : 	
+already in :0
 empty : 0
-size : 13
+size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
@@ -1183,107 +1110,134 @@ empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
+1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 19
-TEST : 29 - CLEAR
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
+TEST : 29 - ERASE
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
+1941755899 => 	
+empty : 0
+size : 7
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1450949922 => 	
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 20
-TEST : 30 - ERASE
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
+TEST : 30 - CLEAR
 empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
+1941755899 => 	
+empty : 0
+size : 7
+content : 
+204635682 => Lorem ipsum dolor sit amet
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1450949922 => 	
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 21
-TEST : 31 - CLEAR
+TEST : 31 - INSERT
 empty : 0
-size : 13
+size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
+1754290516 => This is a test
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1450949922 => 	
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
 1941755899 => 	
@@ -1291,4384 +1245,120 @@ empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1450949922 => 	
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 22
-TEST : 32 - CLEAR
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
+TEST : 32 - ERASE
 empty : 0
 size : 15
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => 	
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
+1941755899 => 	
+empty : 0
+size : 8
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+291198356 => eget pretium velit vehicula et.
+519275039 => there are many tests
+1450949922 => 	
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
 1941755899 => 	
 MAIN TEST : 23
-TEST : 33 - CLEAR
+TEST : 33 - ERASE
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        │       ┌── [31mkey = 204635685 value = Pellentesque eget risus efficitur[0m
+        │   ┌── key = 204635684 value = a mi vestibulum eleifend.[0m
+        └── [31mkey = 204635683 value = 	[0m
+            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        │   ┌── [31mkey = 204635685 value = Pellentesque eget risus efficitur[0m
+        └── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
+            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
-size : 13
+size : 14
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635684 => a mi vestibulum eleifend.
+204635685 => Pellentesque eget risus efficitur
 291198356 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
+1010639471 => congue dictum. Fusce a ultrices
 1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
+1357140244 => there are many tests
+1532156720 => euismod mi ut, tristique lorem.
 1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
+1693140455 => there are many tests
 1754290516 => This is a test
 1941755899 => 	
 empty : 0
-size : 15
+size : 8
 content : 
 204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
+204635683 => there are many tests
 291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
 519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
 1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
 1692432651 => euismod mi ut, tristique lorem.
 1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
 1941755899 => 	
 MAIN TEST : 24
-TEST : 34 - CLEAR
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 25
-TEST : 35 - ERASE
-empty : 0
-size : 13
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 26
-TEST : 36 - INSERT
-key :768067091
- value : 
-already in :1
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 27
-TEST : 37 - CLEAR
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 28
-TEST : 38 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 29
-TEST : 39 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1941755899
- value : 	
-already in :0
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 30
-TEST : 40 - CLEAR
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 31
-TEST : 41 - CLEAR
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 32
-TEST : 42 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1941755899
- value : 	
-already in :0
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 33
-TEST : 43 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 34
-TEST : 44 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 35
-TEST : 45 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 36
-TEST : 46 - CLEAR
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 37
-TEST : 47 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 38
-TEST : 48 - INSERT
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 39
-TEST : 49 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 40
-TEST : 50 - CLEAR
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 41
-TEST : 51 - ERASE
-empty : 0
-size : 14
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1941755899 => 	
-empty : 0
-size : 15
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 42
-TEST : 52 - INSERT
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 43
-TEST : 53 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 44
-TEST : 54 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 45
-TEST : 55 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 46
-TEST : 56 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 47
-TEST : 57 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 48
-TEST : 58 - INSERT
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 49
-TEST : 59 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 50
-TEST : 60 - INSERT
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 51
-TEST : 61 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1941755899
- value : 	
-already in :0
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 52
-TEST : 62 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 53
-TEST : 63 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 54
-TEST : 64 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 55
-TEST : 65 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 56
-TEST : 66 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 57
-TEST : 67 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 58
-TEST : 68 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 59
-TEST : 69 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 60
-TEST : 70 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 61
-TEST : 71 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 62
-TEST : 72 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 63
-TEST : 73 - INSERT
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-MAIN TEST : 64
-TEST : 74 - INSERT
-key :1100953191
- value : 	
-already in :1
-key :1359287685
- value : 
-already in :1
-key :1963969583
- value : Lorem ipsum dolor sit amet
-already in :1
-key :367608652
- value : congue dictum. Fusce a ultrices
-already in :1
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 65
-TEST : 75 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 66
-TEST : 76 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 67
-TEST : 77 - ERASE
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 68
-TEST : 78 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 69
-TEST : 79 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1941755899
- value : 	
-already in :0
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 70
-TEST : 80 - CLEAR
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 71
-TEST : 81 - INSERT
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 16
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1105655106 => Curabitur elementum enim
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 72
-TEST : 82 - INSERT
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 73
-TEST : 83 - ERASE
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 74
-TEST : 84 - ERASE
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 75
-TEST : 85 - INSERT
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 76
-TEST : 86 - ERASE
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 77
-TEST : 87 - ERASE
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 78
-TEST : 88 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 79
-TEST : 89 - CLEAR
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 80
-TEST : 90 - ERASE
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 81
-TEST : 91 - INSERT
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 82
-TEST : 92 - CLEAR
-empty : 0
-size : 19
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 83
-TEST : 93 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 84
-TEST : 94 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 85
-TEST : 95 - ERASE
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 86
-TEST : 96 - ERASE
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 87
-TEST : 97 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 88
-TEST : 98 - ERASE
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 89
-TEST : 99 - CLEAR
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 90
-TEST : 100 - CLEAR
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 91
-TEST : 101 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 92
-TEST : 102 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1963969583
- value : Lorem ipsum dolor sit amet
-already in :0
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 93
-TEST : 103 - INSERT
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 94
-TEST : 104 - INSERT
-key :564065693
- value : Phasellus ut rutrum ante.
-already in :1
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 95
-TEST : 105 - CLEAR
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 96
-TEST : 106 - INSERT
-key :204635682
- value : Lorem ipsum dolor sit amet
-already in :0
-key :1963969583
- value : Lorem ipsum dolor sit amet
-already in :0
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 97
-TEST : 107 - CLEAR
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 98
-TEST : 108 - ERASE
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-MAIN TEST : 99
-TEST : 109 - CLEAR
-empty : 0
-size : 21
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-564065693 => Phasellus ut rutrum ante.
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
-empty : 0
-size : 20
-content : 
-204635682 => Lorem ipsum dolor sit amet
-204635683 => magna. Morbi fringilla ullamcorper
-204635684 => magna. Morbi fringilla ullamcorper
-291198356 => eget pretium velit vehicula et.
-367608652 => congue dictum. Fusce a ultrices
-473000824 => eget pretium velit vehicula et.
-519275039 => there are many tests
-768067091 => 
-1042343401 => euismod mi ut, tristique lorem.
-1100953191 => 	
-1105655106 => Curabitur elementum enim
-1359287685 => 
-1450949922 => 	
-1615400249 => Lorem ipsum dolor sit amet
-1673227668 => eget pretium velit vehicula et.
-1692432651 => euismod mi ut, tristique lorem.
-1754290516 => This is a test
-1857873889 => Phasellus ut rutrum ante.
-1941755899 => 	
-1963969583 => Lorem ipsum dolor sit amet
+TEST : 34 - ERASE

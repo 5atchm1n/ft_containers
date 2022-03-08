@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 12:00:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 12:42:22 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,10 +96,36 @@ namespace _test
     template <typename _map>
     void test_erase(_map &X, _map &Y)
     {
-        (void)X;
-        (void)Y;
         std::cout << "TEST : " << test_no++;
         std::cout << " - ERASE" << std::endl;
+        typename _map::iterator it;
+            switch (std::rand() % 4)
+            {
+                case (0) :
+                    X.erase(X.begin());
+                    break ;
+                case (1) :
+                    std::cout << "Elements erased : " << X.erase(rdm_val<typename _map::key_type>()) << std::endl;
+                    break ;
+                case (2) :
+                    if (X.size() > _MAX_TEST_SIZE)
+                    {
+                        it = X.begin();
+                        for (size_t i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
+                            it++;
+                        X.erase(it, X.end());
+                    }
+                    break ;
+                case (3) :
+                    it = Y.begin();
+                    if (!Y.empty())
+                    {
+                        for (size_t i = 0; i < std::rand() % Y.size(); i++)
+                            it++;
+                    }
+                    Y.erase(it);
+                
+            }
     }
 
     template <typename _map>

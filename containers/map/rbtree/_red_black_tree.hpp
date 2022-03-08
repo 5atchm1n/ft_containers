@@ -13,6 +13,7 @@
 #ifndef _RED_BLACK_TREE_H
 #define _RED_BLACK_TREE_H
 
+#include <sstream>
 #include <cstddef>
 #include <memory>
 #include "map/rbtree/bits/_rbt_node.hpp"
@@ -52,6 +53,7 @@ class _rbtree
         node_pointer    _create_node(const value_type &val);
         void            _clean_tree(node_pointer node);
         int             _count_nodes(node_pointer node) const;
+        void            _print(node_pointer node, std::stringstream &buffer, bool is_tail, std::string prefix);
 
     // Key nodes
         node_type       *_root;
@@ -97,6 +99,9 @@ class _rbtree
         const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };
         iterator        _end() { return iterator(_nil); };
         const_iterator  _end() const { return const_iterator(_nil); };
+    // PRINT DEBUG    
+        void            print(void);
+
 
 };
 
