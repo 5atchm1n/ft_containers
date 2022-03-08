@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 20:34:37 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 22:45:04 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator position)
     key_type tmp_key = position->first;
     value_type val = ft::make_pair(tmp_key, mapped_type());
     tree._delete_node(tree._search_tree(val));
-    tree.print();
 }
 
 

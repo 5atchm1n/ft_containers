@@ -548,24 +548,6 @@ content :
 1941755899 => 	
 MAIN TEST : 4
 TEST : 14 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1450949922 value = 	[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1450949922 value = 	[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 10
 content : 
@@ -593,24 +575,6 @@ content :
 1941755899 => 	
 MAIN TEST : 5
 TEST : 15 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1450949922 value = 	[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1450949922 value = 	[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 9
 content : 
@@ -663,22 +627,6 @@ content :
 1941755899 => 	
 MAIN TEST : 7
 TEST : 17 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 8
 content : 
@@ -704,22 +652,6 @@ content :
 1941755899 => 	
 MAIN TEST : 8
 TEST : 18 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 8
 content : 
@@ -1133,20 +1065,6 @@ content :
 1941755899 => 	
 MAIN TEST : 19
 TEST : 29 - ERASE
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 15
 content : 
@@ -1298,34 +1216,6 @@ content :
 1941755899 => 	
 MAIN TEST : 23
 TEST : 33 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        │   ┌── key = 204635685 value = Pellentesque eget risus efficitur[0m
-        └── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
-            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        │   ┌── key = 204635685 value = Pellentesque eget risus efficitur[0m
-        └── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
-            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 14
 content : 
@@ -1356,20 +1246,6 @@ content :
 1941755899 => 	
 MAIN TEST : 24
 TEST : 34 - ERASE
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 14
 content : 
@@ -1399,32 +1275,6 @@ content :
 1941755899 => 	
 MAIN TEST : 25
 TEST : 35 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        │   ┌── key = 204635685 value = Pellentesque eget risus efficitur[0m
-        └── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
-            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        │   ┌── key = 204635685 value = Pellentesque eget risus efficitur[0m
-        └── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
-            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 13
 content : 
@@ -1509,18 +1359,6 @@ content :
 1941755899 => 	
 MAIN TEST : 28
 TEST : 38 - ERASE
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1450949922 value = 	[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
 empty : 0
 size : 13
 content : 
@@ -1602,84 +1440,6 @@ content :
 1941755899 => 	
 MAIN TEST : 31
 TEST : 41 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635685 value = Pellentesque eget risus efficitur[0m
-            └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    │   ┌── key = 519275039 value = there are many tests[0m
-    └── key = 291198356 value = eget pretium velit vehicula et.[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    │   ┌── key = 1010639471 value = congue dictum. Fusce a ultrices[0m
-    └── key = 519275039 value = there are many tests[0m
-        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    └── key = 1010639471 value = congue dictum. Fusce a ultrices[0m
-        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-│   │       └── [31mkey = 1357140244 value = there are many tests[0m
-└── key = 1105655106 value = Curabitur elementum enim[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1754290516 value = This is a test[0m
-│       │   └── [31mkey = 1693140455 value = there are many tests[0m
-│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
-└── key = 1357140244 value = there are many tests[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
-│   │   │   ┌── [31mkey = 1693140455 value = there are many tests[0m
-│   │   └── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-└── key = 1673227668 value = eget pretium velit vehicula et.[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│       ┌── key = 1941755899 value = 	[0m
-│   ┌── [31mkey = 1754290516 value = This is a test[0m
-│   │   └── key = 1693140455 value = there are many tests[0m
-└── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-└── key = 1693140455 value = there are many tests[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-│   ┌── key = 1941755899 value = 	[0m
-└── key = 1754290516 value = This is a test[0m
-    └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
-└── key = 1941755899 value = 	[0m
-    └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
-└── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 1
 content : 
@@ -1695,16 +1455,6 @@ content :
 1941755899 => 	
 MAIN TEST : 32
 TEST : 42 - ERASE
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-└── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1754290516 value = This is a test[0m
-└── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── [31mkey = 519275039 value = there are many tests[0m
-    └── key = 204635683 value = there are many tests[0m
 empty : 0
 size : 1
 content : 
@@ -1982,62 +1732,2765 @@ content :
 1941755899 => 	
 MAIN TEST : 41
 TEST : 51 - ERASE
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1791144929 value = [0m
-│       │   └── [31mkey = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1202388394 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1055369838 value = consectetur adipiscing elit.[0m
-│   │       └── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
-└── key = 585169881 value = eget pretium velit vehicula et.[0m
-    │   ┌── key = 555320787 value = [0m
-    └── key = 519275039 value = there are many tests[0m
-        │   ┌── [31mkey = 435230875 value = This is a test[0m
-        └── key = 204635683 value = there are many tests[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1791144929 value = [0m
-│       │   └── [31mkey = 1754290516 value = This is a test[0m
-│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1202388394 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1055369838 value = consectetur adipiscing elit.[0m
-│   │       └── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
-└── key = 585169881 value = eget pretium velit vehicula et.[0m
-    │   ┌── key = 555320787 value = [0m
-    └── key = 519275039 value = there are many tests[0m
-        └── key = 435230875 value = This is a test[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1791144929 value = [0m
-│       │   └── [31mkey = 1754290516 value = This is a test[0m
-│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1202388394 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1055369838 value = consectetur adipiscing elit.[0m
-│   │       └── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
-└── key = 585169881 value = eget pretium velit vehicula et.[0m
-    │   ┌── [31mkey = 555320787 value = [0m
-    └── key = 519275039 value = there are many tests[0m
-│           ┌── [31mkey = 1941755899 value = 	[0m
-│       ┌── key = 1791144929 value = [0m
-│       │   └── [31mkey = 1754290516 value = This is a test[0m
-│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
-│   │   │   ┌── [31mkey = 1202388394 value = eget pretium velit vehicula et.[0m
-│   │   └── key = 1055369838 value = consectetur adipiscing elit.[0m
-│   │       └── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
-└── key = 585169881 value = eget pretium velit vehicula et.[0m
-    └── key = 555320787 value = [0m
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1791144929 value = [0m
-│   │   └── [31mkey = 1754290516 value = This is a test[0m
-└── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── key = 1202388394 value = eget pretium velit vehicula et.[0m
-    └── [31mkey = 1055369838 value = consectetur adipiscing elit.[0m
-        │   ┌── [31mkey = 766762787 value = a mi vestibulum eleifend.[0m
-        └── key = 585169881 value = eget pretium velit vehicula et.[0m
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1791144929 value = [0m
-│   │   └── [31mkey = 1754290516 value = This is a test[0m
-└── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
-    │   ┌── key = 1202388394 value = eget pretium velit vehicula et.[0m
-    └── [31mkey = 1055369838 value = consectetur adipiscing elit.[0m
-        └── key = 766762787 value = a mi vestibulum eleifend.[0m
-│       ┌── [31mkey = 1941755899 value = 	[0m
-│   ┌── key = 1791144929 value = [0m
+empty : 0
+size : 12
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 42
+TEST : 52 - INSERT
+empty : 1
+size : 0
+empty : 0
+size : 12
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 43
+TEST : 53 - CLEAR
+empty : 0
+size : 12
+content : 
+204635682 => Lorem ipsum dolor sit amet
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 44
+TEST : 54 - ERASE
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 45
+TEST : 55 - ERASE
+Elements erased : 0
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 46
+TEST : 56 - CLEAR
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 47
+TEST : 57 - CLEAR
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 1
+size : 0
+MAIN TEST : 48
+TEST : 58 - INSERT
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 49
+TEST : 59 - ERASE
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 50
+TEST : 60 - INSERT
+key :204635683
+ value : there are many tests
+already in :0
+key :1791144929
+ value : 
+already in :0
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 51
+TEST : 61 - ERASE
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 52
+TEST : 62 - CLEAR
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 53
+TEST : 63 - CLEAR
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 54
+TEST : 64 - INSERT
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 55
+TEST : 65 - INSERT
+key :204635683
+ value : there are many tests
+already in :0
+key :1791144929
+ value : 
+already in :0
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 10
+content : 
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+MAIN TEST : 56
+TEST : 66 - INSERT
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 57
+TEST : 67 - INSERT
+key :564065693
+ value : Phasellus ut rutrum ante.
+already in :1
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 58
+TEST : 68 - CLEAR
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 59
+TEST : 69 - INSERT
+key :204635683
+ value : there are many tests
+already in :0
+key :1791144929
+ value : 
+already in :0
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 60
+TEST : 70 - CLEAR
+empty : 0
+size : 13
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 61
+TEST : 71 - ERASE
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+MAIN TEST : 62
+TEST : 72 - INSERT
+key :1485838910
+ value : Sed vehicula tellus eu erat
+already in :1
+key :2077014851
+ value : eget pretium velit vehicula et.
+already in :1
+key :1355429677
+ value : Curabitur elementum enim
+already in :1
+key :853062931
+ value : Phasellus ut rutrum ante.
+already in :1
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 12
+content : 
+204635683 => there are many tests
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 63
+TEST : 73 - ERASE
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 64
+TEST : 74 - CLEAR
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 65
+TEST : 75 - ERASE
+Elements erased : 0
+empty : 0
+size : 11
+content : 
+204635683 => there are many tests
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 66
+TEST : 76 - INSERT
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 67
+TEST : 77 - CLEAR
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 68
+TEST : 78 - CLEAR
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 16
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 69
+TEST : 79 - INSERT
+key :1766340821
+ value : 
+already in :1
+key :12383449
+ value : nisi id scelerisque.
+already in :1
+empty : 0
+size : 18
+content : 
+12383449 => nisi id scelerisque.
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 18
+content : 
+12383449 => nisi id scelerisque.
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 70
+TEST : 80 - ERASE
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 17
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 71
+TEST : 81 - INSERT
+key :204635683
+ value : there are many tests
+already in :0
+key :2077014851
+ value : eget pretium velit vehicula et.
+already in :0
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 17
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 17
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 72
+TEST : 82 - ERASE
+Elements erased : 0
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 17
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 73
+TEST : 83 - CLEAR
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 17
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 74
+TEST : 84 - INSERT
+key :1235408928
+ value : nisi id scelerisque.
+already in :1
+key :498174021
+ value : congue dictum. Fusce a ultrices
+already in :1
+key :2059720680
+ value : eget pretium velit vehicula et.
+already in :1
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 75
+TEST : 85 - CLEAR
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 76
+TEST : 86 - CLEAR
+empty : 0
+size : 14
+content : 
+204635683 => there are many tests
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 77
+TEST : 87 - ERASE
+empty : 0
+size : 13
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 78
+TEST : 88 - INSERT
+key :1815509997
+ value : Lorem ipsum dolor sit amet
+already in :1
+key :969237562
+ value : euismod mi ut, tristique lorem.
+already in :1
+key :1794941508
+ value : Curabitur elementum enim
+already in :1
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 20
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 79
+TEST : 89 - INSERT
+key :310292228
+ value : This is a test
+already in :1
+key :808466249
+ value : congue dictum. Fusce a ultrices
+already in :1
+key :720703282
+ value : consectetur adipiscing elit.
+already in :1
+empty : 0
+size : 23
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 23
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 80
+TEST : 90 - INSERT
+key :204635683
+ value : there are many tests
+already in :0
+key :1815509997
+ value : Lorem ipsum dolor sit amet
+already in :0
+empty : 0
+size : 23
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 16
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+519275039 => there are many tests
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 23
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 81
+TEST : 91 - ERASE
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 23
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+853062931 => Phasellus ut rutrum ante.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 82
+TEST : 92 - ERASE
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 22
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 83
+TEST : 93 - CLEAR
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 22
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 84
+TEST : 94 - CLEAR
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 22
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 85
+TEST : 95 - CLEAR
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 22
+content : 
+204635683 => there are many tests
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 86
+TEST : 96 - ERASE
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 21
+content : 
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+498174021 => congue dictum. Fusce a ultrices
+519275039 => there are many tests
+555320787 => 
+585169881 => eget pretium velit vehicula et.
+720703282 => consectetur adipiscing elit.
+766762787 => a mi vestibulum eleifend.
+808466249 => congue dictum. Fusce a ultrices
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1235408928 => nisi id scelerisque.
+1355429677 => Curabitur elementum enim
+1485838910 => Sed vehicula tellus eu erat
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1766340821 => 
+1791144929 => 
+2059720680 => eget pretium velit vehicula et.
+2077014851 => eget pretium velit vehicula et.
+MAIN TEST : 87
+TEST : 97 - ERASE
+empty : 0
+size : 15
+content : 
+204635684 => eget pretium velit vehicula et.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 3
+content : 
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 88
+TEST : 98 - ERASE
+empty : 0
+size : 14
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 3
+content : 
+204635684 => Phasellus ut rutrum ante.
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 89
+TEST : 99 - INSERT
+empty : 0
+size : 14
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+empty : 0
+size : 14
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 90
+TEST : 100 - INSERT
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+empty : 0
+size : 17
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 17
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 91
+TEST : 101 - INSERT
+key :2057799687
+ value : there are many tests
+already in :1
+key :967865629
+ value : nisi id scelerisque.
+already in :1
+key :1077788002
+ value : Pellentesque eget risus efficitur
+already in :1
+empty : 0
+size : 20
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+967865629 => nisi id scelerisque.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1077788002 => Pellentesque eget risus efficitur
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+2057799687 => there are many tests
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+empty : 0
+size : 20
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+967865629 => nisi id scelerisque.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1077788002 => Pellentesque eget risus efficitur
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+2057799687 => there are many tests
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 92
+TEST : 102 - INSERT
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+empty : 0
+size : 20
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+967865629 => nisi id scelerisque.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1077788002 => Pellentesque eget risus efficitur
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+2057799687 => there are many tests
+empty : 0
+size : 20
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+204635687 => congue dictum. Fusce a ultrices
+204635688 => Praesent ullamcorper venenatis augue,
+204635689 => consectetur adipiscing elit.
+555320787 => 
+564065693 => Phasellus ut rutrum ante.
+585169881 => eget pretium velit vehicula et.
+766762787 => a mi vestibulum eleifend.
+967865629 => nisi id scelerisque.
+969237562 => euismod mi ut, tristique lorem.
+1055369838 => consectetur adipiscing elit.
+1077788002 => Pellentesque eget risus efficitur
+1202388394 => eget pretium velit vehicula et.
+1692432651 => euismod mi ut, tristique lorem.
+1754290516 => This is a test
+1791144929 => 
+1794941508 => Curabitur elementum enim
+1815509997 => Lorem ipsum dolor sit amet
+2057799687 => there are many tests
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 93
+TEST : 103 - ERASE
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 94
+TEST : 104 - ERASE
+Elements erased : 0
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 5
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+435230875 => This is a test
+MAIN TEST : 95
+TEST : 105 - INSERT
+key :1543778725
+ value : magna. Morbi fringilla ullamcorper
+already in :1
+key :364160707
+ value : all tests should pass
+already in :1
+key :1441948709
+ value : Praesent ullamcorper venenatis augue,
+already in :1
+key :1716885351
+ value : congue dictum. Fusce a ultrices
+already in :1
+key :1498563845
+ value : 	
+already in :1
+key :1406869635
+ value : Curabitur elementum enim
+already in :1
+empty : 0
+size : 11
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 11
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+MAIN TEST : 96
+TEST : 106 - INSERT
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 11
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 11
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+MAIN TEST : 97
+TEST : 107 - INSERT
+key :547840140
+ value : euismod mi ut, tristique lorem.
+already in :1
+key :2091618866
+ value : Sed vehicula tellus eu erat
+already in :1
+key :308295925
+ value : Sed vehicula tellus eu erat
+already in :1
+empty : 0
+size : 14
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+2091618866 => Sed vehicula tellus eu erat
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 2
+content : 
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+empty : 0
+size : 14
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+2091618866 => Sed vehicula tellus eu erat
+MAIN TEST : 98
+TEST : 108 - INSERT
+empty : 0
+size : 13
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+empty : 0
+size : 14
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+2091618866 => Sed vehicula tellus eu erat
+empty : 0
+size : 13
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+empty : 0
+size : 14
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => Pellentesque eget risus efficitur
+204635686 => Pellentesque eget risus efficitur
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+2091618866 => Sed vehicula tellus eu erat
+MAIN TEST : 99
+TEST : 109 - ERASE
+empty : 0
+size : 13
+content : 
+204635684 => Phasellus ut rutrum ante.
+204635685 => all tests should pass
+204635686 => a mi vestibulum eleifend.
+308295925 => Sed vehicula tellus eu erat
+310292228 => This is a test
+364160707 => all tests should pass
+435230875 => This is a test
+547840140 => euismod mi ut, tristique lorem.
+1406869635 => Curabitur elementum enim
+1441948709 => Praesent ullamcorper venenatis augue,
+1498563845 => 	
+1543778725 => magna. Morbi fringilla ullamcorper
+1716885351 => congue dictum. Fusce a ultrices
+empty : 0
+size : 1
+content : 
+204635684 => Phasellus ut rutrum ante.

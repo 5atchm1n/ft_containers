@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 20:46:21 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 22:42:43 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
     _nil->_max = _rbtree_maximum(_root);
     _nil->_min = _rbtree_minimum(_root);
     _nil->parent = _nil;
-    print();
     _size--;
 }
 
