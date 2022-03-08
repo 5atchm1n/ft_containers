@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 11:45:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 12:00:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,20 @@ namespace _test
                     break;
                 case (1):
                     if (!X.empty())
-                        std::cout << (X.insert(*(X.begin()))).second << std::endl;
+                    {
+                        ret = X.insert(*(X.begin()));
+                        std::cout << "key :" << ret.first->first << std::endl;
+                        std::cout << " value : " << ret.first->second << std::endl;
+                        std::cout << "already in :" << ret.second << std::endl;
+
+                    }
                     if (!Y.empty())
-                        std::cout << (X.insert(*(--(X.end())))).second << std::endl;
+                    {
+                        ret = Y.insert(*(--(Y.end())));
+                        std::cout << "key :" << ret.first->first << std::endl;
+                        std::cout << " value : " << ret.first->second << std::endl;
+                        std::cout << "already in :" << ret.second << std::endl;
+                    }
                     break;
                 case (2):
                     if (!Y.empty())
