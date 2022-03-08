@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 13:12:19 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 13:37:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ template <typename InputIterator>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::insert(InputIterator first, InputIterator last)
 {
+    tree.print();
     while (first != last)
         tree._insert_search(*first++);
+    tree.print();
 }
 
 /**
@@ -47,10 +49,12 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 ft::pair<typename ft::map<_Key, _Tp, _Cmp, _Alloc>::iterator, bool>
 map<_Key, _Tp, _Cmp, _Alloc>::insert(const value_type &value)
 {
+    tree.print();
     iterator tmp = tree._search_tree(value);
     bool    was_inserted = (tmp == end() ? true : false);
     iterator position = tree._insert_search(value);
     ft::pair<iterator, bool> _value = ft::make_pair(position, was_inserted);
+    tree.print();
     return _value;
 }
 
@@ -62,7 +66,9 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
 map<_Key, _Tp, _Cmp, _Alloc>::insert(iterator position, const value_type &value)
 {
+    tree.print();
     return tree._insert_pos(position, value);
+    tree.print();
 }
 
 template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>

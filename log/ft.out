@@ -1,5 +1,105 @@
 BASIC TEST : 0
 TEST : 0 - CONSTRUCTORS
+└── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+    └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+└── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+    └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+│   ┌── [31mkey = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+│   ┌── [31mkey = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+    └── key = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+    └── key = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── [31mkey = 783815874 value = eget pretium velit vehicula et.[0m
+    └── key = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── [31mkey = 783815874 value = eget pretium velit vehicula et.[0m
+    └── key = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── key = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── key = 442951012 value = nisi id scelerisque.[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── key = 442951012 value = nisi id scelerisque.[0m
+            └── [31mkey = 229233696 value = [0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        └── key = 442951012 value = nisi id scelerisque.[0m
+            └── [31mkey = 229233696 value = [0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 442951012 value = nisi id scelerisque.[0m
+        └── key = 229233696 value = [0m
+            └── [31mkey = 175389892 value = This is a test[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 442951012 value = nisi id scelerisque.[0m
+        └── key = 229233696 value = [0m
+            └── [31mkey = 175389892 value = This is a test[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │       ┌── [31mkey = 1212580698 value = magna. Morbi fringilla ullamcorper[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 442951012 value = nisi id scelerisque.[0m
+        └── key = 229233696 value = [0m
+            └── [31mkey = 175389892 value = This is a test[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │       ┌── [31mkey = 1212580698 value = magna. Morbi fringilla ullamcorper[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 442951012 value = nisi id scelerisque.[0m
+        └── key = 229233696 value = [0m
+            └── [31mkey = 175389892 value = This is a test[0m
+│       ┌── [31mkey = 2108313867 value = Sed vehicula tellus eu erat[0m
+│   ┌── key = 1483128881 value = magna. Morbi fringilla ullamcorper[0m
+└── key = 1366999021 value = Sed vehicula tellus eu erat[0m
+    │       ┌── [31mkey = 1212580698 value = magna. Morbi fringilla ullamcorper[0m
+    │   ┌── key = 783815874 value = eget pretium velit vehicula et.[0m
+    │   │   └── [31mkey = 682599717 value = This is a test[0m
+    └── [31mkey = 647800535 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 442951012 value = nisi id scelerisque.[0m
+        └── key = 229233696 value = [0m
+            └── [31mkey = 175389892 value = This is a test[0m
 empty : 0
 size : 10
 content : 
@@ -95,6 +195,106 @@ content :
 2108313867 => Sed vehicula tellus eu erat
 BASIC TEST : 2
 TEST : 2 - CONSTRUCTORS
+└── key = 1564541169 value = nisi id scelerisque.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+│   ┌── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+│   ┌── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+│   ┌── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+│   ┌── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── key = 590056433 value = eget pretium velit vehicula et.[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── key = 590056433 value = eget pretium velit vehicula et.[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── key = 590056433 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 541347900 value = nisi id scelerisque.[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    └── key = 590056433 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 541347900 value = nisi id scelerisque.[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── [31mkey = 1962112916 value = 	[0m
+│   ┌── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── [31mkey = 2112195221 value = This is a test[0m
+│   ┌── key = 1962112916 value = 	[0m
+│   │   └── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── [31mkey = 2112195221 value = This is a test[0m
+│   ┌── key = 1962112916 value = 	[0m
+│   │   └── [31mkey = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── key = 2112195221 value = This is a test[0m
+│   ┌── [31mkey = 1962112916 value = 	[0m
+│   │   │   ┌── [31mkey = 1961870665 value = Lorem ipsum dolor sit amet[0m
+│   │   └── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── key = 2112195221 value = This is a test[0m
+│   ┌── [31mkey = 1962112916 value = 	[0m
+│   │   │   ┌── [31mkey = 1961870665 value = Lorem ipsum dolor sit amet[0m
+│   │   └── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │   ┌── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── key = 541347900 value = nisi id scelerisque.[0m
+        └── [31mkey = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── key = 2112195221 value = This is a test[0m
+│   ┌── [31mkey = 1962112916 value = 	[0m
+│   │   │   ┌── [31mkey = 1961870665 value = Lorem ipsum dolor sit amet[0m
+│   │   └── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │       ┌── [31mkey = 606808455 value = all tests should pass[0m
+    │   ┌── key = 590056433 value = eget pretium velit vehicula et.[0m
+    └── [31mkey = 541347900 value = nisi id scelerisque.[0m
+        └── key = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── key = 2112195221 value = This is a test[0m
+│   ┌── [31mkey = 1962112916 value = 	[0m
+│   │   │   ┌── [31mkey = 1961870665 value = Lorem ipsum dolor sit amet[0m
+│   │   └── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │       ┌── [31mkey = 606808455 value = all tests should pass[0m
+    │   ┌── key = 590056433 value = eget pretium velit vehicula et.[0m
+    └── [31mkey = 541347900 value = nisi id scelerisque.[0m
+        └── key = 462848424 value = congue dictum. Fusce a ultrices[0m
+│       ┌── key = 2112195221 value = This is a test[0m
+│   ┌── [31mkey = 1962112916 value = 	[0m
+│   │   │   ┌── [31mkey = 1961870665 value = Lorem ipsum dolor sit amet[0m
+│   │   └── key = 1709672141 value = euismod mi ut, tristique lorem.[0m
+└── key = 1564541169 value = nisi id scelerisque.[0m
+    │       ┌── [31mkey = 1040001951 value = Lorem ipsum dolor sit amet[0m
+    │   ┌── key = 606808455 value = all tests should pass[0m
+    │   │   └── [31mkey = 590056433 value = eget pretium velit vehicula et.[0m
+    └── [31mkey = 541347900 value = nisi id scelerisque.[0m
+        └── key = 462848424 value = congue dictum. Fusce a ultrices[0m
 empty : 0
 size : 10
 content : 
@@ -274,6 +474,106 @@ content :
 2112195221 => This is a test
 BASIC TEST : 7
 TEST : 7 - CONSTRUCTORS
+└── key = 684743195 value = there are many tests[0m
+└── key = 684743195 value = there are many tests[0m
+│   ┌── [31mkey = 2100918483 value = all tests should pass[0m
+└── key = 684743195 value = there are many tests[0m
+│   ┌── [31mkey = 2100918483 value = all tests should pass[0m
+└── key = 684743195 value = there are many tests[0m
+│   ┌── [31mkey = 2100918483 value = all tests should pass[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── [31mkey = 684743195 value = there are many tests[0m
+│   ┌── [31mkey = 2100918483 value = all tests should pass[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── [31mkey = 684743195 value = there are many tests[0m
+│   ┌── key = 2100918483 value = all tests should pass[0m
+│   │   └── [31mkey = 2028479995 value = 	[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+│   ┌── key = 2100918483 value = all tests should pass[0m
+│   │   └── [31mkey = 2028479995 value = 	[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+│   ┌── key = 2100918483 value = all tests should pass[0m
+│   │   └── [31mkey = 2028479995 value = 	[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+        └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+│   ┌── key = 2100918483 value = all tests should pass[0m
+│   │   └── [31mkey = 2028479995 value = 	[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+        └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+│       ┌── [31mkey = 2100918483 value = all tests should pass[0m
+│   ┌── key = 2028479995 value = 	[0m
+│   │   └── [31mkey = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+        └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+│       ┌── [31mkey = 2100918483 value = all tests should pass[0m
+│   ┌── key = 2028479995 value = 	[0m
+│   │   └── [31mkey = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    └── key = 684743195 value = there are many tests[0m
+        └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+│       ┌── [31mkey = 2100918483 value = all tests should pass[0m
+│   ┌── key = 2028479995 value = 	[0m
+│   │   └── [31mkey = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── [31mkey = 684743195 value = there are many tests[0m
+    └── key = 469192935 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── [31mkey = 2100918483 value = all tests should pass[0m
+│   ┌── key = 2028479995 value = 	[0m
+│   │   └── [31mkey = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── [31mkey = 684743195 value = there are many tests[0m
+    └── key = 469192935 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── key = 2100918483 value = all tests should pass[0m
+│       │   └── [31mkey = 2042690320 value = Phasellus ut rutrum ante.[0m
+│   ┌── [31mkey = 2028479995 value = 	[0m
+│   │   └── key = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── [31mkey = 684743195 value = there are many tests[0m
+    └── key = 469192935 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── key = 2100918483 value = all tests should pass[0m
+│       │   └── [31mkey = 2042690320 value = Phasellus ut rutrum ante.[0m
+│   ┌── [31mkey = 2028479995 value = 	[0m
+│   │   └── key = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── [31mkey = 684743195 value = there are many tests[0m
+    └── key = 469192935 value = Phasellus ut rutrum ante.[0m
+        └── [31mkey = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── key = 2100918483 value = all tests should pass[0m
+│       │   └── [31mkey = 2042690320 value = Phasellus ut rutrum ante.[0m
+│   ┌── [31mkey = 2028479995 value = 	[0m
+│   │   └── key = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 684743195 value = there are many tests[0m
+    └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 254901822 value = Phasellus ut rutrum ante.[0m
+        └── key = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── key = 2100918483 value = all tests should pass[0m
+│       │   └── [31mkey = 2042690320 value = Phasellus ut rutrum ante.[0m
+│   ┌── [31mkey = 2028479995 value = 	[0m
+│   │   └── key = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 684743195 value = there are many tests[0m
+    └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 254901822 value = Phasellus ut rutrum ante.[0m
+        └── key = 183207520 value = Phasellus ut rutrum ante.[0m
+│       ┌── key = 2100918483 value = all tests should pass[0m
+│       │   └── [31mkey = 2042690320 value = Phasellus ut rutrum ante.[0m
+│   ┌── [31mkey = 2028479995 value = 	[0m
+│   │   └── key = 1689146450 value = nisi id scelerisque.[0m
+└── key = 1616936901 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 684743195 value = there are many tests[0m
+    │   │   └── [31mkey = 494581272 value = magna. Morbi fringilla ullamcorper[0m
+    └── [31mkey = 469192935 value = Phasellus ut rutrum ante.[0m
+        │   ┌── [31mkey = 254901822 value = Phasellus ut rutrum ante.[0m
+        └── key = 183207520 value = Phasellus ut rutrum ante.[0m
 empty : 0
 size : 10
 content : 
@@ -369,6 +669,106 @@ content :
 2100918483 => all tests should pass
 BASIC TEST : 9
 TEST : 9 - CONSTRUCTORS
+└── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1673227668 value = eget pretium velit vehicula et.[0m
+    └── [31mkey = 1042343401 value = euismod mi ut, tristique lorem.[0m
+└── key = 1673227668 value = eget pretium velit vehicula et.[0m
+    └── [31mkey = 1042343401 value = euismod mi ut, tristique lorem.[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── [31mkey = 519275039 value = there are many tests[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── [31mkey = 519275039 value = there are many tests[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── [31mkey = 1450949922 value = 	[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── [31mkey = 1450949922 value = 	[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    └── key = 519275039 value = there are many tests[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── [31mkey = 1450949922 value = 	[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── [31mkey = 1941755899 value = 	[0m
+│   ┌── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── [31mkey = 1450949922 value = 	[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── key = 1941755899 value = 	[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1450949922 value = 	[0m
+│   │       └── [31mkey = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── key = 1941755899 value = 	[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1450949922 value = 	[0m
+│   │       └── [31mkey = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── key = 1941755899 value = 	[0m
+│       │   └── [31mkey = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1450949922 value = 	[0m
+│   │       └── [31mkey = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│       ┌── key = 1941755899 value = 	[0m
+│       │   └── [31mkey = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1450949922 value = 	[0m
+│   │       └── [31mkey = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1450949922 value = 	[0m
+│   │       └── [31mkey = 1105655106 value = Curabitur elementum enim[0m
+└── key = 1042343401 value = euismod mi ut, tristique lorem.[0m
+    │   ┌── [31mkey = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 10
 content : 
@@ -772,15 +1172,95 @@ content :
 1941755899 => 	
 MAIN TEST : 10
 TEST : 20 - INSERT
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :1693140455
  value : there are many tests
 already in :1
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :1010639471
  value : congue dictum. Fusce a ultrices
 already in :1
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │       └── [31mkey = 1532156720 value = euismod mi ut, tristique lorem.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :1532156720
  value : euismod mi ut, tristique lorem.
 already in :1
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │       └── [31mkey = 1532156720 value = euismod mi ut, tristique lorem.[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :1357140244
  value : there are many tests
 already in :1
@@ -980,6 +1460,57 @@ content :
 1941755899 => 	
 MAIN TEST : 16
 TEST : 26 - INSERT
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        │   ┌── [31mkey = 204635683 value = 	[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── [31mkey = 291198356 value = eget pretium velit vehicula et.[0m
+        │   ┌── [31mkey = 204635684 value = a mi vestibulum eleifend.[0m
+        └── key = 204635683 value = 	[0m
+            └── [31mkey = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 8
 content : 
@@ -1071,9 +1602,55 @@ content :
 1941755899 => 	
 MAIN TEST : 18
 TEST : 28 - INSERT
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        │       ┌── [31mkey = 204635685 value = Pellentesque eget risus efficitur[0m
+        │   ┌── key = 204635684 value = a mi vestibulum eleifend.[0m
+        └── [31mkey = 204635683 value = 	[0m
+            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│       │   └── [31mkey = 1693140455 value = there are many tests[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   │   ┌── [31mkey = 1673227668 value = eget pretium velit vehicula et.[0m
+│   │   └── key = 1532156720 value = euismod mi ut, tristique lorem.[0m
+│   │       └── [31mkey = 1357140244 value = there are many tests[0m
+└── key = 1105655106 value = Curabitur elementum enim[0m
+    │       ┌── [31mkey = 1010639471 value = congue dictum. Fusce a ultrices[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        │       ┌── [31mkey = 204635685 value = Pellentesque eget risus efficitur[0m
+        │   ┌── key = 204635684 value = a mi vestibulum eleifend.[0m
+        └── [31mkey = 204635683 value = 	[0m
+            └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :204635682
  value : Lorem ipsum dolor sit amet
 already in :0
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── [31mkey = 1692432651 value = euismod mi ut, tristique lorem.[0m
+│   │   └── key = 1673227668 value = eget pretium velit vehicula et.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 key :1941755899
  value : 	
 already in :0
@@ -1212,6 +1789,20 @@ content :
 1941755899 => 	
 MAIN TEST : 21
 TEST : 31 - INSERT
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
+│           ┌── [31mkey = 1941755899 value = 	[0m
+│       ┌── key = 1754290516 value = This is a test[0m
+│   ┌── key = 1692432651 value = euismod mi ut, tristique lorem.[0m
+└── key = 1450949922 value = 	[0m
+    │   ┌── key = 519275039 value = there are many tests[0m
+    └── key = 291198356 value = eget pretium velit vehicula et.[0m
+        └── key = 204635682 value = Lorem ipsum dolor sit amet[0m
 empty : 0
 size : 15
 content : 

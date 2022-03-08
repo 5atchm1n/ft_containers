@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 21:51:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 13:28:11 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node(node_pointer node)
         tmp_y = _rbtree_minimum(node->right);
         node_isred = tmp_y->isred;
         tmp_x = tmp_y->right;
-        if (tmp_y == node)
+        if (tmp_y->parent == node)
             tmp_x->parent = tmp_y;
         else
         {
