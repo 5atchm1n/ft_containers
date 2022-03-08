@@ -38,16 +38,16 @@ RESET="\033[m"
 
 CC = clang++
 CPPSTD = -std=c++98
-CFLAGS = -Wall -Wextra -Werror -MMD -MP
+CXXFLAGS = -Wall -Wextra -Werror -MMD -MP
 
 # Debug and Memory
 
 DEBUG = -fstandalone-debug -g3
 
-MEM = 
-
-ifeq ($(VAR),1)
 MEM = -fsanitize=address 
+
+ifeq ($(NO_MEM),1)
+MEM = 
 endif
 
 ## SOURCE FILES
@@ -82,19 +82,19 @@ _MAP_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_MAP_TEST:.cpp=.o})
 all : ${NAME}
 # default recipe
 ${NAME} : ${OBJS}
-	${CC} ${CFLAGS} ${INC} ${MEM} ${CPPSTD} ${OBJS} -o $@
+	${CC} ${CXXFLAGS} ${INC} ${MEM} ${CPPSTD} ${OBJS} -o $@
 
 # object file recipe
 ${OBJDIR}/%.o:%.cpp
 	@${MKDIR_P} ${@D}
-	${CC} ${CFLAGS} ${_TEST} ${MEM} ${INC} $(DEBUG) $(_INC_RBT_TEST)  ${CPPSTD} -c $< -o $@
+	${CC} ${CXXFLAGS} ${_TEST} ${MEM} ${INC} $(DEBUG) $(_INC_RBT_TEST)  ${CPPSTD} -c $< -o $@
 
 # END GLOBAL ALL
 
 # TEST RED BLACK TREE
 # generate tree exectutable
 ${RBT_TEST} : fclean ${_RBT_TEST_OBJS}
-	${CC} ${CFLAGS} ${_INC_RBT_TEST} ${MEM} ${CPPSTD} ${_RBT_TEST_OBJS} -o $@
+	${CC} ${CXXFLAGS} ${_INC_RBT_TEST} ${MEM} ${CPPSTD} ${_RBT_TEST_OBJS} -o $@
 
 # MAP
 
@@ -107,9 +107,32 @@ ${MAP_STD}: ${MAP_TEST}
 # TEST MAP
 # generate map exectutable
 
-${MAP_TEST} : fclean ${_MAP_TEST_OBJS}
-	${CC} ${CFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_MAP_TEST_OBJS} -o $@
+${MAP_TEST} : clean ${_MAP_TEST_OBJS}
+	${CC} ${CXXFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_MAP_TEST_OBJS} -o $@
 
+LOG_DIR = log
+BIN_DIR = bin
+TEST_MAP = test_map
+
+${TEST_MAP} : tclean
+	@echo ${BLUE} "\n\t RUN VECTOR TESTS" ${RESET}
+	@echo ${CYAN} "Make std_vector :\t" ${RESET}
+	@make -s ${MAP_STD}
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@${MKDIR_P} ${LOG_DIR} 
+	@mv ${MAP_TEST} ${MAP_STD}
+	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
+	@-./${MAP_STD} > ${LOG_DIR}/std.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@echo ${CYAN} "Make ft_vector:\t" ${RESET}
+	@make -s ${MAP_FT}
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@mv ${MAP_TEST} ${MAP_FT}
+	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
+	@-./${MAP_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # VECTOR
 # create make calls for ft and std
@@ -124,15 +147,15 @@ ${VEC_STD} : ${VEC_TEST}
 # generate vector exectutable
 
 ${VEC_TEST} : clean ${_VEC_TEST_OBJS}
-	${CC} ${CFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_VEC_TEST_OBJS} -o $@
+	${CC} ${CXXFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_VEC_TEST_OBJS} -o $@
 
 LOG_DIR = log
 BIN_DIR = bin
 TEST_VECTOR = test_vector
 
 ${TEST_VECTOR} : tclean
-	@echo ${BLUE} "\n\t RUN VECTOR TESTS" ${RESET}
-	@echo ${CYAN} "Make std_vector :\t" ${RESET}
+	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
+	@echo ${CYAN} "Make std_map :\t" ${RESET}
 	@make -s ${VEC_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
@@ -140,7 +163,7 @@ ${TEST_VECTOR} : tclean
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${VEC_STD} > ${LOG_DIR}/std.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@echo ${CYAN} "Make ft_vector:\t" ${RESET}
+	@echo ${CYAN} "Make ft_vector :\t" ${RESET}
 	@make -s ${VEC_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@mv ${VEC_TEST} ${VEC_FT}

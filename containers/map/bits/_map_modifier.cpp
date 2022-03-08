@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 23:19:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 21:59:34 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 11:51:57 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ ft::pair<typename ft::map<_Key, _Tp, _Cmp, _Alloc>::iterator, bool>
 map<_Key, _Tp, _Cmp, _Alloc>::insert(const value_type &value)
 {
     iterator position = tree._insert_search(value);
-    bool    is_in = (position == end() ? true : false);
+    bool    is_in = (position == end() ? false : true);
     ft::pair<iterator, bool> _value = ft::make_pair(position, is_in);
     return _value;
 }
