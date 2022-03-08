@@ -16,6 +16,7 @@
 #include <sstream>
 #include <cstddef>
 #include <memory>
+#include "pair.hpp"
 #include "map/rbtree/bits/_rbt_node.hpp"
 #include "bits/_rbt_iterator.hpp"
 #include "vector/iterators/vector.iterator.hpp"
@@ -44,6 +45,7 @@ class _rbtree
     // Compare function
         _Cmp            _key_compare;
     // Helper functions
+        bool            _is_equal(const value_type &val, const value_type &other) const;
         void            _rbtree_rotate_left(node_type *current_node);
         void            _rbtree_rotate_right(node_type *current_node);
         void            _insert_node_fix(node_pointer node);
@@ -66,7 +68,7 @@ class _rbtree
         typedef ft::_rbtree_const_iterator<value_type, data_allocator>  const_iterator;
         typedef ft::reverse_iterator<iterator>                          reverse_iterator;
         typedef const ft::reverse_iterator<iterator>                    const_reverse_iterator;
-    
+        typedef ft::pair<iterator, bool>                                pair_type;
     //  Constructors    
         _rbtree();
         explicit _rbtree(const _Cmp compare,const _Alloc allocator);

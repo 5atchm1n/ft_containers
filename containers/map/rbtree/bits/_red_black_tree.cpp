@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 17:32:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:54:42 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,17 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_search(const value_type &val)
 }
 
 /**
+ * @brief check if two values are equal
+ * @return true or false bool
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+bool
+_rbtree<_Tp, _Cmp, _Alloc>::_is_equal(const value_type &val, const value_type &other) const
+{
+    return !_key_compare(val, other) && !_key_compare(other, val);
+}
+
+/**
  * @brief iterative search
  * 
  * @param val value to find
@@ -59,7 +70,7 @@ typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
 _rbtree<_Tp, _Cmp, _Alloc>::_search_tree(const value_type &val) const
 {
     node_pointer tmp = _root;
-    while (tmp != _nil && !(!_key_compare(val, *tmp->data) && !_key_compare(*tmp->data, val)))
+    while (tmp != _nil && !_is_equal(val, *tmp->data))
     {
         if (_key_compare(val, *tmp->data))
             tmp = tmp->left;

@@ -6,11 +6,14 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:06:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 18:31:31 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:53:28 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <memory>
+
+#ifndef FT_PAIR_HPP
+#define FT_PAIR_HPP
 
 namespace ft
 {
@@ -90,3 +93,5 @@ std::ostream &operator<<(std::ostream &os, const pair<_T1, _T2> &val)
 }
 
 }  // END NAMESPACE FT
+
+#endif  // FT_PAIR_HPP
