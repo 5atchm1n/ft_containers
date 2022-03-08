@@ -185,7 +185,7 @@ clean :
 
 fclean : clean tclean
 	@echo -n ${BLUE} "clean binaries:\t" ${RESET}
-	@rm -f  ${NAME} ${TEST_VECTOR} ${VEC_FT} ${VEC_STD}
+	@rm -f  ${NAME} ${TEST_VECTOR} ${VEC_FT} ${VEC_STD} ${MAP_STD} ${MAP_FT} ${TEST_MAP}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 
 tclean : clean
