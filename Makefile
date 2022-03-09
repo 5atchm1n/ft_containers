@@ -115,7 +115,7 @@ BIN_DIR = bin
 TEST_MAP = test_map
 
 ${TEST_MAP} : tclean
-	@echo ${BLUE} "\n\t RUN VECTOR TESTS" ${RESET}
+	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
 	@echo ${CYAN} "Make std_vector :\t" ${RESET}
 	@make -s ${MAP_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}

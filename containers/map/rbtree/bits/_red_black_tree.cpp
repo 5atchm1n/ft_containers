@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 23:54:42 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 01:12:19 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,21 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
 _rbtree<_Tp, _Cmp, _Alloc>::_insert_pos(iterator it, const value_type &val)
 {
-    node_pointer node = _search_tree(val);
-    if (node != _nil)
-        return iterator(node);
-    iterator ret;
-    if (_key_compare(*it, val))
-        ret = _insert_node(val, node);
+    iterator pos;
+    if (_key_compare(val, *(it._node->data))
+    && it._node->parent != _nil
+    && _key_compare(*(it._node->parent->data), val))
+        pos = _insert_node(val, it._node).first;
     else
-        ret = _insert_node(val, _root);
-    return ret;
+        pos = _insert_node(val, _root).first;
+    return pos;
 }
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
-_rbtree<_Tp, _Cmp, _Alloc>::_insert_search(const value_type &val)
+typename _rbtree<_Tp, _Cmp, _Alloc>::pair_type
+_rbtree<_Tp, _Cmp, _Alloc>::_insert(const value_type &val)
 {
-    node_pointer node = _search_tree(val);
-    if (node == _nil)
-        node = _insert_node(val, _root);
-    return iterator(node);
+    return _insert_node(val, _root);
 }
 
 /**

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/25 19:43:30 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 00:42:06 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 template <typename InputIterator>
 map<_Key, _Tp, _Cmp, _Alloc>::map(InputIterator first, InputIterator last, const _Cmp &comp, const _Alloc &alloc) : tree(comp, alloc)
 {
-    InputIterator tmp = first;
-    iterator pos = tree._insert_search(*tmp++);
-    while (tmp != last)
-        pos = tree._insert_pos(pos, *tmp++);
+    while (first != last)
+        tree._insert(*first++);
 }
 /**
  * @brief Construct a new map object from copy
@@ -45,9 +43,8 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 map<_Key, _Tp, _Cmp, _Alloc>::map(const map &copy) : tree(copy.key_comp(), copy.get_allocator())
 {
     iterator pos = copy.begin();
-    iterator tmp = tree._insert_search(*pos++);
     while (pos != copy.end())
-        tmp = tree._insert_pos(tmp, *pos++);
+        tree._insert(*pos++);
 }    
 /**
  * @brief 
@@ -74,8 +71,7 @@ typename map<_Key, _Tp, _Cmp, _Alloc>::mapped_type &
 map<_Key, _Tp, _Cmp, _Alloc>::operator[](const key_type &key)
 {
     value_type val = ft::make_pair(key, mapped_type());
-    iterator tmp = tree._insert_search(val);
-    return tmp->second;
+    return (((tree._insert(val)).first)->second);
 }
 /**
  * @brief find a value that matches key pairing 

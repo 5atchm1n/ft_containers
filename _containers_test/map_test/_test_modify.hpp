@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 20:13:37 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 01:24:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,12 +102,16 @@ namespace _test
             switch (std::rand() % 4)
             {
                 case (0) :
+                    std::cout << "case 0" << std::endl;
+                    if (!X.empty())
                     X.erase(X.begin());
                     break ;
                 case (1) :
+                    std::cout << "case 1" << std::endl;
                     std::cout << "Elements erased : " << X.erase(rdm_val<typename _map::key_type>()) << std::endl;
                     break ;
                 case (2) :
+                    std::cout << "case 2" << std::endl;
                     if (X.size() > _MAX_TEST_SIZE)
                     {
                         it = X.begin();
@@ -117,13 +121,14 @@ namespace _test
                     }
                     break ;
                 case (3) :
+                    std::cout << "case 3" << std::endl;
                     it = Y.begin();
-                    if (!Y.empty())
+                    if (!Y.empty() && Y.size() > 5)
                     {
-                        for (size_t i = 0; i < std::rand() % Y.size(); i++)
+                        for (size_t i = 0; i < std::rand() % 5; i++)
                             it++;
+                        Y.erase(it);
                     }
-                    Y.erase(it);
                 
             }
     }

@@ -83,11 +83,11 @@ class _rbtree
         node_pointer    _rbtree_maximum(node_pointer node) const;
         node_pointer    _rbtree_end(node_pointer node) const;
     //    
-        iterator        _insert_search(const value_type &val);
+        pair_type       _insert(const value_type &val);
         iterator        _insert_pos(iterator start, const value_type &val);
     //    
         node_pointer    _search_tree(const value_type &val) const;
-        node_pointer    _insert_node(const value_type &val, node_pointer start_pos);
+        pair_type       _insert_node(const value_type &val, node_pointer start_pos);
         void            _delete_node(node_pointer node);
         void            _clean();
     //

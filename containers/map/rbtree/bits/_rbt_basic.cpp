@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 22:42:01 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:57:24 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 namespace ft
 {
-
 
 /**
  * @brief contructor with default
@@ -106,7 +105,6 @@ _rbtree<_Tp, _Cmp, _Alloc>::_get_max_size() const
 {
     return _node_alloc.max_size() / sizeof(_Tp);
 }
-
 
 /**
  * @brief print tree helper

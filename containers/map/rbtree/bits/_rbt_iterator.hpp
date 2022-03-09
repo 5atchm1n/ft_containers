@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:07:48 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/24 19:00:12 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 00:46:11 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ namespace ft
         void _increment();
         void _decrement();
 
-        _node_pointer _node;
 
     public:
+        _node_pointer _node;
+
         _rbtree_iterator() : _node() {}
         _rbtree_iterator(_node_pointer val) : _node(val) {}
         _rbtree_iterator(const _rbtree_iterator &other) : _node(other._node) {}

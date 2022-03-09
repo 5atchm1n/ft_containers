@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/08 23:51:57 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 01:13:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,26 @@ _rbtree<_Tp, _Cmp, _Alloc>::_create_node(const value_type &val)
  * @brief insert node into tree
  */
 template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
+typename _rbtree<_Tp, _Cmp, _Alloc>::pair_type
 _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos)
 {
-	node_pointer new_node = _create_node(val);
     node_pointer y = _nil;
     node_pointer x;
-    (void)pos;
-    x = _root;
+    if (pos != _nil)
+        x = pos;
+    else
+        x = _root;
     while (x != _nil)
     {
         y = x;
-        if (_key_compare(val, *x->data))
+        if (_is_equal(val, *x->data))
+            return pair_type(iterator(x), false);
+        else if (_key_compare(val, *x->data))
             x = x->left;
         else
             x = x->right;
 	}
+	node_pointer new_node = _create_node(val);
     new_node->parent = y;
     if (y == _nil)
         _root = new_node;
@@ -61,7 +65,7 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node(const value_type &val, node_pointer pos
 	new_node->isred = true;
     _insert_node_fix(new_node);
     _size++;
-    return new_node;
+    return pair_type(iterator(new_node), true);
 }
 
 /**
