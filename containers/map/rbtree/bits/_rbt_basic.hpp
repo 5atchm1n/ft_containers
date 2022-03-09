@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _rbt_basic.cpp                                     :+:      :+:    :+:   */
+/*   _rbt_basic.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 20:33:51 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 23:57:24 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 16:20:32 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../_red_black_tree.hpp"
 
-#ifndef _RBT_BASIC_H
-#define _RBT_BASIC_H
+#ifndef _RBT_BASIC_HPP
+#define _RBT_BASIC_HPP
 
 namespace ft
 {
@@ -52,7 +52,19 @@ _rbtree<_Tp, _Cmp, _Alloc>::operator=(const _rbtree &copy)
     return *this;
 }
 
-/*******
+/**
+ * @brief 
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+void
+_rbtree<_Tp, _Cmp, _Alloc>::_swap(self &tree)
+{
+    std::swap(_root, tree._root);
+    std::swap(_nil, tree._nil);
+    std::swap(_size, tree._size);
+}
+
+/**
  * @brief clean tree
  */
 template<typename _Tp, typename _Cmp, typename _Alloc>
@@ -137,4 +149,4 @@ _rbtree<_Tp, _Cmp, _Alloc>::_print(node_pointer node, std::stringstream &buffer,
     
 }   // END NAMESPACE FT
 
-#endif  // _RBT_BASIC_H
+#endif  // _RBT_BASIC_HPP

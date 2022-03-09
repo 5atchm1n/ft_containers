@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:12:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/06 14:08:04 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 18:37:45 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@
 #define _MAX_TEST_SIZE 10
 
 // Number of iterations of test suite
-#define _NTESTS 1000
+#define _NTESTS 10000
 #define _NTESTS_BASIC 50
 
 // For debugging

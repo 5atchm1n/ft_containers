@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _rbt_delete.cpp                                    :+:      :+:    :+:   */
+/*   _rbt_delete.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 12:32:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 22:42:43 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:35:54 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../_red_black_tree.hpp"
+
+#ifndef _RBT_DELETE_HPP
+#define _RBT_DELETE_HPP
 
 namespace ft
 {
@@ -159,3 +162,5 @@ _rbtree<_Tp, _Cmp, _Alloc>::_delete_node_fix(node_pointer node)
 }
 
 }   // END NAMESPACE FT
+
+#endif  //  _RBT_DELETE_HPP

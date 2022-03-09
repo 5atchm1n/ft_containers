@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _rbt_insert.cpp                                    :+:      :+:    :+:   */
+/*   _rbt_insert.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:20:06 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/09 01:13:02 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:38:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../_red_black_tree.hpp"
 
+
+#ifndef _RBT_INSERT_HPP
+#define _RBT_INSERT_HPP
 namespace ft
 {
 /**
@@ -129,3 +132,5 @@ _rbtree<_Tp, _Cmp, _Alloc>::_insert_node_fix(node_pointer node)
 }
 
 }   // END NAMESPACE FT
+
+#endif  // _RBT_INSERT_HPP

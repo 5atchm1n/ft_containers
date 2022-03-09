@@ -32,6 +32,7 @@ class _rbtree
 
     private:
         typedef typename _Alloc::template rebind<_rb_node<_Tp, _Alloc> >::other  node_allocator;
+        typedef _rbtree<_Tp, _Cmp, _Alloc>  self;
         
         typedef size_t                      size_type;
         typedef _Tp                         value_type;
@@ -64,11 +65,14 @@ class _rbtree
 
     public:
     // Iterators
-        typedef ft::_rbtree_iterator<value_type, data_allocator>        iterator;
-        typedef ft::_rbtree_const_iterator<value_type, data_allocator>  const_iterator;
+        typedef ft::_rbtree_iterator<value_type, node_type>             iterator;
+        typedef ft::_rbtree_iterator<const value_type, const node_type> const_iterator;
         typedef ft::reverse_iterator<iterator>                          reverse_iterator;
         typedef const ft::reverse_iterator<iterator>                    const_reverse_iterator;
+
         typedef ft::pair<iterator, bool>                                pair_type;
+        typedef ft::pair<iterator, iterator>                            pair_range; 
+        typedef ft::pair<const_iterator, const_iterator>                const_pair_range; 
     //  Constructors    
         _rbtree();
         explicit _rbtree(const _Cmp compare,const _Alloc allocator);
@@ -76,46 +80,48 @@ class _rbtree
         _rbtree & operator=(const _rbtree &copy);
         ~_rbtree();
 
-    //  Methods
+    //  SWAP
+        void            _swap(self &tree);
+    //
         node_pointer    _rbtree_successor(node_pointer node) const;
-    //      
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
-    //
-        iterator        _lower_bound(const value_type &val);
-        const_iterator  _lower_bound(const value_type &val) const;
-        iterator        _upper_bound(const value_type &val);
-        const_iterator  _upper_bound(const value_type &val) const;
-    //    
+    //  INSERT  
         pair_type       _insert(const value_type &val);
         iterator        _insert_pos(iterator start, const value_type &val);
-    //    
         node_pointer    _search_tree(const value_type &val) const;
         pair_type       _insert_node(const value_type &val, node_pointer start_pos);
+    //  DELETE
         void            _delete_node(node_pointer node);
         void            _clean();
-    //
+    //  GETTERS
         size_type       _get_size() const;
         size_type       _get_max_size() const;
         _Cmp            _get_key_compare() const { return _key_compare ;}
         data_allocator  _get_data_allocator() const { return _data_alloc ;}
-    //
+    //  ITERATORS
         iterator        _begin() { return iterator(_rbtree_minimum(_root)); };
         const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };
         iterator        _end() { return iterator(_nil); };
         const_iterator  _end() const { return const_iterator(_nil); };
     // PRINT DEBUG    
         void            print(void);
-
-
+    //
+        iterator            _lower_bound(const value_type &val);
+        const_iterator      _lower_bound(const value_type &val) const;
+        iterator            _upper_bound(const value_type &val);
+        const_iterator      _upper_bound(const value_type &val) const;
+        pair_range          _equal_range(const value_type &val);
+        const_pair_range    _equal_range(const value_type &val) const;
 };
 
 }   // END NAMESPACE FT
 
-#include "bits/_red_black_tree.cpp"
-#include "bits/_rbt_rotations.cpp"
-#include "bits/_rbt_insert.cpp"
-#include "bits/_rbt_delete.cpp"
-#include "bits/_rbt_basic.cpp"
+#include "bits/_rbt_basic.hpp"
+#include "bits/_rbt_bounds.hpp"
+#include "bits/_rbt_delete.hpp"
+#include "bits/_rbt_helper.hpp"
+#include "bits/_rbt_insert.hpp"
+#include "bits/_rbt_rotations.hpp"
 
 #endif // END _RED_BLACK_TREE_H

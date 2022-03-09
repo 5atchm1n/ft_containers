@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _rbt_rotations.cpp                                 :+:      :+:    :+:   */
+/*   _rbt_rotations.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 15:07:08 by sshakya           #+#    #+#             */
-/*   Updated: 2022/02/21 02:05:02 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:40:57 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../_red_black_tree.hpp"
 
+#ifndef _RBT_ROTATIONS_HPP
+#define _RBT_ROTATIONS_HPP
+
 namespace ft {
+
+/**
+ * @brief   Perform a LEFT Rotation of a given node
+ */
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
 void
@@ -32,6 +39,10 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_rotate_left(node_type *_x)
     _y->left = _x;
     _x->parent = _y;
 }
+
+/**
+ * @brief   Perform a RIGHT Rotation of a given node
+ */
 
 template <typename _Tp, typename _Cmp, typename _Alloc>
 void
@@ -53,3 +64,4 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_rotate_right(node_type *_x)
 }
 
 }
+#endif  // _RBT_ROTATIONS_HPP

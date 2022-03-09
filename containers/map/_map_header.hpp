@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 01:00:11 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 02:05:29 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 16:29:55 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,10 @@ class map
         typedef typename _tree_type::reverse_iterator       reverse_iterator;
         typedef typename _tree_type::const_reverse_iterator const_reverse_iterator;
 
+        typedef typename _tree_type::pair_type               pair_type;
+        typedef typename _tree_type::pair_range              pair_range;
+        typedef typename _tree_type::const_pair_range        const_pair_range;
+
         // CONSTRUCTORS
         explicit map (const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type()) : tree(comp, alloc) {}
         template <typename InputIterator>
@@ -106,7 +110,7 @@ class map
 		size_type	erase(const key_type &k);
 		void		erase(iterator first, iterator last);
 		// swap
-		void		swap(map &val);
+		void		swap(map &val) { tree._swap(val.tree); };
 		// clear
 		void		clear();
 		/**
@@ -129,8 +133,8 @@ class map
 		iterator		upper_bound(const key_type &key);
 		const_iterator	upper_bound(const key_type &key) const;
 		// equal range
-		pair<const_iterator, const_iterator>	equal_range(const key_type &key) const;
-		pair<iterator, iterator>				equal_range(const key_type &key);
+		pair_range          equal_range(const key_type &key);
+		const_pair_range    equal_range(const key_type &key) const;
 		/**
 		 *	ALLOCATOR
 		 */

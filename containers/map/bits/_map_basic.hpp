@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 02:11:31 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:32:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ map<_Key, _Tp, _Cmp, _Alloc>::map(const map &copy) : tree(copy.key_comp(), copy.
         tree._insert(*pos++);
 }    
 /**
- * @brief 
- * 
+ * @brief Assignment operator 
  */
 template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 map<_Key, _Tp, _Cmp, _Alloc> &
@@ -58,10 +57,6 @@ map<_Key, _Tp, _Cmp, _Alloc>::operator=(const map &val)
     _key_cmp = val._key_cmp;
     return *this;
 }
-/**
- *	ELEMENT ACCESS
- */
-
 /**
  * @brief access operator [ ]
  * @return mapped_type at location
@@ -108,37 +103,6 @@ map<_Key, _Tp, _Cmp, _Alloc>::count(const _Key &key) const
     return pos == end() ? 0 : 1;
 }
 
-template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
-typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
-map<_Key, _Tp, _Cmp, _Alloc>::lower_bound(const key_type &key)
-{
-    value_type val = ft::make_pair(key, mapped_type());
-    return tree._lower_bound(val);
-}
-
-template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
-typename map<_Key, _Tp, _Cmp, _Alloc>::const_iterator
-map<_Key, _Tp, _Cmp, _Alloc>::lower_bound(const key_type &key) const
-{
-    value_type val = ft::make_pair(key, mapped_type());
-    return tree._lower_bound(val);
-}
-
-template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
-typename map<_Key, _Tp, _Cmp, _Alloc>::iterator
-map<_Key, _Tp, _Cmp, _Alloc>::upper_bound(const key_type &key)
-{
-    value_type val = ft::make_pair(key, mapped_type());
-    return tree._upper_bound(val);
-}
-
-template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
-typename map<_Key, _Tp, _Cmp, _Alloc>::const_iterator
-map<_Key, _Tp, _Cmp, _Alloc>::upper_bound(const key_type &key) const
-{
-    value_type val = ft::make_pair(key, mapped_type());
-    return tree._upper_bound(val);
-}
 /**
  * @brief clear tree 
  */
