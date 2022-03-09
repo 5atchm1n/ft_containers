@@ -81,7 +81,11 @@ class _rbtree
     //      
         node_pointer    _rbtree_minimum(node_pointer node) const;
         node_pointer    _rbtree_maximum(node_pointer node) const;
-        node_pointer    _rbtree_end(node_pointer node) const;
+    //
+        iterator        _lower_bound(const value_type &val);
+        const_iterator  _lower_bound(const value_type &val) const;
+        iterator        _upper_bound(const value_type &val);
+        const_iterator  _upper_bound(const value_type &val) const;
     //    
         pair_type       _insert(const value_type &val);
         iterator        _insert_pos(iterator start, const value_type &val);
@@ -91,7 +95,6 @@ class _rbtree
         void            _delete_node(node_pointer node);
         void            _clean();
     //
-        bool            _is_duplicate(const value_type &val) const;
         size_type       _get_size() const;
         size_type       _get_max_size() const;
         _Cmp            _get_key_compare() const { return _key_compare ;}

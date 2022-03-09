@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 01:24:17 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 01:39:28 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,10 @@ namespace _test
         (void)Y;
         std::cout << "TEST : " << test_no++;
         std::cout << " - CLEAR" << std::endl;
+        if (std::rand() % 2)
+            X.clear();
+        else
+            Y.clear();
     }
     
 }

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:15:26 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 01:12:19 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 02:20:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ namespace ft
  * @tparam _Alloc   allocator object 
  */
 
-
 template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
 _rbtree<_Tp, _Cmp, _Alloc>::_insert_pos(iterator it, const value_type &val)
 {
     iterator pos;
-    if (_key_compare(val, *(it._node->data))
+    if (it != _end() && _key_compare(val, *(it._node->data))
     && it._node->parent != _nil
     && _key_compare(*(it._node->parent->data), val))
         pos = _insert_node(val, it._node).first;
@@ -109,15 +108,74 @@ _rbtree<_Tp, _Cmp, _Alloc>::_rbtree_maximum(node_pointer node) const
     return tmp;
 }
 
+/**
+ * @brief find lower bound of given val
+ * @return iterator to val or end
+ */
+
 template <typename _Tp, typename _Cmp, typename _Alloc>
-typename _rbtree<_Tp, _Cmp, _Alloc>::node_pointer
-_rbtree<_Tp, _Cmp, _Alloc>::_rbtree_end(node_pointer node) const
+typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
+_rbtree<_Tp, _Cmp, _Alloc>::_lower_bound(const value_type &val)
 {
-    node_pointer tmp = node;
-    while (tmp->right != _nil)
-        tmp = tmp->right;
-    return tmp->right;
+    iterator it = _begin();
+    iterator ite = _end();
+    while (it != ite)
+    {
+        if (!_key_compare(*it, val))
+            return it;
+        it++;
+    }
+    return it;
 }
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::const_iterator
+_rbtree<_Tp, _Cmp, _Alloc>::_lower_bound(const value_type &val) const
+{
+    iterator it = _begin();
+    iterator ite = _end();
+    while (it != ite)
+    {
+        if (!_key_compare(*it, val))
+            return it;
+        it++;
+    }
+    return it;
+}
+/**
+ * @brief find upper bound of given val
+ * @return iterator to value after val or end
+ */
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::iterator
+_rbtree<_Tp, _Cmp, _Alloc>::_upper_bound(const value_type &val)
+{
+    iterator it = _begin();
+    iterator ite = _end();
+    while (it != ite)
+    {
+        if (!_key_compare(val, *it))
+            return it;
+        it++;
+    }
+    return it;
+}
+
+template <typename _Tp, typename _Cmp, typename _Alloc>
+typename _rbtree<_Tp, _Cmp, _Alloc>::const_iterator
+_rbtree<_Tp, _Cmp, _Alloc>::_upper_bound(const value_type &val) const
+{
+    iterator it = _begin();
+    iterator ite = _end();
+    while (it != ite)
+    {
+        if (!_key_compare(val, *it))
+            return it;
+        it++;
+    }
+    return it;
+}
+
 /**
  * @brief find the in order successor
  * @return pointer to in order successor 
