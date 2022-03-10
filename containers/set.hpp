@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:03:45 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 16:21:51 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/10 17:07:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ class set
 
         set& operator=(const set &);
 
+        
+
         // Capacity
         bool        empty() const { return size() ? false : true }
         size_type   size() const { return _tree._get_size() }
@@ -101,5 +103,9 @@ class set
 };
 
 }   // END NAMESPACE FT
+
+#include "set/bits/_set_basic.hpp"
+#include "set/bits/_set_bounds.hpp"
+#include "set/bits/_set_logical_op.hpp"
 
 #endif  // SET_HPP
