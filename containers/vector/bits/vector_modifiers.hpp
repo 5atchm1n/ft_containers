@@ -160,13 +160,8 @@ vector<_Tp, _Alloc>::insert(iterator position, _Iterator first, _Iterator last,t
         this->_realloc(size() + csize);
     iterator    cpos = begin() + index;
     iterator    cend = begin() + pos_end;
-    if (cpos == cend)
-    {
-        while (first != last)
-            push_back(*first++);        
-        return ;
-    }
-    this->_move(csize, cpos, cend);
+    if (cpos != cend)
+        this->_move(csize, cpos, cend);
     while (first != last)
         this->_mem.construct(cpos++, *first++);
     this->_size += csize;        
