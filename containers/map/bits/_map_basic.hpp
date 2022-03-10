@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _map_basic.cpp                                     :+:      :+:    :+:   */
+/*   _map_basic.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 15:32:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 23:21:12 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ map<_Key, _Tp, _Cmp, _Alloc>::map(InputIterator first, InputIterator last, const
 template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 map<_Key, _Tp, _Cmp, _Alloc>::map(const map &copy) : tree(copy.key_comp(), copy.get_allocator())
 {
-    iterator pos = copy.begin();
+    const_iterator pos = copy.begin();
     while (pos != copy.end())
         tree._insert(*pos++);
 }    

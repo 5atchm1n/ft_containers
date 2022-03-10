@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector.iterator.hpp                                :+:      :+:    :+:   */
+/*   reverse_iterator.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satchmin <satchmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:02:42 by satchmin          #+#    #+#             */
-/*   Updated: 2022/01/31 17:32:31 by satchmin         ###   ########.fr       */
+/*   Updated: 2022/03/10 02:32:46 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ template<typename _Iterator>
     };
 }
 
-#include "vector.iterator.cpp"
+#include "reverse_iterator.cpp"
 
 #endif // VECTOR_ITERATOR_H

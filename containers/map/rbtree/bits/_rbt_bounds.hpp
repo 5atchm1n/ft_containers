@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:57:50 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 16:33:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 23:27:49 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::const_iterator
 _rbtree<_Tp, _Cmp, _Alloc>::_lower_bound(const value_type &val) const
 {
-    iterator it = _begin();
-    iterator ite = _end();
+    const_iterator it = _begin();
+    const_iterator ite = _end();
     while (it != ite)
     {
         if (!_key_compare(*it, val))
@@ -75,8 +75,8 @@ template <typename _Tp, typename _Cmp, typename _Alloc>
 typename _rbtree<_Tp, _Cmp, _Alloc>::const_iterator
 _rbtree<_Tp, _Cmp, _Alloc>::_upper_bound(const value_type &val) const
 {
-    iterator it = _begin();
-    iterator ite = _end();
+    const_iterator it = _begin();
+    const_iterator ite = _end();
     while (it != ite)
     {
         if (_key_compare(val, *it))

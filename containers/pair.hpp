@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:06:52 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/08 23:53:28 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/10 03:02:16 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,6 @@ inline pair<_T1, _T2>
 make_pair(_T1 x, _T2 y)
 {
     return pair<_T1, _T2>(x, y);
-}
-
-template <typename _T1, typename _T2>
-std::ostream &operator<<(std::ostream &os, const pair<_T1, _T2> &val)
-{
-    os << "key = " << val.first;
-    os << " value = " << val.second;
-    return os;
 }
 
 }  // END NAMESPACE FT

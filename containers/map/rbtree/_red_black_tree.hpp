@@ -19,7 +19,7 @@
 #include "pair.hpp"
 #include "map/rbtree/bits/_rbt_node.hpp"
 #include "bits/_rbt_iterator.hpp"
-#include "vector/iterators/vector.iterator.hpp"
+#include "iterators/reverse_iterator.hpp"
 
 #define SINGLE_TREE 1
 #define SINGLE_NODE 1
@@ -65,11 +65,12 @@ class _rbtree
 
     public:
     // Iterators
-        typedef ft::_rbtree_iterator<value_type, node_type>             iterator;
-        typedef ft::_rbtree_iterator<const value_type, const node_type> const_iterator;
-        typedef ft::reverse_iterator<iterator>                          reverse_iterator;
-        typedef const ft::reverse_iterator<iterator>                    const_reverse_iterator;
+        typedef ft::_rbtree_iterator<value_type, node_type>                 iterator;
+        typedef ft::_rbtree_iterator<value_type const, node_type const>     const_iterator;
+        typedef ft::reverse_iterator<iterator>                              reverse_iterator;
+        typedef ft::reverse_iterator<const_iterator>                        const_reverse_iterator;
 
+    // Pair return types
         typedef ft::pair<iterator, bool>                                pair_type;
         typedef ft::pair<iterator, iterator>                            pair_range; 
         typedef ft::pair<const_iterator, const_iterator>                const_pair_range; 
@@ -104,6 +105,11 @@ class _rbtree
         const_iterator  _begin() const { return const_iterator(_rbtree_minimum(_root)); };
         iterator        _end() { return iterator(_nil); };
         const_iterator  _end() const { return const_iterator(_nil); };
+
+        reverse_iterator        _rbegin() { return reverse_iterator(_end()); };
+        const_reverse_iterator  _rbegin() const { return const_reverse_iterator(_end()); };
+        reverse_iterator        _rend() { return reverse_iterator(_begin()); };
+        const_reverse_iterator  _rend() const { return const_reverse_iterator(_begin()); };
     // PRINT DEBUG    
         void            print(void);
     //

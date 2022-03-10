@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 01:00:11 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 16:29:55 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/09 23:37:54 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ class map
         typedef typename _Alloc::const_pointer              const_pointer;
         typedef typename _Alloc::reference                  reference;
         typedef typename _Alloc::const_reference            const_reference;
+        
         typedef typename _tree_type::iterator               iterator;
         typedef typename _tree_type::const_iterator         const_iterator;
         typedef typename _tree_type::reverse_iterator       reverse_iterator;
@@ -93,7 +94,7 @@ class map
         const_iterator end() const { return tree._end(); }
 		//reverse
         reverse_iterator rbegin() { return tree._rbegin(); }
-        reverse_iterator rend() { return tree.rend(); }
+        reverse_iterator rend() { return tree._rend(); }
         const_reverse_iterator rbegin() const { return tree._rbegin(); }
         const_reverse_iterator rend() const { return tree._rend(); }
 
