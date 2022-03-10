@@ -99,10 +99,12 @@ ${RBT_TEST} : fclean ${_RBT_TEST_OBJS}
 # MAP
 
 ${MAP_FT} : ${MAP_TEST}
+	mv ${MAP_TEST} ${MAP_FT}
 
 ${MAP_STD}: _TEST=-D_NAMESPACE=std
 
 ${MAP_STD}: ${MAP_TEST}
+	mv ${MAP_TEST} ${MAP_STD}
 
 # TEST MAP
 # generate map exectutable
@@ -120,14 +122,12 @@ ${TEST_MAP} : tclean
 	@make -s ${MAP_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
-	@mv ${MAP_TEST} ${MAP_STD}
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${MAP_STD} > ${LOG_DIR}/std.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo ${CYAN} "Make ft_vector:\t" ${RESET}
 	@make -s ${MAP_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@mv ${MAP_TEST} ${MAP_FT}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
 	@-./${MAP_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -138,10 +138,12 @@ ${TEST_MAP} : tclean
 # create make calls for ft and std
 
 ${VEC_FT} : ${VEC_TEST}
+	mv ${VEC_TEST} ${VEC_FT}
 
 ${VEC_STD} : _TEST=-D_NAMESPACE=std
 
 ${VEC_STD} : ${VEC_TEST}
+	mv ${VEC_TEST} ${VEC_STD}
 
 # VECTOR
 # generate vector exectutable
@@ -159,14 +161,12 @@ ${TEST_VECTOR} : tclean
 	@make -s ${VEC_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
-	@mv ${VEC_TEST} ${VEC_STD}
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${VEC_STD} > ${LOG_DIR}/std.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo ${CYAN} "Make ft_vector :\t" ${RESET}
 	@make -s ${VEC_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@mv ${VEC_TEST} ${VEC_FT}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
 	@-./${VEC_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
