@@ -126,7 +126,7 @@ vector<_Tp, _Alloc>::insert(iterator position, size_type n, const value_type &va
         this->_realloc(this->_size + n);
     iterator    new_pos = this->_start + index;
     iterator    old_end = this->_start + pos_end;
-    if (this->_size > 0)
+    if (this->_size > 0 && new_pos != end())
         this->_move(n, new_pos, old_end);
     this->_size += n;
     while (n--)
