@@ -35,6 +35,7 @@ class _rbtree
         typedef _rbtree<_Tp, _Cmp, _Alloc>  self;
         
         typedef size_t                      size_type;
+        typedef ptrdiff_t                   difference_type;
         typedef _Tp                         value_type;
         typedef _Alloc                      data_allocator;
         typedef _rb_node<_Tp, _Alloc>       node_type;
