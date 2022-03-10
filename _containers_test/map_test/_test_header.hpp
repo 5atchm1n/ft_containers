@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:12:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 01:24:44 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/10 04:51:58 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,25 +30,19 @@
 #define MAX_SEED 100
 
 // Total number of cases
-#define _TEST_BASIC 3
+#define _TEST_MAIN 5
 // Test cases
 #define _DEFAULT_CONSTRUCTOR 0
-#define _COPY_CONSTRUCTOR 1
-#define _ASSIGNMENT_OP 2
-
-// Total number of cases
-#define _TEST_MAIN 3
-// Test cases
-#define _INSERT 0
-#define _ERASE 1
-#define _CLEAR 2
+#define _INSERT 1
+#define _ERASE 2
+#define _CLEAR 3
+#define _BOUNDS 4
 
 // MAX amount of values to assign/insert
 #define _MAX_TEST_SIZE 10
 
 // Number of iterations of test suite
-#define _NTESTS 100
-#define _NTESTS_BASIC 10
+#define _NTESTS 1000
 
 // For debugging
 static int test_no = 0;

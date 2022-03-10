@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/07 18:17:33 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/10 04:52:39 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,24 +47,12 @@ namespace _test
      * @brief TEST COPY CONSTRUCTOR
      */
     template <typename _vector>
-    void test_copy(_vector &X, _vector &Y)
+    void test_relational_op(_vector &X, _vector &Y)
     {
         (void)X;
         (void)Y;
         std::cout << "TEST : " << test_no++;
-        std::cout << " - COPY CONSTRUCTOR" << std::endl;
-    }
-
-    /**
-     * @brief TEST OPERATOR =
-     */
-    template <typename _vector>
-    void test_assign_op(_vector &X, _vector &Y)
-    {
-        (void)X;
-        (void)Y;
-        std::cout << "TEST : " << test_no++;
-        std::cout << " - OPERATOR=" << std::endl;
+        std::cout << " - RELATIONAL OPERATORS" << std::endl;
     }
 
 }
