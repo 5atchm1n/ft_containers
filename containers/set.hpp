@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:03:45 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 17:07:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/10 18:20:36 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,15 @@ class set
         typedef _Cmp    key_compare;
         typedef _Cmp    value_compare;
         typedef _Alloc  allocator_type;
+        typedef size_t      size_type;
+        typedef ptrdiff_t   difference_type;
         
     private:
         typedef typename _Alloc::template rebind<_Key>::other  _key_alloc_type;
         typedef _rbtree<key_type, key_compare, allocator_type> _tree_type;
         
-        _tree_type _tree;
+        _tree_type  _tree;
+        key_compare _cmp;
 
     public:
         typedef typename allocator_type::pointer            pointer;
@@ -46,26 +49,33 @@ class set
         typedef typename _tree_type::const_iterator             const_iterator;
         typedef typename _tree_type::const_reverse_iterator     reverse_iterator;
         typedef typename _tree_type::const_reverse_iterator     const_reverse_iterator;
-        typedef typename _tree_type::size_type                  size_type;
-        typedef typename _tree_type::difference_type            difference_type;
 
         typedef typename _tree_type::pair_type               pair_type;
         typedef typename _tree_type::pair_range              pair_range;
         typedef typename _tree_type::const_pair_range        const_pair_range;
 
-        explicit set(const _Compare &comp, const allocator_type &alloc = allocator_type()) : _tree(comp, alloc) {}
+        explicit set(const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type()) : _tree(comp, alloc) {}
         template <typename InputIterator>
             set(InputIterator first, InputIterator last, const key_compare &comp = key_compare(), const allocator_type &alloc = allocator_type());
         set(const set &other);
 
         set& operator=(const set &);
 
-        
+        // Iterators
+        iterator    begin() { return _tree._begin(); }
+        const_iterator begin() const { return _tree._begin(); }
+        iterator    end() { return _tree._end(); }
+        const_iterator    end() const { return _tree._end(); }
+        // Reverse Iterators
+        reverse_iterator rbegin() { return _tree._rbegin(); }
+        reverse_iterator rend() { return _tree._rend(); }
+        const_reverse_iterator rbegin() const { return _tree._rbegin(); }
+        const_reverse_iterator rend() const { return _tree._rend(); }
 
         // Capacity
-        bool        empty() const { return size() ? false : true }
-        size_type   size() const { return _tree._get_size() }
-        size_type   max_size() const { return _tree._get_max_size() }
+        bool        empty() const { return size() ? false : true; }
+        size_type   size() const { return _tree._get_size(); }
+        size_type   max_size() const { return _tree._get_max_size(); }
 
         // Modifiers
         pair_type   insert(const value_type &value);
@@ -77,13 +87,13 @@ class set
         size_type   erase(const value_type &val);
         void        erase(iterator first, iterator last);
         
-        void        swap(set &val);
+		void		swap(set &val) { _tree._swap(val._tree); };
         void        clear();
 
         // Observers
-        key_compare     key_comp() const { return _tree._get_key_compare() }
-        value_compare   value_comp() const { return _tree._get_key_compare() }
-        allocator_type  get_allocator() const { return _tree._get_data_allocator() }
+        key_compare     key_comp() const { return _tree._get_key_compare(); }
+        value_compare   value_comp() const { return _tree._get_key_compare(); }
+        allocator_type  get_allocator() const { return _tree._get_data_allocator(); }
 
         // find
 		iterator		find(const key_type &key);
@@ -107,5 +117,6 @@ class set
 #include "set/bits/_set_basic.hpp"
 #include "set/bits/_set_bounds.hpp"
 #include "set/bits/_set_logical_op.hpp"
+#include "set/bits/_set_modifier.hpp"
 
 #endif  // SET_HPP
