@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:08:25 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/07 17:18:38 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 02:29:59 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ namespace _test
     template <>
     int rdm_val<int>()
     {
-        return (int(std::rand() % UINT_MAX));
+        return (int(std::rand() % _MAP_MAX_KEY));
     }
 
     template <>

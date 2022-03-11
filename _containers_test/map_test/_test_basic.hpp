@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 04:52:39 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 02:41:38 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,100 @@ namespace _test
     /**
      * @brief TEST COPY CONSTRUCTOR
      */
-    template <typename _vector>
-    void test_relational_op(_vector &X, _vector &Y)
+    template <typename _map>
+    void test_relational_op(_map &X, _map &Y)
     {
-        (void)X;
-        (void)Y;
         std::cout << "TEST : " << test_no++;
         std::cout << " - RELATIONAL OPERATORS" << std::endl;
+
+        _map Z(X);
+
+        if (X < Y)
+            std::cout << "X < Y" << std::endl;
+        if (X > Y)
+            std::cout << "X > Y" << std::endl;
+        if (Y < X)
+            std::cout << "Y < X" << std::endl;
+        if (Y > X)
+            std::cout << "Y > X" << std::endl;
+        if (X <= Z)
+            std::cout << "X <= Z" << std::endl;
+        if (X >= Z)
+            std::cout << "X >= Z" << std::endl;
+        if (Y <= Z)
+            std::cout << "Y <= Z" << std::endl;
+        if (Y >= Z)
+            std::cout << "Y >= Z" << std::endl;
+        if (X == Z)
+            std::cout << "X == Z" << std::endl;
+        if (X != Y)
+            std::cout << "X != Y" << std::endl;
+    }
+
+    template <typename _it, typename _rit>
+    void test_iter_increment(_it & _iter, _rit &_rev_iter, int rdm)
+    {
+        std::cout << "test iterator increment" << std::endl;
+        while (rdm--)
+        {
+            _iter++;
+            _rev_iter++;
+        }
+        std::cout << _iter->first << " => " << _iter->second << std::endl;
+        std::cout << _rev_iter->first << " => " << _rev_iter->second << std::endl;
+    }
+
+    template <typename _it, typename _rit>
+    void test_iter_decrement(_it & _iter, _rit &_rev_iter, int rdm)
+    {
+        std::cout << "test iterator decrement" << std::endl;
+        while (rdm--)
+        {
+            _iter--;
+            _rev_iter--;
+        }
+        std::cout << _iter->first << " => " << _iter->second << std::endl;
+        std::cout << _rev_iter->first << " => " << _rev_iter->second << std::endl;
+    }
+    
+    template <typename _map>
+    void test_iterators(_map &X, _map &Y)
+    {
+        (void)Y;
+        std::cout << "TEST : " << test_no++;
+        std::cout << " - ITERATORS" << std::endl;
+
+        typename _map::iterator it;
+        it = X.begin();
+        typename _map::iterator _it(it);
+        typename _map::const_iterator cit = X.end();
+        typename _map::reverse_iterator rit = X.rbegin();
+        typename _map::const_reverse_iterator crit = X.rend();
+
+        size_t rdm;
+        if (X.size())
+        {
+            rdm = std::rand() % X.size();
+            if (rdm)
+            {
+                test_iter_increment<typename _map::iterator, typename _map::reverse_iterator>(_it, rit, rdm);
+                test_iter_decrement<typename _map::const_iterator, typename _map::const_reverse_iterator>(cit, crit, rdm);
+            }
+        }
+    }
+
+    template <typename _map>
+    void test_swap(_map &X, _map &Y)
+    {
+        if (!X.empty() && !Y.empty())
+        {
+            typename _map::const_iterator it_x = X.begin();
+            typename _map::const_iterator it_y = Y.begin();
+            X.swap(Y);
+            std::cout << "Check iterator validy" << std::endl;
+            std::cout << "valid : " << (it_x == Y.begin()) << std::endl;
+            std::cout << "valid : " << (it_y == X.end()) << std::endl;
+        }
     }
 
 }
