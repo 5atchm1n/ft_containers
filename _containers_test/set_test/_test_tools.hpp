@@ -6,23 +6,23 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:08:25 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 04:02:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 04:22:39 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <climits>
 
-#ifndef _MAP_TEST_TOOLS_HPP
-#define _MAP_TEST_TOOLS_HPP
+#ifndef _SET_TEST_TOOLS_HPP
+#define _SET_TEST_TOOLS_HPP
 
 namespace _test
 {
     /**
      * @brief PRINT VECTOR
      */
-    template <typename _map>
-    void test_print(const _map &M)
+    template <typename _set>
+    void test_print(const _set &M)
     {
         std::cout << "empty : " << M.empty() << std::endl;
         std::cout << "size : " << M.size() << std::endl;
@@ -30,11 +30,11 @@ namespace _test
         if (!M.empty())
         {
             std::cout << "content : " << std::endl;
-            for (typename _map::const_iterator it = M.begin(); it != M.end(); it++)
-                std::cout << it->first << " => " << it->second << std::endl;
+            for (typename _set::const_iterator it = M.begin(); it != M.end(); it++)
+                std::cout << "key : " << *it << std::endl;
             std::cout << "reverse content : " << std::endl;
             for (typename _vector::const_reverse_iterator it = v.rbegin(); it != v.rend(); it++)
-                std::cout << it->first << " => " << it->second << std::endl;
+                std::cout << "key : " << *it << std::endl;
         }
     }
 
@@ -84,20 +84,6 @@ namespace _test
     {
         return (int(std::rand() % _MAP_MAX_KEY));
     }
-
-    template <>
-    std::pair<const int, std::string>
-    rdm_val<std::pair<const int, std::string> >()
-    {
-        return std::pair<const int, std::string>(rdm_val<int>(), rdm_val<std::string>());
-    }
-    
-    template <>
-    ft::pair<const int, std::string>
-    rdm_val<ft::pair<const int, std::string> >()
-    {
-        return ft::pair<const int, std::string>(rdm_val<int>(), rdm_val<std::string>());
-    }
 }
 
-#endif  //_MAP_TEST_TOOLS_HPP
+#endif  //_SET_TEST_TOOLS_HPP

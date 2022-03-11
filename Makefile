@@ -5,12 +5,6 @@
 
 NAME = ft_containers
 
-RBT_TEST = rbt_test
-
-MAP_TEST = map_test
-
-VEC_TEST = vector_test
-
 VEC_FT = ft_vector
 
 VEC_STD = std_vector
@@ -18,8 +12,16 @@ VEC_STD = std_vector
 MAP_FT = ft_map
 
 MAP_STD = std_map
+
+SET_FT = ft_set
+
+SET_STD = std_set
+
 # Makefile recipe specific Rules
 
+MAP_TEST = map_test
+VEC_TEST = vector_test
+SET_TEST = set_test
 OBJDIR = objs
 MKDIR_P = mkdir -p
 
@@ -42,9 +44,8 @@ CXXFLAGS = -Wall -Wextra -Werror -MMD -MP
 
 # Debug and Memory
 
-DEBUG = -fstandalone-debug -g3
-
-MEM = -fsanitize=address 
+#DEBUG = -fstandalone-debug -g3
+#MEM = -fsanitize=address 
 
 ifeq ($(NO_MEM),1)
 MEM = 
@@ -52,37 +53,38 @@ endif
 
 ## SOURCE FILES
 # Default
-SRC = _containers_test/main3.cpp
-# Reb Black Tree
-_RBT_TEST = _containers_test/_test-rbt.cpp
+SRC = _containers_test/main.cpp
 # Map
 _MAP_TEST = _containers_test/_test-map.cpp
 # Vector
 _VEC_TEST = _containers_test/_test-vector.cpp
+# Set 
+_SET_TEST = _containers_test/_test-set.cpp
 # END
 
 ## INCLUDE FILES
 # Global include
 INC = -I./containers
-# custom include
-_INC_RBT_TEST = -I./containers/map/rbtree
 
 ## DEPENDECIES recipe
 DEPS = ${OBJS:.o=.d}
 VEC_DEPS = ${_VEC_TEST_OBJS:.o=.d}
+MAP_DEPS = ${_MAP_TEST_OBJS:.o=.d}
+SET_DEPS = ${_SET_TEST_OBJS:.o=.d}
+
 
 ## OBJS DIR recipe
 OBJS = $(addprefix ${OBJDIR}/, ${SRC:.cpp=.o})
 _VEC_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_VEC_TEST:.cpp=.o})
-_RBT_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_RBT_TEST:.cpp=.o})
 _MAP_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_MAP_TEST:.cpp=.o})
+_SET_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_SET_TEST:.cpp=.o})
 
 # GLOBAL MAKE ALL
 
 all : ${NAME}
 # default recipe
 ${NAME} : ${OBJS}
-	${CC} ${CXXFLAGS} ${INC} ${MEM} ${CPPSTD} ${OBJS} -o $@
+	${CC} ${CXXFLAGS} ${_TEST} ${INC} ${MEM} ${CPPSTD} ${OBJS} -o $@
 
 # object file recipe
 ${OBJDIR}/%.o:%.cpp
@@ -91,10 +93,45 @@ ${OBJDIR}/%.o:%.cpp
 
 # END GLOBAL ALL
 
-# TEST RED BLACK TREE
-# generate tree exectutable
-${RBT_TEST} : fclean ${_RBT_TEST_OBJS}
-	${CC} ${CXXFLAGS} ${_INC_RBT_TEST} ${MEM} ${CPPSTD} ${_RBT_TEST_OBJS} -o $@
+# SET
+
+${SET_FT} : ${SET_TEST}
+	mv ${SET_TEST} ${SET_FT}
+
+${SET_STD}: _TEST=-D_NAMESPACE=std
+
+${SET_STD}: ${SET_TEST}
+	mv ${SET_TEST} ${SET_STD}
+
+# TEST MAP
+# generate map exectutable
+
+${SET_TEST} : clean ${_SET_TEST_OBJS}
+	${CC} ${CXXFLAGS} ${_TEST} ${INC} ${MEM} ${DEBUG} ${CPPSTD} ${_SET_TEST_OBJS} -o $@
+
+LOG_DIR = log
+BIN_DIR = bin
+TEST_SET = test_set
+
+${TEST_SET} : tclean
+	@echo ${BLUE} "\n\t RUN SET TESTS" ${RESET}
+	@echo ${CYAN} "Make std_set :\t" ${RESET}
+	@make -s ${SET_STD}
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@${MKDIR_P} ${LOG_DIR} 
+	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
+	@-./${SET_STD} > ${LOG_DIR}/std.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@echo ${CYAN} "Make ft_set:\t" ${RESET}
+	@make -s ${SET_FT}
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
+	@-./${SET_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
+
+# SET END
 
 # MAP
 
@@ -133,6 +170,8 @@ ${TEST_MAP} : tclean
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
+
+# MAP END
 
 # VECTOR
 # create make calls for ft and std

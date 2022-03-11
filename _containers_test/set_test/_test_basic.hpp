@@ -6,70 +6,53 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 03:57:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 04:21:58 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "_test_tools.hpp"
 
-#ifndef _MAP_TEST_BASIC_HPP
-#define _MAP_TEST_BASIC_HPP
+#ifndef _SET_TEST_BASIC_HPP
+#define _SET_TEST_BASIC_HPP
 
 namespace _test
 {
 
     /********
-     * @brief   TEST SUITE FOR VECTOR
-     * @tparam _vector  vector class
+     * @brief   TEST SUITE FOR SET
+     * @tparam _set  set class
      */
 
     /**
      * @brief CONSTRUCTORS
      */
-    template <typename _map>
-    void test_constructors(_map &X, _map &Y)
+    template <typename _set>
+    void test_constructors(_set &X, _set &Y)
     {
         std::cout << "TEST : " << test_no++;
         std::cout << " - CONSTRUCTORS" << std::endl;
-        _map Z;
+        _set Z;
         for (int i = 0 ; i < _MAX_TEST_SIZE; i++)
-            Z.insert(rdm_val<typename _map::value_type>());
+            Z.insert(rdm_val<typename _set::value_type>());
         test_print(Z);
-        _map W(Z.begin(),Z.end());
+        _set W(Z.begin(),Z.end());
         test_print(W);
-        _map U(Z);
+        _set U(Z);
         test_print(U);
         X = U;
         Y = W;
     }
 
     /**
-     * @brief TEST OPERATOR [ ]
-     */
-    template <typename _map>
-    void test_operator(_map &X, _map &Y)
-    {
-        std::cout << "TEST : " << test_no++;
-        std::cout << " - OPERATOR [ ] " << std::endl;
-        _map Z;
-
-        for (int i = 0; i < _MAX_TEST_SIZE; i++)
-            Z[rdm_val<typename _map::key_type>()] = rdm_val<typename _map::mapped_type>();
-        test_print(Z);
-        (void)X;
-        (void)Y;
-    }
-
-    /**
      * @brief TEST COPY CONSTRUCTOR
      */
-    template <typename _map>
-    void test_relational_op(_map &X, _map &Y)
+    template <typename _set>
+    void test_relational_op(_set &X, _set &Y)
     {
         std::cout << "TEST : " << test_no++;
         std::cout << " - RELATIONAL OPERATORS" << std::endl;
 
-        _map Z(X);
+        _set Z(X);
 
         if (X < Y)
             std::cout << "X < Y" << std::endl;
@@ -119,19 +102,19 @@ namespace _test
         std::cout << _rev_iter->first << " => " << _rev_iter->second << std::endl;
     }
     
-    template <typename _map>
-    void test_iterators(_map &X, _map &Y)
+    template <typename _set>
+    void test_iterators(_set &X, _set &Y)
     {
         (void)Y;
         std::cout << "TEST : " << test_no++;
         std::cout << " - ITERATORS" << std::endl;
 
-        typename _map::iterator it;
+        typename _set::iterator it;
         it = X.begin();
-        typename _map::iterator _it(it);
-        typename _map::const_iterator cit = X.end();
-        typename _map::reverse_iterator rit = X.rbegin();
-        typename _map::const_reverse_iterator crit = X.rend();
+        typename _set::iterator _it(it);
+        typename _set::const_iterator cit = X.end();
+        typename _set::reverse_iterator rit = X.rbegin();
+        typename _set::const_reverse_iterator crit = X.rend();
 
         size_t rdm;
         if (X.size())
@@ -139,21 +122,21 @@ namespace _test
             rdm = std::rand() % X.size();
             if (rdm)
             {
-                test_iter_increment<typename _map::iterator, typename _map::reverse_iterator>(_it, rit, rdm);
-                test_iter_decrement<typename _map::const_iterator, typename _map::const_reverse_iterator>(cit, crit, rdm);
+                test_iter_increment<typename _set::iterator, typename _set::reverse_iterator>(_it, rit, rdm);
+                test_iter_decrement<typename _set::const_iterator, typename _set::const_reverse_iterator>(cit, crit, rdm);
             }
         }
     }
 
-    template <typename _map>
-    void test_swap(_map &X, _map &Y)
+    template <typename _set>
+    void test_swap(_set &X, _set &Y)
     {
         std::cout << "TEST : " << test_no++;
         std::cout << " - SWAP" << std::endl;
         if (!X.empty() && !Y.empty())
         {
-            typename _map::const_iterator it_x = X.begin();
-            typename _map::const_iterator it_y = Y.begin();
+            typename _set::const_iterator it_x = X.begin();
+            typename _set::const_iterator it_y = Y.begin();
             X.swap(Y);
             std::cout << "Check iterator validy" << std::endl;
             std::cout << "valid : " << (it_x == Y.begin()) << std::endl;
@@ -161,13 +144,13 @@ namespace _test
         }
     }
 
-    template <typename _map>
-    void test_count(_map &X, _map &Y)
+    template <typename _set>
+    void test_count(_set &X, _set &Y)
     {
         std::cout << "TEST : " << test_no++;
         std::cout << " - COUNT" << std::endl;
         
-        _map Z(Y);
+        _set Z(Y);
 
         for (int i = 0; i < _MAP_MAX_KEY; i++)
         {
@@ -181,4 +164,4 @@ namespace _test
 }
 
 
-#endif  //_VECTOR_TEST_BASIC_HPP
+#endif  //_SET_TEST_BASIC_HPP
