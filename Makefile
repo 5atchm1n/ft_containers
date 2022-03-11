@@ -85,7 +85,7 @@ _STACK_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_STACK_TEST:.cpp=.o})
 
 # GLOBAL MAKE ALL
 
-all : test_vector test_map test_stack test_set
+all : test_vector test_map test_stack
 	@${MKDIR_P} ${BIN_DIR}
 	@mv -t ${BIN_DIR} ${VEC_FT} ${MAP_FT} ${STACK_FT} ${VEC_STD} ${MAP_STD} ${STACK_STD}
 
@@ -260,17 +260,17 @@ ${TEST_STACK} : clean
 # TEST TIMING
 time :
 	@echo -n ${YELLOW} "std::vector = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${VEC_STD} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${VEC_STD} > /dev/null
 	@echo -n ${BLUE} "ft::vector = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${VEC_FT} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${VEC_FT} > /dev/null
 	@echo -n ${YELLOW} "std::map = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${MAP_STD} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${MAP_STD} > /dev/null
 	@echo -n ${BLUE} "ft::map = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${MAP_FT} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${MAP_FT} > /dev/null
 	@echo -n ${YELLOW} "std::set = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${SET_STD} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${SET_STD} > /dev/null
 	@echo -n ${BLUE} "std::set = " ${RESET}
-	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${SET_FT} > /dev/null
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${BIN_DIR}/${SET_FT} > /dev/null
 
 
 # COMMON RULES
