@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 12:35:01 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:52:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #ifndef _SET_TEST_BASIC_HPP
 #define _SET_TEST_BASIC_HPP
 
-namespace _test
+namespace _test_set
 {
 
     /********

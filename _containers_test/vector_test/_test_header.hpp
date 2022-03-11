@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:12:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 03:56:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:55:49 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@
 // max number of seeds to test
 #define MAX_SEED 10
 
+namespace _test_vector
+{
+    
 // Total number of cases
 #define _TEST_BASIC 5
 // Test cases
@@ -61,9 +64,12 @@
 static int test_no = 0;
 static int main_test_no = 0;
 
+}
+
 // Tests
 #include "_test_tools.hpp"
 #include "_test_basic.hpp"
 #include "_test_modify.hpp"
+
 
 #endif  //_VECTOR_HEADER_HPP

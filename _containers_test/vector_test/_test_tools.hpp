@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:08:25 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/05 15:15:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:49:58 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #ifndef _VECTOR_TEST_TOOLS_HPP
 #define _VECTOR_TEST_TOOLS_HPP
 
-namespace _test
+namespace _test_vector
 {
     /**
      * @brief PRINT VECTOR

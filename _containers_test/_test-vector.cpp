@@ -18,24 +18,24 @@ void test_vector(int rdm_seed)
     std::srand(rdm_seed);
     void (*_test_basic[])(_vector &, _vector &) =
         {
-            &_test::test_constructors,
-            &_test::test_copy,
-            &_test::test_assign_op,
-            &_test::test_mixed_assign_copy,
-            &_test::test_relational_op
+            &_test_vector::test_constructors,
+            &_test_vector::test_copy,
+            &_test_vector::test_assign_op,
+            &_test_vector::test_mixed_assign_copy,
+            &_test_vector::test_relational_op
         };
     
     std::srand(rdm_seed);
     void (*_test_main[])(_vector &, _vector &) =
         {
-            &_test::test_insert,
-            &_test::test_assign,
-            &_test::test_push,
-            &_test::test_pop,
-            &_test::test_erase,
-            &_test::test_resize,
-            &_test::test_swap,
-            &_test::test_clear
+            &_test_vector::test_insert,
+            &_test_vector::test_assign,
+            &_test_vector::test_push,
+            &_test_vector::test_pop,
+            &_test_vector::test_erase,
+            &_test_vector::test_resize,
+            &_test_vector::test_swap,
+            &_test_vector::test_clear
         };
 
     _vector X;
@@ -76,8 +76,8 @@ void test_vector(int rdm_seed)
             else
                 _test_basic[_REL_OP](Y, X);
         }
-        _test::test_print(X);
-        _test::test_print(Y);
+        _test_vector::test_print(X);
+        _test_vector::test_print(Y);
     }
 
     main_test_no = 0;
@@ -130,8 +130,8 @@ void test_vector(int rdm_seed)
             _test_main[_CLEAR](X, Y);
             break;
         }
-        _test::test_print(X);
-        _test::test_print(Y);
+        _test_vector::test_print(X);
+        _test_vector::test_print(Y);
     }
 }
 

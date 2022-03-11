@@ -19,15 +19,15 @@ void test_set(int rdm_seed)
 
     void (*_test_main[])(_set &, _set &) =
         {
-            &_test::test_constructors,
-            &_test::test_insert,
-            &_test::test_erase,
-            &_test::test_clear,
-            &_test::test_bounds,
-            &_test::test_relational_op,
-            &_test::test_iterators,
-            &_test::test_swap,
-            &_test::test_count
+            &_test_set::test_constructors,
+            &_test_set::test_insert,
+            &_test_set::test_erase,
+            &_test_set::test_clear,
+            &_test_set::test_bounds,
+            &_test_set::test_relational_op,
+            &_test_set::test_iterators,
+            &_test_set::test_swap,
+            &_test_set::test_count
         };
 
     _set X;
@@ -87,8 +87,8 @@ void test_set(int rdm_seed)
             else
                 _test_main[_COUNT](Y, X);
         }
-        _test::test_print(X);
-        _test::test_print(Y);
+        _test_set::test_print(X);
+        _test_set::test_print(Y);
     }
 }
 

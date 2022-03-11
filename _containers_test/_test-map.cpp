@@ -19,16 +19,16 @@ void test_map(int rdm_seed)
 
     void (*_test_main[])(_map &, _map &) =
         {
-            &_test::test_constructors,
-            &_test::test_operator,
-            &_test::test_insert,
-            &_test::test_erase,
-            &_test::test_clear,
-            &_test::test_bounds,
-            &_test::test_relational_op,
-            &_test::test_iterators,
-            &_test::test_swap,
-            &_test::test_count
+            &_test_map::test_constructors,
+            &_test_map::test_operator,
+            &_test_map::test_insert,
+            &_test_map::test_erase,
+            &_test_map::test_clear,
+            &_test_map::test_bounds,
+            &_test_map::test_relational_op,
+            &_test_map::test_iterators,
+            &_test_map::test_swap,
+            &_test_map::test_count
         };
 
     _map X;
@@ -90,8 +90,8 @@ void test_map(int rdm_seed)
             else
                 _test_main[_COUNT](Y, X);
         }
-        _test::test_print(X);
-        _test::test_print(Y);
+        _test_map::test_print(X);
+        _test_map::test_print(Y);
     }
 }
 

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:12:15 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 03:53:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:56:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@
 #ifndef _NAMESPACE
 #define _NAMESPACE ft
 #endif
+
+namespace _test_map
+{
 
 // random number seed
 #define _SEED 42
@@ -55,9 +58,11 @@
 static int test_no = 0;
 static int main_test_no = 0;
 
+}
 // Tests
 #include "_test_tools.hpp"
 #include "_test_basic.hpp"
 #include "_test_modify.hpp"
+
 
 #endif  //_MAP_TEST_HEADER_HPP

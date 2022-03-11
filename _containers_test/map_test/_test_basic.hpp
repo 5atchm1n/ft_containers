@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 03:57:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:51:19 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #ifndef _MAP_TEST_BASIC_HPP
 #define _MAP_TEST_BASIC_HPP
 
-namespace _test
+namespace _test_map
 {
 
     /********
