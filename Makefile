@@ -86,6 +86,12 @@ _STACK_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_STACK_TEST:.cpp=.o})
 # GLOBAL MAKE ALL
 
 all : test_vector test_map test_stack test_set
+	@${MKDIR_P} ${BIN_DIR}
+	@mv -t ${BIN_DIR} ${VEC_FT} ${MAP_FT} ${STACK_FT} ${VEC_STD} ${MAP_STD} ${STACK_STD}
+
+bonus : test_set
+	@${MKDIR_P} ${BIN_DIR}
+	@mv -t ${BIN_DIR} ${SET_FT} ${SET_STD}
 
 # default recipe
 
@@ -278,11 +284,12 @@ clean :
 fclean : clean tclean
 	@echo -n ${BLUE} "clean binaries:\t" ${RESET}
 	@rm -f ${VEC_FT} ${VEC_STD} ${MAP_STD} ${MAP_FT} ${SET_FT} ${SET_STD} ${STACK_FT} ${STACK_STD}
+	@rm -rf ${BIN_DIR}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 
 tclean : clean
 	@echo -n ${BLUE} "clean test logs :\t" ${RESET}
-	@rm -rf ${LOG_DIR}
+	@rm -rf ${LOG_DIR} ${BIN_DIR}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 
 .PHONY : all clean fclean tclean
