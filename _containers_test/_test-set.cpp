@@ -92,6 +92,7 @@ void test_set(int rdm_seed)
     }
 }
 
+#ifdef _MAIN
 int main(void)
 {
     int seed = _SEED;
@@ -99,3 +100,4 @@ int main(void)
         test_set<_NAMESPACE::set<int> >(seed++);
     return 0;
 }
+#endif

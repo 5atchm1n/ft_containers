@@ -135,6 +135,7 @@ void test_vector(int rdm_seed)
     }
 }
 
+#ifdef _MAIN
 int main(void)
 {
     int seed = _SEED;
@@ -142,3 +143,4 @@ int main(void)
         test_vector<_NAMESPACE::vector<std::string> >(seed++);
     return 0;
 }
+#endif

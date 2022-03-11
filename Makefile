@@ -53,7 +53,7 @@ endif
 
 ## SOURCE FILES
 # Default
-SRC = _containers_test/main.cpp
+SRC = _containers_test/_test-all.cpp
 # Map
 _MAP_TEST = _containers_test/_test-map.cpp
 # Vector
@@ -81,6 +81,8 @@ _SET_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_SET_TEST:.cpp=.o})
 
 # GLOBAL MAKE ALL
 
+all : _TEST=-D_TEST_VECTOR -D_TEST_SET -D_TEST_SET
+
 all : ${NAME}
 # default recipe
 ${NAME} : ${OBJS}
@@ -103,7 +105,7 @@ ${SET_STD}: _TEST=-D_NAMESPACE=std
 ${SET_STD}: ${SET_TEST}
 	mv ${SET_TEST} ${SET_STD}
 
-# TEST MAP
+# TEST SET
 # generate map exectutable
 
 ${SET_TEST} : clean ${_SET_TEST_OBJS}
@@ -120,15 +122,15 @@ ${TEST_SET} : tclean
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
-	@-./${SET_STD} > ${LOG_DIR}/std.out
+	@-./${SET_STD} > ${LOG_DIR}/${SET_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo ${CYAN} "Make ft_set:\t" ${RESET}
 	@make -s ${SET_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
-	@-./${SET_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@-./${SET_FT} > ${LOG_DIR}/${SET_FT}.out 2> ${LOG_DIR}/${SET_FT}.mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@-diff -u ${LOG_DIR}/${SET_STD}.out ${LOG_DIR}/${SET_FT}.out > ${LOG_DIR}/set.diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # SET END
@@ -155,20 +157,20 @@ TEST_MAP = test_map
 
 ${TEST_MAP} : tclean
 	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
-	@echo ${CYAN} "Make std_vector :\t" ${RESET}
+	@echo ${CYAN} "Make std_map :\t" ${RESET}
 	@make -s ${MAP_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
-	@-./${MAP_STD} > ${LOG_DIR}/std.out
+	@-./${MAP_STD} > ${LOG_DIR}/${MAP_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@echo ${CYAN} "Make ft_vector:\t" ${RESET}
+	@echo ${CYAN} "Make ft_map:\t" ${RESET}
 	@make -s ${MAP_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
-	@-./${MAP_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@-./${MAP_FT} > ${LOG_DIR}/${MAP_FT}.out 2> ${LOG_DIR}/${MAP_FT}.mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@-diff -u ${LOG_DIR}/${MAP_STD}.out ${LOG_DIR}/${MAP_STD}.out > ${LOG_DIR}/map.diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # MAP END

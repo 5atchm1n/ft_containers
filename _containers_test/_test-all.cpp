@@ -10,10 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string>
+#include <iostream>
+#include <map>
+#include <set>
+#include <vector>
+
 // random number seed
 #define _SEED 42
 // max number of seeds to test
 #define MAX_SEED 10
+
+#ifndef _NAMESPACE
+#define _NAMESPACE std
+#endif
+
+
+#include "_test-vector.cpp"
+#include "_test-map.cpp"
+#include "_test-set.cpp"
 
 int main(void)
 {

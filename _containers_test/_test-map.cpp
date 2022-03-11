@@ -95,6 +95,7 @@ void test_map(int rdm_seed)
     }
 }
 
+#ifdef _MAIN
 int main(void)
 {
     int seed = _SEED;
@@ -102,3 +103,4 @@ int main(void)
         test_map<_NAMESPACE::map<int, std::string> >(seed++);
     return 0;
 }
+#endif
