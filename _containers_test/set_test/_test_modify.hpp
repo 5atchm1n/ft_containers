@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 04:28:35 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 12:40:28 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ namespace _test
         typedef typename _NAMESPACE::pair< typename _set::iterator, bool>   pair_return;
         
         pair_return     ret; 
-        pair_type       value;
+
         try
         {
             switch (std::rand() % 4)
@@ -41,7 +41,7 @@ namespace _test
                     for (int i = 0; i < std::rand() % _MAX_TEST_SIZE; i++)
                     {
                         ret = X.insert(rdm_val<typename _set::value_type>());
-                        std::cout << "key :" << ret.first << std::endl;
+                        std::cout << "key :" << *ret.first << std::endl;
                         std::cout << "already in :" << ret.second << std::endl;
                     }
                     break;
@@ -49,14 +49,14 @@ namespace _test
                     if (!X.empty())
                     {
                         ret = X.insert(*(X.begin()));
-                        std::cout << "key :" << ret.first << std::endl;
+                        std::cout << "key :" << *ret.first << std::endl;
                         std::cout << "already in :" << ret.second << std::endl;
 
                     }
                     if (!Y.empty())
                     {
                         ret = Y.insert(*(--(Y.end())));
-                        std::cout << "key :" << ret.first << std::endl;
+                        std::cout << "key :" << *ret.first << std::endl;
                         std::cout << "already in :" << ret.second << std::endl;
                     }
                     break;
@@ -69,7 +69,7 @@ namespace _test
                 case (3):
                     if (!Y.empty())
                     {
-                        typename _set::key_type test;
+                        typename _set::key_type test = rdm_val<typename _set::key_type>();
                         it = Y.begin();
                         for (int k = 0; k < std::rand() % _MAX_TEST_SIZE; k++)
                         {
@@ -150,15 +150,15 @@ namespace _test
                     if (it != X.end())
                     {
                         std::cout << "chosen node" << std::endl;
-                        std::cout << it->first << " => " << it->second << std::endl;
-                        itlow = X.lower_bound(it->first);
-                        itup = X.upper_bound(it->first);
+                        std::cout << *it << std::endl;
+                        itlow = X.lower_bound(*it);
+                        itup = X.upper_bound(*it);
                         std::cout << "lower" << std::endl;
                         for (iterator it = itlow; it != X.end(); ++it)
-                            std::cout << it->first << " => " << it->second << std::endl;
+                            std::cout << *it << std::endl;
                         std::cout << "upper" << std::endl;
                         for (iterator it = itup; it != X.end(); ++it)
-                            std::cout << it->first << " => " << it->second << std::endl;
+                            std::cout << *it << std::endl;
                     }
                 }
             case (1) :
@@ -172,15 +172,15 @@ namespace _test
                     if (it != Y.end())
                     {
                         std::cout << "chosen node" << std::endl;
-                        std::cout << it->first << " => " << it->second << std::endl;
-                        itlow = Y.lower_bound(it->first);
-                        itup = Y.upper_bound(it->first);
+                        std::cout << *it << std::endl;
+                        itlow = Y.lower_bound(*it);
+                        itup = Y.upper_bound(*it);
                         std::cout << "lower" << std::endl;
                         for (iterator it = itlow; it != Y.end(); ++it)
-                            std::cout << it->first << " => " << it->second << std::endl;
+                            std::cout << *it<< std::endl;
                         std::cout << "upper" << std::endl;
                         for (iterator it = itup; it != Y.end(); ++it)
-                            std::cout << it->first << " => " << it->second << std::endl;
+                            std::cout << *it << std::endl;
                     }
                 }
         }

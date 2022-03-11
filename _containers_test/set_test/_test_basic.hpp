@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 04:21:58 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 12:35:01 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,8 @@ namespace _test
             _iter++;
             _rev_iter++;
         }
-        std::cout << _iter->first << " => " << _iter->second << std::endl;
-        std::cout << _rev_iter->first << " => " << _rev_iter->second << std::endl;
+        std::cout << *_iter << std::endl;
+        std::cout << *_rev_iter << std::endl;
     }
 
     template <typename _it, typename _rit>
@@ -98,8 +98,8 @@ namespace _test
             _iter--;
             _rev_iter--;
         }
-        std::cout << _iter->first << " => " << _iter->second << std::endl;
-        std::cout << _rev_iter->first << " => " << _rev_iter->second << std::endl;
+        std::cout << *_iter << std::endl;
+        std::cout << *_rev_iter << std::endl;
     }
     
     template <typename _set>

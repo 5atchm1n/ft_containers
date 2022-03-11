@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:08:25 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/11 04:22:39 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 12:38:24 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ namespace _test
             for (typename _set::const_iterator it = M.begin(); it != M.end(); it++)
                 std::cout << "key : " << *it << std::endl;
             std::cout << "reverse content : " << std::endl;
-            for (typename _vector::const_reverse_iterator it = v.rbegin(); it != v.rend(); it++)
+            for (typename _set::const_reverse_iterator it = M.rbegin(); it != M.rend(); it++)
                 std::cout << "key : " << *it << std::endl;
         }
     }
