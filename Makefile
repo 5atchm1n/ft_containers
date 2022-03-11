@@ -51,9 +51,6 @@ ifeq ($(NO_MEM),1)
 MEM = 
 endif
 
-## SOURCE FILES
-# Default
-SRC = _containers_test/main.cpp
 # Map
 _MAP_TEST = _containers_test/_test-map.cpp
 # Vector
@@ -67,24 +64,21 @@ _SET_TEST = _containers_test/_test-set.cpp
 INC = -I./containers
 
 ## DEPENDECIES recipe
-DEPS = ${OBJS:.o=.d}
 VEC_DEPS = ${_VEC_TEST_OBJS:.o=.d}
 MAP_DEPS = ${_MAP_TEST_OBJS:.o=.d}
 SET_DEPS = ${_SET_TEST_OBJS:.o=.d}
 
 
 ## OBJS DIR recipe
-OBJS = $(addprefix ${OBJDIR}/, ${SRC:.cpp=.o})
 _VEC_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_VEC_TEST:.cpp=.o})
 _MAP_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_MAP_TEST:.cpp=.o})
 _SET_TEST_OBJS = $(addprefix ${OBJDIR}/, ${_SET_TEST:.cpp=.o})
 
 # GLOBAL MAKE ALL
 
-all : ${NAME}
+all : test_vector test_set test_map
+
 # default recipe
-${NAME} : ${OBJS}
-	${CC} ${CXXFLAGS} ${_TEST} ${INC} ${MEM} ${CPPSTD} ${OBJS} -o $@
 
 # object file recipe
 ${OBJDIR}/%.o:%.cpp
@@ -113,22 +107,22 @@ LOG_DIR = log
 BIN_DIR = bin
 TEST_SET = test_set
 
-${TEST_SET} : tclean
+${TEST_SET} : clean
 	@echo ${BLUE} "\n\t RUN SET TESTS" ${RESET}
 	@echo ${CYAN} "Make std_set :\t" ${RESET}
 	@make -s ${SET_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
-	@-./${SET_STD} > ${LOG_DIR}/std.out
+	@-./${SET_STD} > ${LOG_DIR}/${SET_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo ${CYAN} "Make ft_set:\t" ${RESET}
 	@make -s ${SET_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
-	@-./${SET_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@-./${SET_FT} > ${LOG_DIR}/${SET_FT}.out 2> ${LOG_DIR}/${SET_FT}.mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@-diff -u ${LOG_DIR}/${SET_STD}.out ${LOG_DIR}/${SET_FT}.out > ${LOG_DIR}/set.diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # SET END
@@ -153,22 +147,22 @@ LOG_DIR = log
 BIN_DIR = bin
 TEST_MAP = test_map
 
-${TEST_MAP} : tclean
+${TEST_MAP} : clean
 	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
-	@echo ${CYAN} "Make std_vector :\t" ${RESET}
+	@echo ${CYAN} "Make std_map :\t" ${RESET}
 	@make -s ${MAP_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
-	@-./${MAP_STD} > ${LOG_DIR}/std.out
+	@-./${MAP_STD} > ${LOG_DIR}/${MAP_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@echo ${CYAN} "Make ft_vector:\t" ${RESET}
+	@echo ${CYAN} "Make ft_map:\t" ${RESET}
 	@make -s ${MAP_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
-	@-./${MAP_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@-./${MAP_FT} > ${LOG_DIR}/${MAP_FT}.out 2> ${LOG_DIR}/${MAP_FT}.mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@-diff -u ${LOG_DIR}/${MAP_STD}.out ${LOG_DIR}/${MAP_FT}.out > ${LOG_DIR}/map.diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # MAP END
@@ -194,25 +188,41 @@ LOG_DIR = log
 BIN_DIR = bin
 TEST_VECTOR = test_vector
 
-${TEST_VECTOR} : tclean
-	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
-	@echo ${CYAN} "Make std_map :\t" ${RESET}
+${TEST_VECTOR} : clean
+	@echo ${BLUE} "\n\t RUN VECTOR TESTS" ${RESET}
+	@echo ${CYAN} "Make std_vector :\t" ${RESET}
 	@make -s ${VEC_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
-	@-./${VEC_STD} > ${LOG_DIR}/std.out
+	@-./${VEC_STD} > ${LOG_DIR}/${VEC_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo ${CYAN} "Make ft_vector :\t" ${RESET}
 	@make -s ${VEC_FT}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
-	@-./${VEC_FT} > ${LOG_DIR}/ft.out 2> ${LOG_DIR}/mem.out
+	@-./${VEC_FT} > ${LOG_DIR}/${VEC_FT}.out 2> ${LOG_DIR}/${VEC_FT}.mem.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
-	@-diff -u ${LOG_DIR}/std.out ${LOG_DIR}/ft.out > ${LOG_DIR}/diff.log
+	@-diff -u ${LOG_DIR}/${VEC_STD}.out ${LOG_DIR}/${VEC_FT}.out > ${LOG_DIR}/vector.diff.log
 	@echo ${BLUE} "\n\tcheck log dir for output" ${RESET}
 
 # VECTOR END
+
+# TEST TIMING
+time :
+	@echo -n ${YELLOW} "std::vector = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${VEC_STD} > /dev/null
+	@echo -n ${BLUE} "ft::vector = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${VEC_FT} > /dev/null
+	@echo -n ${YELLOW} "std::map = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${MAP_STD} > /dev/null
+	@echo -n ${BLUE} "ft::map = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${MAP_FT} > /dev/null
+	@echo -n ${YELLOW} "std::set = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${SET_STD} > /dev/null
+	@echo -n ${BLUE} "std::set = " ${RESET}
+	@/usr/bin/time -f "real : %E -- user : %U -- sys : %S" ./${SET_FT} > /dev/null
+
 
 # COMMON RULES
 re : fclean all
@@ -224,12 +234,12 @@ clean :
 
 fclean : clean tclean
 	@echo -n ${BLUE} "clean binaries:\t" ${RESET}
-	@rm -f  ${NAME} ${TEST_VECTOR} ${VEC_FT} ${VEC_STD} ${MAP_STD} ${MAP_FT} ${TEST_MAP}
+	@rm -f  ${NAME} ${TEST_VECTOR} ${VEC_FT} ${VEC_STD} ${MAP_STD} ${MAP_FT} ${TEST_MAP} ${SET_FT} ${SET_STD}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 
 tclean : clean
-	@echo -n ${BLUE} "clean test bin :\t" ${RESET}
-	@rm -rf ${BIN_DIR} ${LOG_DIR}
+	@echo -n ${BLUE} "clean test logs :\t" ${RESET}
+	@rm -rf ${LOG_DIR}
 	@echo ${GREEN} "[ DONE ]" ${RESET}
 
 .PHONY : all clean fclean tclean
