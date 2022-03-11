@@ -6,25 +6,17 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:13:30 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 23:21:12 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 03:12:20 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _MAP_BASIC_HPP
 #define _MAP_BASIC_HPP
 
-#include "../_map_header.hpp"
+#include "map.hpp"
 
 namespace ft 
 {
-
-/**
- * @tparam _Key             key_type 
- * @tparam _Tp              value_type
- * @tparam _Cmp             key_compare
- * @tparam _Alloc           allocator_type
- * @tparam InputIterator    Input iterator type
- */
 
 /**
  * @brief Construct a new map object using iterators
@@ -102,7 +94,15 @@ map<_Key, _Tp, _Cmp, _Alloc>::count(const _Key &key) const
     const_iterator pos(tree._search_tree(val));
     return pos == end() ? 0 : 1;
 }
-
+/**
+ * @brief swap maps
+ */
+template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
+void
+swap(map<_Key, _Tp, _Cmp, _Alloc> &lhs, map<_Key, _Tp, _Cmp, _Alloc> &rhs)
+{
+	lhs.swap(rhs);
+}
 /**
  * @brief clear tree 
  */

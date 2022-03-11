@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:03:45 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 18:20:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 03:20:37 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,17 @@
 
 #include <functional>
 #include <memory>
-#include "map/rbtree/_red_black_tree.hpp"
+#include "_rbtree/_red_black_tree.hpp"
 
 namespace ft
 {
-
+/**
+ * @brief Sets are containers that store unique elements following a specific order.
+ * 
+ * @tparam _Key key type and value type 
+ * @tparam _Cmp compare function (defaults to std::less)
+ * @tparam _Alloc allocator (defaults to std::allocator)
+ */
 template < typename _Key, typename _Cmp = std::less<_Key>, typename _Alloc = std::allocator<_Key> >
 class set 
 {

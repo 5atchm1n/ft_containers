@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 16:08:37 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/09 18:18:15 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 03:11:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,7 @@ namespace ft
 		return (!(lhs < rhs));
 	}
 
-	template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
-	void
-	swap(map<_Key, _Tp, _Cmp, _Alloc> &lhs, map<_Key, _Tp, _Cmp, _Alloc> &rhs)
-	{
-		lhs.swap(rhs);
-	}
+
 }   // END NAMESPACE FT
 
 #endif  // _MAP_LOGICAL_OP_HPP

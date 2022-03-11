@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:19:46 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/10 17:30:34 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/11 03:13:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ set<_Key, _Cmp, _Alloc>::set(InputIterator first, InputIterator last, const _Cmp
 }
 
 /**
- * @brief Construct a new map object from copy
+ * @brief Construct a new set object from copy
  */
 template <typename _Key, typename _Cmp, typename _Alloc>
 set<_Key, _Cmp, _Alloc>::set(const set &copy) : _tree(copy.key_comp(), copy.get_allocator())
