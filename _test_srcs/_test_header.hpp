@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:16:13 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/12 04:34:43 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/12 17:22:29 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,29 @@
 #define _TMAP 0
 #endif
 
+#ifndef _TSTACK
+#define _TSTACK 0
+#endif
+
+#ifndef _TSET
+#define _TSET 0
+#endif
+
+#ifndef _TCONST
+#define _TCONST 0
+#endif
+
+
 // random number seed
-#define _SEED 42
+#define _SEED 7
 // max number of seeds to test
-#define MAX_SEED 10
+#define MAX_SEED 8
 
 // Number of iterations of test suite
-#define _NTESTS 1000
+#define _NTESTS 128
 
-#define MAX_TEST_SIZE 100
-#define MAX_MAP_KEY 100
+#define MAX_TEST_SIZE 1024
+#define MAX_MAP_KEY 4096
 
 #include <iostream>
 #include <iomanip>
@@ -52,6 +65,7 @@
 #include "stack.hpp"
 #include "set.hpp"
 
+#include "tools/_const_class.hpp"
 #include "tools/_test_tools.hpp"
 
 #include "vector_test/_test-vector.cpp"

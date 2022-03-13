@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:07:29 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/12 03:29:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/12 17:04:01 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,6 +174,8 @@ namespace _test_map
             std::cout << i ;
             if (Z.count(i) > 0)
                 std::cout << " is in map" << std::endl;
+            else
+                std::cout << std::endl;
         }
         (void)X;
     }

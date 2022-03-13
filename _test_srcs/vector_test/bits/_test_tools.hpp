@@ -6,11 +6,11 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:08:25 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/12 02:06:23 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/12 16:49:00 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_test_header.hpp" 
+#include "_test_header.hpp"
 
 #ifndef _VECTOR_TEST_TOOLS_HPP
 #define _VECTOR_TEST_TOOLS_HPP
@@ -41,5 +41,4 @@ namespace _test_vector
     }
 }
 
-
-#endif  //_VECTOR_TEST_TOOLS_HPP
+#endif //_VECTOR_TEST_TOOLS_HPP
