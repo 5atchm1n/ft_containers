@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:16:13 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/12 17:22:29 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/14 15:25:48 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@
 
 #include "tools/_const_class.hpp"
 #include "tools/_test_tools.hpp"
+#include "tools/_fake_alloc.hpp"
 
 #include "vector_test/_test-vector.cpp"
 #include "map_test/_test-map.cpp"
