@@ -68,6 +68,8 @@ template <typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator position)
 {
+	if (position == end())
+		return ;
     key_type tmp_key = position->first;
     value_type val = ft::make_pair(tmp_key, mapped_type());
     tree._delete_node(tree._search_tree(val));
@@ -94,8 +96,9 @@ template<typename _Key, typename _Tp, typename _Cmp, typename _Alloc>
 void
 map<_Key, _Tp, _Cmp, _Alloc>::erase(iterator first, iterator last)
 {
-    while (first != last)
-        tree._delete_node(tree._search_tree(*first++));
+	if (first != end())
+		while (first != last)
+			tree._delete_node(tree._search_tree(*first++));
 }
 
 }   // END NAMESPACE FT

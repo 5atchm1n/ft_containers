@@ -31,15 +31,15 @@ class _rbtree
 {
 
     private:
-        typedef typename _Alloc::template rebind<_rb_node<_Tp, _Alloc> >::other  node_allocator;
         typedef _rbtree<_Tp, _Cmp, _Alloc>  self;
         
         typedef size_t                      size_type;
         typedef ptrdiff_t                   difference_type;
         typedef _Tp                         value_type;
-        typedef _Alloc                      data_allocator;
-        typedef _rb_node<_Tp, _Alloc>       node_type;
-        typedef _rb_node<_Tp, _Alloc>*      node_pointer;
+        typedef _rb_node<_Tp>       node_type;
+        typedef _rb_node<_Tp>*      node_pointer;
+        typedef typename _Alloc::template rebind<value_type>::other  data_allocator;
+        typedef typename _Alloc::template rebind<_rb_node<value_type> >::other  node_allocator;
     
     // Allocators 
         node_allocator  _node_alloc;

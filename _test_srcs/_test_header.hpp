@@ -44,10 +44,10 @@
 #define MAX_SEED 8
 
 // Number of iterations of test suite
-#define _NTESTS 128
+#define _NTESTS 64
 
-#define MAX_TEST_SIZE 1024
-#define MAX_MAP_KEY 4096
+#define MAX_TEST_SIZE 256
+#define MAX_MAP_KEY 512
 
 #include <iostream>
 #include <iomanip>

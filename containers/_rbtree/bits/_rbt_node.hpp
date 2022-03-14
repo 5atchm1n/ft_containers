@@ -21,14 +21,13 @@
 
 namespace ft
 {
-template <typename _Tp, typename _Alloc>
+template <typename _Tp>
 class _rb_node
 {
 public:
     typedef _rb_node    node;
     typedef _rb_node*   node_pointer;
     typedef _Tp*        data_pointer;
-    typedef _Alloc      data_allocator;
     bool isred;
     node_pointer nil_node;
     node_pointer parent;
@@ -44,34 +43,18 @@ public:
 
     _rb_node &operator=(const _rb_node &val);
     // Helper function for iterator
-private:
+protected:
     node_pointer _increment() const;
     node_pointer _decrement() const;
-    data_pointer _get_data() const;
-    node_pointer _get_self() const;
 };
-/**
- *	@brief return data
- */
-template <typename _Tp, typename _Alloc>
-typename _rb_node<_Tp, _Alloc>::data_pointer
-_rb_node<_Tp, _Alloc>::_get_data() const
-{
-    return (data);
-}
-template <typename _Tp, typename _Alloc>
-typename _rb_node<_Tp, _Alloc>::node_pointer
-_rb_node<_Tp, _Alloc>::_get_self() const
-{
-    return &this;
-}
+
 /**
  * @brief Construct a new NODE
  *
  * @tparam _Tp, typename _Alloc
  */
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>::_rb_node() :
+template <typename _Tp>
+_rb_node<_Tp>::_rb_node() :
 isred(false),
 nil_node(),
 parent(),
@@ -86,8 +69,8 @@ data() {}
  * @tparam _Tp, typename _Alloc
  * @param copy
  */
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc>::_rb_node(const _rb_node &copy)
+template <typename _Tp>
+_rb_node<_Tp>::_rb_node(const _rb_node &copy)
 {
     *this = copy;
 }
@@ -98,9 +81,9 @@ _rb_node<_Tp, _Alloc>::_rb_node(const _rb_node &copy)
  * @param val   node that we want to assign
  * @return current node with pointers swapped
  */
-template <typename _Tp, typename _Alloc>
-_rb_node<_Tp, _Alloc> &
-_rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
+template <typename _Tp>
+_rb_node<_Tp> &
+_rb_node<_Tp>::operator=(const _rb_node &val)
 {
     isred = val.isred;
     nil_node = val.nil_node;
@@ -119,8 +102,8 @@ _rb_node<_Tp, _Alloc>::operator=(const _rb_node &val)
  *
  * @param val   node to be printed
  */
-template <typename _Tp, typename _Alloc>
-std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp, _Alloc> &val)
+template <typename _Tp>
+std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp> &val)
 {
     if (val.data == NULL)
     {
@@ -129,11 +112,6 @@ std::ostream &operator<<(std::ostream &stream, const _rb_node<_Tp, _Alloc> &val)
         stream << "min : " << val._min << "\n";
         return stream;
     }
-    //stream << "node = " << &val << "\n";
-    //stream << "parent: " << val.parent << "\n";
-    //stream << "nil : " << val.nil_node << "\n";
-    //stream << "left: " << val.left << "\tright: " << val.right << "\n";
-    //stream << "data: ";
     if (val.data != NULL)
         stream << "isred : "<< val.isred << " " << *val.data;
     return stream;

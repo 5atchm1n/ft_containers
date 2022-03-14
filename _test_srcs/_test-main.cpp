@@ -43,7 +43,7 @@ int main(void)
         test_stack<_NAMESPACE::stack<ft::_const_test<int> > >(seed);
      #endif
      #if _TSET
-        test_set<_NAMESPACE::set<ft::_const_test<int> >(seed);
+        test_set<_NAMESPACE::set<ft::_const_test<int> > >(seed);
      #endif    
     
     #endif
