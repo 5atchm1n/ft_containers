@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:16:13 by sshakya           #+#    #+#             */
-/*   Updated: 2022/03/14 15:25:48 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/15 20:05:32 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@
 
 
 // random number seed
-#define _SEED 7
+#define _SEED 42
 // max number of seeds to test
-#define MAX_SEED 8
+#define MAX_SEED 5
 
 // Number of iterations of test suite
-#define _NTESTS 64
+#define _NTESTS 1024
 
 #define MAX_TEST_SIZE 256
-#define MAX_MAP_KEY 512
+#define MAX_MAP_KEY 1024
 
 #include <iostream>
 #include <iomanip>
@@ -55,23 +55,34 @@
 #include <iterator>
 #include <cstdlib>
 #include <climits>
+#include <cstddef>
+
+#include "pair.hpp"
+
+#include "tools/_fake_alloc.hpp"
+#include "tools/_const_class.hpp"
+#include "tools/_test_tools.hpp"
 
 #include <vector>
 #include <map>
 #include <stack>
 #include <set>
+
+#if _TVECTOR
 #include "vector.hpp"
-#include "map.hpp"
-#include "stack.hpp"
-#include "set.hpp"
-
-#include "tools/_const_class.hpp"
-#include "tools/_test_tools.hpp"
-#include "tools/_fake_alloc.hpp"
-
 #include "vector_test/_test-vector.cpp"
-#include "map_test/_test-map.cpp"
-#include "stack_test/_test-stack.cpp"
-#include "set_test/_test-set.cpp"
-
 #endif
+#if _TMAP
+#include "map.hpp"
+#include "map_test/_test-map.cpp"
+#endif
+#if _TSTACK
+#include "stack.hpp"
+#include "stack_test/_test-stack.cpp"
+#endif
+#if _TSET
+#include "set.hpp"
+#include "set_test/_test-set.cpp"
+#endif
+
+#endif	//TEST_HEADER

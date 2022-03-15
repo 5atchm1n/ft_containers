@@ -65,7 +65,8 @@ vector<_Tp, _Alloc>::resize(size_type size, value_type val)
 template <typename _Tp, typename _Alloc>
 template<typename _Iterator>
 void
-vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type*)
+vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last,
+    typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type *)
 {
     difference_type size = std::distance(first, last);
     this->_dealloc();
@@ -75,6 +76,7 @@ vector<_Tp, _Alloc>::assign(_Iterator first, _Iterator last, typename ft::enable
         this->_mem.construct(i, *first++);
     this->_size = size;
 }
+
 /**
  * @brief replace content with value n times
  */

@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:32:40 by satchmin          #+#    #+#             */
-/*   Updated: 2022/03/10 02:33:48 by sshakya          ###   ########.fr       */
+/*   Updated: 2022/03/15 20:09:19 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 // custom iterator
 #include "iterators/reverse_iterator.hpp"
 #include "ft_type_traits.hpp"
+#include "iterator_traits.hpp"
 #include "vector/bits/_vector_base.hpp"
 
 // NAMESPACE
@@ -98,14 +99,16 @@ namespace ft
  *  MODIFIERS
  */
         template <typename _Iterator>
-            void    assign(_Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0);
+            void    assign(_Iterator first, _Iterator last,
+                typename ft::enable_if<!ft::is_integral<_Iterator>::value>::type* = 0);
         void        assign(size_type n, const value_type &val);
         void        push_back(const value_type &val);
         void        pop_back();
         iterator    insert(iterator position, const value_type &val);
         void        insert(iterator position, size_type n, const value_type &val);
         template <typename _Iterator>
-            void    insert(iterator position, _Iterator first, _Iterator last, typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0 );
+            void    insert(iterator position, _Iterator first, _Iterator last,
+				typename ft::enable_if<!ft::is_integral<_Iterator>::value >::type* = 0 );
         iterator    erase(iterator position);
         iterator    erase(iterator first, iterator last);
         void        swap(vector &val);

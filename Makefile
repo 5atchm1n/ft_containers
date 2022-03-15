@@ -3,6 +3,10 @@
 ## VARIABLES
 # Makefile Rules
 
+## INCLUDE FILES
+# Global include
+INC = -I./containers
+
 ## RUN COMPARE TESTS
 TEST_MAP = test_map
 TEST_VECTOR = test_vector
@@ -34,7 +38,7 @@ MKDIR_P = mkdir -p
 LOG_DIR = log
 BIN_DIR = bin
 CONST_TEST = -D_TCONST=1
-
+LOG = 1
 # Makefile colours
 RED="\033[1;31m"
 GREEN="\033[1;32m"
@@ -50,18 +54,20 @@ RESET="\033[m"
 CC = clang++
 CPPSTD = -std=c++98
 CXXFLAGS = -Wall -Wextra -Werror -MMD -MP
+DEBUG = -fstandalone-debug -g3
+MEM = -fsanitize=address 
 
 ## DEPENDECIES recipe
 DEPS = ${OBJS:.o=.d}
 
 # Debug and Memory
 
-ifeq ($(TMEM),1)
-MEM = -fsanitize=address 
+ifeq ($(TMEM),0)
+MEM = 
 endif
 
-ifeq ($(TDEBUG),1)
-DEBUG = -fstandalone-debug -g3
+ifeq ($(TDEBUG),0)
+DEBUG =
 endif
 
 ifeq ($(TCONST),0)
@@ -71,9 +77,7 @@ endif
 # Main
 _TEST_MAIN = _test_srcs/_test-main.cpp
 
-## INCLUDE FILES
-# Global include
-INC = -I./containers
+
 
 ## OBJS DIR recipe
 OBJS = $(addprefix ${OBJDIR}/, ${_TEST_MAIN:.cpp=.o})
@@ -81,6 +85,7 @@ OBJS = $(addprefix ${OBJDIR}/, ${_TEST_MAIN:.cpp=.o})
 # object file recipe
 ${OBJDIR}/%.o:%.cpp
 	@echo ${BLUE} "test flags" ${PURPLE} ${_TEST} ${CONST_TEST} ${RESET}
+	@echo ${BLUE} "debug flags" ${PURPLE} ${MEM} ${DEBUG} ${RESET}
 	@echo -n ${CYAN} "Create objects :\t"
 	@${MKDIR_P} ${@D}
 	@${CC} ${CXXFLAGS} ${_TEST} ${CONST_TEST} ${MEM} ${DEBUG} ${INC} $(DEBUG) ${CPPSTD} -c $< -o $@
@@ -91,9 +96,9 @@ ${OBJDIR}/%.o:%.cpp
 ##
 all : ${FT} ${STD}
 
-bonus : _TEST+=-D_TSET=1
-
-bonus : ${FT} ${STD}
+bonus :
+	@make -sB ${FT} _TEST="-D_TVECTOR=1 -D_TMAP=1 -D_TSTACK=1 -D_TSET=1"
+	@make -sB ${STD} _TEST="-D_NAMESPACE=std -D_TVECTOR=1 -D_TMAP=1 -D_TSTACK=1 -D_TSET=1"
 
 # make ft
 
@@ -120,6 +125,7 @@ ${TEST} :
 	@make -sB ${STD}
 	@echo ${BLUE} "\n\t RUN CONTAINERS TESTS" ${RESET}
 	@${MKDIR_P} ${LOG_DIR}
+ifeq ($(LOG), 1)
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${STD} > ${LOG_DIR}/${STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -129,9 +135,30 @@ ${TEST} :
 	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
 	@diff -u ${LOG_DIR}/${STD}.out ${LOG_DIR}/${FT}.out > ${LOG_DIR}/diff.log
 	@echo ${GREEN} "no diff" ${RESET}
+else
+	@bash -c "diff -u <(./${STD}) <(./${FT}) --color | tee ${LOG_DIR}/all.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif
 
 # make test_bonus
-${TEST_BONUS} : bonus ${TEST}
+${TEST_BONUS} : bonus
+	@echo ${BLUE} "\n\t RUN CONTAINERS TESTS" ${RESET}
+	@${MKDIR_P} ${LOG_DIR}
+ifeq ($(LOG), 1)
+	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
+	@-./${STD} > ${LOG_DIR}/${STD}.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@echo -n ${YELLOW} " RUN TEST - FT\t\t" ${RESET}
+	@-./${FT} > ${LOG_DIR}/${FT}.out
+	@echo ${GREEN} "[ DONE ]" ${RESET}
+	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+	@diff -u ${LOG_DIR}/${STD}.out ${LOG_DIR}/${FT}.out > ${LOG_DIR}/diff.log
+	@echo ${GREEN} "no diff" ${RESET}
+else
+	@bash -c "diff -u <(./${STD}) <(./${FT}) --color | tee ${LOG_DIR}/all.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif
+	
 
 #make test_all
 
@@ -175,7 +202,8 @@ ${TEST_MAP} :
 	@make -sB ${MAP_STD}
 	@make -sB ${MAP_FT}
 	@echo ${BLUE} "\n\t RUN MAP TESTS" ${RESET}
-	@${MKDIR_P} ${LOG_DIR} 
+	@${MKDIR_P} ${LOG_DIR}
+ifeq ($(LOG), 1)
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${MAP_STD} > ${LOG_DIR}/${MAP_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -185,6 +213,10 @@ ${TEST_MAP} :
 	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
 	@diff -u ${LOG_DIR}/${MAP_STD}.out ${LOG_DIR}/${MAP_FT}.out > ${LOG_DIR}/map.diff.log
 	@echo ${GREEN} "no diff" ${RESET}
+else
+	@bash -c "diff -U10 <(./${MAP_STD}) <(./${MAP_FT}) | tee ${LOG_DIR}/map.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif
 
 # MAP END
 
@@ -217,6 +249,7 @@ ${TEST_VECTOR} :
 	@make -sB ${VEC_FT}
 	@echo ${BLUE} "\n\t RUN VECTOR TESTS" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
+ifeq ($(LOG), 1)
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${VEC_STD} > ${LOG_DIR}/${VEC_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -226,6 +259,10 @@ ${TEST_VECTOR} :
 	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
 	@diff -u ${LOG_DIR}/${VEC_STD}.out ${LOG_DIR}/${VEC_FT}.out > ${LOG_DIR}/vector.diff.log
 	@echo ${GREEN} "no diff" ${RESET}
+else
+	@bash -c "diff -U10 <(./${VEC_STD}) <(./${VEC_FT}) | tee ${LOG_DIR}/vector.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif
 
 # VECTOR END
 
@@ -257,6 +294,7 @@ ${TEST_STACK} :
 	@make -sB ${STACK_FT}
 	@echo ${BLUE} "\n\t RUN STACK TESTS" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
+ifeq ($(LOG), 1)
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${STACK_STD} > ${LOG_DIR}/${STACK_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -266,6 +304,10 @@ ${TEST_STACK} :
 	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
 	@diff -u ${LOG_DIR}/${STACK_STD}.out ${LOG_DIR}/${STACK_FT}.out > ${LOG_DIR}/stack.diff.log
 	@echo ${GREEN} "no diff" ${RESET}
+else
+	@bash -c "diff -U10 <(./${STACK_STD}) <(./${STACK_FT}) | tee ${LOG_DIR}/stack.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif 
 
 # END STACK
 
@@ -297,6 +339,7 @@ ${TEST_SET} :
 	@make -sB ${SET_FT}
 	@echo ${BLUE} "\n\t RUN SET TESTS" ${RESET}
 	@${MKDIR_P} ${LOG_DIR} 
+ifeq ($(LOG), 1)
 	@echo -n ${YELLOW} " RUN TEST - STD\t" ${RESET}
 	@-./${SET_STD} > ${LOG_DIR}/${SET_STD}.out
 	@echo ${GREEN} "[ DONE ]" ${RESET}
@@ -306,7 +349,10 @@ ${TEST_SET} :
 	@echo -n ${BLUE} "\n\tcheck log dir for output : " ${RESET}
 	@diff -u ${LOG_DIR}/${SET_STD}.out ${LOG_DIR}/${SET_FT}.out > ${LOG_DIR}/set.diff.log
 	@echo ${GREEN} "no diff" ${RESET}
-
+else
+	@bash -c "diff -U10 <(./${SET_STD}) <(./${SET_FT}) | tee ${LOG_DIR}/set.diff"
+	@echo ${BLUE} "\n\tcheck log dir for output : " ${RESET}
+endif 
 # SET END
 
 # TEST TIMING
