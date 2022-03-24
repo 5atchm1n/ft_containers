@@ -2,7 +2,12 @@
 
 My implementation of the STL containers. This library contains the containers VECTOR, MAP, STACK and SET
 implemented according the the CPP-98 standard.
+### CONCEPTS
 
+This project has the aim of making us understand the syntax to use for template programmings and force us to understand
+how to use the STL containers properly. For my implementation i decided to use split the different method definitions into
+multiple files to allow for smaller and more readable files. This changes the classical syntax and makes for a slightly
+more compicated syntax when defining methods to a templated class.
 #### FILE STRUCTURE
 
 * [_rbtree](https://github.com/5atchm1n/ft_containers/tree/master/containers/_rbtree)
@@ -24,12 +29,7 @@ implemented according the the CPP-98 standard.
 * [stack.hpp](https://github.com/5atchm1n/ft_containers/blob/master/containers/stack.hpp)
 * [vector.hpp](https://github.com/5atchm1n/ft_containers/blob/master/containers/vector.hpp)
 
-### CONCEPTS
 
-This project has the aim of making us understand the syntax to use for template programmings and force us to understand
-how to use the STL containers properly. For my implementation i decided to use split the different method definitions into
-multiple files to allow for smaller and more readable files. This changes the classical syntax and makes for a slightly
-more compicated syntax when defining methods to a templated class.
 
 #### NOTE
 
