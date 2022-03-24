@@ -3,14 +3,7 @@
 My implementation of the STL containers. This library contains the containers VECTOR, MAP, STACK and SET
 implemented according the the CPP-98 standard.
 
-## USAGE
-
-Include the conatiners diretory in the project.
-Contains a tester based on [TESTER](https://github.com/5atchm1n/ft_containers-tester-42)
-
-Use `ft::[container]<[template params]>` to use the container.
-
-### FILE STRUCTURE
+#### FILE STRUCTURE
 
 * [_rbtree](https://github.com/5atchm1n/ft_containers/tree/master/containers/_rbtree)
     * [bits](https://github.com/5atchm1n/ft_containers/tree/master/containers/_rbtree/bits)
@@ -35,7 +28,8 @@ Use `ft::[container]<[template params]>` to use the container.
 
 This project has the aim of making us understand the syntax to use for template programmings and force us to understand
 how to use the STL containers properly. For my implementation i decided to use split the different method definitions into
-multiple files to allow for smaller and more readable files.
+multiple files to allow for smaller and more readable files. This changes the classical syntax and makes for a slightly
+more compicated syntax when defining methods to a templated class.
 
 #### NOTE
 
